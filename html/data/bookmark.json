@@ -101,6 +101,13 @@
 			"rate" : "",
 			"tags" : ["Easing", "Animation", "Tool"]
         },
+        {
+            "site": "Cubic-bezier",
+            "url": "http://www.cubic-bezier.com/",
+            "explain": "cubic-bezier 함수들을 만들고 애니메이션의 속도에 어떤 영향을 미치는지 이해를 돕는다.",
+			"rate" : "",
+			"tags" : ["Cubic-bezier", "Animation", "Timing"]
+        },
 		{
             "site": "CSS3 Awesome",
             "url": "http://css3.bradshawenterprises.com/",
@@ -309,6 +316,43 @@
             "explain": "브라우저 지원에 관한 가장 최근 정보를 전달",
 			"rate" : "",
 			"tags" : ["CSS", "HTML5", "API"]
+        },
+        {
+            "site": "pagepeeker",
+            "url": "http://pagepeeker.com/",
+            "explain": "웹 사이트 스크린샷을 웹 서비스로 제공",
+			"rate" : "",
+			"tags" : ["ScreenShot", "Capture", "Website"]
+        }
+	],
+    "기타" :[
+        {
+            "site": "완전 초보를 위한 깃허브",
+            "url": "http://nolboo.github.io/blog/2013/10/06/github-for-beginner/",
+            "explain": "초보자를 위한 깃허브 사용 메뉴얼",
+			"rate" : "",
+			"tags" : ["깃", "깃허브", "Git"]
+        },
+        {
+            "site": "Git 동영상 강의",
+            "url": "http://opentutorials.org/course/303",
+            "explain": "Git 설치와 협업 등 Git 동영상 강의",
+			"rate" : "",
+			"tags" : ["깃", "깃허브", "Git", "협업"]
+        },
+        {
+            "site": "git - 간편 안내서",
+            "url": "http://rogerdudler.github.io/git-guide/index.ko.html",
+            "explain": "짧지만 꼭 알아야할 Git 안내서",
+			"rate" : "",
+			"tags" : ["깃", "깃허브", "Git"]
+        },
+        {
+            "site": "Git Reference",
+            "url": "http://gitref.org/",
+            "explain": "명령어를 잊어버렸을 때는 용어 참조하기 좋은 사이트",
+			"rate" : "",
+			"tags" : ["깃명령어", "Reference"]
         }
 	]
 }
