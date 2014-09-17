@@ -1,0 +1,314 @@
+{    
+    "Javascript" :[
+        {
+            "site": "생활코딩",
+            "url": "http://opentutorials.org/course/743",
+            "explain": "자바스크립트 동영상 강의",
+			"rate" : "",
+			"tags" : ["동영상", "강의"]
+        },
+        {
+            "site": "Javascript Garden",
+            "url": "http://bonsaiden.github.io/JavaScript-Garden/ko/",
+            "explain": "JavaScript 언어의 핵심만을 모아 놓은 번역 문서",
+			"rate" : "",
+			"tags" : ["번역문서", "객체", "함수", "Array", "타입"]
+        },
+        {
+            "site": "생활코딩 - 정규표현식",
+            "url": "http://opentutorials.org/course/909/5142",
+            "explain": "다양한 정규표현식 패턴과 도구 소개",
+			"rate" : "",
+			"tags" : ["정규표현식", "패턴", "도구"]
+        }
+	],
+    "jQuery" :[
+        {
+            "site": "Taeyo.Net",
+            "url": "http://www.taeyo.pe.kr/Columns/List.aspx?SEQ=29&IDX=1",
+            "explain": "Taeyo의 jQuery 프로그래밍",
+			"rate" : "",
+			"tags" : ["셀렉터", "폼", "event"]
+        }
+	],
+    "AngularJS" :[
+        {
+            "site": "하루만에 끝내는 AngularJS",
+            "url": "http://soomong.net/blog/2014/01/20/translation-ultimate-guide-to-learning-angularjs-in-one-day/",
+            "explain": "Todd라는 개발자가 작성한 “Ultimate guide to learning angular js in one day”라는 블로그 글을 번역한 글",
+			"rate" : "",
+			"tags" : ["컨트롤러", "디렉티브", "서비스", "데이터 바인딩"]
+        },
+        {
+            "site": "AngularJS는 왜 좋은가?",
+            "url": "http://blog.outsider.ne.kr/975",
+            "explain": "Angular.js는 왜 좋은 가에 대한 설명",
+			"rate" : "",
+			"tags" : ["컨트롤러", "디렉티브", "서비스", "데이터 바인딩"]
+        },
+        {
+            "site": "AngularJS의 매력에 빠지다",
+            "url": "http://blog.naver.com/jjoommnn/130179684248",
+            "explain": "Angular.js를 문법적으로 설명한 블로그 글",
+			"rate" : "",
+			"tags" : ["컨트롤러", "디렉티브", "서비스", "데이터 바인딩"]
+        },
+        {
+            "site": "AngularJS Hub",
+            "url": "http://www.angularjshub.com/",
+            "explain": "AngularJS의 code와 예제를 확인할 수 있는 레퍼런스 사이트",
+			"rate" : "",
+			"tags" : ["코드", "예제", "레퍼런스"]
+        }
+	],
+    "Node.js" :[
+        {
+            "site": "Felix's Node.js Guide",
+            "url": "http://pismute.github.io/nodeguide.com/index.html",
+            "explain": " Felix Geisendorfer라는 개발자가 작성한 Guide 문서",
+			"rate" : "",
+			"tags" : ["Node", "Guide"]
+        },
+        {
+            "site": "The Node Beginner Book",
+            "url": "http://www.nodebeginner.org/index-kr.html",
+            "explain": "Node 입문자를 위한 번역 문서",
+			"rate" : "",
+			"tags" : ["Node", "Guide", "입문"]
+        }
+	],
+    "HTML5" :[
+        {
+            "site": "CSSDeck",
+            "url": "http://cssdeck.com/labs/forms-validation-styling-semantics",
+            "explain": "폼 유효성 검사 및 styling & semantics",
+			"rate" : "",
+			"tags" : ["Form", "Validation", "Semantics"]
+        }
+	],
+    "CSS3" :[
+        {
+            "site": "<HTML>Lion",
+            "url": "http://www.htmllion.com/index.html",
+            "explain": "CSS3의 모든것 - Tutorials와 Tool",
+			"rate" : "",
+			"tags" : ["Tutorials", "Tool"]
+        },
+        {
+            "site": "Ceaser",
+            "url": "http://matthewlein.com/ceaser/",
+            "explain": "CSS EASING ANIMATION TOOL ",
+			"rate" : "",
+			"tags" : ["Easing", "Animation", "Tool"]
+        },
+		{
+            "site": "CSS3 Awesome",
+            "url": "http://css3.bradshawenterprises.com/",
+            "explain": "CSS3 Transitions, Transforms, Animation, Filters",
+			"rate" : "",
+			"tags" : ["Transition", "Transform", "Animation", "Filter"]
+        },
+        {
+            "site": "CSS 3.0 Maker",
+            "url": "http://www.css3maker.com/css3-animation.html",
+            "explain": "",
+			"rate" : "",
+			"tags" : ["Tool"]
+        },
+        {
+            "site": "Selectivizr",
+            "url": "http://selectivizr.com/",
+            "explain": " CSS3 selectors for IE",
+			"rate" : "",
+			"tags" : ["IE"]
+        },
+        {
+            "site": "Mastering the :nth-child",
+            "url": "http://nthmaster.com/",
+            "explain": " :nth-child를 마스터 하자.",
+			"rate" : "",
+			"tags" : ["nth-child"]
+        },
+        {
+            "site": "Blog [mojomomo]",
+            "url": "http://mojomomo.blog.me/30175351208",
+            "explain": "다양한 CSS3의 효과를 경험하자.",
+			"rate" : "",
+			"tags" : ["예제", "효과", "Animation"]
+        },
+        {
+            "site": "Single Element Icons",
+            "url": "http://cssdeck.com/labs/single-element-icons",
+            "explain": "CSS 아이콘 만들기",
+			"rate" : "",
+			"tags" : ["아이콘", "Icons"]
+        },
+        {
+            "site": "CSS SELECTORS COMPATIBILITY",
+            "url": "http://kimblim.dk/css-tests/selectors/",
+            "explain": "CSS 선택자들과 브라우저의 호환성 리스트",
+			"rate" : "",
+			"tags" : ["선택자", "selector", "호환성"]
+        },
+        {
+            "site": "CSS3 Patterns Gallery",
+            "url": "http://lea.verou.me/css3patterns/",
+            "explain": "CSS만으로 만들 수 있는 창의적인 패턴",
+			"rate" : "",
+			"tags" : ["patterns", "gallery"]
+        },
+        {
+            "site": "CSS3 Filters",
+            "url": "http://tangledindesign.com/using-css3-filters-to-enhance-your-transitions/",
+            "explain": "이미지 전이를 강화하는 CSS3 필터",
+			"rate" : "",
+			"tags" : ["filter", "transition"]
+        }
+
+	],
+    "SASS" :[
+        {
+            "site": "생활코딩",
+            "url": "http://opentutorials.org/course/470/2488",
+            "explain": "SASS의 소개 및 설치, 문법",
+			"rate" : "",
+			"tags" : ["동영상", "강의"]
+        },
+        {
+            "site": "SASS",
+            "url": "http://sass-lang.com/",
+            "explain": "SASS 공식사이트",
+			"rate" : "",
+			"tags" : ["Install", "Learn", "Document"]
+        },
+        {
+            "site": "Wireframe",
+            "url": "http://soooprmx.com/wp/archives/5059",
+            "explain": "SASS 간단정리",
+			"rate" : "",
+			"tags" : ["문법", "네스팅", "믹스인"]
+        }
+	],
+    "반응형웹" :[
+        {
+            "site": "Profound Grid",
+            "url": "http://www.profoundgrid.com/",
+            "explain": "반응형을 위한 다양한 Grid 시스템을 제공.",
+			"rate" : "",
+			"tags" : ["Responsive", "Grid"]
+        },
+        {
+            "site": "<HTML>Lion",
+            "url": "http://www.htmllion.com/templates.html",
+            "explain": "반응형웹 Template",
+			"rate" : "",
+			"tags" : ["Responsive", "Template"]
+        },
+        {
+            "site": "Responsive Grid System",
+            "url": "http://www.responsivegridsystem.com/",
+            "explain": "나만의 응답성 높은 그리드 시스템을 만들기",
+			"rate" : "",
+			"tags" : ["Responsive", "Grid"]
+        }
+	],
+    "Design" :[
+        {
+            "site": "PiliApp",
+            "url": "http://www.piliapp.com/symbol/",
+            "explain": "특수문자를 클릭한번에 붙여넣기 할 수 있는 Symbol",
+			"rate" : "",
+			"tags" : ["특수문자", "Symbol"]
+        },
+        {
+            "site": "ColorCode",
+            "url": "http://colourco.de/",
+            "explain": "유용한 색상 선택 도구",
+			"rate" : "",
+			"tags" : ["Color", "색상"]
+        },
+        {
+            "site": "COLORS",
+            "url": "http://clrs.cc/",
+            "explain": "최신트랜드에 맞춘 기본 색상 코드모음",
+			"rate" : "",
+			"tags" : ["Color", "색상"]
+        }
+	],
+    "VIM" :[
+        {
+            "site": "Blog [essayer]",
+            "url": "http://www.morenice.kr/117",
+            "explain": "개발 생산성을 위한 필수 vim plugin",
+			"rate" : "",
+			"tags" : ["Plugin"]
+        },
+        {
+            "site": "KLDP",
+            "url": "http://kldp.org/node/125263",
+            "explain": "vim 사용자를 위한 플러그인 매니저 vundle",
+			"rate" : "",
+			"tags" : ["Plugin", "vundle", "플러그인 매니저"]
+        },
+        {
+            "site": "vimium",
+            "url": "http://sunyzero.tistory.com/178",
+            "explain": "구글 크롬 vim 단축키 플로그인",
+			"rate" : "",
+			"tags" : ["단축키", "플로그인", "vimium"]
+        }
+	],
+    "Emmet" :[
+        {
+            "site": "Emmet Documentation",
+            "url": "http://docs.emmet.io/",
+            "explain": "Emmet 공식 문서",
+			"rate" : "",
+			"tags" : ["Syntax", "Demo"]
+        },
+        {
+            "site": "Cheat-sheet",
+            "url": "http://docs.emmet.io/cheat-sheet/",
+            "explain": "Emmet 문법을 한번에 볼수 있는 Cheat Sheet",
+			"rate" : "",
+			"tags" : ["Syntax", "Demo"]
+        }
+	],
+    "Tool" :[
+        {
+            "site": "projectparfait",
+            "url": "http://projectparfait.adobe.com",
+            "explain": "PSD파일을 불러와서 Layer별로 CSS와 이미지저장 가능",
+			"rate" : "",
+			"tags" : ["PSD"]
+        },
+        {
+            "site": "coveloping",
+            "url": "http://coveloping.com/",
+            "explain": "개발에 유용한 코딩 툴을 모아놓은 coveloping",
+			"rate" : "",
+			"tags" : ["Tool", "Generator", "Minifier", "Tester"]
+        },
+        {
+            "site": "JSFIDDLE",
+            "url": "http://jsfiddle.net/",
+            "explain": "HTML, CSS, JavaScript를 웹에서 작성해서 바로 테스트 해볼 수 있고, 그 소스를 저장 공유할 수 있는 서비스",
+			"rate" : "",
+			"tags" : ["editor"]
+        },
+        {
+            "site": "jsbeautifier",
+            "url": "http://jsbeautifier.org/",
+            "explain": "난독화/패킹된 자바스크립트 디코딩할때 아주 유용한 툴",
+			"rate" : "",
+			"tags" : ["디코딩", "압축"]
+        },
+        {
+            "site": "caniuse",
+            "url": "http://caniuse.com/",
+            "explain": "브라우저 지원에 관한 가장 최근 정보를 전달",
+			"rate" : "",
+			"tags" : ["CSS", "HTML5", "API"]
+        }
+	]
+}

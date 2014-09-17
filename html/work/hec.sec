@@ -1,0 +1,11 @@
+<h1>현대 엔지니어링</h1>
+<div class="clfix">
+	<img src="/home/images/img_hyundae_engineering.jpg" class="responsive-img" alt="" />
+	<ul class="desc-list">
+		<li><span>Project</span> 현대엔지니어링</li>
+		<li><span>Client</span> 현대엔지니어링</li>
+		<li><span>Date</span> 2011.09 ~ 2011.12</li>
+		<li><span>Url</span> <a href="http://www.hec.co.kr/" target="_blank">http://www.hec.co.kr/</a></li>
+		<li>Web Publishing / jQuery</li>
+	</ul>
+</div>

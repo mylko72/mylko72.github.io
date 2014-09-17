@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+h2 {margin-bottom:40px; font-size:1.6em; color:#000; font-weight:bold;}
+h3, h4 {font-family: 'Oswald','Nanum Gothic', Dotum;}
+
+#bookmarkNav.fixed {position:fixed; top:130px;}
+
+.bx-box {float:left;}
+ul.bookmark {position:absolute; left:-90px; top:10px; width:175px;}
+ul.bookmark > li {padding-left:14px; border-bottom:1px dotted #FF746C; font-size:0.9em; line-height:250%; color:#fff; -webkit-transition:all .5s ease;}
+ul.bookmark > li.sel {border: 0px solid #ff0000; border-radius: 5px; background-color:#bf0000; transform:scale(1.4); }
+ul.bookmark > li.unsel {opacity:0.7; transform:scale(0.9);}
+ul.bookmark > li:last-child {border-bottom:none;}
+
+.bookmark-list {margin-left:25%;}
+	.bookmark-list h3 {margin:-20px 0 0px;}
+	.bookmark-list h3 * {vertical-align:middle;}
+	.bookmark-list h3 em {display:inline-block; padding:4px 10px 9px; background-color:#000; color:#fff; font-style:normal;}
+	.bookmark-list h3 .fa-caret-right {margin:2px 0 0 -2px; font-size:2.6em; color:#000;}
+
+ul.lists {margin-bottom:50px;}
+	ul.lists li {padding:25px 0 20px 20px;}
+	ul.lists li:nth-child(odd) {background-color:#f9f9f9;}
+	ul.lists li:nth-child(even) {background-color:#f1f1f1;}
+	ul.lists li h4 {display:inline-block; margin-right:10px; vertical-align:top;}
+	ul.lists li .info {display:inline-block; max-width:540px;}
+	ul.lists li .tags {margin-top:20px; font-size:0.80em;}
+	ul.lists li .tags span {margin-right:10px;}
+	ul.lists li .tags span a {color:#47769B;}
+	ul.lists li p {margin-top:10px; font-size:0.9em; color:#292929;}
+	ul.lists li em {font-style:normal; font-weight:bold;}
+	ul.lists li a {font-family: 'Oswald','Nanum Gothic', Dotum; color:#FF851B; font-weight:normal;}
+
+*, *:before, *:after{box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; } 
+.css-shapes-preview{position: relative; height: 500px; width: 20%; padding: 0px; left: 0px; -webkit-transform: rotate(0deg) skew(0deg); transform: rotate(0deg) skew(0deg); border-left: 110px solid #FF4136; border-right: 110px solid #FF4136; border-bottom: 40px solid transparent; }

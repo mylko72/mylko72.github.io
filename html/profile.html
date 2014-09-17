@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<title>UI Laboratory</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link href='http://fonts.googleapis.com/css?family=Pinyon+Script' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Denk+One' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Anton' rel='stylesheet' type='text/css'>
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/home/inc/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="/home/inc/css/profile.css" />
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="/home/inc/js/lib/jquery.animate-enhanced.min.js"></script>
+	<script type="text/javascript" src="/home/inc/js/lib/tram.js"></script>
+	<script type="text/javascript" src="/home/inc/js/common.js"></script>
+	<script type="text/javascript" src="/home/inc/js/utilities.js"></script>
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<style type="text/css" media="screen">
+		@import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css" ) ;
+	</style>
+</head>
+<body>
+
+<div id="body-wrapper">
+	<header>
+		<div class="inner-c">
+			<!--<div class="device">
+				<ul>
+					<li><a href="../icon/mobile"><i class="fa fa-mobile-phone"></i>mobile</a></li>
+					<li><a href="../icon/tablet"><i class="fa fa-tablet"></i> tablet</a></li>
+					<li><a href="../icon/desktop"><i class="fa fa-desktop"></i> desktop</a></li>
+				</ul>	
+			</div>-->
+			<div id="gnb" class="clfix">
+				<a href="/home/index.html?hn=0"><h1>LeeKwanOh<span>Web Publisher & UI Developer</span></h1></a>
+			</div>
+		</div>
+	</header>
+	<div id="contents">
+		<section>
+			<div class="inner-c clfix">
+				<h2>Profile</h2>
+
+				<aside class="rotatedtext">
+					<div class="name">
+						<h1 class="white">Lee</h1>
+						<h1>Lee</h1>
+						<h1>Kwan</h1>
+						<h1>Oh</h1>
+						<h2>Please e-mail me<br />with any feedback<br />about my website.<br /><a href="mailto:mypmk@naver.com">mypmk@naver.com</a></h2>
+					</div>
+					<div class="role">
+						<h1 class="job">Publishier</h1>
+						<h1 class="job2">UI Developer</h1>
+					</div>
+				</aside>
+				<article class="about-me clfix">
+					<h3>About Me</h3>
+					<!--<img src="/home/images/img_my_bicycle.jpg" class="bicycle" alt="나의 자전거" />-->
+					<p class="mb20"> 2014년 웹관련 경력 <span class="red">12년차</span>이며,<br />
+						웹디자이너로 시작하여 현재는 <span class="maroon">웹퍼블리셔</span>이자 <span class="blue">UI 개발자</span>이다.<br /> <span class="brown">커피</span>... 그리고 <span class="green">자전거</span>를 타며 자연을 느끼는 소소함을 좋아한다.
+					</p>
+					<p>
+						나의 일을 사랑하며<br />
+						UI 개발과 동적 스크립트 구현에 관심이 많다.
+					</p>
+					<ul class="photo clfix">
+						<li><a href="#"><img src="/home/images/img_my_pic01.jpg" alt="나의 자전거" /></a></li>
+						<li><a href="#"><img src="/home/images/img_my_pic02.jpg" alt="나의 자전거" /></a></li>
+						<li><a href="#"><img src="/home/images/img_my_pic03.jpg" alt="나의 자전거" /></a></li>
+					</ul>
+					<ul class="profile">
+						<li>이름 : 이관오</li>
+						<li>이메일: mypmk72@gmail.com</li>
+						<li>주소 : 안산시 단원구 초지동</li>
+						<li>고용형태 : 프리랜서</li>
+						<li>업무분야 : Web Publisher, UI 개발, Front End 개발</li>
+					</ul>
+				</article>
+
+			</div>
+		</section>
+
+		<section id="myskill">
+			<div class="inner-c clfix">
+				<article class="my-skill clfix">
+					<h3>My Skills</h3>
+
+					<div class="skill-list first">
+						<h4>Web Publishing</h4>
+						<ul>
+							<li>웹표준</li>
+							<li>웹접근성</li>
+							<li>Cross Browsing</li>
+							<li>Mobile Web</li>
+							<li>Responsive Web</li>
+							<li>CSS3</li>
+							<li>HTML5</li>
+							<li>SASS</li>
+							<li>VIM</li>
+						</ul>
+					</div>
+					<div class="skill-list">
+						<h4>Front End Develpement</h4>
+						<ul>
+							<li>jQuery</li>
+							<li>Javascript</li>
+							<li>Bootstrap</li>
+							<li>NodeJs</li>
+						</ul>
+					</div>
+					<div class="ico-send"><i class="fa fa-send-o"></i></div>
+				</article>
+			</div>
+		</section>
+		<section id="myhistory">
+			<div class="inner-c clfix">
+				<article class="my-skill clfix">
+					<h3>My History</h3>
+					<form>
+						<fieldset class="my-form">
+							<ul class="years">
+								<li>
+									<input type="checkbox" id="type_year_0" name="years" />
+									<label for="type_year_0"><i class="fa fa-square-o"></i> All</label>
+								</li>
+								<li>
+									<input type="checkbox" id="type_year_8" name="years" />
+									<label for="type_year_8"><i class="fa fa-square-o"></i> 2013.10 - 2014.04</label>
+								</li>
+								<li>
+									<input type="checkbox" id="type_year_7" name="years" />
+									<label for="type_year_7"><i class="fa fa-square-o"></i> 2013.03 - 2013.08</label>
+								</li>
+								<li>
+									<input type="checkbox" id="type_year_6" name="years" />
+									<label for="type_year_6"><i class="fa fa-square-o"></i> 2012.07 - 2013.03</label>
+								</li>
+								<li>
+									<input type="checkbox" id="type_year_5" name="years" />
+									<label for="type_year_5"><i class="fa fa-square-o"></i> 2007.07 - 2012.05</label>
+								</li>
+								<li>
+									<input type="checkbox" id="type_year_4" name="years" />
+									<label for="type_year_4"><i class="fa fa-square-o"></i> 2006.09 - 2007.04</label>
+								</li>
+								<li>
+									<input type="checkbox" id="type_year_3" name="years" />
+									<label for="type_year_3"><i class="fa fa-square-o"></i> 2005.01 - 2005.07</label>
+								</li>
+								<li>
+									<input type="checkbox" id="type_year_2" name="years" />
+									<label for="type_year_2"><i class="fa fa-square-o"></i> 2002.07 - 2004.11</label>
+								</li>
+								<li>
+									<input type="checkbox" id="type_year_1" name="years" />
+									<label for="type_year_1"><i class="fa fa-square-o"></i> 2001.06 - 2001.12</label>
+								</li>
+							</ul>
+						</fieldset>
+						<ul class="works">
+							<li>
+								<h4>| 2013.10 - 2014.03 / ADNSTYLE</h4>
+								<ul>
+									<li><a href="#">&#8718; <strong>삼성닷컴 반응형웹 :</strong>  참여율 100% <span>&#10010;</span></a>
+										<div class="detail" style="display: block;">
+											<h5>프로젝트명 : 삼성닷컴 반응형웹</h5>
+											<ul>
+												<li><span>&#9676;</span> 사이트주소 : <a href="http://www.samsung.com/uk/home" target="_blank">http://www.samsung.com/uk/home</a></li>
+												<li><span>&#9676;</span> 수행기간 : 2013.10 ~ 2014.04</li>
+												<li><span>&#9676;</span> 담당업무 : 자바 스크립트 및 UI 개발</li>
+												<li><span>&#9676;</span> 투입인원 : 스크립터 3명</li>
+												<li><span>&#9676;</span> 수행내용 : Front 페이지 UI 스크립트 및 자바스크립트 동적 구현</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<h4>| 2013.03 - 2013.08 / ITLINE</h4>
+								<ul class="lists">
+									<li><a href="#">&#8718; <strong>LG Fashion Shop :</strong>  참여율 100% <span>&#10010;</span></a>
+										<div class="detail" style="display: block;">
+											<h5>프로젝트명 : LG Fashion Shop</h5>
+											<ul>
+												<li><span>&#9676;</span> 사이트주소 : <a href="http://www.lgfashionshop.com/" target="_blank">http://www.lgfashionshop.com/</a></li>
+												<li><span>&#9676;</span> 수행기간 : 2013.03 ~ 2013.07</li>
+												<li><span>&#9676;</span> 담당업무 : 웹퍼블리싱 PL</li>
+												<li><span>&#9676;</span> 투입인원 : 웹퍼블리셔 2명</li>
+												<li><span>&#9676;</span> 수행내용 : Html 코딩 및 Front 페이지 UI 스크립트 / 가이드 작성 / 개발페이지 코딩 결함 수정</li>
+											</ul>
+										</div>
+									</li>
+									<li><a href="#">&#8718; <strong>LG Fashion Shop Mobile Web :</strong> 참여율 100% <span>&#10010;</span></a>
+										<div class="detail">
+											<h5>프로젝트명 : LG Fashion Shop Mobile Web</h5>
+											<ul>
+												<li><span>&#9676;</span> 사이트주소 : <a href="http://m.lgfashionshop.com/" target="_blank">http://m.lgfashionshop.com/</a></li>
+												<li><span>&#9676;</span> 수행기간 : 2013.08 ~ 2013.08</li>
+												<li><span>&#9676;</span> 담당업무 : 웹퍼블리싱 PL</li>
+												<li><span>&#9676;</span> 투입인원 : 웹퍼블리셔 2명</li>
+												<li><span>&#9676;</span> 수행내용 : Html 코딩 및 미디어쿼리 / 모바일웹 가이드 작성 / Front 페이지 UI 스크립트</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<h4>| 2012.07 - 2013.03 / CONTENTS TECH</h4>
+								<ul class="lists">
+									<li><a href="#">&#8718; <strong>SAMSUNG Developers :</strong>  참여율 100% <span>&#10010;</span></a>
+										<div class="detail" style="display: block;">
+											<h5>프로젝트명 : SAMSUNG Developers</h5>
+											<ul>
+												<li><span>&#9676;</span> 사이트주소 : <a href="http://developer.samsung.com/" target="_blank">http://developer.samsung.com/</a></li>
+												<li><span>&#9676;</span> 수행기간 : 2012.07 ~ 2012.10</li>
+												<li><span>&#9676;</span> 담당업무 : 웹퍼블리싱 PL</li>
+												<li><span>&#9676;</span> 투입인원 : 웹퍼블리셔 3명</li>
+												<li><span>&#9676;</span> 수행내용 : Html 코딩 및 jQuery / 일정관리 및 가이드 작성 / 개발페이지 코딩 결함 수정</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<h4>| 2007.07 - 2012.05 / MEDIA4TH</h4>
+								<ul class="lists">
+									<li><a href="#">&#8718; <strong>SKT Membership :</strong> http://www.sktmembership.co.kr /  참여율 100% <span>&#10010;</span></a>
+									<div class="detail">
+										<h5>프로젝트명 : SKT Membership</h5>
+										<ul>
+											<li><span>&#9676;</span> 사이트주소 : <a href="http://www.sktmembership.co.kr" target="_blank">http://www.sktmembership.co.kr</a></li>
+											<li><span>&#9676;</span> 수행기간 : 2012.02 ~ 2012.05</li>
+											<li><span>&#9676;</span> 담당업무 : 웹퍼블리싱 PL</li>
+											<li><span>&#9676;</span> 투입인원 : 웹퍼블리셔 3명</li>
+											<li><span>&#9676;</span> 수행내용 : Html 코딩 및 jQuery / 일정관리 및 카테고리별 파트 분담 / 개발페이지 코딩 결함 수정</li>
+										</ul>
+									</div>
+									</li>
+									<li><a href="#">&#8718; <strong>신한은행 홈페이지 :</strong> http://www.shinhan.com/  참여율 70% <span>&#10010;</span></a>
+									<div class="detail">
+										<h5>프로젝트명 : 신한은행</h5>
+										<ul>
+											<li><span>&#9676;</span> 사이트주소 : <a href="http://www.shinhan.com/" target="_blank">http://www.shinhan.com/</a></li>
+											<li><span>&#9676;</span> 수행기간 : 2011.07 ~ 2012.02</li>
+											<li><span>&#9676;</span> 담당업무 : 웹퍼블리싱 PL</li>
+											<li><span>&#9676;</span> 투입인원 : 웹퍼블리셔 9명</li>
+											<li><span>&#9676;</span> 수행내용 : Html 코딩 및 jQuery / 일정관리 및 카테고리별 파트 분담 / 개발페이지 코딩 결함 수정</li>
+										</ul>
+									</div>
+									</li>
+									<li><a href="#">&#8718; <strong>현대엔지니어링 :</strong> http://www.hec.co.kr/  참여율 50% <span>&#10010;</span></a>
+									<div class="detail">
+										<h5>프로젝트명 : 현대엔지니어링 </h5>
+										<ul>
+											<li><span>&#9676;</span> 사이트주소 : <a href="http://www.hec.co.kr/" target="_blank">http://www.hec.co.kr/</a></li>
+											<li><span>&#9676;</span> 수행기간 : 2011.09 ~ 2011. 12</li>
+											<li><span>&#9676;</span> 담당업무 : 웹퍼블리싱 PL</li>
+											<li><span>&#9676;</span> 투입인원 : 웹퍼블리셔 2명</li>
+											<li><span>&#9676;</span> 수행내용 : Html 코딩 및 jQuery / 일정관리 및 카테고리별 파트 분담 / 프로젝트 코딩 가이드 작성 및 샘플페이지 작성 / 개발페이지 코딩 결함 수정</li>
+										</ul>
+									</div>
+									</li>
+									<li><a href="#">&#8718; <strong>롯데카드 :</strong> http://www.lottecard.co.kr/  참여율 70% <span>&#10010;</span></a>
+									<div class="detail">
+										<h5>프로젝트명 : 롯데카드 </h5>
+										<ul>
+											<li><span>&#9676;</span> 사이트주소 : <a href="http://www.lottecard.co.kr/" target="_blank">http://www.lottecard.co.kr/</a></li>
+											<li><span>&#9676;</span> 수행기간 : 2011.04 ~ 2011. 09</li>
+											<li><span>&#9676;</span> 담당업무 : 웹퍼블리싱 PL</li>
+											<li><span>&#9676;</span> 투입인원 : 웹퍼블리셔 5명</li>
+											<li><span>&#9676;</span> 수행내용 : Html 코딩 및 jQuery / 일정관리 및 카테고리별 파트 분담 / 프로젝트 코딩 가이드 작성 및 샘플페이지 작성 / 개발페이지 코딩 결함 수정</li>
+										</ul>
+									</div>
+									</li>
+									<li><a href="#">&#8718; <strong>BC카드 UI 통합 가이드</strong> / 참여율 80%</a></li>
+									<li><a href="#">&#8718; <strong>KTH 컨버전스 영상서비스 :</strong> http://www.playy.co.kr / 참여율 80% <span>&#10010;</span></a>
+									<div class="detail">
+										<h5>프로젝트명 : KTH 컨버전스 영상서비스</h5>
+										<ul>
+											<li><span>&#9676;</span> 사이트주소 : <a href="http://tv.playy.co.kr/movie/contentMovie.html?cseq=16630" target="_blank">http://tv.playy.co.kr/movie/contentMovie.html?cseq=16630</a></li>
+											<li><span>&#9676;</span> 수행기간 : 2010.10 ~ 2010.12</li>
+											<li><span>&#9676;</span> 담당업무 : 웹퍼블리싱</li>
+											<li><span>&#9676;</span> 투입인원 : 웹퍼블리셔 1명</li>
+											<li><span>&#9676;</span> 수행내용 : Html 코딩 및 jQuery / 코딩 가이드 작성 및 개발페이지 코딩 결함 수정</li>
+										</ul>
+									</div>
+									</li>
+									<li><a href="#">&#8718; <strong>CJ 헬로비전 Tving :</strong> http://tving.gomtv.com / 참여율 100%</a></li>
+									<li><a href="#">&#8718; <strong>Tooniverse :</strong> http://www.tooniland.com/tooniverse/TooniverseMain.tl / 참여율 100% <span>&#10010;</span></a>
+									<div class="detail">
+										<h5>프로젝트명 : Tooniverse 개편</h5>
+										<ul>
+											<li><span>&#9676;</span> 사이트주소 : <a href="http://www.tooniland.com/tooniverse/TooniverseMain.tl" target="_blank">http://www.tooniland.com/tooniverse/TooniverseMain.tl</a></li>
+											<li><span>&#9676;</span> 수행기간 : 2010.07 ~ 2010.08</li>
+											<li><span>&#9676;</span> 담당업무 : 웹퍼블리싱</li>
+											<li><span>&#9676;</span> 투입인원 : 웹퍼블리셔 1명</li>
+											<li><span>&#9676;</span> 수행내용 : Html 코딩 및 jQuery / 코딩 가이드 작성</li>
+										</ul>
+									</div>
+									</li>
+									<li><a href="#">&#8718; <strong>SKT T bizpoint :</strong> http://www.tbizpoint.co.kr / 참여율 100% <span>&#10010;</span></a>
+									<div class="detail">
+										<h5>프로젝트명 : SKT T비즈포인트 신규 구축</h5>
+										<ul>
+											<li><span>&#9676;</span> 사이트주소 : <a href="http://www.tbizpoint.co.kr" target="_blank">http://www.tbizpoint.co.kr</a></li>
+											<li><span>&#9676;</span> 수행기간 : 2010.03 ~ 2010.06</li>
+											<li><span>&#9676;</span> 담당업무 : 웹퍼블리싱 PL</li>
+											<li><span>&#9676;</span> 투입인원 : 웹퍼블리셔 2명</li>
+											<li><span>&#9676;</span> 수행내용 : Html 코딩 및 jQuery / 일정관리 및 카테고리별 파트 분담 / 프로젝트 코딩 가이드 작성 및 샘플페이지 작성 / 개발페이지 코딩 결함 수정</li>
+										</ul>
+									</div>
+									</li>
+									<li><a href="#">&#8718; <strong>BC카드 법인 :</strong> http://wisebiz.bccard.com / 참여율 100% <span>&#10010;</span></a>
+									<div class="detail">
+										<h5>프로젝트명 : BC카드 법인 웹사이트 개편</h5>
+										<ul>
+											<li><span>&#9676;</span> 사이트주소 : <a href="http://wisebiz.bccard.com" target="_blank">http://wisebiz.bccard.com</a></li>
+											<li><span>&#9676;</span> 수행기간 : 2009.09 ~ 2009.12</li>
+											<li><span>&#9676;</span> 담당업무 : 웹퍼블리싱</li>
+											<li><span>&#9676;</span> 투입인원 : 웹퍼블리셔 3명</li>
+											<li><span>&#9676;</span> 수행내용 : CMS (Contents Management System) 연동 코딩 / Html 코딩 및 자바스크립트 / 개발페이지 코딩 결함 수정</li>
+										</ul>
+									</div>
+									</li>
+									<li><a href="#">&#8718; <strong>비씨골프라운지 :</strong> http://www.golfloung.com / 참여율 100% <span>&#10010;</span></a>
+									<div class="detail">
+										<h5>프로젝트명 : 비씨골프라운지 웹사이트 신규 구축</h5>
+										<ul>
+											<li><span>&#9676;</span> 사이트주소 : <a href="http://www.golfloung.com" target="_blank">http://www.golfloung.com</a></li>
+											<li><span>&#9676;</span> 수행기간 : 2009.04 ~ 2009.07</li>
+											<li><span>&#9676;</span> 담당업무 : 웹퍼블리싱 PL</li>
+											<li><span>&#9676;</span> 투입인원 : 웹퍼블리셔 4명</li>
+											<li><span>&#9676;</span> 수행내용 : CMS (Contents Management System) 연동 코딩 / Html 코딩 및 자바스크립트 / 일정관리 및 카테고리별 파트 분담 / 프로젝트 코딩 가이드 작성 및 샘플페이지 작성 / 개발페이지 코딩 결함 수정</li>
+										</ul>
+									</div>
+									</li>
+									<li><a href="#">&#8718; <strong>SK 브로드밴드 TV  :</strong>  사이트 개편 / 참여율 100% <span>&#10010;</span></a>
+									<div class="detail">
+										<h5>프로젝트명 : SK 브로드밴드 TV 개편</h5>
+										<ul>
+											<li><span>&#9676;</span> 수행기간 : 2008.12 ~ 2009.02</li>
+											<li><span>&#9676;</span> 담당업무 : 웹퍼블리싱 PL</li>
+											<li><span>&#9676;</span> 투입인원 : 웹퍼블리셔 2명</li>
+											<li><span>&#9676;</span> 수행내용 : Html 코딩 및 자바스크립트 / 일정관리 및 카테고리별 파트 분담 / 프로젝트 코딩 가이드 작성 및 샘플페이지 작성</li>
+										</ul>
+									</div>
+									</li>
+									<li><a href="#">&#8718; <strong>2008 SK 텔렘콤 Tworld :</strong>  http://www.tworld.co.kr / 참여율 100% <span>&#10010;</span></a>
+									<div class="detail">
+										<h5>프로젝트명 :  2008 SK 텔렘콤 Tworld 사이트 개편</h5>
+										<ul>
+											<li><span>&#9676;</span> 사이트주소 : <a href="http://www.tworld.co.kr" target="_blank">http://www.tworld.co.kr</a></li>
+											<li><span>&#9676;</span> 수행기간 : 2008.08 ~ 2008.11</li>
+											<li><span>&#9676;</span> 담당업무 : 웹퍼블리싱 PL</li>
+											<li><span>&#9676;</span> 투입인원 : 웹퍼블리셔 3명</li>
+											<li><span>&#9676;</span> 수행내용 : Html 코딩 및 jQuery / 일정관리 및 카테고리별 파트 분담 / 프로젝트 코딩 가이드 작성 및 샘플페이지 작성 / 개발페이지 코딩 결함 수정</li>
+										</ul>
+									</div>
+									</li>
+									<li><a href="#">&#8718; <strong>2007 SK 텔렘콤 Tworld :</strong>  http://www.tworld.co.kr / 참여율 100% <span>&#10010;</span></a>
+									<div class="detail">
+										<h5>프로젝트명 :  2007 SK 텔렘콤 Tworld 사이트 개편</h5>
+										<ul>
+											<li><span>&#9676;</span> 사이트주소 : <a href="http://www.tworld.co.kr" target="_blank">http://www.tworld.co.kr</a></li>
+											<li><span>&#9676;</span> 수행기간 : 2007.07 ~ 2007.12</li>
+											<li><span>&#9676;</span> 담당업무 : 웹퍼블리싱 PL</li>
+											<li><span>&#9676;</span> 투입인원 : 웹퍼블리셔 7명</li>
+											<li><span>&#9676;</span> 수행내용 : Html 코딩 및 jQuery / 일정관리 및 카테고리별 파트 분담 / 프로젝트 코딩 가이드 작성 및 샘플페이지 작성 / 개발페이지 코딩 결함 수정</li>
+										</ul>
+									</div>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<h4>| 2006. 09 - 2007. 04 / NEOFISH</h4>
+								<ul class="lists">
+									<li><a href="#">&#8718; <strong>쇼핑몰 와와닷컴 :</strong> http://www.waawaa.com / 참여율 100% </a> </li>
+								</ul>
+							</li>
+							<li>
+								<h4>| 2005. 01 - 2005. 07 / INFOREX</h4>
+								<ul class="lists">
+									<li><a href="#">&#8718; <strong>오즈뮤직 :</strong> 서비스 중단 / 참여율 100% </a> </li>
+								</ul>
+							</li>
+							<li>
+								<h4>| 2002.07 - 2004.11 / KL COMMUNICATION</h4>
+								<ul class="lists">
+									<li><a href="#">&#8718; <strong>한경 대외협력국 :</strong> 서비스 중단 / 참여율 100% </a> </li>
+									<li><a href="#">&#8718; <strong>B.V.D. NewYork :</strong> 사이트 개편 / 참여율 100% </a> </li>
+									<li><a href="#">&#8718; <strong>2003 011 스타팅 콘서트 :</strong> 사이트 개편 / 참여율 100% </a> </li>
+									<li><a href="#">&#8718; <strong>MBC ESPN :</strong> 사이트 개편 / 참여율 100% </a> </li>
+								</ul>
+							</li>
+							<li>
+								<h4>| 2001.06 - 2001.12 / EMOTION</h4>
+								<ul class="lists">
+									<li><a href="#">&#8718; <strong>포털사이트 넷츠고(네이트 전신) :</strong> 서비스 중단 / 참여율 100% </a> </li>
+								</ul>
+							</li>
+						</ul>
+					</form>
+				</article>
+			</div>
+		</section>
+	</div>
+	<footer>
+		<div class="inner-c clfix">
+			<div class="fl clfix">
+				<h2>Category</h2>
+				<nav>
+					<ul class="clfix">
+						<li><a href="#">Main</a></li>
+						<li><a href="#">Work</a></li>
+						<li><a href="#">Profile</a></li>
+						<li><a href="#">Study</a></li>
+						<li><a href="#">Bookmark</a></li>
+					</ul>
+				</nav>
+			</div>
+			<p class="copyright">Copyright ⓒ MYLKO 2014 All rights reserved.</p>
+		</div>
+	</footer>
+</div>
+</body>
+</html>

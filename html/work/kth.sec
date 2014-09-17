@@ -1,0 +1,11 @@
+<h1>KTH 컨버전스 영상서비스</h1>
+<div class="clfix">
+	<img src="/home/images/img_playy.jpg" class="responsive-img" alt="" />
+	<ul class="desc-list">
+		<li><span>Project</span> KTH 컨버전스 영상서비스</li>
+		<li><span>Client</span> KTH</li>
+		<li><span>Date</span> 2010.10 ~ 2010.12</li>
+		<li><span>Url</span> <a href="http://www.playy.co.kr/" target="_blank">http://www.playy.co.kr/</a></li>
+		<li>jQuery / Web Publishing</li>
+	</ul>
+</div>

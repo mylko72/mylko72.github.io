@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<title>UI Laboratory</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link href='http://fonts.googleapis.com/css?family=Pinyon+Script' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Denk+One' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Anton' rel='stylesheet' type='text/css'>
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="http://mylko72.maru.net/home/inc/css/common.css" />
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="http://mylko72.maru.net/home/inc/js/lib/jquery.animate-enhanced.min.js"></script>
+	<script type="text/javascript" src="http://mylko72.maru.net/home/inc/js/lib/tram.js"></script>
+	<script type="text/javascript" src="http://mylko72.maru.net/home/inc/js/common.js"></script>
+	<script type="text/javascript" src="http://mylko72.maru.net/home/inc/js/utilities.js"></script>
+	<script type="text/javascript" src="http://mylko72.maru.net/home/inc/js/bookmark.js"></script>
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<style type="text/css" media="screen">
+		@import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css" ) ;
+	</style>
+
+	<style type="text/css">
+		#contents h2.page-tit {padding:30px 0 30px 20px; background-color:#b5d1e6; color:#000;}
+
+		h3.tit {margin-bottom:30px;}
+		h4.tits {margin-bottom:20px;}
+		h5.titss {margin-bottom:10px; font-size:0.85em;}
+		
+		figure {margin-bottom:30px; text-align:center;}
+		figcaption {padding:15px 0; text-align:center;}
+
+		p {font-size:1em; line-height:1.5em;}
+		code {font-size:15px; border:1px solid #D2D2D2; padding:2px 5px; border-radius:8px; -moz-border-radius:8px; -webkit-border-radius:8px; -o-border-radius:8px; -ms-border-radius:8px; background-color:#F4F4F4;}
+
+		.red {color:red;}
+
+		.jump-module {margin-bottom:40px;}
+			.jump-module .jump-nav {padding-left:30px;-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+			.jump-module .jump-nav li {margin-bottom:10px;}
+			.jump-module .jump-nav li span {display:inline-block; margin-right:10px; color:#ff3f04;}
+			.jump-module.docked {position:fixed; top:0; width:100%; background:#f1f1f1; z-index:99; padding:15px 5px; border-top:1px solid #a4a4a4; border-bottom:1px solid #a4a4a4; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+			.jump-module.docked .jump-nav {width:100%; overflow:hidden;}
+			.jump-module.docked .jump-nav li {float:left; margin-right:20px;}
+			.jump-module.docked .jump-nav li.last {float:right;}
+			.jump-module.docked .jump-nav li.last .gotop {display:block;}
+
+		.list {margin-bottom:50px;}
+		.list li {margin-bottom:5px;}
+
+		table.tbl-x {width:100%; margin-bottom:30px; border-top:1px solid #aaa; border-bottom:1px solid #aaa; table-layout:fixed;}
+		table.tbl-x caption {width:auto; height:auto; visibility:visible; font-size:1em; line-height:1.5em; text-align:left; font-weight:bold;}
+		table.tbl-x th {padding:4px 0; border-right:1px solid #dedede; border-bottom:1px solid #dedede; background:#fafafa;}
+		table.tbl-x th.al {text-align:left; padding-left:10px;}
+		table.tbl-x td {padding:2px 10px; border-bottom:1px solid #eaeaea; border-right:1px solid #eaeaea; background:#fafafa; font-size:0.85em; color:#666; line-height:1.8em;}
+		table.tbl-x .none {border-right:none;}
+	</style>
+</head>
+<body>
+
+<div id="body-wrapper">
+	<header>
+		<div class="inner-c">
+			<!--<div class="device">
+				<ul>
+					<li><a href="../icon/mobile"><i class="fa fa-mobile-phone"></i>mobile</a></li>
+					<li><a href="../icon/tablet"><i class="fa fa-tablet"></i> tablet</a></li>
+					<li><a href="../icon/desktop"><i class="fa fa-desktop"></i> desktop</a></li>
+				</ul>	
+			</div>-->
+			<div id="gnb" class="clfix">
+				<h1>LeeKwanOh<span>Web Publisher & UI Developer</span></h1>
+			</div>
+		</div>
+	</header>
+	<div id="contents">
+		<h2 class="page-tit">
+			<div class="inner-c clfix">
+				Vim	
+			</div>
+		</h2>
+		<section>
+			<div class="inner-c clfix">
+
+				<p class="mb20">Vim 에디터는 유닉스 세상에서 오랜 전통을 이어온 Vi 에디터의 진보된 형태이다. Vi와 Vim은 태생이 유닉스 환경이다보니, 텍스트 환경인 터미널에서 사용되도록 디자인되어 있다. 메모장과 유사해 보이는 Vim 에디터의 첫인상은 화려하고 막강한 기능으로 무장된 요즘 윈도우 기반의 에디터를 접해 봤다면 황당하고 당혹감 마저 느낄 것이다. 하지만 그래픽 환경보다 실행 속도가 수십 배는 빠르고 용량도 작으며 성능도 뛰어나다면 뭔가 허전해 보이는 Vim이 가지고 있는 매력이 궁금하지 않는가?? </p>
+
+				<div class="jump-module inner-x">
+					<ul class="jump-nav list">
+						<li><span>&#9649;</span><a href="#" data-target=".demo" class="jump-link">Vim 명령어</a></li>
+						<li><span>&#9649;</span><a href="#" data-target=".what-it-does" class="jump-link">옵션 및 에러처리</a></li>
+						<li><span>&#9649;</span><a href="#" data-target=".usage" class="jump-link">문자열 관련 기능</a></li>
+						<li><span>&#9649;</span><a href="#" data-target=".download" class="jump-link">파일 관련 기능</a></li>
+						<li><span>&#9649;</span><a href="#" data-target=".credits" class="jump-link">편집 기술</a></li>
+						<li><span>&#9649;</span><a href="#" data-target=".license" class="jump-link">자동화</a></li>
+					</ul>
+				</div>
+
+				<figure>
+					<img src="/home/images/img_vim_screen.jpg" alt="Vim 화면" width="500" height="383">
+					<figcaption>[Vim 화면]</figcaption>
+				</figure>
+
+				<p class="mb20">다음은 Vim 에디터이 특징이다.</p>
+				<ul class="list">
+					<li>- 대부분의 운영체제를 지원한다.</li>
+					<li>- 매우 작고 빠르다. (낮은 사양에서도 잘 작동한다.)</li>
+					<li>- 텍스트 환경인 터미널이나 콘솔에서도 작동한다.</li>
+					<li>- GUI 환경도 지원한다.</li>
+					<li>- 프로그래밍 언어별 특수 기능을 지원한다.</li>
+					<li>- 플러그인에 따라 다양한 확장 기능을 지원한다.</li>
+					<li>- 내장 스크립트로 원하는 기능을 만들 수 있다.(커스터마이징 등)</li>
+					<li>- 외부 명령어와 연동할 수 있다.</li>
+					<li>- 작업 녹화나 자동화, 배치 기능을 제공한다.</li>
+				</ul>
+
+				<article>
+					<h3 class="tit">Vim 명령어</h3>
+
+					<p class="mb20">Vim은 일반적으로 마우스를 쓰지 않으므로, 키보드로 범위를 지정하거나 삭제, 복사, 붙이기등 모든 명령어를 단축키로 실행한다. Vim을 능숙하게 사용하기 위해서는 아래의 명령어 단축키와 이동 단축키등을 손가락이 기억할 수 있도록 training을 할 필요가 있다.</p>
+
+					<figure>
+						<img src="/home/images/img_vim_key.jpg" alt="Vim 명령어 단축키" width="1024" height="750">
+						<figcaption>[Vim 명령어 단축키]</figcaption>
+					</figure>
+
+					<h4 class="tits">&#10074; 입력하기</h4>
+
+					<p class="mb20">Vim은 일반모드(normal mode)라는 상태로 시작되는데 입력을 하려면 입력모드(insert mode)로 전환해야 한다. 일반 모드에서 입력 모드로 전환하는 키는 <code>i</code> 이다. 입력 모드로 전환되면 화면 맨 아래에 현재 모드를 알려주는 '-INSERT-'가 표시되며 이후로는 모든 키가 입력된다. 그외 입력 모드로 전환하는 키는 아래와 같다.</p> 
+
+					<table class="tbl-x mb10" summary="">
+						<caption>입력모드 전환 키</caption>
+						<colgroup>
+							<col width="20%">
+							<col width="80%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>명령어</th>
+								<th class="none">설명</th>
+							</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<th class="al">a, A</th>
+							<td class="none"><code>a</code>(append)는 현재 커서 위치에서 한 칸 뒤로 이동한 후 입력 모드로 전환된다.<br /><code>A</code>는 현재 행의 끝으로 이동한 후, 입력 모드로 전환된다.</td>
+						</tr>
+						<tr>
+							<th class="al">i, I</th>
+							<td class="none"><code>i</code>(insert)는 현재 커서 위치에서 입력 모드로 전환된다.<br /><code>I</code>는 현재 행의 맨 앞으로 이동 후, 입력 모드로 전환된다.</td>
+						</tr>
+						<tr>
+							<th class="al">o, O</th>
+							<td class="none"><code>o</code>(open line)는 현재 행 아래에 새로운 행을 하나 만든 후 입력 모드로 전환된다.<br /><code>O</code>는 현재 행 위에 새로운 행을 하나 만든 후 입력 모드로 전환된다.</td>
+						</tr>
+						<tr>
+							<th class="al">R</th>
+							<td class="none">수정(replace) 모드로 작동하므로 모든 글자는 덧쓰여진다.</td>
+						</tr>
+						</tbody>
+					</table>
+
+					<h4 class="tits">&#10074; 저장하기</h4>
+
+					<p class="mb20">입력한 내용을 저장하려면 명령행 모드(command line mode)에서 <code>:w</code>를 누르고 엔터를 누르면 파일이 저장된다. 명령행 모드는 일반모드에서 콜론(:)을 누르면 명령행 모드로 전환된다. 또한 다른 이름으로 저장하려면 <code>:w 파일이름</code>으로 입력하면 다른 이름으로 저장할 수 있다.</p>
+
+					<h4 class="tits">&#10074; 종료하기</h4>
+
+					<p class="mb20">Vim을 종료하는 명령어는 명령행 모드에서 <code>:q</code>로 명령한다. 또한 저장후 종료하려면 <code>:wq</code>라고 입력해도 된다.</p>
+
+					<h4 class="tits">&#10074; 커서 이동하기</h4>
+
+					<figure>
+						<img src="/home/images/img_vim_key02.jpg" alt="Vim 이동 단축키" width="1024" height="662">
+						<figcaption>[Vim 이동 단축키]</figcaption>
+					</figure>
+
+					<h5 class="titss">&#65290; 상하좌우로 이동하기</h5>
+
+					<p class="mb20">Vim에서 커서 이동 영문키는 j키를 중심으로 <code>h</code>, <code>j</code>, <code>k</code>, <code>l</code>이며, 주의할 점은 꼭 소문자로 써야 한다. 상하좌우로 이동하는 키의 경우에는 앞에 숫자를 입력해서 반복 횟수를 지정할 수 있다. 예를 들어 <code>j</code>는 한칸 아래로 이동하는데, <code>10j</code>라고 하면 열 칸을 아래로 이동한다. 그리고 <code>^</code>은 공백을 제외하고 현재 행의 내용이 처음 등장하는 곳으로 이동한다. <code>$</code>는 현재 행의 맨 끝으로 이동한다.</p>
+
+					<h5 class="titss">&#65290; 화면 스크롤하기</h5>
+
+					<table class="tbl-x mb10" summary="">
+						<caption></caption>
+						<colgroup>
+							<col width="20%">
+							<col width="80%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>이동 단축키</th>
+								<th class="none">설명</th>
+							</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<th class="al"><code>Ctrl-b</code></th>
+							<td class="none">위로 한 화면 스크롤</td>
+						</tr>
+						<tr>
+							<th class="al"><code>Ctrl-f</code></th>
+							<td class="none">아래로 한 화면 스크롤</td>
+						</tr>
+						<tr>
+							<th class="al"><code>Ctrl-u</code></th>
+							<td class="none">위로 1/2 화면 스크롤</td>
+						</tr>
+						<tr>
+							<th class="al"><code>Ctrl-d</code></th>
+							<td class="none">아래로 1/2 화면 스크롤</td>
+						</tr>
+						</tbody>
+					</table>
+
+					<h5 class="titss">&#65290; 문서 특정 위치로 이동하기</h5>
+
+					<table class="tbl-x mb10" summary="">
+						<caption></caption>
+						<colgroup>
+							<col width="20%">
+							<col width="80%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>이동 단축키</th>
+								<th class="none">설명</th>
+							</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<th class="al"><code>[#]gg</code></th>
+							<td class="none">#행으로 이동한다. #이 생략되면 첫행으로 이동한다.</td>
+						</tr>
+						<tr>
+							<th class="al"><code>[#]G</code></th>
+							<td class="none">#행으로 이동한다. #이 생략되면 마지막 행으로 이동한다.</td>
+						</tr>
+						<tr>
+							<th class="al"><code>:#</code></th>
+							<td class="none">#행으로 이동한다.</td>
+						</tr>
+						</tbody>
+					</table>
+
+					<h5 class="titss">&#65290; 현재 위치 확인하기</h5>
+
+					<p class="mb20">현재 행의 위치 정보를 보기 위해서는 <code>Ctrl-g</code>를 누르면 하단 상태 바에 표시한다.</p>
+
+					<h4 class="tits">&#10074; 삭제, 복사, 붙이기, 취소하기</h4>
+
+					<h5 class="titss">&#65290; 삭제하기</h5>
+
+					<table class="tbl-x mb10" summary="">
+						<caption></caption>
+						<colgroup>
+							<col width="20%">
+							<col width="80%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>명령어</th>
+								<th class="none">설명</th>
+							</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<th class="al"><code>x</code></th>
+							<td class="none">커서에 위치한 문자 삭제 (<code>Delete</code>키와 같음)</td>
+						</tr>
+						<tr>
+							<th class="al"><code>dd</code>, <code>:d</code></th>
+							<td class="none">현재 행을 삭제</td>
+						</tr>
+						<tr>
+							<th class="al"><code>[#]dd</code></th>
+							<td class="none">#행 만큼 줄을 삭제한다. 예를 들어 3dd라고 하면 세 줄을 삭제한다.</td>
+						</tr>
+						<tr>
+							<th class="al"><code>D</code></th>
+							<td class="none"><span class="red">현재 컬럼 위치에서 현재 행의 끝부분까지 삭제 (<code>d$</code>와 동일)</td>
+						</tr>
+						<tr>
+							<th class="al"><code>J</code></th>
+							<td class="none">아래 행을 현재 행의 끝에 붙임 (아래 행의 앞부분 공백은 공백 하나로 치환)</td>
+						</tr>
+						<tr>
+							<th class="al"><code>gJ</code></th>
+							<td class="none">아래 행을 현재 행의 끝에 붙임 (아래 행의 앞부분 공백은 그대로 유지)</td>
+						</tr>
+						</tbody>
+					</table>
+
+					<h5 class="titss">&#65290; 붙여넣기</h5>
+
+					<p class="mb20">Vim에서는 삭제 기능이 무조건 잘라내기로 작동하며 삭제된 내용은 임시 저장소 역할을 하는 레지스터에 저장된다. <code>p</code> 명령어는 삭제된 내용을 붙여 넣는다.</p>
+
+					<table class="tbl-x mb10" summary="">
+						<caption></caption>
+						<colgroup>
+							<col width="20%">
+							<col width="80%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>명령어</th>
+								<th class="none">설명</th>
+							</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<th class="al"><code>p</code>, <code>:p</code></th>
+							<td class="none">현재 행에 붙여 넣는다. 개행 문자가 포함된 경우에는 현재 행의 아래에 붙여 넣는다.</td>
+						</tr>
+						<tr>
+							<th class="al"><code>[#]p</code></th>
+							<td class="none">p명령을 #만큼 반복한다. 만약 5p라고 하면 p 명령이 다섯 번 반복된다.</td>
+						</tr>
+						<tr>
+							<th class="al"><code>P</code></th>
+							<td class="none">현재 행의 위쪽에 붙인다.</td>
+						</tr>
+						</tbody>
+					</table>
+
+					<h5 class="titss">&#65290; 복사하기</h5>
+
+					<table class="tbl-x mb10" summary="">
+						<caption></caption>
+						<colgroup>
+							<col width="20%">
+							<col width="80%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>명령어</th>
+								<th class="none">설명</th>
+							</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<th class="al"><code>yy</code>, <code>:y</code></th>
+							<td class="none">현재 행을 레지스터에 복사한다.</td>
+						</tr>
+						<tr>
+							<th class="al"><code>[#]y</code></th>
+							<td class="none">3yy라고 하면 현재 행을 기준으로 세 행을 복사한다.</td>
+						</tr>
+						</tbody>
+					</table>
+
+
+					<table style="width:800px;" class="tbl-x mb10" summary="">
+						<caption></caption>
+						<colgroup>
+							<col width="*">
+							<col width="10%">
+							<col width="18%">
+							<col width="18%">
+							<col width="22%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>항목</th>
+								<th>페이지</th>
+								<th>단가</th>
+								<th>금액</th>
+								<th class="none">할인금액</th>
+							</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<th class="al">메인</th>
+							<td>1P</td>
+							<td>200,000원</td>
+							<td>200,000원</td>
+							<td class="none">-</td>
+						</tr>
+						<tr>
+							<th class="al">레이아웃</th>
+							<td>1P</td>
+							<td>100,000원</td>
+							<td>100,000원</td>
+							<td class="none">-</td>
+						</tr>
+						<tr>
+							<th class="al">상품 리스트(썸네일)</th>
+							<td>8P</td>
+							<td>80,000원</td>
+							<td>640,000원</td>
+							<td class="none">384,000원 (-256,000)</td>
+						</tr>
+						<tr>
+							<th class="al">상품 상세</th>
+							<td>5P</td>
+							<td>150,000원</td>
+							<td>750,000원</td>
+							<td class="none">450,000원</td>
+						</tr>
+						<tr>
+							<th class="al">이벤트 리스트(썸네일)</th>
+							<td>2P</td>
+							<td>80,000원</td>
+							<td>160,000원</td>
+							<td class="none">96,000원</td>
+						</tr>
+						<tr>
+							<th class="al">이벤트 상세</th>
+							<td>2P</td>
+							<td>50,000원</td>
+							<td>100,000원</td>
+							<td class="none">60,000원</td>
+						</tr>
+						<tr>
+							<th class="al">이용후기 리스트(텍스트)</th>
+							<td>6P</td>
+							<td>50,000원</td>
+							<td>300,000원</td>
+							<td class="none">180,000원</td>
+						</tr>
+						<tr>
+							<th class="al">이용후기 상세</th>
+							<td>6P</td>
+							<td>50,000원</td>
+							<td>300,000원</td>
+							<td class="none">180,000원</td>
+						</tr>
+						<tr>
+							<th class="al">브랜드</th>
+							<td>2P</td>
+							<td>50,000원</td>
+							<td>100,000원</td>
+							<td class="none">-</td>
+						</tr>
+						<tr>
+							<th class="al">고객센터 메인</th>
+							<td>1P</td>
+							<td>80,000원</td>
+							<td>80,000원</td>
+							<td class="none">-</td>
+						</tr>
+						<tr>
+							<th class="al">고객센터 리스트(텍스트)</th>
+							<td>3P</td>
+							<td>50,000원</td>
+							<td>150,000원</td>
+							<td class="none">90,000원</td>
+						</tr>
+						<tr>
+							<th class="al">고객센터 상세</th>
+							<td>3P</td>
+							<td>50,000원</td>
+							<td>150,000원</td>
+							<td class="none">90,000원</td>
+						</tr>
+						<tr>
+							<th class="al">마이페이지 메인</th>
+							<td>1P</td>
+							<td>80,000원</td>
+							<td>80,000원</td>
+							<td class="none">-</td>
+						</tr>
+						<tr>
+							<th class="al">마이페이지 리스트(썸네일)</th>
+							<td>2P</td>
+							<td>80,000원</td>
+							<td>160,000원</td>
+							<td class="none">96,000원</td>
+						</tr>
+						<tr>
+							<th class="al">마이페이지 정보수정</th>
+							<td>1P</td>
+							<td>50,000원</td>
+							<td>50,000원</td>
+							<td class="none">-</td>
+						</tr>
+						<tr>
+							<th class="al">시안확인/쿠폰&적립금</th>
+							<td>2P</td>
+							<td>50,000원</td>
+							<td>100,000원</td>
+							<td class="none">-</td>
+						</tr>
+						<tr>
+							<th class="al">주문결제</th>
+							<td>5P</td>
+							<td>70,000원</td>
+							<td>350,000원</td>
+							<td class="none">-</td>
+						</tr>
+						<tr>
+							<th class="al">회원가입</th>
+							<td>3P</td>
+							<td>50,000원</td>
+							<td>150,000원</td>
+							<td class="none">-</td>
+						</tr>
+						<tr>
+							<th class="al">푸터메뉴</th>
+							<td>3P</td>
+							<td>50,000원</td>
+							<td>150,000원</td>
+							<td class="none">-</td>
+						</tr>
+						<tr style="background-color:#000; color:red; font-weight:bold;">
+							<th class="al">총금액(견적)</th>
+							<td>57P</td>
+							<td>-</td>
+							<td>3,970,000원</td>
+							<td class="none">2,986,000원</td>
+						</tr>
+						</tbody>
+					</table>
+
+					<table style="width:800px;" class="tbl-x mb10" summary="">
+						<caption></caption>
+						<colgroup>
+							<col width="*">
+							<col width="18%">
+							<col width="18%">
+							<col width="18%">
+							<col width="18%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>항목</th>
+								<th>페이지</th>
+								<th>단가</th>
+								<th>금액</th>
+								<th class="none">할인금액</th>
+							</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<th class="al">캐러젤 슬라이드</th>
+							<td>8ea</td>
+							<td>100,000원</td>
+							<td>800,000원</td>
+							<td class="none">480,000원</td>
+						</tr>
+						<tr>
+							<th class="al">플라잉 배너 및 메뉴</th>
+							<td>1ea</td>
+							<td>70,000원</td>
+							<td>70,000원</td>
+							<td class="none">-</td>
+						</tr>
+						<tr style="background-color:#000; color:red; font-weight:bold;">
+							<th class="al">총금액(견적)</th>
+							<td>-</td>
+							<td>-</td>
+							<td>870,000원</td>
+							<td class="none">550,000원</td>
+						</tr>
+						</tbody>
+					</table>
+
+					<table style="width:600px;" class="tbl-x mb10" summary="">
+						<caption></caption>
+						<colgroup>
+							<col width="*" />
+							<col width="25%" />
+							<col width="25%" />
+							<col width="25%" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th>웹퍼블리싱</th>
+								<th>스크립트</th>
+								<th>개발</th>
+								<th class="none">총금액</th>
+							</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td class="ar">2,950,000원</td>
+							<td class="ar">550,000원</td>
+							<td class="ar">4,700,000원</td>
+							<td class="ar none">8,200,000원</td>
+						</tr>
+						</tbody>
+					</table>
+					<table style="width:600px;" class="tbl-x mb10" summary="">
+						<caption></caption>
+						<colgroup>
+							<col width="*" />
+							<col width="25%" />
+							<col width="25%" />
+							<col width="25%" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th>웹퍼블리싱</th>
+								<th>개발</th>
+								<th>테스트</th>
+								<th class="none">총기간</th>
+							</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td class="ac">2 주</td>
+							<td class="ac">3 주</td>
+							<td class="ac">1 주</td>
+							<td class="ac none">6 주(약 1개월 15일)</td>
+						</tr>
+						</tbody>
+					</table>
+					<table style="width:800px;" class="tbl-x mb10" summary="">
+						<caption></caption>
+						<colgroup>
+							<col width="*" />
+							<col width="25%" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th>항목</th>
+								<th class="none">단가</th>
+							</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td class="al">메인 및 데이타 연동 페이지 작업</td>
+							<td class="al none">1,000,000원</td>
+						</tr>
+						<tr>
+							<td class="al">게시판 작업( 상품. 이벤트. 이용후기. 고객 센터. 등등)</td>
+							<td class="al none">1,600,000원</td>
+						</tr>
+						<tr>
+							<td class="al">쿠폰 및 적립금</td>
+							<td class="al none">600,000원</td>
+						</tr>
+						<tr>
+							<td class="al">회원가입 및 정보수정</td>
+							<td class="al none">500,000원</td>
+						</tr>
+						<tr>
+							<td class="al">결제 연동 및 히스토리 데이타</td>
+							<td class="al none">1,000,000원</td>
+						</tr>
+						<tr style="background-color:#000; color:red; font-weight:bold;">
+							<th class="al">총금액(견적)</th>
+							<td class="none">4,700,000원</td>
+						</tr>
+						</tbody>
+					</table>
+				</article>
+
+				
+			</div>
+		</section>
+	</div>
+	<footer>
+		<div class="inner-c clfix">
+			<div class="fl clfix">
+				<h2>Category</h2>
+				<nav>
+					<ul class="clfix">
+						<li><a href="#">Main</a></li>
+						<li><a href="#">Work</a></li>
+						<li><a href="#">Profile</a></li>
+						<li><a href="#">Study</a></li>
+						<li><a href="#">Bookmark</a></li>
+					</ul>
+				</nav>
+			</div>
+			<p class="copyright">Copyright ⓒ MYLKO 2014 All rights reserved.</p>
+		</div>
+	</footer>
+</div>
+<div id="bookmarkTemplate" style="display:none;">
+	<div class="contents">
+		<h3><em>test</em><i class="fa fa-caret-right"></i></h3>
+
+		<ul class="lists">
+			<li>
+				<h4><em>test -</em></h4>
+				<div class="info">
+					<a href="#" target="_blank">http://kr-css3.tistory.com/</a></h4>
+					<p class="explain">test test.</p>
+					<p class="tags">
+						<span><i class="fa fa-tag"></i> <a href="#">text-shadow</a></span>
+					</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+
+</body>
+</html>
