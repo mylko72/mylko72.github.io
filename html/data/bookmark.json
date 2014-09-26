@@ -96,6 +96,13 @@
             "explain": "Node.js 문서의 한글 번역본",
 			"rate" : "",
 			"tags" : ["Node", "Guide", "Manual"]
+        },
+        {
+            "site": "Inside.js",
+            "url": "http://nodejs-kr.org/insidejs/archives/category/node",
+            "explain": "Node.js를 활용한 유용한 정보",
+			"rate" : "",
+			"tags" : ["Node"]
         }
 	],
     "HTML5" :[
