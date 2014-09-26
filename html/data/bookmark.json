@@ -20,6 +20,13 @@
             "explain": "다양한 정규표현식 패턴과 도구 소개",
 			"rate" : "",
 			"tags" : ["정규표현식", "패턴", "도구"]
+        },
+        {
+            "site": "Grunt 공식 사이트 한글판",
+            "url": "http://gruntjs-kr.herokuapp.com/",
+            "explain": "Grunt 공식 사이트를 번역한 비공식 사이트",
+			"rate" : "",
+			"tags" : ["Grunt", "자동화"]
         }
 	],
     "jQuery" :[
