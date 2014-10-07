@@ -15,6 +15,13 @@
 			"tags" : ["번역문서", "객체", "함수", "Array", "타입"]
         },
         {
+            "site": "Dottoro Web Reference",
+            "url": "http://help.dottoro.com/ljjfxqdr.php",
+            "explain": "JavaScript를 core와 client-side로 나누어 설명한 레퍼런스 사이트",
+			"rate" : "",
+			"tags" : ["Core", "Client Side", "레퍼런스"]
+        },
+        {
             "site": "생활코딩 - 정규표현식",
             "url": "http://opentutorials.org/course/909/5142",
             "explain": "다양한 정규표현식 패턴과 도구 소개",
@@ -36,6 +43,20 @@
             "explain": "Taeyo의 jQuery 프로그래밍",
 			"rate" : "",
 			"tags" : ["셀렉터", "폼", "event"]
+        },
+		{
+            "site": "CMSFactory.NET",
+            "url": "http://www.cmsfactory.net/jquery",
+            "explain": "유용한 플러그인과 메서드를 설명한 jQuery 강좌",
+			"rate" : "",
+			"tags" : ["플러그인", "메서드", "강좌"]
+        },
+		{
+            "site": "WEBSAMO",
+            "url": "http://www.websamo.com/bbs/board.php?bo_table=jquery_api",
+            "explain": "jQuery API를 한글로 번역하여 소개",
+			"rate" : "",
+			"tags" : ["API", "메서드", "강좌"]
         }
 	],
     "AngularJS" :[
