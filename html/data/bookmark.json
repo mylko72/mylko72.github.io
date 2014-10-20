@@ -57,6 +57,13 @@
             "explain": "jQuery API를 한글로 번역하여 소개",
 			"rate" : "",
 			"tags" : ["API", "메서드", "강좌"]
+        },
+		{
+            "site": "Mastercafe",
+            "url": "http://www.mastercafe.com/index.asp?zona=tutorial",
+            "explain": "jQuery의 다양한 효과와 예제로 살펴본 Tutorials",
+			"rate" : "",
+			"tags" : ["효과", "예제", "Tutorials"]
         }
 	],
     "AngularJS" :[
@@ -219,6 +226,13 @@
             "explain": "이미지 전이를 강화하는 CSS3 필터",
 			"rate" : "",
 			"tags" : ["filter", "transition"]
+        },
+        {
+            "site": "CSS Layout",
+            "url": "http://ko.learnlayout.com/",
+            "explain": "CSS 레이아웃을 배울 수 있는 한국어 버전",
+			"rate" : "",
+			"tags" : ["Layout", "transition"]
         }
 
 	],
@@ -303,6 +317,41 @@
             "explain": "파워포인트에 날개를 달아줄 Power mock up 플러그인 프로그램",
 			"rate" : "",
 			"tags" : ["Powerpoint", "Mockup", "Sketch", "Plugin"]
+        },
+        {
+            "site": "PATTERNTAP",
+            "url": "http://patterntap.com/",
+            "explain": "웹 UI 패턴들을 볼 수 있는 사이트",
+			"rate" : "",
+			"tags" : ["UI", "패턴"]
+        },
+        {
+            "site": "PATTERNTAP",
+            "url": "http://patterntap.com/",
+            "explain": "웹 UI 패턴들을 볼 수 있는 사이트",
+			"rate" : "",
+			"tags" : ["UI", "패턴"]
+        },
+        {
+            "site": "Mobile Patterns",
+            "url": "http://www.mobile-patterns.com/",
+            "explain": "Calendar, feeds, lists 등 섹션별로 모바일 UI 패턴 화면을 제공",
+			"rate" : "",
+			"tags" : ["UI", "모바일", "패턴"]
+        },
+        {
+            "site": "MOBILEAWESOMENESS",
+            "url": "http://www.mobileawesomeness.com/",
+            "explain": "평가단의 평가를 통해서 모바일 웹 UI 패턴을 볼 수 있는 사이트",
+			"rate" : "",
+			"tags" : ["UI", "모바일", "패턴"]
+        },
+        {
+            "site": "Android Patterns",
+            "url": "http://www.androidpatterns.com",
+            "explain": "사용성 측면에서 UI의 패턴과 예시를 들어 정보를 제공",
+			"rate" : "",
+			"tags" : ["UI", "모바일", "패턴", "안드로이드"]
         }
 	],
     "VIM" :[
