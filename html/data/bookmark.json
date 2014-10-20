@@ -326,13 +326,6 @@
 			"tags" : ["UI", "패턴"]
         },
         {
-            "site": "PATTERNTAP",
-            "url": "http://patterntap.com/",
-            "explain": "웹 UI 패턴들을 볼 수 있는 사이트",
-			"rate" : "",
-			"tags" : ["UI", "패턴"]
-        },
-        {
             "site": "Mobile Patterns",
             "url": "http://www.mobile-patterns.com/",
             "explain": "Calendar, feeds, lists 등 섹션별로 모바일 UI 패턴 화면을 제공",
