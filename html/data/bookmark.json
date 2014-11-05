@@ -94,6 +94,41 @@
             "explain": "AngularJS의 code와 예제를 확인할 수 있는 레퍼런스 사이트",
 			"rate" : "",
 			"tags" : ["코드", "예제", "레퍼런스"]
+        },
+        {
+            "site": "Programmingsummaries",
+            "url": "http://programmingsummaries.tistory.com/229",
+            "explain": "AngularJS를 공부하는데 필요한 정보를 제공하는 블로그",
+			"rate" : "",
+			"tags" : ["개발", "레퍼런스"]
+        },
+        {
+            "site": "AngularJS Cheat Sheet",
+            "url": "http://www.cheatography.com/proloser/cheat-sheets/angularjs/",
+            "explain": "AngularJS의 기능들을 요약한 Cheat Sheet",
+			"rate" : "",
+			"tags" : ["Cheat Sheet"]
+        },
+        {
+            "site": "Summernote용 AngularJS 디렉티브",
+            "url": "http://blog.outsider.ne.kr/1019",
+            "explain": "부트스트랩 기반의 WYSIWYG 에디터인 Summernote의 Angular 버전",
+			"rate" : "",
+			"tags" : ["Summernote", "부트스트랩", "에디터"]
+        },
+        {
+            "site": "angular-scroll",
+            "url": "https://github.com/oblador/angular-scroll",
+            "explain": "one-page 웹사이트를 위한 auto scroll 기능을 angularjs로 구현",
+			"rate" : "",
+			"tags" : ["Auto Scroll", "Scroll", "One page"]
+        },
+        {
+            "site": "Programing is Fun",
+            "url": "http://netframework.tistory.com/category/Dynamic%20Language",
+            "explain": "angularJs를 이용한 single page web application 개발에 필요한 정보",
+			"rate" : "",
+			"tags" : ["Single Page", "SPA"]
         }
 	],
     "Node.js" :[
@@ -138,6 +173,13 @@
             "site": "CSSDeck",
             "url": "http://cssdeck.com/labs/forms-validation-styling-semantics",
             "explain": "폼 유효성 검사 및 styling & semantics",
+			"rate" : "",
+			"tags" : ["Form", "Validation", "Semantics"]
+        },
+        {
+            "site": "demosthenes.info/",
+            "url": "http://demosthenes.info/blog/html",
+            "explain": "",
 			"rate" : "",
 			"tags" : ["Form", "Validation", "Semantics"]
         }
@@ -233,6 +275,13 @@
             "explain": "CSS 레이아웃을 배울 수 있는 한국어 버전",
 			"rate" : "",
 			"tags" : ["Layout", "transition"]
+        },
+        {
+            "site": "Background Reveal Scroll In Pure CSS",
+            "url": "http://demosthenes.info/blog/950/Background-Reveal-Scroll-In-Pure-CSS",
+            "explain": "CSS로 구현한 Background Reveal Scroll",
+			"rate" : "",
+			"tags" : ["Background", "Scroll"]
         }
 
 	],
