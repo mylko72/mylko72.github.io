@@ -130,6 +130,8 @@
 					if(!changedDevice){
 						$('#bookmarkNav').removeClass();
 						$('.bx-box').removeClass('css-shapes-preview');
+						$('.nav-scroll').hasClass('docked') ? $('#bookmarkNav').addClass('fixed') : $('#bookmarkNav').removeClass('fixed');
+
 						changedDevice = true;
 					}
 				}
@@ -141,18 +143,21 @@
 
 			eventDriven.on(eventDictionary.global.SCROLL, function(e){
 				var scrollTop = $.util.getScrollTop();	
-				if(scrollTop >= headerBottom){
-					$('#bookmarkNav').addClass('fixed');
-				}else{
-					$('#bookmarkNav').removeClass('fixed');
+				if(real_width < 992){
+					if($('.nav-scroll').hasClass('docked')){
+						$('#bookmarkNav').addClass('fixed');
+					}else{
+						$('#bookmarkNav').removeClass('fixed');
+					}
 				}
 			});
 
-			$(window).on('scroll', function(e){
+			/*$(window).on('scroll', function(e){
 				if(real_width < 992){
+					console.log('called33');
 					eventDriven.trigger(jQuery.Event(eventDictionary.global.SCROLL));
 				}
-			});
+			});*/
 
 		}
 

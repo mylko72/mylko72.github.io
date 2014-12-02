@@ -24,13 +24,14 @@ ul.lists {margin-bottom:50px;}
 	ul.lists li:nth-child(odd) {background-color:#f9f9f9;}
 	ul.lists li:nth-child(even) {background-color:#f1f1f1;}
 	ul.lists li h4 {display:inline-block; margin-right:10px; vertical-align:top;}
-	ul.lists li .info {display:inline-block; max-width:540px;}
+	ul.lists li .info {display:inline-block; width:100%; margin-top:10px;}
+	ul.lists li .info > a {display:block; width:100%; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; line-height:20px;}
 	ul.lists li .tags {margin-top:20px; font-size:0.80em;}
 	ul.lists li .tags span {margin-right:10px;}
 	ul.lists li .tags span a {color:#47769B;}
 	ul.lists li p {margin-top:10px; font-size:0.9em; color:#292929;}
 	ul.lists li em {font-style:normal; font-weight:bold;}
-	ul.lists li a {font-family: 'Oswald','Nanum Gothic', Dotum; color:#FF851B; font-weight:normal;}
+	ul.lists li a {font-family: 'Oswald','Nanum Gothic', Dotum; color:#FF851B; font-weight:normal; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
 
 *, *:before, *:after{box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; } 
 .css-shapes-preview {position: relative; height: 600px; width: 20%; padding: 0px; left: 0px; -webkit-transform: rotate(0deg) skew(0deg); transform: rotate(0deg) skew(0deg); border-left: 110px solid #FF4136; border-right: 110px solid #FF4136; border-bottom: 40px solid transparent; }
@@ -52,4 +53,12 @@ ul.lists {margin-bottom:50px;}
 
 @media (min-width:993px) and (max-width:1200px){
 	.css-shapes-preview {border-left-width:100px; border-right-width:100px;}
+}
+
+@media (min-width:768px) and (max-width:1199px){
+	ul.lists li .info {max-width:445px; margin-top:0;}
+}
+
+@media (min-width:1200px){
+	ul.lists li .info {max-width:540px; margin-top:0;}
 }
