@@ -120,8 +120,6 @@
 			eventDriven.on(eventDictionary.global.RESIZE, function(e){
 				var real_width = $.util.realWidth();
 
-				eventDriven.trigger(jQuery.Event(eventDictionary.global.SCROLL));
-
 				if(real_width > 992){
 					$('#bookmarkNav').addClass('col-md-2 fixed');
 					$('.bx-box').addClass('css-shapes-preview');
