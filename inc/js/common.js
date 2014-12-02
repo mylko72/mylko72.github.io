@@ -230,6 +230,8 @@ $(function () {
 			$navScroll.find('.device').remove();
 
 			$.util= new $.Utilities();
+			
+			console.log($.util.device().isIE());
 			bindEvents();
 		}
 

@@ -73,11 +73,19 @@ footer {position:relative; padding:40px 0 40px; background:#333; color:#999;}
 	.navbar-brand h1 {float:left; margin-top:-10px; font-family: 'Pinyon Script', cursive !important; font-size:3.2em !important; color:#000; font-weight:400; line-height:16px;}
 	.navbar-brand h1 span {display:block; margin-top:10px; font-family: 'Denk One'; font-size:1rem; text-align:center;}
 
+.navbar-default .navbar-collapse {background-color:#fff;}
+
 @media (min-width:768px) and (max-width:991px) {
 	.navbar .container {padding-left:0px; padding-right:0px;}
 }
 @media (min-width:768px){
 	header .navbar .navbar-collapse {float:right; padding-left:0;}
+}
+@media (max-width:767px){
+	header .navbar .navbar-collapse .navbar-nav {float:right; margin-right:0;}
+	header .navbar .navbar-collapse .navbar-right {float:right; width:100%; margin-right:0;}
+	header .navbar .navbar-collapse .navbar-right > li > a {text-align:right;}
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a {text-align:right;}
 }
 /** 맞춤화(e) **/
 
@@ -88,6 +96,13 @@ footer {position:relative; padding:40px 0 40px; background:#333; color:#999;}
 	.nav-scroll #gnb ul li a {color:#000;}
 	.nav-scroll .navbar-collapse {float:right; padding-left:0;}
 	
+@media (max-width:767px){
+	.nav-scroll .navbar-collapse {float:none;}
+	.nav-scroll .navbar .navbar-collapse .navbar-nav {float:right; margin-right:0;}
+	.nav-scroll .navbar .navbar-collapse .navbar-right {float:right; width:100%; margin-right:0;}
+	.nav-scroll .navbar .navbar-collapse .navbar-right > li > a {text-align:right;}
+}
+
 .lazy {-webkit-transition-property: opacity; -moz-transition-property: opacity; -o-transition-property: opacity; transition-property: opacity; -webkit-transition-duration: 0.3s; -moz-transition-duration: 0.3s; -o-transition-duration: 0.3s; transition-duration: 0.3s; -webkit-transition-timing-function: ease; -moz-transition-timing-function: ease; -o-transition-timing-function: ease; transition-timing-function: ease; opacity: 0;}
 
 #toTop {display: none; width: 100px; background: #000; text-align: center; padding: 8px 12px; position: fixed; bottom: 10px; right: 10px; cursor: pointer; color: #fff; font-size: 0.7em; text-transform: uppercase; font-weight: bold;}
