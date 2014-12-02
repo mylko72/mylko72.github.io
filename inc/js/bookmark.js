@@ -100,12 +100,14 @@
 			var headerHeight = $('header').outerHeight(),
 				headerTop = $('header').position().top,
 				headerBottom = headerHeight + headerTop;
+			
+			var changedDevice = false,
+				real_width = $.util.realWidth();
 
 			$bookmarkMenu.on('click', 'a', function(e){
 				e.preventDefault();
 				var eTarget = $(this)[0].hash,
-					dockedHeight = $('header').outerHeight(),
-					real_width = $.util.realWidth();
+					dockedHeight = $('header').outerHeight();
 
 				$bookmarkMenu.find('li').removeClass().addClass('unsel');	
 				$(this).parent().removeClass().addClass('sel');
@@ -118,16 +120,20 @@
 			});
 			
 			eventDriven.on(eventDictionary.global.RESIZE, function(e){
-				var real_width = $.util.realWidth();
+				real_width = $.util.realWidth();
 
 				eventDriven.trigger(jQuery.Event(eventDictionary.global.SCROLL));
 
 				if(real_width > 992){
 					$('#bookmarkNav').addClass('col-md-2 fixed');
 					$('.bx-box').addClass('css-shapes-preview');
+					changedDevice = false;
 				}else{
-					$('#bookmarkNav').removeClass();
-					$('.bx-box').removeClass('css-shapes-preview');
+					if(!changedDevice){
+						$('#bookmarkNav').removeClass();
+						$('.bx-box').removeClass('css-shapes-preview');
+						changedDevice = true;
+					}
 				}
 			});
 
@@ -145,7 +151,9 @@
 			});
 
 			$(window).on('scroll', function(e){
-				eventDriven.trigger(jQuery.Event(eventDictionary.global.SCROLL));
+				if(real_width < 992){
+					eventDriven.trigger(jQuery.Event(eventDictionary.global.SCROLL));
+				}
 			});
 
 		}
