@@ -151,16 +151,7 @@
 					}
 				}
 			});
-
-			/*$(window).on('scroll', function(e){
-				if(real_width < 992){
-					console.log('called33');
-					eventDriven.trigger(jQuery.Event(eventDictionary.global.SCROLL));
-				}
-			});*/
-
 		}
-
 
 		init();
 	};

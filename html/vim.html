@@ -9,11 +9,12 @@
 	<link href='http://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Anton' rel='stylesheet' type='text/css'>
 	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/home/inc/css/modules/bootstrap.css" media="screen"/>
 	<link rel="stylesheet" type="text/css" href="/home/inc/css/common.css" />
 	<link rel="stylesheet" type="text/css" href="/home/inc/css/vim.css" />
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script type="text/javascript" src="/home/inc/js/lib/jquery.animate-enhanced.min.js"></script>
-	<script type="text/javascript" src="/home/inc/js/lib/tram.js"></script>
+	<script type="text/javascript" src="/home/inc/js/lib/bootstrap.js"></script>
 	<script type="text/javascript" src="/home/inc/js/common.js"></script>
 	<script type="text/javascript" src="/home/inc/js/utilities.js"></script>
 	<script type="text/javascript" src="/home/inc/js/bookmark.js"></script>
@@ -28,25 +29,25 @@
 
 <div id="body-wrapper">
 	<header>
-		<div class="inner-c">
-			<!--<div class="device">
-				<ul>
-					<li><a href="../icon/mobile"><i class="fa fa-mobile-phone"></i>mobile</a></li>
-					<li><a href="../icon/tablet"><i class="fa fa-tablet"></i> tablet</a></li>
-					<li><a href="../icon/desktop"><i class="fa fa-desktop"></i> desktop</a></li>
-				</ul>	
-			</div>-->
-			<div id="gnb" class="clfix">
-				<h1>LeeKwanOh<span>Web Publisher & UI Developer</span></h1>
+		<nav class="navbar navbar-default" role="navigation">
+			<div id="gnb" class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#"><h1>LeeKwanOh<span>Web Publisher & UI Developer</span></h1></a>
+				</div>
 			</div>
-		</div>
+		</nav>
 	</header>
 	<div id="contents">
 		<section>
-			<div class="inner-c clfix">
+			<div class="container">
 				<h2>VIM</h2>
-			</div>
-			<div class="inner-c clfix">
 
 				<p class="mb20">Vim 에디터는 유닉스 세상에서 오랜 전통을 이어온 Vi 에디터의 진보된 형태이다. Vi와 Vim은 태생이 유닉스 환경이다보니, 텍스트 환경인 터미널에서 사용되도록 디자인되어 있다. 메모장과 유사해 보이는 Vim 에디터의 첫인상은 화려하고 막강한 기능으로 무장된 요즘 윈도우 기반의 에디터를 접해 봤다면 황당하고 당혹감 마저 느낄 것이다. 하지만 그래픽 환경보다 실행 속도가 수십 배는 빠르고 용량도 작으며 성능도 뛰어나다면 뭔가 허전해 보이는 Vim이 가지고 있는 매력이 궁금하지 않는가?? </p>
 
@@ -62,7 +63,7 @@
 				</div>
 
 				<figure>
-					<img src="/home/images/img_vim_screen.jpg" alt="Vim 화면" width="500" height="383">
+					<img src="/home/images/img_vim_screen.jpg" alt="Vim 화면" width="500" height="auto">
 					<figcaption>[Vim 화면]</figcaption>
 				</figure>
 
@@ -85,7 +86,7 @@
 					<p class="mb20">Vim은 일반적으로 마우스를 쓰지 않으므로, 키보드로 범위를 지정하거나 삭제, 복사, 붙이기등 모든 명령어를 단축키로 실행한다. Vim을 능숙하게 사용하기 위해서는 아래의 명령어 단축키와 이동 단축키등을 손가락이 기억할 수 있도록 training을 할 필요가 있다.</p>
 
 					<figure>
-						<img src="/home/images/img_vim_key.jpg" alt="Vim 명령어 단축키" width="1024" height="750">
+						<img src="/home/images/img_vim_key.jpg" alt="Vim 명령어 단축키" width="1024" height="auto">
 						<figcaption>[Vim 명령어 단축키]</figcaption>
 					</figure>
 
@@ -136,7 +137,7 @@
 					<h4 class="tits">&#10074; 커서 이동하기</h4>
 
 					<figure>
-						<img src="/home/images/img_vim_key02.jpg" alt="Vim 이동 단축키" width="1024" height="662">
+						<img src="/home/images/img_vim_key02.jpg" alt="Vim 이동 단축키" width="1024" height="auto">
 						<figcaption>[Vim 이동 단축키]</figcaption>
 					</figure>
 
@@ -309,33 +310,25 @@
 						</tr>
 						</tbody>
 					</table>
-
-
-
-
-
-
 				</article>
-
-				
 			</div>
 		</section>
 	</div>
 	<footer>
-		<div class="inner-c clfix">
-			<div class="fl clfix">
+		<div class="container">
+			<div class="pull-left clfix">
 				<h2>Category</h2>
 				<nav>
 					<ul class="clfix">
-						<li><a href="#">Main</a></li>
-						<li><a href="#">Work</a></li>
-						<li><a href="#">Profile</a></li>
-						<li><a href="#">Study</a></li>
-						<li><a href="#">Bookmark</a></li>
+						<li><a href="/home/html/index.html?hn=1">Main</a></li>
+						<li><a href="/home/html/work.html?hn=2">Work</a></li>
+						<li><a href="/home/html/profile.html?hn=3">Profile</a></li>
+						<li><a href="/home/html/vim.html?hn=4">Study</a></li>
+						<li><a href="/home/html/bookmark.html?hn=5">Bookmark</a></li>
 					</ul>
 				</nav>
 			</div>
-			<p class="copyright">Copyright ⓒ MYLKO 2014 All rights reserved.</p>
+			<p class="pull-right copyright">Copyright ⓒ MYLKO 2014 All rights reserved.</p>
 		</div>
 	</footer>
 </div>

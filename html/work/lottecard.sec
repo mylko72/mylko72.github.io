@@ -1,11 +1,15 @@
 <h1>Lotte Card</h1>
 <div class="clfix">
-	<img src="/home/images/recent_work_view07.jpg" class="responsive-img" alt="" />
-	<ul class="desc-list">
-		<li><span>Project</span> 롯데카드</li>
-		<li><span>Client</span> Lotte Card</li>
-		<li><span>Date</span> 2011.04 ~ 2011.09</li>
-		<li><span>Url</span> <a href="http://www.lottecard.co.kr/" target="_blank">http://www.lottecard.co.kr/</a></li>
-		<li>Javascript / jQuery / Web Publishing</li>
-	</ul>
+	<div class="col-md-8">
+		<img src="/home/images/recent_work_view07.jpg" class="responsive-img" alt="" />
+	</div>
+	<div class="col-md-3">
+		<ul class="desc-list">
+			<li><span>Project</span> 롯데카드</li>
+			<li><span>Client</span> Lotte Card</li>
+			<li><span>Date</span> 2011.04 ~ 2011.09</li>
+			<li><span>Url</span> <a href="http://www.lottecard.co.kr/" target="_blank">http://www.lottecard.co.kr/</a></li>
+			<li>Javascript / jQuery / Web Publishing</li>
+		</ul>
+	</div>
 </div>

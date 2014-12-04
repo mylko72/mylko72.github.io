@@ -1,11 +1,15 @@
 <h1>BC카드 법인</h1>
 <div class="clfix">
-	<img src="/home/images/img_wise_biz.jpg" class="responsive-img" alt="" />
-	<ul class="desc-list">
-		<li><span>Project</span> BC카드 법인</li>
-		<li><span>Client</span> BC</li>
-		<li><span>Date</span> 2009.09 ~ 2009.12</li>
-		<li><span>Url</span> <a href="http://wisebiz.bccard.com/" target="_blank">http://wisebiz.bccard.com/</a></li>
-		<li>jQuery / Web Publishing</li>
-	</ul>
+	<div class="col-md-8">
+		<img src="/home/images/img_wise_biz.jpg" class="responsive-img" alt="" />
+	</div>
+	<div class="col-md-3">
+		<ul class="desc-list">
+			<li><span>Project</span> BC카드 법인</li>
+			<li><span>Client</span> BC</li>
+			<li><span>Date</span> 2009.09 ~ 2009.12</li>
+			<li><span>Url</span> <a href="http://wisebiz.bccard.com/" target="_blank">http://wisebiz.bccard.com/</a></li>
+			<li>jQuery / Web Publishing</li>
+		</ul>
+	</div>
 </div>

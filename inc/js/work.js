@@ -6,7 +6,7 @@
 	**/
     $.WorkList= function () {
 
-		var $workTmplList = $('#work-templates .works-list').find('>li'),
+		var $workTmplList = $('#work-templates .works-list').find('>div'),
 			$worklist = $('.page-slider').find('.works-list');
 
         /** 
@@ -46,11 +46,11 @@
 			if(jsonData){
 				$template
 				.find('img').attr('src', jsonData.image).end()
-				.find('.summary a').attr('data-view', jsonData.view).end()
-				.find('.summary h3').text(jsonData.project).end()
-				.find('.summary .client').text(jsonData.client).end()
-				.find('.summary .date').text(jsonData.date).end()
-				.find('.summary .url').text(jsonData.url).end();
+				.find('.caption a').attr('data-view', jsonData.view).end()
+				.find('.caption h3').text(jsonData.project).end()
+				.find('.caption .client').text(jsonData.client).end()
+				.find('.caption .date').text(jsonData.date).end()
+				.find('.caption .url').text(jsonData.url).end();
 			}
 
 			return $template;
@@ -73,11 +73,10 @@ $(function () {
     $.PageSlider= function () {
 
 		var	$pageContainer = $('.page-crop'), 
-			$workEl = $('.works-list').find('>li'),
-			$links= $workEl.find('.summary a'),
+			$workEl = $('.works-list').find('>div'),
+			$links= $workEl.find('.caption a'),
 			$workDesc = $('.work-desc'),
 			$back = $workDesc.find('.back'),
-			originHeight = $pageContainer.outerHeight(),
 			animated = false,
 			timer;
 
@@ -154,7 +153,7 @@ $(function () {
 			$back.on('click', function(e){
 				//e.preventDefault();
 				$('body').removeClass(function(index){
-					$pageContainer.css('height', originHeight);
+					$pageContainer.css('height', 'auto');
 					return 'easing-page';
 				});
 
@@ -165,6 +164,17 @@ $(function () {
 						clearTimeout(timer);
 					}
 				}, 500);
+			});
+			
+			eventDriven.on(eventDictionary.global.RESIZE, function(e){
+				resizeHeight('.work-view');
+			});
+
+			$(window).on('resize', function(e){
+				if($workDesc.is(':visible')){
+					console.log('resize');
+					eventDriven.trigger(jQuery.Event(eventDictionary.global.RESIZE));
+				}
 			});
 		}
 

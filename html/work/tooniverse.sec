@@ -1,11 +1,15 @@
 <h1>Tooniverse</h1>
 <div class="clfix">
-	<img src="/home/images/img_tooniverse.jpg" class="responsive-img" alt="" />
-	<ul class="desc-list">
-		<li><span>Project</span> Tooniverse</li>
-		<li><span>Client</span> CJ E&N</li>
-		<li><span>Date</span> 2010.07 ~ 2010.08</li>
-		<li><span>Url</span> <a href="http://www.tooniland.com/tooniverse/TooniverseMain.tl" target="_blank">http://www.tooniland.com/tooniverse/TooniverseMain.tl</a></li>
-		<li>jQuery / Web Publishing</li>
-	</ul>
+	<div class="col-md-8">
+		<img src="/home/images/img_tooniverse.jpg" class="responsive-img" alt="" />
+	</div>
+	<div class="col-md-3">
+		<ul class="desc-list">
+			<li><span>Project</span> Tooniverse</li>
+			<li><span>Client</span> CJ E&N</li>
+			<li><span>Date</span> 2010.07 ~ 2010.08</li>
+			<li><span>Url</span> <a href="http://www.tooniland.com/tooniverse/TooniverseMain.tl" target="_blank">http://www.tooniland.com/tooniverse/TooniverseMain.tl</a></li>
+			<li>jQuery / Web Publishing</li>
+		</ul>
+	</div>
 </div>
