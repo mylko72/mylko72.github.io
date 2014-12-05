@@ -172,8 +172,8 @@ $(function () {
 			});
 
 			$(window).on('resize', function(e){
+				$pageContainer.css('height', 'auto');
 				if($workDesc.is(':visible')){
-					console.log('resize');
 					eventDriven.trigger(jQuery.Event(eventDictionary.global.RESIZE));
 				}
 			});
