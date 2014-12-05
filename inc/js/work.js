@@ -36,6 +36,7 @@
 			})
 			.done(function(){
 				new $.PageSlider();
+				new $.LazyLoadImages().init();
 			});
 		}
 

@@ -418,9 +418,12 @@ $(function () {
 			},
 			scan : function(){
 				var len = this.lazy.length;
+				console.log('length :'+len);
 				for(var i=0;i<len;i++){
+					console.log('call2');
 					var $elem = $(this.lazy[i]);
 					if($elem.attr('data-lazy-loaded') !== 'true' && this.isInView($elem)){
+						console.log('call');
 						$elem.attr('data-lazy-loaded', 'true');
 						$elem.animate({'opacity':1});
 						$elem.removeClass('lazy');
