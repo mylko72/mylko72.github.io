@@ -1,6 +1,22 @@
 {    
     "works":[
         {
+            "project": "Lotte Fresh",
+            "image": "/home/images/img_lotte_fresh_s.jpg",
+            "client": "LOTTE",
+			"date" : "2014.09 ~ 2014.11",
+			"view": "lotte_fresh",
+			"url" : "http://www.lottefresh.com/"
+        },
+        {
+            "project": "SAMSUNG CN 반응형웹",
+            "image": "/home/images/img_samsung_cn_s.jpg",
+            "client": "SAMSUNG",
+			"date" : "2014.07 ~ 2014.08",
+			"view": "samsung_cn",
+			"url" : "http://www.samsung.com/cn/"
+        },
+        {
             "project": "SAMSUNG JP 반응형웹",
             "image": "/home/images/img_samsung_jp_s.jpg",
             "client": "SAMSUNG",
