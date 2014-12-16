@@ -77,7 +77,7 @@
 	@media (max-width:320px){
 		.work-view .desc-list li a {width:140px;}
 	}
-	@media (max-width:360px){
+	@media (max-width:480px){
 		article.work-desc {padding:80px 15px 30px;}
 		article.work-desc .back {margin:-60px 0 0 0;}
 		article.work-desc .back .fa {font-size:2em;}
