@@ -607,6 +607,13 @@
             "explain": "지킬로 깃허브에 무료 블로그 만들기",
 			"rate" : "",
 			"tags" : ["블로그", "Github", "지킬"]
+        },
+        {
+            "site": "A Visual Git Reference",
+            "url": "http://marklodato.github.io/visual-git-guide/index-ko.html",
+            "explain": "그림으로 보는 Git 명령어",
+			"rate" : "",
+			"tags" : ["명령어", "Git"]
         }
 	]
 }
