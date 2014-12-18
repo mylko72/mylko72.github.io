@@ -78,7 +78,7 @@ function requestTick(ev) {
 			"Main" : "/home/html/index.html?hn=1",
 			"Work" : "/home/html/work.html?hn=2",
 			"Profile" : "/home/html/profile.html?hn=3",
-			"Git" : "http://mylko72.gitbooks.io/git/",
+			"Vim" : "/home/html/vim.html?hn=4",
 			"Bookmark" : "/home/html/bookmark.html?hn=5"
 		}
 
@@ -119,6 +119,14 @@ function requestTick(ev) {
 		}
 
 		function bindEvents(){
+
+			$('.dropdown-menu').find('.mobile').on('click', function(){
+				$(window).trigger('resize');
+			});
+
+			$(window).bind('resize', function(){
+				$(this)[0].resizeTo(400,500);	
+			});
 
 		}
 
@@ -195,11 +203,10 @@ $(function () {
 
 		 addStrHtml : function(){
 			var str = '<li class="dropdown">';
-			str += '<a href="#" class="dropdown-toggle" data-toggle="dropdown">Device <b class="caret"></b></a>';
+			str += '<a href="#" class="dropdown-toggle" data-toggle="dropdown">Study<b class="caret"></b></a>';
 			str += '<ul class="dropdown-menu">';
-			str += '<li><a href="#">mobile</a></li>';
-			str += '<li><a href="#">tablet</a></li>';
-			str += '<li><a href="#">desktop</a></li>';
+			str += '<li><a href="http://mylko72.gitbooks.io/git/" class="mobile" target="_blank">Git</a></li>';
+			str += '<li><a href="http://mylko72.github.io/FEDNote/html/markdown/angular-app.html" class="tablet" target="_blank">AngularJS</a></li>';
 			str += '</ul>';
 			str += '</li>';
 			
