@@ -49,20 +49,27 @@
 	.my-ability .col-sm-6:nth-child(1), .my-ability .col-sm-6:nth-child(2) {margin-bottom:20px;}
 	.my-ability .col-xs-12 {margin-bottom:20px;}
 	.my-ability .col-xs-12:last-child {margin-bottom:0px;}
+	.my-ability .circle {width:80%;}
+	.my-ability .circle p {font-size:1.3em;}
 }
 
 /** 맞춤화(e) **/
 
 .my-concern {margin-bottom:20px;}
 	.my-concern h2 {margin-bottom:30px; font-size:1.6em; color:#4C9EFC; font-weight:bold;}
-	.my-concern p {width:80%; margin-bottom:20px; font-family:"Nanum Gothic"; font-size:.85em; color:#666; line-height:180%;}
+	.my-concern p {width:100%; font-family:"Nanum Gothic"; font-size:.85em; color:#666; line-height:180%;}
 	.my-concern em {font-size:2em; color:#4C9EFC; font-weight:bold; font-style:normal;}
+	.my-concern .viewBtn * {font-weight:bold; vertical-align:middle;}
 
+/** 맞춤화(s) **/
+@media (max-width:992px){
+	.my-concern .col-xs-12:first-child {margin-bottom:50px;}	
+}
+/** 맞춤화(e) **/
 .my-study {margin-bottom:0px;}
 	.my-study h2 {margin-bottom:30px; font-size:1.6em; color:#F15B25; font-weight:bold;}
-	.box-wrapper {clear:both; padding:20px 0; height:125px; position:relative;}
 	.col-one {padding:10px 20px; background:#23bdc2; -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; color:#fff; font-weight:bold; line-height:160%; text-align:center; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;} 
-	.col-two {padding-top:10px; font-size:.85em; line-height:160%;}
+	.col-two {font-size:.85em; line-height:160%;}
 
 /** 맞춤화(s) **/
 @media (max-width:768px){
