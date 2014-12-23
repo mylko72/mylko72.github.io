@@ -185,6 +185,13 @@
             "explain": "제이쿼리 개발자를 위한 AngularJS 가이드 문서",
 			"rate" : "",
 			"tags" : ["튜토리얼"]
+        },
+        {
+            "site": "AngularJS-Learning",
+            "url": "https://github.com/soomong/AngularJS-Learning",
+            "explain": "AngularJS 학습할 수 있는 유용한 링크 모음",
+			"rate" : "",
+			"tags" : ["링크", "학습"]
         }
 	],
     "Node.js" :[
