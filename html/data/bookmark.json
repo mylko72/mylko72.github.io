@@ -621,6 +621,13 @@
             "explain": "그림으로 보는 Git 명령어",
 			"rate" : "",
 			"tags" : ["명령어", "Git"]
+        },
+        {
+            "site": "Pro Git",
+            "url": "http://git-scm.com/book/ko/v1",
+            "explain": "책으로 출간된 'Pro Git' 한글 번역본",
+			"rate" : "",
+			"tags" : ["번역본", "책"]
         }
 	]
 }
