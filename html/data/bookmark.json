@@ -192,6 +192,13 @@
             "explain": "AngularJS 학습할 수 있는 유용한 링크 모음",
 			"rate" : "",
 			"tags" : ["링크", "학습"]
+        },
+        {
+            "site": "MOBICON",
+            "url": "http://mobicon.tistory.com/335",
+            "explain": "MEAN Stack 개발자 되기",
+			"rate" : "",
+			"tags" : ["MEAN Stack"]
         }
 	],
     "Node.js" :[
