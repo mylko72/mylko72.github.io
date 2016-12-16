@@ -1,0 +1,7 @@
+// Sprites Map import
+{{#each path as |value key|}}
+	@import "{{value.path}}/{{@root.prefix}}{{value.collection}}.{{@root.exe}}";
+{{/each}}
+
+// Sprites Map List
+$map_list: ( {{#each path as |value key|}}{{#if @first}}${{@root.prefix}}{{value.collection}}{{else}}, ${{@root.prefix}}{{value.collection}}{{/if}}{{/each}} );
