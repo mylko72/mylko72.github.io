@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+// sass common
+@import "common/variables";
+@import "common/base";
+@import "common/placeholders";
+@import "common/mixins";
+@import "common/sprite_mixin";
+
+// test
+.test-bi_home1 {
+  @include get-sprite(bi_home_1, $sp_test);
+}
+.test-bi_home2 {
+  @include get-sprite(bi_home_2, $sp_test);
+}
+.test-bi_home3 {
+  @include get-sprite(bi_home_3, $sp_test);
+}
+.test-bi_home4 {
+  @include get-sprite(bi_home_4, $sp_test);
+}
+.test-bi_home5 {
+  @include get-sprite(bi_home_5, $sp_test);
+}

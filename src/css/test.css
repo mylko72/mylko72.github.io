@@ -1,0 +1,13 @@
+.test-bi_home1, .test-bi_home2, .test-bi_home3, .test-bi_home4, .test-bi_home5 { background-image: url(../img/sp_test.png); background-size: 104px 104px; }
+
+.test-bi_home1 { width: 32px; height: 32px; background-position: 0px 0px; }
+
+.test-bi_home2 { width: 32px; height: 32px; background-position: -36px 0px; }
+
+.test-bi_home3 { width: 32px; height: 32px; background-position: 0px -36px; }
+
+.test-bi_home4 { width: 32px; height: 32px; background-position: -36px -36px; }
+
+.test-bi_home5 { width: 32px; height: 32px; background-position: -72px 0px; }
+
+/*# sourceMappingURL=test.css.map */

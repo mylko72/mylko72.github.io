@@ -1,0 +1,63 @@
+// Sprites Map
+$sp_test: (
+  name: 'sp_test',
+  width: 104px,
+  height: 104px,
+  image: '../img/sp_test.png',
+  sprites: (
+    bi_home_1: (
+      offset-x: 0px,
+      offset-y: 0px,
+      width: 32px,
+      height: 32px,
+    ),
+      bi_home_2: (
+      offset-x: -36px,
+      offset-y: 0px,
+      width: 32px,
+      height: 32px,
+    ),
+      bi_home_3: (
+      offset-x: 0px,
+      offset-y: -36px,
+      width: 32px,
+      height: 32px,
+    ),
+      bi_home_4: (
+      offset-x: -36px,
+      offset-y: -36px,
+      width: 32px,
+      height: 32px,
+    ),
+      bi_home_5: (
+      offset-x: -72px,
+      offset-y: 0px,
+      width: 32px,
+      height: 32px,
+    ),
+      bi_home_6: (
+      offset-x: -72px,
+      offset-y: -36px,
+      width: 32px,
+      height: 32px,
+    ),
+      bi_home_7: (
+      offset-x: 0px,
+      offset-y: -72px,
+      width: 32px,
+      height: 32px,
+    ),
+      bi_home_8: (
+      offset-x: -36px,
+      offset-y: -72px,
+      width: 32px,
+      height: 32px,
+    ),
+      bi_home_9: (
+      offset-x: -72px,
+      offset-y: -72px,
+      width: 32px,
+      height: 32px,
+    ),
+  )
+);
