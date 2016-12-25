@@ -12,7 +12,14 @@
 	.jumbotron.key-visu ul li img {margin-top:-50px;}
 }
 @media (min-width: 1200px) {
-	.jumbotron.key-visu {height:500px;}
+	.jumbotron.key-visu {
+		height:500px;
+		background-image:url(../../images/img_winter.jpg);
+		background-position: 50% 100%;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+	}
 	.jumbotron.key-visu ul li img {margin-top:-100px;}
 }
 /** 맞춤화(e) **/

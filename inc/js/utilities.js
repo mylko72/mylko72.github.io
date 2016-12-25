@@ -13,6 +13,34 @@
 			realWidth : checkWidth
 		};
 
+		var myevent = {
+			 'stop' : function(e){    //퍼사드메서드
+
+				  // 이벤트 객체를 가져온다.
+				  e = e || window.event;
+
+				  // IE 이외의 모든 브라우저
+				  // 기본동작이 수행되지 않게 한다.
+				  if(typeof e.preventDefault === 'function'){
+					   e.preventDefault();
+				  }
+				  // 이벤트가 상위 노드로 전파되지 않게 한다.
+				  if(typeof e.stopPropagation === 'function'){
+					   e.stopPropagation();
+				  }
+				 
+				  // IE
+				  // 기본동작이 수행되지 않게 한다.
+				  if(typeof e.returnValue === 'boolean'){
+					   e.returnValue = false;
+				  }
+				  // 이벤트가 상위 노드로 전파되지 않게 한다.
+				  if(typeof e.cancelBubble === 'boolean'){
+					   e.cancelBubble = true;
+				  }
+			 }
+		}
+
 		function checkWidth(){
 			var real_width;
             if (detectDevice().isMobile() !== null){
@@ -189,3 +217,48 @@
 	};
 
 }(jQuery));
+
+(function ($) {
+	$.Form= function () {
+		
+		function init(){
+
+			bindEvents();
+
+			$(':checked').trigger('click');
+		}
+
+		function bindEvents(){
+			
+			/* checkbox toggle */
+			$(':checkbox').click(function(){
+				var $label = $(this).next('label');
+				$(this).is(':checked') ? $label.addClass('on') : $label.removeClass('on');
+				$(this).is(':checked') ? $(this).prop('checked', true) : $(this).prop('checked', false);
+			});
+
+			/* radio button toggle */
+			$(':radio').click(function(){
+				var $label = $(this).next('label');
+				console.log($label);
+				var val = $(this).attr('name');
+				var $labelGroup = $('input[name='+val+']').next();
+				$labelGroup.removeClass('on');
+				if($(this).is(':checked')){
+					$('input[name='+val+']').prop('checked',false);
+					$(this).prop('checked',true);
+					$label.addClass('on');
+				}
+			});
+
+		}
+
+		init();
+
+	};
+
+}(jQuery));
+
+$(function () {
+	new $.Form();
+});

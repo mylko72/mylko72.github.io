@@ -1,4 +1,4 @@
-{    
+{
     "Javascript" :[
         {
             "site": "생활코딩",
@@ -252,6 +252,13 @@
             "explain": "",
 			"rate" : "",
 			"tags" : ["Form", "Validation", "Semantics"]
+        },
+        {
+            "site": "HTML5 Open Rererences",
+            "url": "http://html5ref.clearboth.org/",
+            "explain": "",
+			"rate" : "",
+			"tags" : ["HTML5", "Reference"]
         }
 	],
     "CSS3" :[
@@ -526,6 +533,13 @@
             "explain": "grunt로 프로젝트를 자동화하는 과정을 설정 ",
 			"rate" : "",
 			"tags" : ["강좌", "자동화"]
+        },
+        {
+            "site": "Grunt",
+            "url": "http://gruntjs-kr.herokuapp.com/",
+            "explain": " Grunt 공식 사이트를 번역한 비공식 사이트",
+			"rate" : "",
+			"tags" : ["공식사이트", "자동화"]
         }
 	],
     "Tool" :[

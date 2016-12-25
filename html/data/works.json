@@ -1,6 +1,30 @@
-{    
+{
     "works":[
         {
+            "project": "토리버치 쇼핑몰",
+            "image": "/home/images/img_toryburch_s.jpg",
+            "client": "제일모직",
+			"date" : "2016.04 ~ 2016.06",
+			"view": "toryburch",
+			"url" : "http://www.toryburch.co.kr/"
+        },
+        {
+            "project": "LG.COM 4.0 Roll Out",
+            "image": "/home/images/img_lgcom_s.jpg",
+            "client": "LG CNS",
+			"date" : "2015.10 ~ 2016.03",
+			"view": "lgcom",
+			"url" : "http://www.lg.com/uk/"
+        },
+        {
+            "project": "한컴 핀테크",
+            "image": "/home/images/img_dreamsead_s.jpg",
+            "client": "한글과 컴퓨터",
+			"date" : "2015.08 ~ 2015.09",
+			"view": "dreamsead",
+			"url" : "https://www.dreamsead.com/"
+        },
+	{
             "project": "Lotte Fresh",
             "image": "/home/images/img_lotte_fresh_s.jpg",
             "client": "LOTTE",
