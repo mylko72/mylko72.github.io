@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=2.0,minimum-scale=1.0,user-scalable=yes">
+<meta property="og:image" content="https://ssl.pstatic.net/sstatic/search/common/og_v3.png">
+<meta name="description" lang="ko" content="'OOO'의 네이버 통합검색 결과입니다.">
+<title>OOO : 네이버 통합검색</title>
+<link rel="shortcut icon" href="https://ssl.pstatic.net/sstatic/search/favicon/favicon_140327.ico">
+<link rel="stylesheet" type="text/css" href="./css/w.css">
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/layout.js"></script>
+<style type="text/css">
+h2.gg_tit{padding:14px 5px 10px;margin:30px 0 10px;color:#333;font-size:20px;font-weight:500;line-height:20px;border-bottom:1px solid #999}
+.gg_bullet{display:inline-block;width:10px;height:10px;border-radius:50%}
+.gg_bullet.gg_red{background:#f00}
+.gg_bullet.gg_blue{background:#00f}
+.gg_bullet.gg_orange{background:#f60}
+.gg_bullet.gg_green{background:#398600}
+
+.gg_dsc p{display:block;margin:0 -5px;padding:15px 0;text-align:center;font-size:20px;color:#fff;background-color:#57a0f6}
+.gg_dsc em{margin:10px 0;display:block;color:#ff0000}
+.gg_sub{font-size:16px;color:#666}
+
+.gg_wrap{margin-bottom:10px;font-size:16px;line-height:24px}
+.gg_wrap ul{list-style-type:square;padding-left:20px}
+.gg_wrap li{margin-bottom:5px;color:#666}
+.gg_tit_alert+.gg_wrap{border-color:#f00}
+.gg_tit_function+.gg_wrap{border-color:#00f}
+.gg_tit_part+.gg_wrap{border-color:#f60}
+.gg_tit_sample+.gg_wrap{border-color:#398600}
+
+h2.gg_tit_alert,.gg_red, li.gg_red{color:#ff3f3f}
+h2.gg_tit_function,.gg_blue{color:#00f}
+h2.gg_tit_part,.gg_orange{color:#f60}
+h2.gg_tit_sample,.gg_green{color:#398600}
+
+.gg_link{color:#005fc1;text-decoration:underline}
+.gg_button{display:inline-block;padding:8px;border:1px solid #dedede;background:#f8f8f8}
+</style>
+</head>
+<body class="api_animation">
+<div id="u_skip" class="u_skip"><a href="#ct">본문 바로가기</a></div>
+<header>
+	<img src="http://dev.ui.naver.com/tmp/?320x50_msearchheader_y_93c47d_100" alt="Dummy" style="display:block;width:100%;height:50px">
+	<img src="http://dev.ui.naver.com/tmp/?320x45_msearchlnb_y_93c47d_100" alt="Dummy" style="display:block;width:100%;height:45px">
+</header>
+<hr>
+<div id="container">
+	<div id="ct">
+		<div class="gg_dsc">
+			<p>2016 통검개편 마크업 공통 가이드</p>
+			<em>※ 타입 추가&amp;수정 필요시 <u>통검 마크업(검색ui개발_통검 DL)</u>에 문의합니다.</em>
+		</div>
+		<!-- 2016개편 -->
+		<section class="sc">
+			<h2 class="gg_tit">공통</h2>
+			<div class="gg_wrap">
+			<ul>
+				<li>body에 <b>api_animation</b> 클래스 있으면 애니메이션 동작합니다.</li>
+				<li>컨텐츠검색내 레이어 띄울 경우 <b>z-index:2000 ~ 2999</b> 사이 값만 사용합니다.<br>
+					전체 레이어 띄울 경우 반드시 미리 공유해주세요</li>
+				<li>
+					<b class="gg_bullet gg_red"></b> 표기 UI는 <u class="gg_red">style 재설정 금지</u>합니다.<br>
+					<b class="gg_bullet gg_orange"></b> 표기 UI는  기능 확인용으로 <u class="gg_red">다중 class를 이용</u>하여 style설정이 가능합니다.<br>
+					<b class="gg_bullet gg_blue"></b> 표기 UI는 부분적으로 style 재설정 가능합니다.<br>
+					<b class="gg_bullet gg_green"></b> 표기 UI는 기능적용 마크업 sample입니다.
+				</li>
+			</ul>
+			</div>
+		</section>
+
+		<section class="sc">
+			<h2 class="gg_tit"><b class="gg_bullet gg_red"></b> 타이틀 </h2>
+			<div class="gg_wrap">
+			<ul>
+				<li class="gg_red">style 재설정 하지 않습니다.</li>
+			</ul>
+			</div>
+
+			<div class="api_subject_bx">
+				<div class="api_title_area">
+					<h2 class="api_title">타이틀<time datetime="yyyy-mm-dd" class="api_dsc">2016.10.06.</time></h2>
+				</div>
+			</div>
+		</section>
+
+		<section class="sc">
+			<h2 class="gg_tit"><b class="gg_bullet gg_red"></b> 타이틀 + 옵션</h2>
+			<div class="gg_wrap">
+			<ul>
+				<li class="gg_red">style 재설정 하지 않습니다.</li>
+				<li>공통이 아닌 경우 .api_title_sub 자식 요소로 만들어서 사용합니다.</li>
+			</ul>
+			</div>
+
+			<div class="api_subject_bx">
+				<div class="api_title_area">
+					<h2 class="api_title">타이틀<span class="api_dsc">서브명</span></h2>
+					<div class="api_title_sub">
+						<!-- [D] 선택시 selected 및 aria-selected="ture" 추가 -->
+						<a href="#" class="api_sub_option selected" role="option" aria-selected="true">관련도순</a>
+						<a href="#" class="api_sub_option" role="option">최신순</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="sc">
+			<h2 class="gg_tit"><b class="gg_bullet gg_red"></b> 타이틀 + 광고링크</h2>
+			<div class="api_subject_bx">
+				<div class="api_title_area">
+					<h2 class="api_title">타이틀<a href="#" class="api_ad_link"><i class="spnew api_ico_help">이 정보가 표시된 이유</i></a></h2>
+					<div class="api_title_sub">
+						<a href="#" class="api_sub_link">
+							<span class="txt">'<strong class="elss tit">일이삼사오육칠팔구십일이삼사오육칠팔구십</strong>' 관련광고</span>
+							<i class="spnew api_ico_help">이 정보가 표시된 이유</i>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="api_subject_bx">
+				<div class="api_title_area">
+					<h2 class="api_title">타이틀</h2>
+					<div class="api_title_sub">
+						<a href="#" class="api_sub_link">
+							<span class="txt"><strong class="tit">신용카드신용카드신용카드</strong>관련광고</span>
+							<i class="spnew api_ico_help">이 정보가 표시된 이유</i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="sc">
+			<h2 class="gg_tit"><b class="gg_bullet gg_red"></b> 더보기</h2>
+			<div class="gg_wrap">
+			<ul>
+				<li class="gg_red">style 재설정 하지 않습니다.</li>
+				<li>type_margin 추가시 상단 9px(공통)여백 추가됩니다.</li>
+			</ul>
+			</div>
+
+			<div class="api_more_wrap">
+				<a href="#" class="api_more">검색결과 더보기<i class="spnew ico_arr"></i></a>
+			</div>
+		</section>
+
+		<section class="sc">
+			<h2 class="gg_tit"><b class="gg_bullet gg_red"></b> 더보기 type2(기업,게임)</h2>
+			<div class="gg_wrap">
+			<ul>
+				<li class="gg_red">style 재설정 하지 않습니다.</li>
+				<li>type_margin 추가시 상단 9px(공통)여백 추가됩니다.</li>
+			</ul>
+			</div>
+
+			<div class="api_more_wrap">
+				<!-- [D] 접기로 변경 open 추가 -->
+				<a href="#" class="api_more_multi" role="button"><span>펼쳐보기</span><i class="spnew ico_arr"></i></a>
+			</div>
+
+			<div class="gg_wrap">
+			<ul>
+				<li>로딩중&amp;기본더보기</li>
+			</ul>
+			</div>
+
+			<div class="api_more_wrap">
+				<a href="#" class="api_more_multi" role="button"><span>더보기</span><i class="spnew ico_arr"></i></a>
+				<div class="api_loading_area">
+					<div class="loading_area"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="100%" height="8" alt="로딩중" class="bg_bloading2"></div>
+				</div>
+				<a href="#" class="api_more" style="display:none">검색결과 더보기<i class="spnew ico_arr"></i></a>
+			</div>
+		</section>
+
+		<section class="sc">
+			<h2 class="gg_tit"><b class="gg_bullet gg_blue"></b> 더보기 type3</h2>
+			<div class="gg_wrap">
+				<ul>
+				<li>대표색이 있으면 api_more_icon_inner에 재설정 합니다.(테두리색,배경색)</li>
+				<li>type_margin 추가시 상단 9px(공통)여백 추가됩니다.</li>
+				</ul>
+			</div>
+
+			<div class="api_more_wrap">
+				<!-- [D] 접기로 변경 open 추가 -->
+				<a href="#" class="api_more_theme">
+					<span class="api_more_icon">
+						<span class="api_more_icon_inner" style="background-color:#38548f"><span>더보기</span><span class="api_arrow_wrap spnew"></span>
+					</span>
+				</a>
+			</div>
+		</section>
+
+		<section class="sc">
+			<h2 class="gg_tit"><b class="gg_bullet gg_red"></b> 공통 하단배너</h2>
+			<div class="gg_wrap">
+			<ul>
+				<li class="gg_red">style 재설정 하지 않습니다.</li>
+				<li>&lt;section&gt;자식 요소로만 사용합니다.</li>
+			</ul>
+			</div>
+			<div class="api_banner_wrap">
+				<a href="#" class="api_banner_inner"><i class="spnew api_ico_talktalk"></i>실전 회화의 시작, <em class="point">네이버 영어톡톡</em></a>
+			</div>
+		</section>
+
+		<section class="sc">
+			<h2 class="gg_tit"><b class="gg_bullet gg_red"></b> 메인판 연동배너</h2>
+			<div class="gg_wrap">
+				<ul>
+				<li class="gg_red">style 재설정 하지 않습니다.</li>
+				<li>&lt;section&gt;자식 요소로만 사용합니다.</li>
+				</ul>
+			</div>
+			<div class="api_banner_wrap">
+				<a href="#" class="api_banner_inner"><i class="spnew api_ico_home_add"></i>네이버 홈 <em class="point">&apos;책&middot;문화&apos;판</em> 추가하기</a>
+			</div>
+		</section>
+
+		<section class="sc">
+			<h2 class="gg_tit"><b class="gg_bullet gg_red"></b> 컬렉션 박스 <span class="gg_sub">.api_subject_bx</span></h2>
+			<div class="gg_wrap">
+			<ul>
+				<li class="gg_red">style 재설정 하지 않습니다.</li>
+				<li>&lt;section&gt; 자식 요소로만 사용합니다.</li>
+				<li>type_margin 클래스 추가시 상단 여백 없습니다.</li>
+			</ul>
+			</div>
+
+			<div class="api_subject_bx">
+				<div class="api_title_area">
+					<h2 class="api_title">타이틀</h2>
+				</div>
+				컨텐츠 내용이 위치합니다.
+			</div>
+		</section>
+
+		<section class="sc">
+			<h2 class="gg_tit"><b class="gg_bullet gg_red"></b> 정보 로딩중</h2>
+			<div class="gg_wrap">
+			<ul>
+				<li class="gg_red">api_loading 및 dsc_loading 에 직접 style재정의 하지 않습니다.</li>
+				<li>정보요소 로딩중으로 사용합니다.(예, 지도, 타임라인 등)</li>
+				<li>상하 여백 및 높이값 추가시 감싸는 DIV 추가하여 설정합니다.</li>
+			</ul>
+			</div>
+
+			<div class="api_subject_bx">
+				<div class="api_loading">
+					<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="100%" height="8" alt="로딩중" class="bg_bloading2">
+					<p class="dsc_loading">정보를 가져오는 중입니다.</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="sc">
+			<h2 class="gg_tit"><b class="gg_bullet gg_red"></b> 에러</h2>
+			<div class="gg_wrap">
+			<ul>
+				<li class="gg_red">style 재설정 하지 않습니다.</li>
+				<li>정보요소 에러타입에 사용합니다.(예, 스포츠인물, 게임 등)</li>
+				<li>상하 여백 및 높이값 추가시 감싸는 DIV 추가하여 설정합니다.</li>
+				<li>버튼등 사용하지 않는 요소는 제거 합니다.</li>
+			</ul>
+			</div>
+
+			<div class="api_subject_bx">
+				<div class="api_error">
+					<i class="spnew api_ico_error"></i>
+					<strong class="tit_message">현재 확인할 수 있는 정보가<br>존재하지 않습니다.</strong>
+					<p class="dsc_message">다른 정보를 선택하여 서비스를 이용해보세요.</p>
+					<a href="#" role="button" class="btn_total">전체결과보기</a>
+					<a href="#" role="button" class="btn_retry"><i class="spnew api_ico_retry2"></i>초기화</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="sc">
+			<h2 class="gg_tit"><b class="gg_bullet gg_red"></b> 컬렉션 하단 정보확인</h2>
+			<div class="gg_wrap">
+			<ul>
+				<li>레이어(.ly_api_info) 위치값 재설정 가능합니다. <b class="gg_red">(그 외 재설정 금지)</b></li>
+				<li>주제에 따라 텍스트 변경 가능합니다.</li>
+			</ul>
+			</div>
+
+			<div class="api_subject_bx">
+				컨텐츠 내용이 위치합니다.
+				<div class="api_info_area">
+					<a href="#" class="btn_api_info" role="button">정보확인 2017.04.22.<i class="spnew ico_alert"></i></a>
+					<!-- [D] 정보확인 선택시 toggle -->
+					<div class="ly_api_info">
+						<strong class="tit">프로필 정보확인</strong>
+						<p class="dsc">네이버는 당사자 또는 당사자와 관련된 기관에서 공식적으로 제공한 정보 및 언론이나 외부에 공개된 정보를 프로필로 제공하고 있습니다. <a href="#" class="link">네이버 고객센터</a></p>
+						<button type="button" class="btn_close"><i class="spnew ico_close">정보확인 레이어 닫기</i></button>
+					</div>
+				</div>
+			</div>
+			<div class="api_subject_bx">
+				컨텐츠 내용이 위치합니다.
+				<div class="api_info_area type_bg">
+					<a href="#" class="btn_api_info" role="button">정보확인 2017.04.22.<i class="spnew ico_alert"></i></a>
+					<!-- [D] 정보확인 선택시 toggle -->
+					<div class="ly_api_info">
+						<strong class="tit">프로필 정보확인</strong>
+						<p class="dsc">네이버는 당사자 또는 당사자와 관련된 기관에서 공식적으로 제공한 정보 및 언론이나 외부에 공개된 정보를 프로필로 제공하고 있습니다. <a href="#" class="link">네이버 고객센터</a></p>
+						<button type="button" class="btn_close"><i class="spnew ico_close">정보확인 레이어 닫기</i></button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="sc">
+			<h2 class="gg_tit"><b class="gg_bullet gg_orange"></b> 스크롤(시스템or캐로셀) + 이어서 더보기</h2>
+			<div class="gg_wrap">
+			<ul>
+				<li>api_list_scroll에 다중 클래스 적용하여 style 설정 (<a href="../06_nvideo/sp_nvideo.html?active" class="gg_link">예시</a>)</li>
+				<li>style은 첫번째,마지막 .bx안에 하위요소 간격 조정을 위해 사용합니다.</li>
+				<li>간격은 li 하위요소에 margin-left 값으로 지정합니다.</li>
+			</ul>
+			</div>
+
+			<div class="api_subject_bx">
+				<!-- [D] flick or scroll -->
+				<!-- [D] 스크롤(캐로셀) + 이어서 더보기 적용시 높이값 적용 -->
+				<div class="api_list_scroll_wrap">
+					<div>
+						<ul class="api_list_scroll">
+						<li class="bx">
+							<div style="width:100px;height:175px;background:#deb7ff;font-size:15px;line-height:18px"></div>
+						</li>
+						<li class="bx">
+							<div style="width:100px;height:175px;background:#eeddfd;font-size:15px;line-height:18px"></div>
+						</li>
+						<li class="bx">
+							<div style="width:100px;height:175px;background:#deb7ff;font-size:15px;line-height:18px"></div>
+						</li>
+						<li class="bx">
+							<div style="width:100px;height:175px;background:#eeddfd;font-size:15px;line-height:18px"></div>
+						</li>
+						<li class="bx">
+							<div style="width:100px;height:175px;background:#deb7ff;font-size:15px;line-height:18px"></div>
+						</li>
+						<li class="bx">
+							<div style="width:100px;height:175px;background:#eeddfd;font-size:15px;line-height:18px"></div>
+						</li>
+						<li class="bx">
+							<div style="width:100px;height:175px;background:#deb7ff;font-size:15px;line-height:18px"></div>
+						</li>
+						<li class="bx">
+							<div style="width:100px;height:175px;background:#eeddfd;font-size:15px;line-height:18px"></div>
+						</li>
+						<li class="bx">
+							<a href="#" class="api_list_more">
+								<span class="api_more_info">
+									<span class="spnew api_loader"><span class="spnew" style="width:50%;"></span></span>이어서<br>더보기
+								</span>
+							</a>
+						</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="sc" style="padding-top:20px">
+			<h2 class="gg_tit"><b class="gg_bullet gg_orange"></b> rotate 기능 <span class="gg_sub">회전 텍스트 클릭</span></h2>
+			<div class="gg_wrap">
+			<ul>
+				<li>주제별 더보기/더보기 type2 외에 더보기 버튼 rotate시 사용합니다.</li>
+				<li>rotate가 필요한 요소에 api_rotate_icon 을 넣고 ani_rotate 추가하면 회전</li>
+				<li>다중 클래스를 사용하여 style 설정</li>
+			</ul>
+			</div>
+
+			<a href="#" role="button" class="gg_button">
+				<!-- [D] api_rotate_icon 에 ani_rotate 추가시 회전 -->
+				<i class="api_rotate_icon" style="display:inline-block">회전</i>
+			</a>
+		</section>
+
+		<section class="sc" style="padding:20px 0">
+			<h2 class="gg_tit"><b class="gg_bullet gg_orange"></b> 접기/펼치기(show/hide) 기능 <span class="gg_sub">회전 텍스트 클릭</span></h2>
+			<div class="gg_wrap">
+			<ul>
+				<li>show/hide가 필요한 요소에 api_hidden_box 을 넣고 api_open 추가 후 ani_fadein 추가하면 동작</li>
+				<li>api_hidden_box 자식요소로 추가하여 style 설정</li>
+			</ul>
+			</div>
+
+			<!-- [D] api_open 추가 후 ani_fadein 추가 -->
+			<div class="api_hidden_box">회전하면서 펼쳐지는 컨텐츠 내용</div>
+			<a href="#" role="button" class="gg_button">
+				<!-- [D] api_rotate_icon 에 ani_rotate 추가시 회전 -->
+				<i class="api_rotate_icon" style="display:inline-block">회전</i>
+			</a>
+		</section>
+
+		<section class="sc">
+			<h2 class="gg_tit"><b class="gg_bullet gg_blue"></b> 주제별 더보기</h2>
+			<div class="gg_wrap">
+			<ul>
+				<li>&lt;section&gt;자식 요소로만 사용합니다.</li>
+				<li>대표색이 있으면 api_more_icon_inner, api_bar에 재설정 합니다.(테두리색,배경색,폰트색)</li>
+			</ul>
+			</div>
+
+			<div class="api_more_wrap">
+				<!-- [D] 상위 api_more_wrap에 ani_play 추가시 동작 -->
+				<a href="#" class="api_more_theme">
+					<span class="api_more_icon">
+						<span class="api_more_icon_inner" style="background-color:#54aaee">더보기<span class="api_bar_wrap"><i class="api_bar"></i><i class="api_bar"></i></span></span>
+					</span>
+				</a>
+			</div>
+		</section>
+
+		<section class="sc">
+			<h2 class="gg_tit"><b class="gg_bullet gg_blue"></b> 주제별 더보기 축약형</h2>
+			<div class="gg_wrap">
+			<ul>
+				<li>&lt;section&gt;자식 요소로만 사용합니다.</li>
+				<li class="gg_red">style 재설정 하지 않습니다.</li>
+			</ul>
+			</div>
+
+			<div class="api_more_wrap">
+				<a href="#" class="api_more_theme">
+					<span class="api_more_icon">
+						<span class="api_more_icon_inner" style="background-color:#fff;color:#424242">더보기<span class="api_arrow_wrap2 spnew"></span></span>
+					</span>
+				</a>
+				<a href="#" class="api_more" style="display:none">검색결과 더보기<i class="spnew ico_arr"></i></a>
+			</div>
+		</section>
+
+		<section class="sc">
+			<h2 class="gg_tit"><b class="gg_bullet gg_blue"></b> 배너 홈화면 추가</h2>
+			<div class="gg_wrap">
+			<ul>
+				<li>&lt;section&gt;자식 요소로만 사용합니다.</li>
+				<li>배너 inline style로 색상 지정가능 (배경색, 폰트색)</li>
+			</ul>
+			</div>
+
+			<a href="#" class="api_banner_home" style="background-color:#38548f"><span class="ico_thumb"><i class="spnew api_ico_banner"></i></span> 오버워치 홈 화면에 추가하기</a>
+		</section>
+
+		<section class="sc">
+			<h2 class="gg_tit"><b class="gg_bullet gg_blue"></b> 상단 알림영역</h2>
+			<div class="gg_wrap">
+			<ul>
+				<li>&lt;section&gt;자식 요소로만 사용합니다.</li>
+				<li>다중 클래스를 사용하여 style 재설정 가능합니다.(배경색, 폰트 강조색)</li>
+			</ul>
+			</div>
+
+			<div class="api_alert_bx">
+				<p class="api_alert_message">상단 <em class="point">알림영역</em> 타입입니다. 상단 <em class="point">알림영역</em> 타입입니다.</p>
+				<a href="#" class="btn_alert_close"><i class="spnew ico_close">닫기</i></a>
+			</div>
+		</section>
+
+		<section class="sc">
+			<h2 class="gg_tit"><b class="gg_bullet gg_blue"></b> 아이콘</h2>
+			<div class="gg_wrap">
+			<ul>
+				<li>간격 조정 외에는 style 변경하지 않습니다.</li>
+			</ul>
+			</div>
+
+			<i class="spnew api_icon_official">공식</i>
+			<i class="spnew api_icon_official2">공식</i>
+			<i class="spnew api_ico_total">대표</i>
+			<i class="spnew api_ico_total2">대표</i>
+			<i class="spnew api_ico_translate">번역보기</i>
+			<i class="spnew api_ico_error"></i>
+			<i class="spnew api_ico_alert"></i>
+			<i class="spnew api_ico_alert2"></i>
+			<i class="spnew api_ico_alert3"></i>
+			<i class="spnew api_ico_help"></i>
+			<i class="spnew api_ico_return"></i>
+			<i class="spnew api_ico_return2"></i>
+			<i class="spnew api_ico_arr"></i>
+			<i class="spnew api_ico_svideo">동영상</i>
+			<i class="spnew api_ico_video">동영상</i>
+			<i class="spnew api_ico_video quick">동영상 바로재생</i>
+			<i class="spnew api_ico_video2">동영상</i>
+			<i class="spnew api_ico_gif">GIF</i>
+			<i class="spnew api_ico_banner"></i>
+			<i class="spnew api_ico_official">공식</i>
+			<i class="spnew api_ico_power">파워</i>
+			<i class="spnew api_ico_honor">명예</i>
+			<i class="spnew api_ico_expert">전문가</i>
+			<i class="spnew api_ico_partner">파트너</i>
+			<i class="spnew api_ico_q">질문</i>
+			<i class="spnew api_ico_a">답변</i>
+			<i class="spnew api_ico_q2">질문</i>
+			<i class="spnew api_ico_smarteditor">스마트에디터3.0</i>
+			<i class="spnew api_ico_add"></i>
+			<i class="spnew api_ico_star"><i class="spnew api_ico_star_inner" style="width:50%"></i></i>
+			<i class="spnew api_ico_star"><i class="spnew api_ico_star_inner2" style="width:50%"></i></i>
+			<i class="spnew api_ico_npay">네이버페이</i>
+			<i class="spnew api_ico_nlogin">네이버로그인</i>
+			<i class="spnew api_ico_adult"></i>
+			<i class="spnew api_ico_cart"></i>
+			<i class="spnew api_ico_phone"></i>
+			<i class="spnew api_ico_phone2"></i>
+			<i class="spnew api_ico_photo"></i>
+			<i class="spnew api_ico_talktalk"></i>
+			<i class="spnew api_ico_shoplogo"></i>
+			<i class="spnew api_ico_soundpost">사운드포스트</i>
+			<i class="spnew api_ico_age19"></i>
+			<i class="spnew api_ico_beta"></i>
+			<i class="spnew api_ico_close">닫기</i>
+			<i class="spnew api_ico_reply"></i>
+			<i class="spnew api_ico_reply2"></i>
+			<i class="spnew api_ico_file_hwp">아래아한글(hwp)</i>
+			<i class="spnew api_ico_file_xls">MS엑셀(xls)</i>
+			<i class="spnew api_ico_file_doc">MS워드(doc)</i>
+			<i class="spnew api_ico_file_pdf">아크로벳(pdf)</i>
+			<i class="spnew api_ico_file_ppt">MS파워포인트(ppt)</i>
+			<i class="spnew api_ico_home_add"></i>
+			<a href="#" class="api_btn_map" role="button"><i class="spnew api_ico_expand">지도확대</i></a>
+		</section>
+
+		<section class="sc">
+			<h2 class="gg_tit"><b class="gg_bullet gg_blue"></b> 썸네일 이미지준비중+로딩중</h2>
+			<div class="gg_wrap">
+			<ul>
+				<li>썸네일 영역에 사용합니다.</li>
+				<li>width, height값 수정하여 적용합니다.</li>
+				<li>style 재설정하지 않습니다.</li>
+			</ul>
+			</div>
+
+			<div class="api_subject_bx">
+				<div>90*90 이하</div>
+				<div>
+					<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="63" height="63" alt="이미지준비중" class="bg_nimg">
+					<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="63" height="63" alt="성인인증필요" class="bg_censor19">
+				</div>
+				<div>91*91 ~ 179*179 이하</div>
+				<div>
+					<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="100" height="100" alt="이미지준비중" class="bg_nimg2">
+					<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="100" height="100" alt="성인인증필요" class="bg_censor19">
+				</div>
+				<div>180*180 이상</div>
+				<div>
+					<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="180" height="180" alt="이미지준비중" class="bg_nimg3">
+					<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="180" height="180" alt="성인인증필요" class="bg_censor19">
+				</div>
+				<div>로딩중</div>
+				<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="100" height="100" alt="이미지로딩중" class="bg_bloading2">
+			</div>
+		</section>
+
+		<section class="sc">
+			<h2 class="gg_tit"><b class="gg_bullet gg_blue"></b> CSS말줄임</h2>
+			<div class="gg_wrap">
+			<ul>
+				<li>1줄 말줄임은 elss와 다중 class로 조합하여 style 설정합니다.</li>
+				<li>다중 말줄임은 api_txt_lines와 다중 class로 조합하여 max-height, -webkit-line-clamp, line-height, font-size, color 등 style 설정합니다.</li>
+			</ul>
+			</div>
+
+			<div class="api_subject_bx">
+				<div class="elss">1줄 말줄임 1줄 말줄임 1줄 말줄임 1줄 말줄임 1줄 말줄임 1줄 말줄임</div>
+				<br>
+				<div class="api_txt_lines" style="max-height:4rem;-webkit-line-clamp:2;color:#005fc1;line-height:2rem">다중 말줄임 다중 말줄임 다중 말줄임 다중 말줄임 다중 말줄임 다중 말줄임 다중 말줄임 다중 말줄임 다중 말줄임 다중 말줄임 다중 말줄임 다중 말줄임 다중 말줄임 다중 말줄임 다중 말줄임</div>
+			</div>
+		</section>
+
+		<section class="sc">
+			<h2 class="gg_tit"><b class="gg_bullet gg_green"></b> 컬렉션 박스 + 더보기</h2>
+
+			<div class="api_subject_bx">
+				<div class="api_title_area">
+					<h2 class="api_title">타이틀</h2>
+				</div>
+				<div>컨텐츠 내용이 위치합니다.</div>
+			</div>
+			<div class="api_more_wrap">
+				<a href="#" class="api_more">검색결과 더보기<i class="spnew ico_arr"></i></a>
+			</div>
+		</section>
+
+		<section class="sc">
+			<h2 class="gg_tit"><b class="gg_bullet gg_green"></b> 컬렉션 박스 + 주제 더보기</h2>
+
+			<div class="api_subject_bx">
+				<div class="api_title_area">
+					<h2 class="api_title">타이틀</h2>
+				</div>
+				<div>컨텐츠 내용이 위치합니다.</div>
+			</div>
+			<div class="api_more_wrap">
+				<!-- [D] 상위 api_more_wrap에 ani_play 추가시 동작 -->
+				<a href="#" class="api_more_theme">
+					<span class="api_more_icon">
+						<span class="api_more_icon_inner" style="background-color:#54aaee">더보기<span class="api_bar_wrap"><i class="api_bar"></i><i class="api_bar"></i></span></span>
+					</span>
+				</a>
+			</div>
+		</section>
+
+		<section class="sc">
+			<h2 class="gg_tit"><b class="gg_bullet gg_green"></b> 접기/펼치기 + 더보기 type2</h2>
+
+			<div class="api_subject_bx">
+				<div class="api_title_area">
+					<h2 class="api_title">타이틀</h2>
+				</div>
+				<div>컨텐츠 내용이 위치합니다.</div>
+				<!-- [D] api_open 추가 후 ani_fadein 추가 -->
+				<div class="api_hidden_box">펼치기 클릭 후 노출되는 컨텐츠 내용이 위치합니다.<br><br><br><br></div>
+			</div>
+			<div class="api_more_wrap">
+				<!-- [D] 접기로 변경 open 추가 -->
+				<a href="#" class="api_more_multi" role="button"><span>펼쳐보기</span><i class="spnew ico_arr"></i></a>
+			</div>
+		</section>
+	</div>
+	<hr>
+	<div id="aside">
+		<img src="http://dev.ui.naver.com/tmp/?310x91_msearchaside1_y_93c47d_100" alt="Dummy" style="display:block;width:100%;height:91px;margin-top:5px">
+		<img src="http://dev.ui.naver.com/tmp/?310x434_msearchaside2_y_93c47d_100" alt="Dummy" style="display:block;width:100%;height:434px;margin-top:5px">
+	</div>
+</div>
+<hr>
+<footer>
+	<img src="http://dev.ui.naver.com/tmp/?310x150_msearchfooter_y_93c47d_100" alt="Dummy" style="display:block;width:100%;height:150px;margin-top:5px">
+</footer>
+<!-- 흰색딤드레이어, display:block,ani_play추가,제거,display:none -->
+<div class="api_ly_white_dimmed"></div>
+<!-- 주제별 레이어 -->
+<div class="api_ly_extend">
+<div class="api_extend_wrap">
+
+<h2 class="gg_tit gg_tit_part">공통 정답형헤더</h2>
+<div class="gg_wrap">
+<ul>
+	<li>DIV.api_header 및 DIV.api_content 전체 공통 입니다. (공통 애니메이션 적용)</li>
+	<li>GNB영역 대표색상은 DIV.api_header 하위 빈DIV에 rgb값으로 추가합니다.</li>
+	<li>타이틀 서브명 없으면 삭제합니다.</li>
+	<li>탭메뉴 균등분할 타입 추가(디자인,운영부서와 협의하여 사용)</li>
+	<li class="gg_red">스타검색은 통검 배경(그라데이션) 브릿지에 동일하게 반영</li>
+</ul>
+</div>
+
+	<!-- [D] api_fixed 추가시 position:fixed, ani_slide_show 추가시 show -->
+	<div class="api_header">
+		<!-- [D] 주제별 대표색상 rgb 값 -->
+		<div style="background-color:rgb(23,99,205)">
+			<div class="header_gnb">
+				<!-- [D] 이전보기 없으면 제거 -->
+				<!-- div class="btn_area">
+					<a href="#" class="btn"><i class="spnew ico_prev">이전</i></a>
+				</div -->
+				<div class="tit_area">
+					<h2 class="tit">타이틀<span class="tit_sub_dsc">option</span></h2>
+					<span class="sub"><em class="sub_dsc">서브문구</em><em class="sub_dsc">서브문구</em><em class="sub_dsc type_dot">Abcd</em></span>
+				</div>
+				<div class="tool_area">
+					<button type="button" class="btn"><i class="spnew ico_share">공유하기</i></button>
+					<button type="button" class="btn"><i class="spnew ico_close">닫기</i></button>
+				</div>
+			</div>
+			<!-- TYPE1 기본/스크롤 자동전환 -->
+			<div class="header_lnb">
+				<!-- [D] scroll, ul의 너비가 디바이스 너비보다 커지면 type_scroll 추가 -->
+				<div class="scroll_lnb type_scroll">
+					<ul class="list_lnb" role="tablist">
+					<!-- [D] 선택시 li에 aria-selected="true" selected 추가 -->
+					<!-- [D] 선택하는 순간 나머지 i에 이전에 선택된 i의 위치값 transform:translateX(0px) 추가 및 선택된 i style 값 제거 -->
+					<li class="bx selected" role="tab" aria-selected="true"><a href="#" class="tab"><span class="menu">메뉴1<i class="slide_bar"></i></span></a></li>
+					<li class="bx" role="tab"><a href="#" class="tab"><span class="menu">메뉴2<i class="slide_bar"></i></span></a></li>
+					<li class="bx" role="tab"><a href="#" class="tab"><span class="menu">메뉴3<i class="slide_bar"></i></span></a></li>
+					<li class="bx" role="tab"><a href="#" class="tab"><span class="menu">메뉴4<i class="slide_bar"></i></span></a></li>
+					<li class="bx" role="tab"><a href="#" class="tab"><span class="menu">메뉴5<i class="slide_bar"></i></span></a></li>
+					<li class="bx" role="tab"><a href="#" class="tab"><span class="menu">메뉴6<i class="slide_bar"></i></span></a></li>
+					<li class="bx" role="tab"><a href="#" class="tab"><span class="menu">메뉴7<i class="slide_bar"></i></span></a></li>
+					<li class="bx" role="tab"><a href="#" class="tab"><span class="menu">메뉴8<i class="slide_bar"></i></span></a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- TYPE2 균등분할 스크롤 안됨 -->
+			<div class="header_lnb">
+				<div class="scroll_lnb type_equal">
+					<ul class="list_lnb" role="tablist">
+					<!-- [D] 선택시 li에 aria-selected="true" selected 추가 -->
+					<!-- [D] 선택하는 순간 나머지 i에 이전에 선택된 i의 위치값 transform:translateX(0px) 추가 및 선택된 i style 값 제거 -->
+					<li class="bx selected" role="tab" aria-selected="true"><a href="#" class="tab"><span class="menu">여행정보<i class="slide_bar"></i></span></a></li>
+					<li class="bx" role="tab"><a href="#" class="tab"><span class="menu">가본만한곳<i class="slide_bar"></i></span></a></li>
+					<li class="bx" role="tab"><a href="#" class="tab"><span class="menu">리뷰<i class="slide_bar"></i></span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="api_header">
+		<!-- [D] 주제별 대표색상 rgb 값 -->
+		<div style="background-color:rgba(244,109,153,1);
+background:-moz-linear-gradient(-45deg, rgba(244,109,153,1) 0%, rgba(244,109,153,1) 100%);
+background:-webkit-gradient(left top, right bottom, color-stop(0%, rgba(244,109,153,1)), color-stop(100%, rgba(248,165,150,1)));
+background:-webkit-linear-gradient(-45deg, rgba(244,109,153,1) 0%, rgba(248,165,150,1) 100%);
+background:linear-gradient(135deg, rgba(244,109,153,1) 0%, rgba(248,165,150,1) 100%);">
+			<div class="header_gnb">
+				<!-- [D] 이전보기 없으면 제거 -->
+				<!-- div class="btn_area">
+					<a href="#" class="btn"><i class="spnew ico_prev">이전</i></a>
+				</div -->
+				<div class="tit_area">
+					<h2 class="tit">타이틀<span class="tit_sub_dsc">option</span></h2>
+					<span class="sub"><em class="sub_dsc">서브문구</em><em class="sub_dsc">서브문구</em><em class="sub_dsc type_dot">Abcd</em></span>
+				</div>
+				<div class="tool_area">
+					<button type="button" class="btn"><i class="spnew ico_share">공유하기</i></button>
+					<button type="button" class="btn"><i class="spnew ico_close">닫기</i></button>
+				</div>
+			</div>
+			<!-- TYPE2 균등분할 스크롤 안됨 -->
+			<div class="header_lnb">
+				<div class="scroll_lnb type_equal">
+					<ul class="list_lnb" role="tablist">
+					<!-- [D] 선택시 li에 aria-selected="true" selected 추가 -->
+					<!-- [D] 선택하는 순간 나머지 i에 이전에 선택된 i의 위치값 transform:translateX(0px) 추가 및 선택된 i style 값 제거 -->
+					<li class="bx selected" role="tab" aria-selected="true"><a href="#" class="tab"><span class="menu">여행정보<i class="slide_bar"></i></span></a></li>
+					<li class="bx" role="tab"><a href="#" class="tab"><span class="menu">가본만한곳<i class="slide_bar"></i></span></a></li>
+					<li class="bx" role="tab"><a href="#" class="tab"><span class="menu">리뷰<i class="slide_bar"></i></span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="api_content">
+		<section class="sc xxx">
+			<div class="api_subject_bx">
+				컨텐츠 내용이 위치합니다.<br>컨텐츠 내용이 위치합니다.<br>컨텐츠 내용이 위치합니다.<br>컨텐츠 내용이 위치합니다.<br>컨텐츠 내용이 위치합니다.<br>컨텐츠 내용이 위치합니다.<br>컨텐츠 내용이 위치합니다.<br>컨텐츠 내용이 위치합니다.
+			</div>
+
+			<h2 class="gg_tit gg_tit_alert">접기/펼치기</h2>
+			<div class="gg_wrap">
+			<ul>
+				<li>style 재설정 하지 않습니다.</li>
+				<li>상단 더보기 type2와 동일합니다</li>
+			</ul>
+
+			<div class="api_more_wrap">
+				<!-- [D] 접기로 변경 open 추가 -->
+				<a href="#" class="api_more_multi" role="button"><span>펼쳐보기</span><i class="spnew ico_arr"></i></a>
+			</div>
+
+			<h2 class="gg_tit gg_tit_alert">브릿지 공통 더보기</h2>
+			<div class="gg_wrap">
+			<ul>
+				<li>접기/펼치기와 동일합니다.</li>
+				<li>텍스트 수정 가능합니다. (더보기, 펼쳐보기)</li>
+				<li>style 재설정 하지 않습니다.</li>
+				<li>api_more_wrap에 type_loading 클래스 토글로 로딩중 표시됩니다.</li>
+			</ul>
+			</div>
+
+			<!-- [D] type_loading 토글 -->
+			<div class="api_more_wrap">
+				<a href="#" class="api_more_multi" role="button">펼쳐보기<i class="spnew ico_arr"></i></a>
+				<!-- 로딩중 -->
+				<div class="api_loading_area">
+					<div class="loading_area"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="100%" height="8" alt="로딩중" class="bg_bloading2"></div>
+				</div>
+			</div>
+		</section>
+		<h2 class="gg_tit gg_tit_alert">브릿지 정보확인</h2>
+		<div class="gg_wrap">
+		<ul>
+			<li>style 재설정 하지 않습니다.</li>
+			<li>불필요한 경우 제거 가능합니다. (DIV.api_info_area)</li>
+			<li>텍스트 변경 가능합니다.</li>
+		</ul>
+		</div>
+		<!-- 정보확인 -->
+		<div class="api_info_area">
+			<a href="#" class="btn_api_info" role="button">정보확인 2017.04.22.<i class="spnew ico_alert"></i></a>
+			<!-- [D] 정보확인 선택시 toggle -->
+			<div class="ly_api_info">
+				<strong class="tit">프로필 정보확인</strong>
+				<p class="dsc">네이버는 당사자 또는 당사자와 관련된 기관에서 공식적으로 제공한 정보 및 언론이나 외부에 공개된 정보를 프로필로 제공하고 있습니다. <a href="#" class="link">네이버 고객센터</a></p>
+				<button type="button" class="btn_close"><i class="spnew ico_close">정보확인 레이어 닫기</i></button>
+			</div>
+		</div>
+	</div>
+	<h2 class="gg_tit gg_tit_alert">브릿지 하단 footer</h2>
+	<div class="gg_wrap">
+	<ul>
+		<li>style 재설정 하지 않습니다.</li>
+		<li>주제에 따라 하단 텍스트 변경 및 추가/제거 가능합니다.</li>
+	</ul>
+	</div>
+
+	<div class="api_footer">
+		<a href="#" class="api_banner_home" style="background-color:#38548f"><span class="ico_thumb"><i class="spnew api_ico_banner"></i></span> 오버워치 홈 화면에 추가하기</a>
+		<div class="api_info_banner">
+			<a href="#" class="banner_bx" role="button"><i class="spnew api_ico_search"></i><strong class="tit">통합검색</strong> 결과보기</a>
+		</div>
+		<div class="api_info_service">
+			<div class="service_area">
+				<span class="info"><a href="#">통합검색 고객센터</a></span>
+				<span class="info"><a href="#">네이버 고객센터</a></span>
+			</div>
+			<a href="#" class="service_logo"><i class="spnew ico_logo">NAVER</i></a>
+		</div>
+	</div>
+</div>
+</div>
+</body>
+</html>
