@@ -1,0 +1,114 @@
+@charset "utf-8";
+/**
+BASE CSS
+**/
+* { margin:0; padding:0; }
+* {-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+html, body { margin:0px; padding:0px; background-color:#fff; font-family:"Nanum Gothic", 'Dotum', 'serif', sans-serif; font-size:100%; color:#666; line-height:100%; overflow-y:auto;}
+img { max-width:100%; border:0; vertical-align:top; }
+fieldset { border:0px; }
+legend { visibility:hidden; height:0px; width:0px; line-height:0; _text-indent:-10px; font-size:0px; }
+table { border-collapse:collapse; }
+select{vertical-align:middle} 
+ul, ol { list-style-type:none; }
+dt, dd, h1 ,h2, h3, h4 { padding:0px; margin:0px; }
+input {font-size:12px;}
+hr { display: none; }
+caption, legend,  #skipNavi {width:0; height:0; line-height:0; overflow:hidden; visibility:hidden; font-size:0;}
+
+.fl { float:left !important; }
+.fr { float:right !important; }
+.am { vertical-align:middle !important; }
+.ac {text-align:center !important;}
+.ar {text-align:right !important;}
+.bgnone { background:none !important; }
+.b {font-weight:bold;}
+.invisible{display:block; overflow:hidden; visibility:hidden; width:0; height:0; margin:0; font-size:0; line-height:0;}
+
+a, a:link, a:visited, a:active {color:inherit; text-decoration:none;}
+a:hover {text-decoration:none;}
+a {outline:none;select-dummy:expression(this.hideFocus=true);}
+
+.clfix:after {content: "."; display: block; height: 0px; clear: both; visibility: hidden;}
+.clfix {display: inline-block;}
+.clfix {display: block;}
+* html .clfix {height: 1%;} /* Hides from IE-mac */
+.clfix { zoom:1; } /*for IE 5.5-7*/
+
+h1, h2, h3, h4, h5, h6 {font-family: 'Oswald', 'Nanum Gothic', 'Dotum';}
+
+.inner-c {position:relative; width:1024px; margin:0 auto;}
+
+.mb20 {margin-bottom:20px;}
+.mr20 {margin-right:50px;}
+
+[class*='col-'] {-moz-transition:all 0.3s ease 0s;-webkit-transition:all 0.3s ease 0s;-o-transition:all 0.3s ease 0s;-ms-transition:all 0.3s ease 0s;transition:all 0.3s ease 0s;}
+/**
+LAYOUT
+All layout related styles: grids, columns, etc...
+**/
+#body-wrapper {width:100%; background-color:#f6f6f6; border-top:7px solid #f5f5f5; overflow-x:hidden; overflow-y:hidden;}
+#body-wrapper.mobile {width:420px;}
+header {position:relative; background-color:#fff; border-bottom:1px solid #E4E4E4;}
+	header .device {position:absolute; right:0; top:8px; width:218px; padding:0 0 2px 10px; background-color:#999; border:1px solid #ddd; border-radius:5px;}
+#contents {width:100%; padding:50px 0 0;}
+@media (max-width:767px){
+	#contents .container {padding-left:30px; padding-right:30px;}
+}
+footer {position:relative; padding:40px 0 40px; background:#333; color:#999;}
+	footer h2 {float:left; margin-right:30px; margin-bottom:0; font-size:1em; color:#fff; line-height:160%;}
+	footer nav {float:left;}
+	footer ul {}
+	footer ul li {float:left; margin-right:20px; border-bottom:1px solid #444; line-height:160%;}
+	footer ul li a {font-family: 'Oswald', sans-serif; font-size:0.85em; color:#fff !important; font-weight:normal;}
+	footer .copyright {font-size:0.75em;} 
+	
+.device ul li {float:left; margin-right:15px;}
+	.device ul li a {font-family:Tahoma; font-size:0.7em; color:#fff;}
+	.device ul li a .fa {width:16px; font-size:0.8em; display:inline-block; text-align:center; margin-right:2px}
+
+/** GNB **/
+
+/** 맞춤화(s) **/
+.navbar {border:none; margin-bottom:0;}
+.navbar .container {padding-top:30px; padding-bottom:10px;}
+.navbar-default {background-color:transparent;}
+.navbar-brand {font-size:16px;}
+	.navbar-brand h1 {float:left; margin-top:-10px; font-family: 'Pinyon Script', cursive !important; font-size:3.2em !important; color:#000; font-weight:400; line-height:16px;}
+	.navbar-brand h1 span {display:block; margin-top:10px; font-family: 'Denk One'; font-size:1rem; text-align:center;}
+
+.navbar-default .navbar-collapse {background-color:#fff;}
+@media (max-width:480px){
+	.nav > li > a {padding-left:10px; padding-right:10px;}
+}
+@media (min-width:768px) and (max-width:991px) {
+	.navbar .container {padding-left:0px; padding-right:0px;}
+}
+@media (min-width:768px){
+	header .navbar .navbar-collapse {float:right; padding-left:0;}
+}
+@media (max-width:767px){
+	header .navbar .navbar-collapse .navbar-nav {float:right; margin-right:0;}
+	header .navbar .navbar-collapse .navbar-right {float:right; width:100%; margin-right:0;}
+	header .navbar .navbar-collapse .navbar-right > li > a {text-align:right;}
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a {text-align:right;}
+}
+/** 맞춤화(e) **/
+
+.nav-scroll {position:fixed; width:100%; border-bottom:1px solid #ddd; z-index:99; background-color:#fff; opacity: 0; top:-90px; -webkit-transition:top 0.8s ease, opacity 0.8s ease; -moz-transition:top 0.8s ease, opacity 0.8s ease; -o-transition:top 0.8s ease, opacity 0.8s ease; -ms-transition:top 0.6s ease, opacity 0.8s ease; transition:top 0.6s ease, opacity 0.8s ease; box-shadow: 0 1px 5px 0 #CCC;}
+	.nav-scroll.docked {top:0; opacity: 0.9;}
+	.nav-scroll .inner-c {padding:30px 0 20px;}
+	.nav-scroll #gnb h1 {margin-top:0;}
+	.nav-scroll #gnb ul li a {color:#000;}
+	.nav-scroll .navbar-collapse {float:right; padding-left:0;}
+	
+@media (max-width:767px){
+	.nav-scroll .navbar-collapse {float:none;}
+	.nav-scroll .navbar .navbar-collapse .navbar-nav {float:right; margin-right:0;}
+	.nav-scroll .navbar .navbar-collapse .navbar-right {float:right; width:100%; margin-right:0;}
+	.nav-scroll .navbar .navbar-collapse .navbar-right > li > a {text-align:right;}
+}
+
+.lazy {-webkit-transition-property: opacity; -moz-transition-property: opacity; -o-transition-property: opacity; transition-property: opacity; -webkit-transition-duration: 0.3s; -moz-transition-duration: 0.3s; -o-transition-duration: 0.3s; transition-duration: 0.3s; -webkit-transition-timing-function: ease; -moz-transition-timing-function: ease; -o-transition-timing-function: ease; transition-timing-function: ease; opacity: 0;}
+
+#toTop {display: none; width: 100px; background: #000; text-align: center; padding: 8px 12px; position: fixed; bottom: 10px; right: 10px; cursor: pointer; color: #fff; font-size: 0.7em; text-transform: uppercase; font-weight: bold;}

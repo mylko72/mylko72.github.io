@@ -1,0 +1,15 @@
+<h1>LG Fashion Shop</h1>
+<div class="clfix">
+	<div class="col-md-8">
+		<img src="/home/images/recent_work_view02.jpg" class="responsive-img" alt="" />
+	</div>
+	<div class="col-md-3">
+		<ul class="desc-list">
+			<li><span>Project</span> LG Fashion Shop</li>
+			<li><span>Client</span> LG Fashion</li>
+			<li><span>Date</span> 2013.03 ~ 2013. 07</li>
+			<li><span>Url</span> <a href="http://www.lfmall.co.kr/" target="_blank">http://www.lfmall.co.kr/</a></li>
+			<li>Javascript / jQuery / Web Publishing</li>
+		</ul>
+	</div>
+</div>

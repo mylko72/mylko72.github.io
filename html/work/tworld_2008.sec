@@ -1,0 +1,15 @@
+<h1>SK 텔레콤 T world</h1>
+<div class="clfix">
+	<div class="col-md-8">
+		<img src="/home/images/img_tworld_2008.jpg" class="responsive-img" alt="" />
+	</div>
+	<div class="col-md-3">
+		<ul class="desc-list">
+			<li><span>Project</span> SK 텔레콤 T world</li>
+			<li><span>Client</span> SK 텔레콤</li>
+			<li><span>Date</span> 2008.08 ~ 2008.11</li>
+			<li><span>Url</span> <a href="http://www.tworld.co.kr" target="_blank">http://www.tworld.co.kr</a></li>
+			<li>jQuery / Web Publishing</li>
+		</ul>
+	</div>
+</div>

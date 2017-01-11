@@ -1,0 +1,15 @@
+<h1>한컴 핀테크</h1>
+<div class="clfix">
+	<div class="col-md-8">
+		<img src="/home/images/recent_dreamsead_view.jpg" class="responsive-img" alt="" />
+	</div>
+	<div class="col-md-3">
+		<ul class="desc-list">
+			<li><span>Project</span> 한컴 핀테크 드림시드</li>
+			<li><span>Client</span> 한글과 컴퓨터</li>
+			<li><span>Date</span> 2015.08 ~ 2015.09</li>
+			<li><span>Url</span> <a href="https://www.dreamsead.com/" target="_blank">https://www.dreamsead.com/</a></li>
+			<li>Javascript / jQuery / Web Publishing</li>
+		</ul>
+	</div>
+</div>
