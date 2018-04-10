@@ -602,7 +602,7 @@ var createConts = function() {
 	//if(fileNum > 4) fileNum = 0;
 	if(fileNum > 4) fileNum = 1;
 	fileName = 'schedule0'+fileNum+'_0'+fileNum;
-	ajaxLoad(YList[onIdx].replace(/-/g,""), _insertBox, "http://devimage.hnsmall.com/genhtml/tvtableAjax/"+ fileName +".html", false);
+	ajaxLoad(YList[onIdx].replace(/-/g,""), _insertBox, "./genhtml/"+ fileName +".html", false);
 	/* e : 퍼블 화면용 */
 }
 
@@ -612,7 +612,7 @@ var createLeftConts = function(getSeqNo) {
 	//_insertBox.empty();
 	/* s : 퍼블 화면용 */
 	fileName = 'seq_schedule'+getSeqNo+'_'+getSeqNo;
-	ajaxLoad(YList[onIdx].replace(/-/g,""), _insertBox, "http://devimage.hnsmall.com/genhtml/tvtableAjax/"+ fileName +".html", true);
+	ajaxLoad(YList[onIdx].replace(/-/g,""), _insertBox, "./genhtml/"+ fileName +".html", true);
 	/* e : 퍼블 화면용 */
 }
 
