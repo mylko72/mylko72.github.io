@@ -1,0 +1,620 @@
+@charset "utf-8";
+html, body {height:100%;}
+
+/***************************************************************************************************************
+** TV편성표 - MAIN tvschedule_image01
+background-image:url(//devimage.hnsmall.com/images/mobile2014/common/ico_header.png); background-repeat: no-repeat; background-size:300px auto;
+***************************************************************************************************************/
+.bgTv, .bgTvAfter:after, .bgTvBefore:before, .onair:after {background-image:url(//image.hnsmall.com/images/mobile2014/common/ico_header.png); background-repeat: no-repeat; background-size:300px auto;}
+.onAirWrap {position:relative; height:100%; min-height:100%; height:auto !important;}
+.onAirWrap .onAirHeader {position:relative; width:100%; height:40px; border-bottom:1px solid #d4d4d4;}
+.onAirWrap .onAirHeader .blind {display:inline-block; position:absolute; left:-9999rem; width:0; height:0; line-height:0; text-indent:-999em;}
+/* .onAirWrap .onAirHeader .headTitle {left:50%; margin-left:-50.5px; margin-top:12px; font-size:17px; letter-spacing: -1px;} */
+.onAirWrap .onAirHeader .btnPageBack {position:absolute; top:0; left:0; width:38px; height:40px;}
+.onAirWrap .onAirHeader .btnPageBack.bgTvAfter:after {display:block; content:""; width:20px; height:18px; margin:11px auto 0; font-size:0; line-height:0; color:transparent;  background-position:0 -90px;}
+.onAirWrap .onAirHeader .pageTit {margin: 0 200px 0 43px; line-height:40px; font-size:17px; font-weight:bold; color:#000;}
+.onAirWrap .onAirHeader .btnsTopArea {overflow:hidden; position:absolute; top:0; right:0; bottom:0; padding:7px 0 0;}
+.onAirWrap .onAirHeader .btnsTopArea a {display:inline-block; width:auto; margin:0 5px 0 0; vertical-align:top;}
+.onAirWrap .onAirHeader .btnsTopArea a img {height:25px; vertical-align:top;}
+.onAirWrap .onAirHeader .btnsTopArea a.btnSearch {box-sizing:border-box; position:relative; width:104px;height:25px; border:1px solid #e51937; border-radius:30px;background:none;}
+.onAirWrap .onAirHeader .btnsTopArea a.btnSearch.bgTvAfter:after {display:block; content:"";  position:absolute; right:10px; top:3px; width:16px; height:16px;  background-position:-20px -90px;}
+
+/* 편성표 요일 리스트 슬라이드 */
+.onAirWrap .dateNaviBox {-webkit-box-sizing:border-box; position:relative; width:100%; height:41px; border-bottom:1px solid #ddd;}
+.onAirWrap .dateNaviBox .weekSlide {overflow:hidden; position:relative;}
+.onAirWrap .dateNaviBox .weekSlide ul {overflow:hidden; position:relative; width:300%;}
+.onAirWrap .dateNaviBox .weekSlide ul li {float:left; width:3.7%;}
+.onAirWrap .dateNaviBox .weekSlide ul li a {display:block; height:36px; padding:4px 0 0; line-height:14px;  font-size:11px; color:#565656; text-align:center;}
+.onAirWrap .dateNaviBox .weekSlide ul li a span {display:block; width:22px; height:21px; margin:0 auto; padding:1px 0 0; line-height:21px; font-size:17px; font-weight:700; -webkit-border-radius:100%;}
+.onAirWrap .dateNaviBox .weekSlide ul li .today {color:#f35169;}
+.onAirWrap .dateNaviBox .weekSlide ul li.on a {color:#e51937;}
+.onAirWrap .dateNaviBox .weekSlide ul li.on a span {font-size:15px; color:#fff; background:#e51937; letter-spacing:-0.5px;}
+.onAirWrap .dateNaviBox .onAirTit {height:31px; padding:1px 10px 0; line-height:31px; font-size:12px; font-weight:normal; color:#fff; background:#da0f2d;}
+.onAirWrap .dateNaviBox .onAirTit span {display:inline-block; margin:0 0 0 10px; vertical-align:top;}
+
+/* 편성표 요일 리스트 - 좌우 이동 버튼 추가 2016-11-24 */
+.onAirWrap .dateNaviBox.type02 {padding:0 20px; z-index:100;}
+.onAirWrap .dateNaviBox.type02 > a {position:absolute; top:0; bottom:0; width:20px;}
+.onAirWrap .dateNaviBox.type02 > a:before {display:block; content:""; position:absolute; top:50%; left:50%; width:7px; height:13px; margin:-7px 0 0 -4px;}
+.onAirWrap .dateNaviBox.type02 > a.btnPrev {left:0;}
+.onAirWrap .dateNaviBox.type02 > a.btnPrev.bgTvBefore:before {background-position:-40px -90px;}
+.onAirWrap .dateNaviBox.type02 > a.btnPrev.bgTvBefore.disable:before {background-position:-50px -90px;}
+.onAirWrap .dateNaviBox.type02 > a.btnNext {right:0;}
+.onAirWrap .dateNaviBox.type02 > a.btnNext.bgTvBefore:before {background-position:-60px -90px;}
+.onAirWrap .dateNaviBox.type02 > a.btnNext.bgTvBefore.disable:before {background-position:-70px -90px;}
+
+/* 편성표 요일 리스트 - 슬라이드 가이드 레이어 */
+.onAirWrap .dateNaviBox.type02 .weekGuideLayer {position:absolute; left:0; right:0; bottom:-44px; -webkit-box-sizing:border-box; height:44px; padding:9px 0 0;}
+.onAirWrap .dateNaviBox.type02 .weekGuideLayer > .guideTxt {position:relative; height:23px; padding:1px 0 0; margin:0 57px; line-height:23px; font-size:11px; font-weight:bold; color:#fff; text-align:center; background:#da0f2d;}
+.onAirWrap .dateNaviBox.type02 .weekGuideLayer > .guideTxt:before {display:block; content:""; position:absolute; left:-21px; top:50%; width: 0; height: 0; margin:-18px 0 0; border-style: solid; border-width: 18px 22px 18px 0; border-color: transparent #da0f2e transparent transparent; background-image:none;}
+.onAirWrap .dateNaviBox.type02 .weekGuideLayer > .guideTxt:after {display:block; content:""; position:absolute; right:-21px; top:50%; width: 0; height: 0; margin:-18px 0 0; border-style: solid; border-width: 18px 0 18px 22px; border-color: transparent transparent transparent #da0f2e; background-image:none;}
+.onAirWrap .dateNaviBox.type02 .btnClose {position:absolute; top:-10px; right:20px; width:12px; height:12px; line-height:0; font-size:1px; color:transparent; border:none; background-image:none; background-color:transparent; outline:none;}
+
+/* 편성표 요일별 슬라이드 컨텐츠 */
+.onAirWrap .onAirCont {overflow:hidden; position:absolute; top:82px; bottom:0; left:0; z-index:99; width:100%;}
+.onAirWrap .onAirCont .contsL {overflow:hidden; position:relative; box-sizing:border-box;  -webkit-box-sizing:border-box; width:100%; height:100%; padding:0 29% 240px 0;}
+.onAirWrap .onAirCont .contsR {/*overflow:hidden;*/position:absolute; top:0; right:0; bottom:0; box-sizing:border-box; -webkit-box-sizing:border-box; width:29%; height:100%; border-left:1px solid #fff;}
+
+/* 상품 이미지 */
+.onAirWrap .onairViewWrap {overflow:hidden; position:relative; box-sizing:border-box; -webkit-box-sizing:border-box; height:100%; max-height:100%;}
+.onAirWrap .onairViewWrap .img {display:block; overflow:hidden; position:relative; box-sizing:border-box; -webkit-box-sizing:border-box;  width:100%; height:100%; text-align:center;}
+/*.onAirWrap .onairViewWrap .img:after {display:block; content:""; position:absolute; top:0; right:0; left:0; bottom:0; background:#000; opacity:0.2;}*/
+.onAirWrap .onairViewWrap .img img {visibility:hidden; max-width:100%; max-height:100%; vertical-align:top;}
+
+.onAirWrap .onairViewWrap .prdAlertBox {position:absolute; bottom:0; left:0; right:0; font-size:12px; color:#444; text-align:center; background:#fff;}
+.onAirWrap .onairViewWrap .prdAlertBox > .preOrder {display:inline-block; position:relative; height:26px; padding:1px 0 0 20px; color:#4d4d4d; line-height:26px; letter-spacing:-0.5px;}
+.onAirWrap .onairViewWrap .prdAlertBox > .preOrder.bgTvAfter:after {display:block; content:""; position:absolute; top:6px; left:0; width:15px; height:14px; background-position:-120px -90px;}
+
+.onAirWrap .onairViewWrap .imgFrame {position:absolute; top:0; right:0; left:0; bottom:0;}
+.onAirWrap .onairViewWrap .imgFrame:before {display:block; content:""; position:absolute; top:0; right:0; left:0; bottom:0; background:#000; opacity:0.2;}
+.onAirWrap .onairViewWrap .imgFrame .videoPlay {position:absolute; top:50%; left:0; right:0; margin:-19px 0 0;}
+.onAirWrap .onairViewWrap .imgFrame .videoPlay.bgTvBefore:before {display:block; content:""; width:38px; height:38px; margin:0 auto; background:url(//image.hnsmall.com/images/mobile2014/common/flag_pang.png) no-repeat -110px -250px;background-size:210px 305px;}
+.onAirWrap .onairViewWrap .imgFrame .videoPlay .tvTxt {display:block; text-align:center;}
+.onAirWrap .onairViewWrap .imgFrame .videoPlay .tvTxt.live {position:absolute; left:-9999em; color:transparent;}
+.onAirWrap .onairViewWrap .imgFrame .videoPlay .tvTxt.return {font-size:12px; color:#fff;}
+
+.onAirWrap .onairViewWrap .imgFrame .digitWrap {position:absolute; top:50%; left:50%; margin:5px 0 0 -42px;}
+.onAirWrap .onairViewWrap .imgFrame .digitWrap:after {display:block; content:""; clear:both; width:0; height:0; line-height:0;}
+.onAirWrap .onairViewWrap .imgFrame .digitWrap .digit, .onAirWrap .onairViewWrap .digitWrap .dot {background:url(//image.hnsmall.com/images/mobile2014/tv/tvtable_3/tvSchedule_digits_new.png) no-repeat; background-size:12px 600px;}
+.onAirWrap .onairViewWrap .imgFrame .digitWrap .digit {float: left; width:12px; height:50px;}
+.onAirWrap .onairViewWrap .imgFrame .digitWrap .digit.t0 {background-position-y: 0px; }
+.onAirWrap .onairViewWrap .imgFrame .digitWrap .digit.t1 {background-position-y: -50px; }
+.onAirWrap .onairViewWrap .imgFrame .digitWrap .digit.t2 {background-position-y: -100px; }
+.onAirWrap .onairViewWrap .imgFrame .digitWrap .digit.t3 {background-position-y: -150px; }
+.onAirWrap .onairViewWrap .imgFrame .digitWrap .digit.t4 {background-position-y: -200px; }
+.onAirWrap .onairViewWrap .imgFrame .digitWrap .digit.t5 {background-position-y: -250px; }
+.onAirWrap .onairViewWrap .imgFrame .digitWrap .digit.t6 {background-position-y: -300px; }
+.onAirWrap .onairViewWrap .imgFrame .digitWrap .digit.t7 {background-position-y: -350px; }
+.onAirWrap .onairViewWrap .imgFrame .digitWrap .digit.t8 {background-position-y: -400px; }
+.onAirWrap .onairViewWrap .imgFrame .digitWrap .digit.t9 {background-position-y: -450px; }
+.onAirWrap .onairViewWrap .imgFrame .digitWrap .dot {float: left; width: 6px;height: 40px; background-position:-3px -551px;}
+
+.onAirWrap .onairViewWrap .playBtn:before {opacity:0.15;}
+.onAirWrap .onairViewWrap .playBtn .playIco.large .playTime {font-size:20px; letter-spacing:-0.5px;}
+.onAirWrap .onairViewWrap .playBtn .playIco.large .playTxt {display:inline-block; font-size:15px; color:#fff; letter-spacing:-0.5px; vertical-align:top;}
+
+.onAirWrap .onairError {position:absolute; left:0; top:0; bottom:0; right:29%; z-index:10; background:#fff; text-align:center;}
+.onAirWrap .onairError:before {display:inline-block; width:1px; height:100%; content:''; vertical-align:middle;}
+.onAirWrap .onairError .prtErrorMsg {display:inline-block; vertical-align:middle;}
+.onAirWrap .onairError .prtErrorMsg:before {display:inline-block; content:''; width:54px; height:54px; margin-bottom:10px; background:url(//image.hnsmall.com/images/mobile2014/common/ico_header.png) no-repeat -140px -305px; background-size:300px auto;}
+.onAirWrap .onairError .prtErrorMsg .txt_error {margin-bottom:10px; font-size:15px; color:#333;}
+.onAirWrap .onairError .prtErrorMsg .txt_loading {margin-bottom:20px; font-size:12px; color:#888; line-height:1;}
+.onAirWrap .onairError .prtErrorMsg .btn02 {padding:0 20px; border-radius:4px; -moz-border-radius:4px; -webkit-border-radius:4px; font-weight:normal;}
+
+/* 상품 요약 */
+.onAirWrap .onairInfoSect {position:absolute; bottom:0; left:0; right:29%; height:240px; border-top:1px solid #e9e9e9; background:#fff}
+.onAirWrap .onairInfoSect .onairPrdInfo  {display:block; min-height:96px; margin:8px 12px 8px 12px;}
+.onAirWrap .onairInfoSect .onairPrdInfo .prdTit {display:-webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;text-overflow: ellipsis;overflow: hidden;height:38px;padding:1px 0 0; line-height:19px;font-size:16px;letter-spacing:-0.5px;font-weight:normal; color:#000;}
+.onAirWrap .onairInfoSect .onairPrdInfo .priceInfo .tit {display:inline-block; width:80px; line-height:18px; font-size:12px; color:#222; vertical-align:middle;}
+.onAirWrap .onairInfoSect .onairPrdInfo .priceInfo .priceNum {display:inline-block; line-height:18px; font-size:17px; font-weight:bold; color:#e51937; vertical-align:middle;}
+.onAirWrap .onairInfoSect .onairPrdInfo .priceInfo .priceNum em {font-size:12px;}
+.onAirWrap .onairInfoSect .onairPrdInfo .priceInfo .priceNum.type02 {color:#222;}
+.onAirWrap .onairInfoSect .onairPrdInfo .priceInfo .salePrice {display:inline-block; line-height:18px; font-size:12px; color:#666; text-decoration:line-through;}
+.onAirWrap .onairInfoSect .onairPrdInfo.type02 {letter-spacing:-0.5px;}
+
+/* 버튼영역 - 버튼 1개 경우 */
+.onAirWrap .onairInfoSect .btnOrderBox {overflow:hidden;}
+.onAirWrap .onairInfoSect .btnOrderBox a {display:block; height:35px; padding:1px 0 0; line-height:34px; font-size:15px; text-align:center;/*border-top:1px solid #da0f2d; border-bottom:1px solid #da0f2d;*/ letter-spacing:-0.5px; box-sizing:border-box;}
+.onAirWrap .onairInfoSect .btnOrderBox a.btnType01 {color:#fff; background:#888;}
+.onAirWrap .onairInfoSect .btnOrderBox a.btnType02 {color:#fff; background:#f35169;}
+.onAirWrap .onairInfoSect .btnOrderBox a.btnType03 {color:#666; border-top:1px solid #ddd; border-bottom:1px solid #ddd; background:#f3f3f3; line-height:32px;}
+
+
+/* 버튼영역 - 버튼 2개 경우 */
+.onAirWrap .onairInfoSect .btnOrderBox.col02 a {height:35px;}
+.onAirWrap .onairInfoSect .btnOrderBox.col02 a {display:block; box-sizing:border-box; float:left; width:50%;}
+
+/* 관련상품 슬라이드 */
+.onAirWrap .onairInfoSect .relatPrdListWrap {overflow:hidden; position:relative; width:100%;}
+.onAirWrap .onairInfoSect .relatPrdListWrap ul {overflow:hidden; position:relative; width:10000em;}
+.onAirWrap .onairInfoSect .relatPrdListWrap ul li {position:relative; float:left;}
+.onAirWrap .onairInfoSect .relatPrdListWrap ul li a {display:block; position:relative; min-height:73px; padding:10px 10px 10px 85px;}
+.onAirWrap .onairInfoSect .relatPrdListWrap ul li a .img {position:absolute; top:2px; left:0; box-sizing:border-box; -webkit-box-sizing:border-box; width:73px; height:73px;}
+.onAirWrap .onairInfoSect .relatPrdListWrap ul li a .img img {width:100%; vertical-align:top;}
+.onAirWrap .onairInfoSect .relatPrdListWrap ul li a .img .swiper-lazy-preloader {position:absolute; top:0; left:0; width:73px; height:73px; background:#fff;}
+.onAirWrap .onairInfoSect .relatPrdListWrap ul li a .relatPrdInfo .relatPrdTit {display:-webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;text-overflow: ellipsis;overflow: hidden;height:30px;line-height:15px;font-size:13px;font-weight:normal; color:#333;}
+.onAirWrap .onairInfoSect .relatPrdListWrap ul li a .relatPrdInfo .relatSalePrice {display:block; line-height:18px; font-size:12px; color:#666; text-decoration:line-through;}
+.onAirWrap .onairInfoSect .relatPrdListWrap ul li a .relatPrdInfo .priceNum {display:block; line-height:18px; font-size:17px; font-weight:bold; color:#e51937; vertical-align:middle;}
+.onAirWrap .onairInfoSect .relatPrdListWrap ul li a .relatPrdInfo .priceNum em {font-size:12px;}
+.onAirWrap .onairInfoSect .relatPrdListWrap .indicateWrap {position:absolute; bottom:4px; left:0; right:0; text-align:center;}
+.onAirWrap .onairInfoSect .relatPrdListWrap .indicateWrap button {overflow:hidden; width:7px; height:7px; border:none; border-radius:100%; -webkit-border-radius:100%; background:#cdcdcd; -webkit-appearace:none;}
+.onAirWrap .onairInfoSect .relatPrdListWrap .indicateWrap button span {display:inline-block; overflow:hidden; position:absolute; left:-9999em; width:0; height:0; line-height:0; font-size:1px;}
+.onAirWrap .onairInfoSect .relatPrdListWrap .indicateWrap button.on {background:#e51937;}
+.onAirWrap .onairInfoSect .relatPrdListWrap ul li a .relatPrdInfo .relatSalePrice.hide {display:none}
+
+/* 쇼핑뉴스 바로가기 배너 */
+.onAirWrap .shopNewLink {width:100%;}
+.onAirWrap .shopNewLink a {display:block; height:93px; text-align:center;}
+.onAirWrap .shopNewLink a img {height:100%;}
+
+.onAirWrap .onAirCont .contsL.scrollView {position:relative; max-height:100%; padding:0 29% 0 0; /*overflow-y:scroll; overflow-x:hidden;-webkit-overflow-scrolling: touch;-webkit-perspective: 0;*/}
+.onAirWrap .onAirCont .contsL.scrollView .inner {height: calc(100% + 1px);}
+.onAirWrap .onAirCont .contsL.scrollView .prtSetView {box-sizing:border-box; -webkit-box-sizing:border-box; width:100%; /*height:100%;*/ margin-bottom:10px;}
+.onAirWrap .onAirCont .contsL.scrollView .prtSetView:last-child {margin-bottom:0;}
+.onAirWrap .onAirCont .contsL.scrollView .prtSetView .onairViewWrap {/*padding:9% 0;*/padding-top:190px;}
+.onAirWrap .onAirCont .contsL.scrollView .prtSetView .onairViewWrap .flag_tv {position:absolute; left:10px; top:6px; z-index:20; width:32px; height:25px; background-image: url(//image.hnsmall.com/images/mobile2014/tv/tvtable_3/ico_tv_flag.png);background-repeat: no-repeat;background-size: 32px auto;overflow:hidden; text-indent:-1000px;}
+.onAirWrap .onAirCont .contsL.scrollView .prtSetView .onairViewWrap .flag_tv2 {position:absolute; left:10px; top:6px; z-index:20; width:32px; height:25px; background-image: url(//image.hnsmall.com/images/mobile2014/tv/tvtable_3/ico_tv_flag.png);background-repeat: no-repeat;background-size: 32px auto;background-position:0 -25px;overflow:hidden; text-indent:-1000px;}
+.onAirWrap .onAirCont .contsL.scrollView .prtSetView .onairViewWrap .img {position:absolute; left:0; top:0;}
+.onAirWrap .onAirCont .contsL.scrollView .prtSetView .onairViewWrap .playBtn {z-index:10;}
+.onAirWrap .onAirCont .contsL.scrollView .prtSetView .onairInfoSect {position:static; height:auto;}
+
+/* 편성표 요일별 시간 리스트 */
+.onAirWrap .prdTvTimeList {/*overflow:hidden;*/ position:relative; height:100%; background:#fff;}
+.onAirWrap .prdTvTimeList .dateTag {position:absolute; left:-57px; top:10px; z-index:99; width:75px; height:25px; background:url(//image.hnsmall.com/images/mobile2014/tv/tvtable_3/bg_date_tag02.png) no-repeat; background-size:75px 50px; background-position:0 0; font-size:15px; color:#666; letter-spacing:-0.5px; font-weight:bold; line-height:26px; text-align:center;}
+.onAirWrap .prdTvTimeList .dateTag.on {background-position:0 -25px; color:#e51937;}
+.onAirWrap .prdTvTimeList .dateTag .day {font-size:13px; font-weight:normal; vertical-align:0;}
+.onAirWrap .prdTvTimeList ul {position:relative; z-index:100;}
+.onAirWrap .prdTvTimeList ul li {/*overflow:hidden;*/ position:relative; height:auto !important; /* padding:100% 0 0; */ line-height:0;}
+.onAirWrap .prdTvTimeList ul li img {width:100%; /* margin:-100% 0 0; */ vertical-align:top;}
+.onAirWrap .prdTvTimeList ul li img.noImg {display:none}
+.onAirWrap .prdTvTimeList ul li .framBox {position:absolute; top:0; left:0; right:0; bottom:0; background:url(//image.hnsmall.com/images/mobile2014/tv/tvtable_3/bg_schedule_list_frame.png) repeat-x 0 0; background-size:1px 100%;}
+.onAirWrap .prdTvTimeList ul li .framBox .prdTvInfo {position:absolute;bottom:6px; left:7px; right:7px;}
+.onAirWrap .prdTvTimeList ul li .framBox .prdTvInfo strong {display:block; overflow:hidden; margin:0 0 -1px; line-height:15px; font-size:13px; color:#fff;}
+.onAirWrap .prdTvTimeList ul li .framBox .prdTvInfo strong.onair {display:block;  height:17px; margin:0; padding:2px 0 0 25px;}
+.onAirWrap .prdTvTimeList ul li .framBox .prdTvInfo strong.onair:after {display:block; content:""; position:absolute; top:0; left:0; width:23px; height:19px; margin:0; line-height:14px; background-position:-80px -90px;}
+.onAirWrap .prdTvTimeList ul li .framBox .prdTvInfo span {display:block; overflow:hidden; width:100%; line-height:15px; font-size:13px; color:#fff; white-space:nowrap; text-overflow:ellipsis;}
+.onAirWrap .prdTvTimeList ul li .multi_item {position:relative;}
+
+.onAirWrap .prdTvTimeList ul li.on .multi_item:first-child .framBox,
+.onAirWrap .prdTvTimeList ul li.multiItems .framBox {border-top:3px solid #e51937 !important; border-bottom:none !important;}
+
+.onAirWrap .prdTvTimeList ul li .multi_item .framBox,
+.onAirWrap .prdTvTimeList ul li.multiItems + li.multiItems .framBox {border-top:none !important;}
+
+.onAirWrap .prdTvTimeList ul li.on .multi_item:last-child .framBox {border-bottom:3px solid #e51937 !important;}
+.onAirWrap .prdTvTimeList ul li.on .framBox, .onAirWrap .prdTvTimeList ul li.ch_2 .framBox {border:3px solid #e51937;}
+.onAirWrap .prdTvTimeList ul li.ch_2 + li.ch_2 {}
+.onAirWrap .prdTvTimeList ul li.ch_2 + li.ch_2 .framBox {border:3px solid #d61532; margin-top:-3px;}
+.onAirWrap .prdTvTimeList ul li.on .framBox .prdTvInfo {bottom:4px; left:5px; right:5px;}
+.onAirWrap .prdTvTimeList .loading_wrap {/*position:absolute; left:0; top:0; z-index:99;*/ /*width:100%; height:92px;*/ padding:20px 0;}
+.onAirWrap .prdTvTimeList .loading_wrap img.loading {width:40px; height:auto;}
+.onAirWrap .prdTvTimeList ul + .loading_wrap {top:initial; bottom:0;}
+
+.onAirWrap .prdTvTimeList ul li .num {position:absolute; left:0; top:0; display:table-cell; width:25px; height:25px; background:#000; color:#fff; line-height:25px; text-align:center;}
+
+/* 편성표 NO DATA */
+.onAirWrap .noConts {display:none; position:absolute; top:82px; bottom:0; right:0; left:0; background:#f4f4f4;}
+.onAirWrap .noConts .noContsinner {position:absolute; top:50%; right:0; left:0; margin:-100px 0 0; font-size:15px; line-height:20px; color:#000; text-align:center;}
+.onAirWrap .noConts .noContsinner.bgTvBefore:before {display:block; content:""; width:60px; height:55px; margin:0 auto 20px; background-position:-150px -90px;}
+
+/* 편성표 메인 가로모드 */
+.landscape {display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:#000; opacity:0.9; z-index:100;}
+.landscape .innerBox {position:absolute; top:50%; left:0; right:0; margin:-50px 0 0;  line-height:20px; font-size:15px; color:#fff; text-align:center;}
+.landscape .bgTvBefore:before {display:block; content:""; width:71px; height:41px; margin:0 auto 20px; background-position:-210px -90px;}
+
+/***************************************************************************************************************
+** 편성표 - 가이드 팝업
+***************************************************************************************************************/
+.slide_guideWrap {display:none; position:fixed;left:0;top:0;width:100%;height:100%;  overflow: hidden;  z-index:10;}
+.slide_guideWrap:before {display:block; content:""; position:absolute; top:0; left:0; right:0; bottom:0; background:#000; opacity:0.6;}
+.slide_guideWrap .imgBox {position:absolute; top:50%; left:50%; width:220px; height:220px; margin:-110px 0 0 -110px;}
+.slide_guideWrap .imgBox img {width:100%;}
+
+
+/***************************************************************************************************************
+** 편성표 - SUB PAGE
+***************************************************************************************************************/
+/* TV편성표 레이아웃 2016-07-01 */
+.bg_schedule_search {background:#e9e8e8;}
+.tvScheduleWrap .blind {position:absolute !important; left:-9999px !important; overflow:hidden !important; width:0 !important; height:0 !important; line-height:0 !important;}
+.tvScheduleCont {padding:41px 0 20px;}
+.tvScheduleCont.typoModify {padding:105px 0 20px;}
+
+/* TV편성표 - header 2016-06-30 */
+.tvScheduleWrap .scheduleHead {position:fixed; top:0; left:0; right:0; background:#fff; z-index:15;}
+.tvScheduleWrap .scheduleHead .pageTit {box-sizing:border-box; padding: 0 0 0 43px; height:41px;  line-height:40px; font-size:17px; font-weight:bold; color:#000; border-bottom:1px solid #c8c8c8;}
+.tvScheduleWrap .scheduleHead .btnPageBack {position:absolute; top:0; left:0; width:38px; height:40px; }
+.tvScheduleWrap .scheduleHead .btnPageBack:before {display:block; content:""; position:absolute; top:10px; left:10px; width:21px; height:20px; background:url(//image.hnsmall.com/images/mobile2014/common/ico_header.png) no-repeat -120px -30px; background-size:300px 390px;}
+.tvScheduleWrap .scheduleHead .btnBox {position:absolute; top:8px; right:10px; height:26px; padding:3px 0 0;}
+.tvScheduleWrap .scheduleHead .btnBox a {display:inline-block; width:26px; height:23px; margin-right:5px; vertical-align:top; background:url(//image.hnsmall.com/images/mobile2014/common/ico_header.png) no-repeat; background-size:300px 390px;}
+.tvScheduleWrap .scheduleHead .btnBox a:last-child {margin:0;}
+.tvScheduleWrap .scheduleHead .btnBox a.btnHome {background-position:-150px -30px;}
+.tvScheduleWrap .scheduleHead .btnBox a.btnCart {background-position:-180px -30px;}
+.tvScheduleWrap .scheduleHead .btnBox a.btnCart .num {
+position:absolute; top:0; right:0; width:14px; height:13px; padding:1px 0 0; line-height:13px; font-size:11px; font-style:normal; color:#fff; text-align:center; border:1px solid #fff; border-radius:100%;
+background: -moz-linear-gradient(-45deg,  rgba(71,78,86,1) 0%, rgba(71,78,86,1) 21%, rgba(19,19,19,1) 73%, rgba(19,19,19,1) 99%, rgba(19,19,19,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  rgba(71,78,86,1) 0%,rgba(71,78,86,1) 21%,rgba(19,19,19,1) 73%,rgba(19,19,19,1) 99%,rgba(19,19,19,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  rgba(71,78,86,1) 0%,rgba(71,78,86,1) 21%,rgba(19,19,19,1) 73%,rgba(19,19,19,1) 99%,rgba(19,19,19,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#474e56', endColorstr='#131313',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+/* TV편성표 - header : 쇼핑뉴스 2016-08-01 */
+.tvScheduleWrap .scheduleHead.type02 {background:#1a1a1a;}
+.tvScheduleWrap .scheduleHead.type02 .pageTit {height:45px; line-height:45px; color:#fff; border-bottom:none;}
+.tvScheduleWrap .scheduleHead.type02 .btnPageBack:before {top:12px; left:10px; background:url(//image.hnsmall.com/images/mobile2014/common/ico_header.png) no-repeat 0 -30px; background-size:300px 390px;}
+.tvScheduleWrap .scheduleHead.type02 .btnBox {top:10px; height:30px;}
+.tvScheduleWrap .scheduleHead.type02 .btnBox a {height:30px; background:url(//image.hnsmall.com/images/mobile2014/common/ico_header.png) no-repeat; background-size:300px 390px;}
+.tvScheduleWrap .scheduleHead.type02 .btnBox a.btnHome {background-position:-30px -30px;}
+.tvScheduleWrap .scheduleHead.type02 .btnBox a.btnCart {position:relative; background-position:-60px -30px;}
+.tvScheduleWrap .scheduleHead.type02 .btnBox a.btnCart .num {
+position:absolute; top:-3px; right:0; width:14px; height:13px; padding:1px 0 0; line-height:13px; font-size:11px; color:#fff; text-align:center; border:1px solid #fff; border-radius:100%;overflow:hidden;
+background: -moz-linear-gradient(-45deg,  rgba(71,78,86,1) 0%, rgba(71,78,86,1) 21%, rgba(19,19,19,1) 73%, rgba(19,19,19,1) 99%, rgba(19,19,19,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  rgba(71,78,86,1) 0%,rgba(71,78,86,1) 21%,rgba(19,19,19,1) 73%,rgba(19,19,19,1) 99%,rgba(19,19,19,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  rgba(71,78,86,1) 0%,rgba(71,78,86,1) 21%,rgba(19,19,19,1) 73%,rgba(19,19,19,1) 99%,rgba(19,19,19,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#474e56', endColorstr='#131313',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.tvScheduleWrap .scheduleHead.type02 .btnBox a.btnSearch {position:relative; width:30px; height:30px; margin:-1px 0 0; background:none;}
+.tvScheduleWrap .scheduleHead.type02 .btnBox a.btnSearch:before {display:inline-block; content:""; position:absolute; left:4px; width:20px;height:20px; background:url(//image.hnsmall.com/images/mobile2014/common/ico_header.png) no-repeat -90px -30px;background-size:300px auto;}
+
+/* TV편성표 - top 쇼핑뉴스 2016-08-01 */
+.tvScheduleWrap .scheduleNewsTop {height:40px; padding:0 10px; border-bottom:1px solid #eee; background:#fff;}
+.tvScheduleWrap .scheduleNewsTop:after {display:block; content:""; clear:both;}
+.tvScheduleWrap .scheduleNewsTop .dateWrap {display:block; float:left; height:29px; padding:11px 0 0;}
+.tvScheduleWrap .scheduleNewsTop .dateWrap .flagToday {display:inline-block; height:16px; margin:0 4px 0 0; padding:1px 5px 0; line-height:16px; font-size:11px; color:#fffbfb; vertical-align:middle; border-radius:10px; background:#accdee;}
+.tvScheduleWrap .scheduleNewsTop .dateWrap .dateTxt {display:inline-block; margin:0 6px 0 0; padding:1px 0 0; color:#333; font-size:15px; line-height:18px; font-weight:bold; vertical-align:middle;}
+.tvScheduleWrap .scheduleNewsTop .dateWrap .btnCalendar {display:inline-block; width:16px; height:16px; vertical-align:middle; border:none; outline:none; border-radius:0; background:url(//image.hnsmall.com/images/mobile2014/common/ico_header.png) no-repeat -224px -30px; background-size:300px 390px; -webkit-appearance:none;}
+
+.tvScheduleWrap .scheduleNewsTop .utilBtnBox {float:right; padding:8px 0 0;}
+.tvScheduleWrap .scheduleNewsTop .utilBtnBox a {margin:0 3px 0 0; word-break:normal;}
+.tvScheduleWrap .scheduleNewsTop .utilBtnBox a:last-child {margin:0;}
+.tvScheduleWrap .scheduleNewsTop .utilBtnBox .btnTvSchedule {display:inline-block; height:19px; padding:2px 8px 0; line-height:19px; font-size:11px; color:#e51937; border:1px solid #e51937; border-radius:12px; vertical-align:top;}
+.tvScheduleWrap .scheduleNewsTop .utilBtnBox .btnTvSubscribe {display:inline-block; height:19px; padding:2px 8px 0; line-height:19px; font-size:11px; color:#333; border:1px solid #565656; border-radius:12px; vertical-align:top;}
+/* .tvScheduleWrap .scheduleNewsTop .utilBtnBox .btnSubscribe {display:inline-block; position:relative; width:50px; height:21px; border:1px solid #cdcdcd; border-radius:12px; background:#cdcdcd url(//image.hnsmall.com/images/mobile2014/tv/tvtable_3/btn_subscribe01.gif) no-repeat right center; background-size:21px 13px; -webkit-appearance:none; vertical-align:top;}
+.tvScheduleWrap .scheduleNewsTop .utilBtnBox .btnSubscribe button {width:100%; height:21px; border:none; border-radius:0; outline:none; background:none; -webkit-appearance:none;}
+.tvScheduleWrap .scheduleNewsTop .utilBtnBox .btnSubscribe button span {position:absolute; top:0; left:0; width:21px; height:21px; border-radius:12px; background:#fff; box-shadow:1px 2px 2px rgba(0,0,0,0.2); transition:left .3s ease, box-shadow .3s ease, background .3s ease;}
+.tvScheduleWrap .scheduleNewsTop .utilBtnBox .btnSubscribe.active {border:1px solid #e51937; background:#e51937 url(//image.hnsmall.com/images/mobile2014/tv/tvtable_3/btn_subscribe02.gif) no-repeat left center; background-size:21px 13px;}
+.tvScheduleWrap .scheduleNewsTop .utilBtnBox .btnSubscribe.active button span { left:29px; box-shadow:-1px 2px 2px rgba(0,0,0,0.2);  transition:left .3s ease, box-shadow .3s ease, background .3s ease;} */
+
+/* TV편성표 - 쇼핑뉴스 구독신청 팝업 2016-08-01 */
+.tvScheduleWrap .scheduleNewsTop .tipLayerWrap {top:-10px; line-height:0; font-size:0; z-index:5;}
+.tvScheduleWrap .scheduleNewsTop .tipLayerWrap .tipLayerBox {left:-65px; padding:6px 0 0; line-height:18px; border:none; background:url(//image.hnsmall.com/images/mobile2014/tv/tvtable_3/bg_tooltip_arrow.png) no-repeat 88px 0;background-size:10px 6px;}
+.tvScheduleWrap .scheduleNewsTop .tipLayerWrap .tipLayerBox .tipConts {padding: 10px; color:#fff; font-size:12px; background:url(//image.hnsmall.com/images/mobile2014/tv/tvtable_3/bg_tooltip_opacity.png) repeat;}
+.tvScheduleWrap .scheduleNewsTop .tipLayerWrap .tipLayerBox .btnClose {overflow:hidden; position:absolute; top:9px; right:4px; width:20px; height:20px; color:transparent;  border:none; background:url(//image.hnsmall.com/images/mobile2014/tv/tvtable_3/btn_tooltip_close.png) no-repeat center; background-size:11px;}
+
+/* TV편성표 - 쇼핑뉴스 편성표 달력 2016-08-01 */
+.tvScheduleWrap .scheduleNewsTop .calendarPopWrap {display:none; overflow:hidden; position:fixed;top:85px; right:0; left:0; border-top:1px solid #accdee; box-shadow:0 2px 4px rgba(0,0,0,0.2); background:#fff; z-index:5;}
+.tvScheduleWrap .scheduleNewsTop .calendarWrap .ui-datepicker {box-sizing:border-box; width:100%; padding:0;}
+.tvScheduleWrap .scheduleNewsTop .calendarPopWrap .calendarWrap .ui-datepicker .ui-datepicker-header {width:100%; padding:7px 0 6px; margin:0 auto; font-family:HelveticaNeue-Light, AppleSDGothicNeo-Light, sans-serif; border-bottom:1px solid #e9e8e8; text-align:center; background:none;}
+.tvScheduleWrap .scheduleNewsTop .calendarWrap .ui-widget-content, .tvScheduleWrap .scheduleNewsTop .calendarWrap .ui-widget-header  {border:none;}
+.tvScheduleWrap .scheduleNewsTop .calendarWrap .ui-widget-header .ui-icon {background:url(//image.hnsmall.com/images/mobile2014/common/ico_header.png) no-repeat; background-size:300px 390px;}
+.tvScheduleWrap .scheduleNewsTop .calendarPopWrap .calendarWrap .ui-datepicker .ui-datepicker-title {display:block; padding:0; font-size:16px; font-weight:bold; color:#222;}
+.tvScheduleWrap .scheduleNewsTop .calendarPopWrap .calendarWrap .ui-datepicker .ui-datepicker-title .ui-datepicker-month {margin:0 0 0 -3px;}
+.tvScheduleWrap .scheduleNewsTop .calendarWrap .ui-datepicker .ui-datepicker-prev,
+.tvScheduleWrap .scheduleNewsTop .calendarWrap .ui-datepicker .ui-datepicker-next {width:42px; height:42px; top:0; margin:0;}
+.tvScheduleWrap .scheduleNewsTop .calendarPopWrap .calendarWrap .ui-datepicker .ui-datepicker-prev span {width:8px; height:12px; margin-top:-6px; background-position:-210px -48px;}
+.tvScheduleWrap .scheduleNewsTop .calendarPopWrap .calendarWrap .ui-datepicker .ui-datepicker-next span {width:8px; height:12px; margin-top:-6px; background-position:-220px -48px;}
+.tvScheduleWrap .scheduleNewsTop .calendarWrap .ui-corner-all, .tvScheduleWrap .scheduleNewsTop .calendarWrap .ui-corner-bottom, .tvScheduleWrap .scheduleNewsTop .calendarWrap .ui-corner-right, .tvScheduleWrap .scheduleNewsTop .ui-corner-br {border-radius:0;}
+.tvScheduleWrap .scheduleNewsTop .calendarPopWrap .calendarWrap .ui-widget-header .ui-state-disabled {display:none;}
+.tvScheduleWrap .scheduleNewsTop .calendarPopWrap .calendarWrap .ui-datepicker table th {padding:10px 0; margin:0; font-size:12px; color:#222; font-weight:200; font-family:HelveticaNeue-Light, AppleSDGothicNeo-Light, sans-serif; background:#fff;}
+.tvScheduleWrap .scheduleNewsTop .calendarPopWrap .calendarWrap .ui-datepicker table td {margin:0; padding:10px 0 20px; text-align:center; vertical-align:top;}
+.tvScheduleWrap .scheduleNewsTop .calendarPopWrap .calendarWrap .ui-datepicker table th:first-child {color:#e51937;}
+.tvScheduleWrap .scheduleNewsTop .calendarPopWrap .calendarWrap .ui-datepicker table th:last-child {color:#3981c8;}
+.tvScheduleWrap .scheduleNewsTop .calendarPopWrap .calendarWrap .ui-datepicker table td:first-child a {color:#e51937;}
+.tvScheduleWrap .scheduleNewsTop .calendarPopWrap .calendarWrap .ui-datepicker table td:last-child a {color:#3a83e6;}
+.tvScheduleWrap .scheduleNewsTop .calendarPopWrap .calendarWrap .ui-datepicker table th span {display:inline-block; width:25px; height:24px; padding:1px 0 0; line-height:24px;}
+.tvScheduleWrap .scheduleNewsTop .calendarPopWrap .calendarWrap .ui-datepicker table td span {display:block; margin:0 0 -20px; text-align:center; font-size:14px; font-weight:bold;}
+.tvScheduleWrap .scheduleNewsTop .calendarPopWrap .calendarWrap .ui-datepicker table td {padding:0 0 10px; font-weight:200; font-family:HelveticaNeue-Light, AppleSDGothicNeo-Light, sans-serif;}
+.tvScheduleWrap .scheduleNewsTop .calendarPopWrap .calendarWrap .ui-datepicker table td a {padding:1px 0 0; line-height:28px; font-size:14px; text-align:center;}
+.tvScheduleWrap .scheduleNewsTop .calendarPopWrap .calendarWrap .ui-datepicker table td a,
+.tvScheduleWrap .scheduleNewsTop .calendarPopWrap .calendarWrap .ui-datepicker table td .ui-state-default  {display:inline-block; width:25px; height:24px; line-height:24px; font-size:15px; color:#000; border:1px solid #fff; background:#fff;}
+.tvScheduleWrap .scheduleNewsTop .calendarPopWrap .calendarWrap .ui-datepicker table td.ui-state-disabled span {margin:0; font-weight:normal;}
+.tvScheduleWrap .scheduleNewsTop .calendarPopWrap .calendarWrap .ui-datepicker table td:first-child a {color:#e51937 !important;}
+.tvScheduleWrap .scheduleNewsTop .calendarPopWrap .calendarWrap .ui-datepicker table td:last-child a {color:#3981c8 !important;}
+.tvScheduleWrap .scheduleNewsTop .calendarPopWrap .calendarWrap .ui-datepicker table td.ui-datepicker-today.ui-datepicker-current-day a,
+.tvScheduleWrap .scheduleNewsTop .calendarPopWrap .calendarWrap .ui-datepicker table td.ui-datepicker-today a {color:#fff; font-weight:normal; border:1px solid #e51937; border-radius:100%; background:#e51937;}
+.tvScheduleWrap .scheduleNewsTop .calendarPopWrap .calendarWrap .ui-datepicker table td.ui-datepicker-today span,
+.tvScheduleWrap .scheduleNewsTop .calendarPopWrap .calendarWrap .ui-datepicker table td.ui-datepicker-today.ui-datepicker-current-day span {color:#19bfbf;font-weight:bold;}
+.tvScheduleWrap .scheduleNewsTop .calendarPopWrap .calendarWrap .ui-datepicker table td.ui-datepicker-current-day a {color:#fff; font-weight:bold; border-radius:100%; background:#e51937;}
+.tvScheduleWrap .scheduleNewsTop .calendarPopWrap .calendarWrap .ui-datepicker table td.ui-datepicker-current-day span {color:#e51937;font-weight:bold;}
+.tvScheduleWrap .scheduleNewsTop .calendarPopWrap .calendarWrap .ui-datepicker table td.ui-datepicker-current-day .ui-state-active {color:#222; font-weight:normal; border:1px solid #575b65; background:#fff;}
+.tvScheduleWrap .scheduleNewsTop .calendarPopWrap .calendarWrap .ui-datepicker table td:first-child a.ui-state-active {border:1px solid #e51937 !important;}
+.tvScheduleWrap .scheduleNewsTop .calendarPopWrap .calendarWrap .ui-datepicker table td:last-child a.ui-state-active {border:1px solid #3981c8 !important}
+
+/* TV편성표 쇼핑뉴스 UI개선 2016-11-18 */
+.tvScheduleWrap  .shNewVideoBox {position:relative; padding:0; margin:41px 0 -31px;}
+.tvScheduleWrap  .shNewVideoBox:after {display:block; content:"";padding:56.37064246614808% 0 0;}
+.tvScheduleWrap  .shNewVideoBox > span {display:block; position:absolute; top:0; left:0; width:100%; height:100%;}
+
+/* TV편성표 검색 - 검색폼 2016-06-30 */
+.tvScheduleWrap .searchFormWrap {position:relative; box-sizing:border-box; width:100%; padding:7px 45px 7px 10px;}
+.tvScheduleWrap .searchFormWrap fieldset:after {display:block; content:""; clear:both; overflow:hidden; width:0; height:0; }
+.tvScheduleWrap .searchFormWrap .searchIpt {display:block; overflow:hidden; box-sizing:border-box; position:relative; width:100%; padding:0 10px; border:1px solid #ddd; border-radius:3px; background:#fafafa;}
+.tvScheduleWrap .searchFormWrap .searchIpt input[type=text] {width:100%; height:28px; font-size:13px; line-height:27px; color:#333; border:none; background:#fafafa; -webkit-appearance:none; outline:none;text-indent:0}
+.tvScheduleWrap .searchFormWrap .searchIpt ::-webkit-input-placeholder{line-height:27px; font-size:13px; color:#898989}
+/* .searchHeader .search_box ::-webkit-input-placeholder{color:#565656;}
+.searchHeader .search_box :-moz-input-placehorder{color:#565656;}
+.searchHeader .search_box ::-moz-input-placehorder{color:#565656;}
+.searchHeader .search_box :-ms-input-placehorder{color:#565656;} */
+.tvScheduleWrap .searchFormWrap .searchIpt .btn_search_del {position:absolute; top:50%; right:5px; width:16px;height:16px;padding:0;margin:-8px 0 0;border:none;background:#ccc;text-indent:-9999px;cursor:pointer; outline:none;border-radius:50%;-webkit-border-radius:50%;}
+.tvScheduleWrap .searchFormWrap .searchIpt .btn_search_del:before {display:inline-block; content:""; position:absolute; top:4px; left:4px; width:8px;height:8px; background:url(//image.hnsmall.com/images/mobile2014/common/ico_header.png) no-repeat -30px -82px;background-size:300px auto;}
+.tvScheduleWrap .searchFormWrap .btn_search {position:absolute; top:7px; right:7px; width:30px;height:30px; border:none; outline:none; background:#e51937; -webkit-appearance: none;border-radius:50%;-webkit-border-radius:50%;}
+.tvScheduleWrap .searchFormWrap .btn_search:before {display:inline-block; content:""; position:absolute; top:6px; left:7px; width:16px;height:16px; background:url(//image.hnsmall.com/images/mobile2014/common/ico_header.png) no-repeat -60px -60px;background-size:300px auto;}
+
+/* TV편성표 검색 - 최근검색 2016-07-01 */
+.tvScheduleWrap .searchHistoryWrap {padding:44px 0 0; border-bottom:1px solid #b5b5b5;}
+.tvScheduleWrap .searchHistoryWrap ul {padding:8px 0 15px 10px; border-top:1px solid #e9e8e8; background:#fff;}
+.tvScheduleWrap .searchHistoryWrap ul:after {display:block; content:""; clear:both; overflow:hidden; width:0; height:0; line-height:0; }
+.tvScheduleWrap .searchHistoryWrap ul li {float:left; position:relative; box-sizing:border-box;width:50%; padding:0 10px 0 0; margin:7px 0 0;}
+.tvScheduleWrap .searchHistoryWrap ul li a {display:block; height:32px; padding:1px 25px 0 15px; line-height:32px; font-size:14px; color:#333; border:1px solid #eee; border-radius:17px;}
+.tvScheduleWrap .searchHistoryWrap ul li a span {display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.tvScheduleWrap .searchHistoryWrap ul li .btn_shsr_del {position:absolute; top:12px;right:20px; width:11px; height:11px; border:none; background:url(//image.hnsmall.com/images/mobile2014/common/ico_header.png) no-repeat -90px -60px;background-size:300px auto; outline:none; -webkit-appearance: none;}
+.tvScheduleWrap .searchHistoryWrap .searchNone {padding:70px 0 40px; font-size:15px; color:#999; text-align:center; border-top:1px solid #e9e8e8; background:#fff;}
+.tvScheduleWrap .searchDel  {padding:15px 0; text-align:center;}
+.tvScheduleWrap .searchDel a {font-size:14px; color:#333;}
+
+/* TV편성표 검색 - 최근검색 2016-11-02 */
+.tvScheduleWrap .searchHistoryWrap.type02 {overflow:hidden;}
+.tvScheduleWrap .searchHistoryWrap.type02 ul {padding:0; margin:0 0 -1px;}
+.tvScheduleWrap .searchHistoryWrap.type02 ul li {padding:0 20px 0 0; margin:0; border-bottom:1px solid #f3f3f3;}
+.tvScheduleWrap .searchHistoryWrap.type02 ul li a {height:30px; padding:1px 0 0 15px; border:none; border-radius:0;}
+.tvScheduleWrap .searchHistoryWrap.type02 ul li .btn_shsr_del {right:5px;}
+.tvScheduleWrap .searchHistoryWrap.type02 ul li:nth-child(2n) {padding:0 28px 0 0;}
+.tvScheduleWrap .searchHistoryWrap.type02 ul li:nth-child(2n) a {padding:1px 0 0 7px;}
+.tvScheduleWrap .searchHistoryWrap.type02 ul li:nth-child(2n) .btn_shsr_del {right:15px;}
+
+.tvScheduleWrap .searchHistoryWrap.type02 .searchNone {box-sizing:border-box; height:160px; padding:72px 0 0;}
+
+.tvScheduleWrap .searchDel.type02 {position:relative; margin:-1px 0 0; padding:0 15px; text-align:right; border-top:1px solid #f3f3f3; border-bottom:1px solid #b5b5b5; background:#f7f7f7;}
+.tvScheduleWrap .searchDel.type02 a {display:inline-block; height:29px; padding:1px 0  0; line-height:29px; font-size:12px;}
+
+/* TV편성표 검색 - 자동완성 2016-08-09 */
+.tvScheduleWrap .autoSearchWrap {padding:44px 0 0; border-bottom:1px solid #b5b5b5;}
+.tvScheduleWrap .autoSearchWrap .searchOn {border-top:1px solid #e9e8e8;}
+.tvScheduleWrap .autoSearchWrap .searchNone p {font-size:15px;}
+
+/* 기존 스타일 운영 유지위해 남겨놓음 2016-09-07 */
+.tvScheduleWrap .typoModifyWrap {padding:10px 0; margin:0 0 7px; text-align:center; border-top:1px solid #b5b5b5; background:#f4f4f4;}
+.tvScheduleWrap .typoModifyWrap .result_txt {min-height:18px; color:#000; font-size:14px}
+.tvScheduleWrap .typoModifyWrap .result_txt strong { color:#e51937 }
+.tvScheduleWrap .typoModifyWrap .correc_txt {display:inline-block; font-size:12px; color:#565656}
+.tvScheduleWrap .typoModifyWrap .correc_txt:after {border-top:1px solid #898989;display:block;content:"";}
+
+.tvScheduleWrap .srResultInfo {display:block; box-sizing:border-box; width:100%; padding:0 10px 7px; border-bottom:1px solid #b5b5b5; background:#fff;}
+.tvScheduleWrap .srResultInfo .srRresultNum {display:inline-block; line-height:18px; font-size:12px; color:#565656;}
+.tvScheduleWrap .srResultInfo .srRresultNum em {font-size:13px; font-weight:bold; font-style:normal; color:#e51937;}
+
+.tvScheduleWrap .unifiSearchResultWrap {padding:75px 0 0; margin:0 0 5px;}
+.tvScheduleWrap .unifiSearchResultWrap .searchResultListBox {margin:0;}
+/* //기존 스타일 운영 유지위해 남겨놓음 2016-09-07 */
+
+/* TV편성표 검색 - 한영오타 2016-09-07 */
+.tvScheduleWrap .unifiSearchResultWrap.ver02 .typoModifyWrap {padding:10px 0; margin:0 0 7px; text-align:center; border-top:1px solid #b5b5b5; background:#f4f4f4;}
+.tvScheduleWrap .unifiSearchResultWrap.ver02 .typoModifyWrap .result_txt {min-height:18px; color:#000; font-size:14px}
+.tvScheduleWrap .unifiSearchResultWrap.ver02 .typoModifyWrap .result_txt strong { color:#e51937 }
+.tvScheduleWrap .unifiSearchResultWrap.ver02 .typoModifyWrap .correc_txt {display:inline-block; font-size:12px; color:#565656}
+.tvScheduleWrap .unifiSearchResultWrap.ver02 .typoModifyWrap .correc_txt:after {border-top:1px solid #898989;display:block;content:"";}
+
+/* TV편성표 검색 - 총결과 갯수 2016-09-07 */
+.tvScheduleWrap .unifiSearchResultWrap.ver02 .srResultInfo {display:block; position:static; width:100%; height:34px; margin:-7px 0 5px; padding:0; transform:initial; -webkit-transform:initial;}
+.tvScheduleWrap .unifiSearchResultWrap.ver02 .srResultInfo .srResultInfoInner {box-sizing:border-box; padding:7px 10px; height:34px; border-bottom:1px solid #b5b5b5; background:#fff; transform:translate3d(0px, 0px, 0px); -webkit-transform:translate3d(0px, 0px, 0px); z-index:12;}
+.tvScheduleWrap .unifiSearchResultWrap.ver02 .srResultInfo .srResultInfoInner.fixed {position:fixed; top:78px; left:0; right:0;}
+.tvScheduleWrap .unifiSearchResultWrap.ver02 .srResultInfo .srRresultNum {display:inline-block; line-height:18px; font-size:12px; color:#565656;}
+.tvScheduleWrap .unifiSearchResultWrap.ver02 .srResultInfo .srRresultNum em {font-size:13px; font-weight:bold; font-style:normal; color:#e51937;}
+
+/* TV편성표 검색 - 검색결과 리스트(통합검색 리스트)  2016-09-07 */
+.tvScheduleWrap .unifiSearchResultWrap.ver02 {padding:0; margin:44px 0 5px;}
+.tvScheduleWrap .unifiSearchResultWrap.ver02 .searchResultListBox {margin:0;}
+
+/* TV편성표 검색 - 검색결과 리스트  */
+.tvScheduleWrap .searchResultListBox {margin:5px 0 0;}
+.tvScheduleWrap .searchResultListBox > li {position:relative; margin:5px 0 0; border-bottom:1px solid #b5b5b5; background:#fff;}
+.tvScheduleWrap .searchResultListBox > li:first-child {margin:0;}
+.tvScheduleWrap .searchResultListBox > li a {display:block; min-height:75px; padding:10px 10px 10px 95px;}
+.tvScheduleWrap .searchResultListBox > li a.flagtype {min-height:90px;}
+.tvScheduleWrap .searchResultListBox > li .imgBox {position:absolute; left:10px; top:10px; width:75px;}
+.tvScheduleWrap .searchResultListBox > li .imgBox + img {margin-top:14px;}
+.tvScheduleWrap .searchResultListBox > li .imgBox img {width:100%; vertical-align:top;}
+
+.tvScheduleWrap .searchResultListBox > li .prdCont {position:relative;}
+.tvScheduleWrap .searchResultListBox > li .prdCont .goodTit_sbox {overflow:hidden; height:15px; color:#909090; font-size:0.857em; letter-spacing:-1px;}/* 2016-04-14 수식어 추가 */
+.tvScheduleWrap .searchResultListBox > li .prdCont .srPrdTit {display:-webkit-box; overflow:hidden; width:100%; max-height:42px; margin:0 0 22px; line-height:19px; font-size:16px; font-weight:normal; color:#000; text-overflow:ellipsis; -webkit-line-clamp:2; -webkit-box-orient:vertical;}/* 2016-04-14 line-height 수정 */
+.tvScheduleWrap .searchResultListBox > li .prdCont .benefit {display:block; position:relative; min-height:14px; padding:3px 0; margin:-22px 0 0; line-height:12px; color:#898989;}
+.tvScheduleWrap .searchResultListBox > li .prdCont .benefit span {display:inline-block; margin:0 2px 0 0; line-height:12px; font-size:12px; vertical-align:middle; letter-spacing:-1px;}
+.tvScheduleWrap .searchResultListBox > li .prdCont .benefit span + span:before {display:inline-block; content:""; width:1px; height:10px; margin:-1px 5px 0 0; background:#ccc; font-size:0; line-height:0; vertical-align:middle;}
+.tvScheduleWrap .searchResultListBox > li .prdCont .benefit .comment {position:absolute; right:0; top:4px; min-width:70px; line-height:12px; font-size:12px; color:#565656; text-align:right;}
+.tvScheduleWrap .searchResultListBox > li .prdCont .benefit .comment em {font-weight:bold;}
+
+.tvScheduleWrap .searchResultListBox > li .prdCont .priceInfoBox > p {margin:2px 0 0; font-size:12px; font-weight:bold; line-height:20px; color:#222;}
+.tvScheduleWrap .searchResultListBox > li .prdCont .priceInfoBox > p.discountPrice {line-height:16px; font-size:12px; font-weight:normal; color:#666;}
+.tvScheduleWrap .searchResultListBox > li .prdCont .priceInfoBox > p span {display:inline-block; vertical-align:top;}
+.tvScheduleWrap .searchResultListBox > li .prdCont .priceInfoBox > p .tit {font-weight:normal;}
+.tvScheduleWrap .searchResultListBox > li .prdCont .priceInfoBox > p .tit.type01 {width:80px;}
+.tvScheduleWrap .searchResultListBox > li .prdCont .priceInfoBox > p .tit.type02 {width:138px; padding:2px 0 0; line-height:16px;}
+.tvScheduleWrap .searchResultListBox > li .prdCont .priceInfoBox > p span em {display:inline-block; font-size:1.455em;  vertical-align:top;}
+.tvScheduleWrap .searchResultListBox > li .prdCont .priceInfoBox > p span .wonBox {display:inline-block; vertical-align:top;}
+.tvScheduleWrap .searchResultListBox > li .prdCont .pointC01 {color:#e51937;}
+.tvScheduleWrap .searchResultListBox > li .prdCont .pointC02 {color:#777;}
+.tvScheduleWrap .searchResultListBox > li .prdCont .saleFlag {position:absolute; right:0; bottom:0; width:40px; height:22px;}
+.tvScheduleWrap .searchResultListBox > li .prdCont .saleFlag span {overflow:hidden; display:block; text-indent:-999em;}
+
+.tvScheduleWrap .telecastTit {box-sizing:border-box; padding:0 10px 12px;}
+.tvScheduleWrap .telecastTit .telecastInner {overflow:hidden; height:29px; padding:0 7px; line-height:29px; background:#f4f4f4;}
+.tvScheduleWrap .telecastTit .telecastInner h1 {float:left; height:25px; padding:0; margin:0; line-height: 29px; font-size:13px; font-weight:bold; text-align:left; border:none; letter-spacing:-0.5px; background:#f4f4f4;}
+.tvScheduleWrap .telecastTit .telecastInner h1.type01 {color:#19bfbf;}
+.tvScheduleWrap .telecastTit .telecastInner h1.type02 {color:#999;}
+.tvScheduleWrap .telecastTit .telecastInner h1.type03 {color:#e51937;}
+.tvScheduleWrap .telecastTit .telecastInner h1 .ico_telecast {position:relative; display:inline-block; width:12px; height:12px; margin:-2px 5px 0 0; vertical-align:middle; background-color:#19bfbf; border-radius:50%;-webkit-border-radius:50%;}
+.tvScheduleWrap .telecastTit .telecastInner h1 .ico_telecast:before {display:block; content:""; position:absolute; top:3px; left:4px; width:5px; height:5px; background:url(//image.hnsmall.com/images/mobile2014/common/ico_header.png) no-repeat; background-size:300px 390px; background-position:-137px -60px;}
+.tvScheduleWrap .telecastTit .telecastInner h1.type01 .ico_telecast {}
+.tvScheduleWrap .telecastTit .telecastInner h1.type02 .ico_telecast {background-color:#cecece;}
+.tvScheduleWrap .telecastTit .telecastInner h1.type03 .ico_telecast {background-color:#e51937;}
+.tvScheduleWrap .telecastTit .telecastInner .time {display:inline-block; float:right; padding:0 0 0 10px; line-height: 29px; color:#898989; font-size:13px;}
+
+/* 검색결과 - 편성정보 수정 2016-07-22 */
+.tvScheduleWrap .telecastTit.type02 {padding:0 0 0 13px; border-top:1px solid #e5e5e5}
+.tvScheduleWrap .telecastTit.type02 .telecastInner{padding:0; background:none}
+.tvScheduleWrap .telecastTit.type02 .telecastInner h1{float:left; width:72px; height:30px; padding:0 12px 0 0; color:#e51937; background:none;}
+.tvScheduleWrap .telecastTit.type02 .telecastInner h1 .ico_telecast {width:15px; height:14px;margin: -5px 3px 0 0; background:url(//image.hnsmall.com/images/mobile2014/common/ico_header.png) no-repeat; background-size:300px 390px; background-position:-120px -60px; border-radius:0;-webkit-border-radius:0;}
+.tvScheduleWrap .telecastTit.type02 .telecastInner h1 .ico_telecast:before {display:none;}
+.tvScheduleWrap .telecastTit.type02 .telecastInner .time {float:left; padding:0; letter-spacing:-0.5px;}
+.tvScheduleWrap .telecastTit.type02 .telecastInner .order_btn {font-size:13px;box-sizing:border-box; float:right;padding:0;width:80px;height:30px; line-height:29px; text-align:center;background:#e51937;color:#fff;min-height:30px;}
+.tvScheduleWrap .telecastTit.type02 .telecastInner .arim_btn {font-size:13px;box-sizing:border-box; float:right;padding:0;width:80px;height:30px; line-height:29px; text-align:center;background:#f4f4f4;color:#565656;min-height:30px;}
+.tvScheduleWrap .telecastTit.type02 .telecastInner .arim_btn span {display:inline-block; padding:0 0 0 0; font-size:12px; letter-spacing:-0.5px;}
+.tvScheduleWrap .telecastTit.type02 .telecastInner .arim_btn span:after {display:inline-block; content:""; width:13px; height:13px; margin:-2px 0 0 2px; background:url(//image.hnsmall.com/images/mobile2014/common/ico_header.png) no-repeat -120px -77px; background-size:300px 390px; vertical-align:middle;}
+.tvScheduleWrap .telecastTit.type02 .telecastInner .arim_btn.on {color:#e51937;}
+.tvScheduleWrap .telecastTit.type02 .telecastInner .arim_btn.on span:after {background-position:-137px -77px;}
+
+/*  TV편성표 검색- 검색결과 없음 */
+.tvScheduleWrap .search_no_area {margin:44px 0 0; padding:28px 0; text-align:center; background:#f4f4f4;}
+.tvScheduleWrap .search_no_area .result_txt {color:#000; font-size:14px}
+.tvScheduleWrap .search_no_area .result_txt:before {display:block; content:""; width:22px; height:24px; margin:0 auto 8px; background:url(//image.hnsmall.com/images/mobile2014/common/ico_header.png) no-repeat -150px -60px; background-size:300px 390px;}
+.tvScheduleWrap .search_no_area .result_txt strong { color:#e51937 }
+.tvScheduleWrap .search_no_area .correc_txt { padding-top:5px; display:inline-block; font-size:12px; color:#565656}
+.tvScheduleWrap .search_no_area .correc_txt:after { border-top:1px solid #898989; display:block; content:""}
+.tvScheduleWrap .search_no_area .correc_txt.type02:after {border:none;} /* 2016-03-22 추가 */
+.tvScheduleWrap .schedule_no_datas {padding:40px 0; background:#fff;}
+.tvScheduleWrap .schedule_no_datas strong {display:block; color:#000; text-align:center;}
+.tvScheduleWrap .schedule_no_datas .txt01 {margin:12px 0 0; color:#898989; font-size:12px; text-align:center;}
+.tvScheduleWrap .schedule_no_datas .btnBox {margin:20px 0 0; text-align:center;}
+
+/* TV편성표 검색 - 검색결과 로딩영역  2016-08-08 */
+.tvScheduleWrap .loading_wrap {margin:5px 0; padding:50px 0; border-bottom:1px solid #b5b5b5;}
+.tvScheduleWrap .loading_wrap img {vertical-align:top;}
+
+/* TV편성표 - 쇼핑뉴스 리스트 2016-08-02 */
+.tvScheduleWrap .shNewsTab {height:184px; margin:41px 0 0;}
+.tvScheduleWrap .shNewsTab .shNewsTabIn {overflow:hidden; position:relative; width:100%;}
+.tvScheduleWrap .shNewsTab .shNewsTabIn.fixed {position:fixed; top:-38px; left:0; z-index:3;}
+.tvScheduleWrap .shNewsTab .shNewsTabIn > ul {overflow:hidden; position:relative; width:10000em; transform: translate3d(-400px, 0px, 0px); -webkit-transform: translate3d(-400px, 0px, 0px);}
+.tvScheduleWrap .shNewsTab .shNewsTabIn > ul.load {transform: translate3d(0px, 0px, 0px); -webkit-transform: translate3d(0px, 0px, 0px); transition:transform .5s ease; -webkit-transition:-webkit-transform .5s ease;}
+.tvScheduleWrap .shNewsTab .shNewsTabIn > ul li {float:left; width:146px; border-bottom:1px solid #eee;}
+.tvScheduleWrap .shNewsTab .shNewsTabIn > ul li.selected_bar {display:block; position:absolute; bottom:0; width:146px; height:2px; line-height:0; font-size:0; border:none; background:#333;  transform: translate3d(0px, 0px, 0px); -webkit-transform: translate3d(0px, 0px, 0px);}
+.tvScheduleWrap .shNewsTab .shNewsTabIn > ul li a {display:block; vertical-align:top; /* border-bottom:1px solid #fff; */}
+.tvScheduleWrap .shNewsTab .shNewsTabIn > ul li a img {width:100%; vertical-align:top; border:none;}
+
+/* TV편성표 - 기존 쇼핑뉴스 Contents Box 2016-08-05 */
+.tvScheduleWrap .oldNewsWrap {display:none; position:relative; margin:41px 0 0;}
+.tvScheduleWrap .oldNewsWrap li img {width:100%; vertical-align:top;}
+.tvScheduleWrap .oldNewsWrap li a {display:block;}
+.tvScheduleWrap .oldNewsWrap li.newsQuickMove {overflow:hidden; position:absolute; top:0; left:0; right:0;}
+.tvScheduleWrap .oldNewsWrap li.newsQuickMove a {float:left;}
+.tvScheduleWrap .oldNewsWrap .baseTxt {text-align: center; padding:30px 0; border-top: 1px solid #EAEAEA; background-color: white;}
+.tvScheduleWrap .oldNewsWrap .baseTxt a {display:inline-block; padding: 10px 30px ;background-color: #da0f2d;color: #FFF;font-size: 18px; word-break:normal;}
+.tvScheduleWrap .oldNewsWrap .baseTxt div {font-size: 12px; color:#898989;   padding-bottom:10px; font-weight: bold; }
+
+/* TV편성표 - 쇼핑뉴스 경고문구  */
+.tvScheduleWrap .shNewsCaution {margin:5px 0 0; padding:10px 15px; font-size:13px; color:#787878; border-top:1px solid #d5d5d5; border-bottom:1px solid #d5d5d5; background:#fff;}
+
+/* 상품정보 공통 2017-01-03 */
+.tvScheduleWrap .prdTitBox {margin:10px 10px 0;}
+.tvScheduleWrap .prdTitBox .tit {width:100%; overflow:hidden; font-size:15px; letter-spacing:-0.5px; text-overflow:ellipsis; white-space:nowrap;}
+
+.tvScheduleWrap .prdPriceInfoWrap {position: relative; margin:5px 10px 0; font-size:12px;color:#898989}
+.tvScheduleWrap .prdPriceInfoWrap .discountPrice {font-size:13px; color:#666;}
+.tvScheduleWrap .prdPriceInfoWrap .discountPrice .tit {font-size:12px; color:#999;}
+.tvScheduleWrap .prdPriceInfoWrap .discountPrice .exist {color:#999;}
+.tvScheduleWrap .prdPriceInfoWrap .discountPrice .exist em {text-decoration:line-through;}
+.tvScheduleWrap .prdPriceInfoWrap .textLineM{text-decoration: line-through;}
+.tvScheduleWrap .prdPriceInfoWrap .priceInfoBox {width:100%; font-size:14px; color:#333}
+.tvScheduleWrap .prdPriceInfoWrap .priceInfoBox:after {display:block; content:""; clear:both; width:0; height:0; line-height:0; font-size:0;}
+.tvScheduleWrap .prdPriceInfoWrap .priceInfoBox .priceTitle {float:left; width:80px; line-height:21px; padding:0; font-size:12px; font-weight:normal; color:#222;}
+.tvScheduleWrap .prdPriceInfoWrap .priceInfoBox .priceTxt {float:left;}
+.tvScheduleWrap .prdPriceInfoWrap .priceInfoBox .priceTxt .priceRed {font-size:16px; font-weight:bold; color:#e51937;}
+.tvScheduleWrap .prdPriceInfoWrap .priceInfoBox .priceTxt .textWonRed {font-size:12px; font-weight:bold; color:#e51937;}
+.tvScheduleWrap .prdPriceInfoWrap .priceInfoBox .priceTxt .priceBlack {font-size:16px; font-weight:bold; color:#222;}
+.tvScheduleWrap .prdPriceInfoWrap .priceInfoBox .priceTxt .textWonBlack {font-size:12px; font-weight:bold; color:#222;}
+.tvScheduleWrap .prdPriceInfoWrap .priceInfoBox .priceTxt .btn_saleInfo {top:0px;}
+
+.tvScheduleWrap .prdPriceInfoWrap.flagLeft {position:relative; padding:0 0 0 75px;}
+.tvScheduleWrap .prdPriceInfoWrap.flagLeft .Msale_NB {left:5px;}
+.tvScheduleWrap .prdPriceInfoWrap.flagLeft.type02 {margin-top:8px; letter-spacing:-0.5px;}
+.tvScheduleWrap .prdPriceInfoWrap.type02 .priceInfoBox .priceTxt .textWonRed,
+.tvScheduleWrap .prdPriceInfoWrap.type02 .priceInfoBox .priceTxt .textWonBlack {display:inline-block; width:24px;}
+
+/* 상품정보 플래그 공통 2016-01-03 */
+.tvScheduleWrap .benefit_noint{border:1px solid #cdcdcd;padding:0 1px;margin-right:2px;font-size:10px;line-height:15px;color:#898989;vertical-align:2px;}/*플랫_무이자*/
+.tvScheduleWrap .benefit_oiltax{border:1px solid #cdcdcd;padding:0 2px;font-size:10px;line-height:12px;color:#898989;vertical-align:2px}/*플랫_유류세*/
+.tvScheduleWrap .benefit_nointM{margin-right:3px;font-size:11px;color:#565656;vertical-align:1px}/*플랫_무이자개월수*/
+
+/* 쇼핑뉴스 UI 개선 2017-01-03 4e47c1 */
+.tvScheduleWrap .shNewsPrdWrap {position:relative; margin:46px 5px 10px; padding:0 0 10px; border-bottom:1px solid #ddd; background:#fff;}
+.tvScheduleWrap .shNewsPrdWrap .viewTopBox {position:relative; top:0; left:0; right:0; height:40px; margin:0 0 -40px; z-index:1;}
+.tvScheduleWrap .shNewsPrdWrap .viewTopBox .videoLogo {padding:6px 0 0; text-align:center;}
+.tvScheduleWrap .shNewsPrdWrap .viewTopBox .videoLogo img {height:28px; }
+.tvScheduleWrap .shNewsPrdWrap .viewTopBox > a {overflow:hidden; position:absolute; top:50%; height:14px; margin:-7px 0 0; font-size:13px; color:#666; line-height:14px;}
+.tvScheduleWrap .shNewsPrdWrap .viewTopBox > a:after {display:block; content:""; position:absolute; top:50%; width:6px; height:11px; margin:-6px 0 0;}
+.tvScheduleWrap .shNewsPrdWrap .viewTopBox > a.btnPrev {left:5px; padding:0 0 0 10px;}
+.tvScheduleWrap .shNewsPrdWrap .viewTopBox > a.btnPrev:after {left:0; background-position:-12px -109px;}
+.tvScheduleWrap .shNewsPrdWrap .viewTopBox > a.btnNext {right:5px; padding:0 10px 0 0;}
+.tvScheduleWrap .shNewsPrdWrap .viewTopBox > a.btnNext:after {right:0; background-position:-18px -109px;}
+
+.tvScheduleWrap .shNewsPrdWrap .viewBox {overflow:hidden; position:relative; padding:40px 0 0; background:#e8e9e9;}
+.tvScheduleWrap .shNewsPrdWrap .viewBox:before {display:block; content:""; position:relative; padding:56.49350649350649% 0 0;}
+.tvScheduleWrap .shNewsPrdWrap .viewBox .viewInnerBox {position:absolute; top:40px; right:0; bottom:0; left:0;}
+.tvScheduleWrap .shNewsPrdWrap .viewBox .viewInnerBox img {height:100%; vertical-align:top;}
+
+.tvScheduleWrap .shNewsPrdWrap .btnBox {margin:5px 10px 0; text-align:center; background:#fff;}
+.tvScheduleWrap .shNewsPrdWrap .btnBox > a {width:100%; padding:1px 0 0;}
+
+/* .tvScheduleWrap .shNewsPrdWrap.typeVedio .viewTopBox > a {color:#666;}
+.tvScheduleWrap .shNewsPrdWrap.typeVedio .viewTopBox > a.btnPrev:after {left:0; background-position:-12px -109px;}
+.tvScheduleWrap .shNewsPrdWrap.typeVedio .viewTopBox > a.btnNext:after {right:0; background-position:-18px -109px;} */
+
+.tvScheduleWrap .shNewsPrdWrap.typeVedio .viewBox {padding:40px 5px 5px; background:#ccc;}
+.tvScheduleWrap .shNewsPrdWrap.typeVedio .viewBox .viewInnerBox {right:5px; bottom:5px; left:5px;}
+
+.tvScheduleWrap .shNewsDetailWrap {border-bottom:1px solid #ddd; background:#fff;}
+.tvScheduleWrap .shNewsDetailWrap .detailInfoBox {overflow:hidden;height:700px;}
+.tvScheduleWrap .shNewsDetailWrap .detailInfoBox .imgBox {display:block; padding:0; margin:0; font-size:0; line-height:0; border:none;}
+.tvScheduleWrap .shNewsDetailWrap .detailInfoBox img {width:100%; padding:0; margin:0; vertical-align:top; border:none;}
+.tvScheduleWrap .shNewsDetailWrap .btnDetail {display:block; margin:10px 10px 0; text-align:center; border-top:1px solid #e5e5e5; background:#fff;}
+.tvScheduleWrap .shNewsDetailWrap .btnDetail span {display:inline-block; position:relative; height:29px; padding:1px 10px 0 0; line-height:29px; font-size:11px; color:#898989; vertical-align:top; text-decoration:underline;}
+.tvScheduleWrap .shNewsDetailWrap .btnDetail span:after {display:block; content:""; position:absolute; top:50%; right:0; width:6px; height:5px; margin:-3px 0 0; background-position:0 -109px;}
+.tvScheduleWrap .shNewsDetailWrap .btnDetail.on span:after {background-position:-1177px 0;}
+
+.tvScheduleWrap .goTvScheduleWrap {padding:30px 0; margin:10px 0; text-align: center;  border-top: 1px solid #EAEAEA; background-color: white;}
+.tvScheduleWrap .goTvScheduleWrap div {font-size:13px; color:#666;   padding-bottom:7px; font-weight: bold; }
+.tvScheduleWrap .goTvScheduleWrap a {display:block; margin:0 15px;  height:38px; padding:1px 0 0; line-height:38px; background-color: #da0f2d; color:#fff;font-size: 14px; word-break:normal;}
+
+
+/* 최종 혜택가 팝업 */
+.deem.type02 {position:fixed}
+.pop_wrap .pop_contents02{position:relative;padding-bottom:30px;margin:0 10px;border-radius:10px;background: #fff;box-shadow:none;}
+.pop_wrap .pop_contents02 h3{padding:8px 10px 7px;background: #e51937;border-radius:10px 10px 0 0;font-size:18px;font-weight:normal;color:#fff;}
+.pop_wrap .pop_close02{display:block;position:absolute;right:11px;top:11px;width:18px;height:18px;background: url(//image.hnsmall.com/images/mobile2014/common/ico_header.png) no-repeat 0 -300px;background-size:300px 390px;text-indent:-9999px;}
+.priceInfor_guide{margin:10px}
+.priceInfor_guide .guideInfor{color:#898989}
+.priceInfor_guide  .tit{color:#000000; margin-top:20px; margin-bottom:5px}
+.priceInfor_guide img{width:100%}
+
+/* 방송알림 등록 팝업 */
+.layerPopWrap02 .layerConts .innerConts.scrollY {overflow-y:auto; overflow-x:hidden; max-height:298px; -webkit-overflow-scrolling:touch;}
+.layerPopWrap02 .arimiRegBox .arimiHead {overflow:hidden; margin:-20px -15px 0; padding:10px; background:#f1f1f1;}
+.layerPopWrap02 .arimiRegBox .arimiHead .img {display:block; overflow:hidden;  float:left; width:60px; height:60px;}
+.layerPopWrap02 .arimiRegBox .arimiHead .img img {width:100%;}
+.layerPopWrap02 .arimiRegBox .arimiHead .name {display:-webkit-box; overflow:hidden; -webkit-line-clamp:3; -webkit-box-orient:vertical; float:right; width:200px; line-height:18px; color:#232323;}
+.layerPopWrap02 .arimiRegBox .arimiHead .category {color:#232323;}
+.layerPopWrap02 .arimiRegBox .setupOpt > li {margin:0 -15px; padding:10px; border-bottom:1px solid #eee;}
+.layerPopWrap02 .arimiRegBox .setupOpt dl dt {margin:10px 0 0; font-size:13px; font-weight:bold; color:#898989;}
+.layerPopWrap02 .arimiRegBox .setupOpt dl dt:first-child {margin:0;}
+.layerPopWrap02 .arimiRegBox .setupOpt dl dd .optBtnBox {overflow:hidden;}
+.layerPopWrap02 .arimiRegBox .setupOpt dl dd .optBtnBox li {float:left; box-sizing:border-box; width:31%; margin:7px 0 0;}
+.layerPopWrap02 .arimiRegBox .setupOpt dl dd .optBtnBox li:nth-child(3n-1) {width:38%; padding:0 7px;}
+.layerPopWrap02 .arimiRegBox .setupOpt dl dd .optBtnBox li a {display:block; height:25px; line-height:25px; padding:1px 0 0; font-size:12px; color:#565656; text-align:center; border:1px solid #d3d3d3; border-radius:3px;}
+.layerPopWrap02 .arimiRegBox .setupOpt dl dd .optBtnBox li a.checked {color:#e51937; border:1px solid #e51937;}
+.layerPopWrap02 .arimiRegBox .setupOpt dl dd .optBtnBox.type02 li {width:22%; padding:0 7px 0 0;}
+.layerPopWrap02 .arimiRegBox .setupOpt dl dd .optBtnBox.type02 li:nth-child(3n-1) {width:22%; padding:0 7px 0 0;}
+.layerPopWrap02 .arimiRegBox .setupOpt dl dd .optBtnBox.type02 li:nth-child(4n) {width: 34%; padding:0;}
+.layerPopWrap02 .arimiRegBox .setupOpt dl dd .reciveAgreeBox {position:relative; padding:7px 0 0;}
+.layerPopWrap02 .arimiRegBox .setupOpt dl dd .reciveAgreeBox input[type=checkbox] {vertical-align:middle;}
+.layerPopWrap02 .arimiRegBox .setupOpt dl dd .reciveAgreeBox label {display:inline-block; line-height:23px; vertical-align:middle;}
+.layerPopWrap02 .arimiRegBox .setupOpt dl dd .reciveAgreeBox .btnModifyInfo {position:absolute; right:0; padding:0 7px; text-align:center; border:1px solid #cdcdcd; border-radius:3px;}
+.layerPopWrap02 .arimiRegBox .setupOpt dl dd .reciveAgreeBox .btnModifyInfo span {display:inline-block; height:20px; padding:1px 0 0; line-height:20px; font-size:11px; color:#565656; background-size:12px;}
+.layerPopWrap02 .arimiRegBox .setupOpt dl dd .reciveAgreeBox .btnModifyInfo span:before {display:inline-block; content:""; width:12px; height:13px; margin-top:-1px; margin-right:3px; vertical-align:middle; background:url(//image.hnsmall.com/images/mobile2014/common/ico_header.png) no-repeat -90px -195px;background-size:300px 390px;}
+.layerPopWrap02 .arimiRegBox .icoComt {margin:0 -15px -20px; padding:10px;}
+
+/* 방송알림 설정 토스트팝업 2011-02-09 */
+.tv_arimi_toast01 {position:fixed; top:257px; left:50%; width:0; height:0; margin-left:0; background: url(//image.hnsmall.com/images/mobile2014/common/toast_arimi01.png) no-repeat left top; background-size:0; color:transparent; font-size:0; z-index:100; -webkit-transition:all 0.1s cubic-bezier(0.3,0.1,0.7,-0.1);}
+.tv_arimi_toast01.view {width:114px; height:114px; top:200px; margin-left:-57px; background-size:114px; -webkit-transition:all 0.15s cubic-bezier(0.3,0.1,0.7,-0.1);}
+.tv_arimi_toast02 {position:fixed; top:257px; left:50%; width:0; height:0; margin-left:0; background: url(//image.hnsmall.com/images/mobile2014/common/toast_arimi02.png) no-repeat left top; background-size:0; color:transparent; font-size:0; z-index:100; -webkit-transition:all 0.1s cubic-bezier(0.3,0.1,0.7,-0.1);}
+.tv_arimi_toast02.view {width:114px; height:114px; top:200px; margin-left:-57px; background-size:114px; -webkit-transition:all 0.15s cubic-bezier(0.3,0.1,0.7,-0.1);}

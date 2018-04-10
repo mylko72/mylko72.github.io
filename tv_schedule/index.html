@@ -1,0 +1,492 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>HOME & SHOPPING</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta http-equiv="Pragma"  content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Imagetoolbar" content="no" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="expires" content="0"/>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width" id="viewport" />
+<link rel="SHORTCUT ICON" href="http://image.hnsmall.com/images/img2012/common/home.ico" />
+<link rel='apple-touch-icon-precomposed' href="http://image.hnsmall.com/images/img2012/common/home.ico" />
+<meta name='apple-mobile-web-app-capable' content='yes' />
+<link rel="stylesheet" href="./css/common.css">
+<link rel="stylesheet" href="./css/tv_schedule.css">
+<!-- <link rel="stylesheet" href="/resources2014/css/common_sub_20160929.css"> -->
+
+<script type="text/javascript" src="./libs/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="./libs/swiper.js"></script>
+<script type="text/javascript" src="./libs/tv_schedule_v3.js"></script>
+
+</head>
+<body>
+<div class="onAirWrap">
+	<!-- s : onAirHeader -->
+	<header class="onAirHeader">
+		<h1 class="pageTit">TV편성표</h1>
+		<a href="#" class="btnPageBack bgTvAfter"><span class="blind">이전</span></a>
+		<div class="btnsTopArea">
+			<a href="#"><img src="http://image.hnsmall.com/images/mobile2014/tv/tvtable_3/btn_broad_alarm.png" alt="방송알림" /></a> <!-- 2017-08-07 수정 -->
+			<a href="#" class="btnSearch bgTvAfter"><span class="blind">검색</span></a>
+		</div>
+	</header>
+	<!-- e : onAirHeader -->
+
+	<!-- s : onAirContainer -->
+	<section class="onAirContainer">
+		<!-- s : weekArea -->
+		<!-- <div class="dateNaviBox">
+			<div class="weekSlide">
+				<ul class="swiper-wrapper">
+				</ul>
+			</div>
+		</div> -->
+		<div class="dateNaviBox type02">
+			<a href="#" class="btnPrev bgTvBefore"></a>
+			<div class="weekSlide">
+				<ul class="swiper-wrapper">
+				</ul>
+			</div>
+			<a href="#" class="btnNext bgTvBefore"></a>
+
+			<!-- s : weekArea 영역 슬라이드 가이드 문구 레이어 -->
+			<div class="weekGuideLayer">
+				<div class="guideTxt bgTvBefore bgTvAfter">날짜를 좌우로 밀어서 이동하세요.</div>
+				<!-- <button class="btnClose bgTv">닫기</button> -->
+			</div>
+			<!-- e :  weekArea 영역 슬라이드 가이드 문구 레이어 -->
+		</div>
+		<!-- e : weekArea -->
+
+		<!-- s : onAirCont -->
+		<div class="onAirCont">
+			<!-- s : contsL -->
+			<div class="contsL scrollView"> <!-- 2017-08-07 scrollView 추가 -->
+				<div class="swiper-wrapper"> <!-- 2017-08-07 swiper-wrapper 추가 -->
+					<div class="swiper-slide"> <!-- 2017-08-07 swiper-slide 추가 -->
+						<div class="prtSetView"> <!-- 2017-08-07 prtSetView 추가 -->
+							<div class="onairViewWrap">
+								<span class="flag_tv">TV홈쇼핑 상품</span>
+								<span class="img"><img data-img-src="http://image.hnsmall.com/images/banner/554/1058554.jpg?cache=20161004145737" alt="" /></span>
+								<a href="#" class="playBtn">
+									<span class="playIco large">
+										<span class="playTime">10:20:22</span>
+									</span>
+								</a>
+								<video controls="controls" style="display: none;">
+		                        	<source srcdata="/live/mp4:a.stream/playlist.m3u8" src="http://livevod.hnsmall.com:1935/live/mp4:a.stream/playlist.m3u8?device_key=&amp;user_id=201111001381&amp;birth_year=&amp;sex=&amp;area_cd=10&amp;grade_cd=40&amp;page_cd=04&amp;channel_code=">
+		                        </video>
+							</div>
+
+							<div class="onairInfoSect">
+								<a href="#" class="onairPrdInfo type02">
+									<strong class="prdTit">셀트리온스킨큐어 김태희핑크크림(m)</strong>
+									<p class="priceInfo">
+										<span class="salePrice">89,000원</span>
+									</p>
+									<p class="priceInfo">
+										<span class="tit">최종혜택가</span>
+										<span class="priceNum">72,090<em>원~</em></span>
+									</p>
+									<p class="priceInfo">
+										<span class="tit">모바일할인가</span>
+										<span class="priceNum type02">80,100<em>원</em></span>
+									</p>
+								</a>
+
+								<div class="btnOrderBox col02">
+									<a href="javascript:;" class="btnType01" onclick="toastAlert(this, '#tvArimToast02'); return false;">방송알림(1,299)</a>
+									<a href="javascript:;" class="btnType02">구매하기</a>
+								</div>
+							</div>
+						</div>
+						<div class="prtSetView">
+							<div class="onairViewWrap">
+								<span class="flag_tv2">2ch 상품</span>
+								<span class="img"><img data-img-src="http://image.hnsmall.com/images/goods/362/12411362_g.jpg" alt="" /></span>
+								<div class="prdAlertBox">
+									<span class="preOrder bgTvAfter">방송 구성과 동일하게 주문 가능</span>
+								</div>
+							</div>
+
+							<div class="onairInfoSect">
+								<a href="#" class="onairPrdInfo type02">
+									<strong class="prdTit">한스킨 셀커버 파운데이션 멘디니 에디션(m)</strong>
+									<p class="priceInfo">
+										<span class="tit">최종혜택가</span>
+										<span class="priceNum">56,619<em>원~</em></span>
+									</p>
+									<p class="priceInfo">
+										<span class="tit">모바일할인가</span>
+										<span class="priceNum type02">62,910<em>원</em></span>
+									</p>
+								</a>
+
+								<div class="btnOrderBox col02">
+									<a href="javascript:;" class="btnType03" onclick="toastAlert(this, '#tvArimToast02'); return false;">방송알림 해제</a>
+									<a href="javascript:;" class="btnType02">구매하기</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+        		<div class="swiper-scrollbar"></div> <!-- 2017-08-07 Scroll Bar 추가 -->
+			</div>
+			<!-- e : contsL -->
+
+			<!-- s : contsR -->
+			<div class="contsR">
+				<div class="prdTvTimeList">
+					<ul class="swiper-wrapper">
+						<li class="swiper-slide" seq_frame_no="01">
+							<img src="http://image.hnsmall.com/images/goods/794/12300794_i.jpg" alt="" onerror="this.src = 'http://image.hnsmall.com/images/mobile2013/noimg/emptyGoodsM_r.jpg'">
+							<a href="#" class="framBox">
+								<div class="prdTvInfo">
+									<strong>03:10~</strong>
+									<span>맥스클리닉</span>
+								</div>
+							</a>
+						</li>
+						<!-- 동시편성상품 추가 2017-07-25 //-->
+						<li class="swiper-slide ch_2 multiItems on">
+							<div class="multi_item">
+								<img src="http://image.hnsmall.com/images/goods/482/12262482_i.jpg" alt="" onerror="this.src = 'http://image.hnsmall.com/images/mobile2013/noimg/emptyGoodsM_r.jpg'">
+								<a href="#" class="framBox" seq_frame_no="02">
+									<div class="prdTvInfo">
+										<strong class="onair">05:27~</strong>
+										<span>쏠리에블라우스SS+IGN가디건SS</span>
+									</div>
+								</a>
+							</div>
+							<div class="multi_item">
+								<img src="http://image.hnsmall.com/images/goods/482/12262482_i.jpg" alt="" onerror="this.src = 'http://image.hnsmall.com/images/mobile2013/noimg/emptyGoodsM_r.jpg'">
+								<a href="#" class="framBox" seq_frame_no="03">
+									<div class="prdTvInfo">
+										<strong class="onair">05:27~</strong>
+										<span>쏠리에블라우스SS+IGN가디건SS</span>
+									</div>
+								</a>
+							</div>
+							<div class="multi_item">
+								<img src="http://image.hnsmall.com/images/goods/482/12262482_i.jpg" alt="" onerror="this.src = 'http://image.hnsmall.com/images/mobile2013/noimg/emptyGoodsM_r.jpg'">
+								<a href="#" class="framBox" seq_frame_no="04">
+									<div class="prdTvInfo">
+										<strong class="onair">05:27~</strong>
+										<span>쏠리에블라우스SS+IGN가디건SS</span>
+									</div>
+								</a>
+							</div>
+						</li>
+						<!--// 동시편성상품 추가 2017-07-25 -->
+						<li class="swiper-slide ch_2" seq_frame_no="05">  <!-- 투채널 ch_2 추가 2017-06-15 -->
+							<img src="http://image.hnsmall.com/images/goods/185/12277185_i.jpg" alt="" onerror="this.src = 'http://image.hnsmall.com/images/mobile2013/noimg/emptyGoodsM_r.jpg'">
+							<a href="#" class="framBox">
+								<div class="prdTvInfo">
+									<strong>05:07~</strong>
+									<span>세제혁명</span>
+								</div>
+							</a>
+						</li>
+						<li class="swiper-slide" seq_frame_no="01">
+							<img src="http://image.hnsmall.com/images/goods/769/12273769_i.jpg" alt="" onerror="this.src = 'http://image.hnsmall.com/images/mobile2013/noimg/emptyGoodsM_r.jpg'">
+							<a href="#" class="framBox">
+								<div class="prdTvInfo">
+									<strong>04:20~</strong>
+									<span>로베르따디까메리노속옷</span>
+								</div>
+							</a>
+						</li>
+						<li class="swiper-slide" seq_frame_no="02">
+							<img src="http://image.hnsmall.com/images/goods/405/12279405_i.jpg" alt="" onerror="this.src = 'http://image.hnsmall.com/images/mobile2013/noimg/emptyGoodsM_r.jpg'">
+							<a href="#" class="framBox">
+								<div class="prdTvInfo">
+									<strong class="onair">06:00~</strong>
+									<span>로젠토트레킹화</span>
+								</div>
+							</a>
+						</li>
+						<li class="swiper-slide" seq_frame_no="03">
+							<img src="http://image.hnsmall.com/images/goods/619/12298619_i.jpg" alt="" onerror="this.src = 'http://image.hnsmall.com/images/mobile2013/noimg/emptyGoodsM_r.jpg'">
+							<a href="#" class="framBox">
+								<div class="prdTvInfo">
+									<strong>07:15~</strong>
+									<span>캐나다산햄프씨드</span>
+								</div>
+							</a>
+						</li>
+						<li class="swiper-slide" seq_frame_no="01">
+							<img src="http://image.hnsmall.com/images/goods/436/12271436_i.jpg" alt="" onerror="this.src = 'http://image.hnsmall.com/images/mobile2013/noimg/emptyGoodsM_r.jpg'">
+							<a href="#" class="framBox">
+								<div class="prdTvInfo">
+									<strong>08:20~</strong>
+									<span>폴리코사놀</span>
+								</div>
+							</a>
+						</li>
+						<li class="swiper-slide" seq_frame_no="02">
+							<img src="http://image.hnsmall.com/images/goods/201/12292201_i.jpg" alt="" onerror="this.src = 'http://image.hnsmall.com/images/mobile2013/noimg/emptyGoodsM_r.jpg'">
+							<a href="#" class="framBox">
+								<div class="prdTvInfo">
+									<strong>09:20~</strong>
+									<span>블랙앤데커청소기</span>
+								</div>
+							</a>
+						</li>
+						<li class="swiper-slide" seq_frame_no="03">
+							<img src="http://image.hnsmall.com/images/goods/541/12285541_i.jpg" alt="" onerror="this.src = 'http://image.hnsmall.com/images/mobile2013/noimg/emptyGoodsM_r.jpg'">
+							<a href="#" class="framBox">
+								<div class="prdTvInfo">
+									<strong>10:20~</strong>
+									<span>센스맘매트리스</span>
+								</div>
+							</a>
+						</li>
+						<li class="swiper-slide" seq_frame_no="01">
+							<img src="http://image.hnsmall.com/images/goods/325/12254325_i.jpg" alt="" onerror="this.src = 'http://image.hnsmall.com/images/mobile2013/noimg/emptyGoodsM_r.jpg'">
+							<a href="#" class="framBox">
+								<div class="prdTvInfo">
+									<strong>11:35~</strong>
+									<span>해피콜양면팬</span>
+								</div>
+							</a>
+						</li>
+						<li class="swiper-slide" seq_frame_no="02">
+							<img src="http://image.hnsmall.com/images/goods/147/12306147_i.jpg" alt="" onerror="this.src = 'http://image.hnsmall.com/images/mobile2013/noimg/emptyGoodsM_r.jpg'">
+							<a href="#" class="framBox">
+								<div class="prdTvInfo">
+									<strong>12:45~</strong>
+									<span>키스젤네일</span>
+								</div>
+							</a>
+						</li>
+						<li class="swiper-slide" seq_frame_no="03">
+							<img src="http://image.hnsmall.com/images/goods/105/12254105_i.jpg" alt="" onerror="this.src = 'http://image.hnsmall.com/images/mobile2013/noimg/emptyGoodsM_r.jpg'">
+							<a href="#" class="framBox">
+								<div class="prdTvInfo">
+									<strong>13:55~</strong>
+									<span>IGN(니트SS+가디건SS)</span>
+								</div>
+							</a>
+						</li>
+						<li class="swiper-slide" seq_frame_no="01">
+							<img src="http://image.hnsmall.com/images/goods/581/12307581_i.png" alt="" onerror="this.src = 'http://image.hnsmall.com/images/mobile2013/noimg/emptyGoodsM_r.jpg'">
+							<a href="#" class="framBox">
+								<div class="prdTvInfo">
+									<strong>15:10~</strong>
+									<span>공기정화식물</span>
+								</div>
+							</a>
+						</li>
+						<li class="swiper-slide" seq_frame_no="02">
+							<img src="http://image.hnsmall.com/images/goods/661/12253661_i.jpg" alt="" onerror="this.src = 'http://image.hnsmall.com/images/mobile2013/noimg/emptyGoodsM_r.jpg'">
+							<a href="#" class="framBox">
+								<div class="prdTvInfo">
+									<strong>16:25~</strong>
+									<span>후르츠견과</span>
+								</div>
+							</a>
+						</li>
+						<li class="swiper-slide" seq_frame_no="01">
+							<img src="http://image.hnsmall.com/images/goods/644/12284644_i.jpg" alt="" onerror="this.src = 'http://image.hnsmall.com/images/mobile2013/noimg/emptyGoodsM_r.jpg'">
+							<a href="#" class="framBox">
+								<div class="prdTvInfo">
+									<strong>17:35~</strong>
+									<span>매직캔쓰레기통</span>
+								</div>
+							</a>
+						</li>
+						<li class="swiper-slide" seq_frame_no="03">
+							<img src="http://image.hnsmall.com/images/goods/065/12297065_i.jpg" alt="" onerror="this.src = 'http://image.hnsmall.com/images/mobile2013/noimg/emptyGoodsM_r.jpg'">
+							<a href="#" class="framBox">
+								<div class="prdTvInfo">
+									<strong>18:40~</strong>
+									<span>발효육포</span>
+								</div>
+							</a>
+						</li>
+						<li class="swiper-slide" seq_frame_no="01">
+							<img src="http://image.hnsmall.com/images/mobile2013/noimg/emptyGoodsM_r.jpg" alt="" onerror="this.src = 'http://image.hnsmall.com/images/mobile2013/noimg/emptyGoodsM_r.jpg'">
+							<a href="#" class="framBox">
+								<div class="prdTvInfo">
+									<strong>19:30~</strong>
+									<span>속초크루즈호텔분양권</span>
+								</div>
+							</a>
+						</li>
+						<li class="swiper-slide" seq_frame_no="02">
+							<img src="http://image.hnsmall.com/images/goods/022/12271022_i.jpg" alt="" onerror="this.src = 'http://image.hnsmall.com/images/mobile2013/noimg/emptyGoodsM_r.jpg'">
+							<a href="#" class="framBox">
+								<div class="prdTvInfo">
+									<strong>20:30~</strong>
+									<span>아너스물걸레청소기</span>
+								</div>
+							</a>
+						</li>
+						<li class="swiper-slide" seq_frame_no="03">
+							<img src="http://image.hnsmall.com/images/goods/707/12306707_i.jpg" alt="" onerror="this.src = 'http://image.hnsmall.com/images/mobile2013/noimg/emptyGoodsM_r.jpg'">
+							<a href="#" class="framBox">
+								<div class="prdTvInfo">c
+									<strong>21:40~</strong>
+									<span>아이오페매트피니쉬</span>
+								</div>
+							</a>
+						</li>
+						<li class="swiper-slide" seq_frame_no="01">
+							<img src="http://image.hnsmall.com/images/goods/782/12217782_i.jpg" alt="" onerror="this.src = 'http://image.hnsmall.com/images/mobile2013/noimg/emptyGoodsM_r.jpg'">
+							<a href="#" class="framBox">
+								<div class="prdTvInfo">
+									<strong>22:50~</strong>
+									<span>아디다스여성속옷</span>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- e : contsR -->
+		</div>
+		<!-- e : onAirCont -->
+
+		<!-- s : No Data Contents -->
+		<div class="noConts">
+			<div class="noContsinner bgTvBefore">
+				선택하신 날짜의 편성표가 없습니다.<br />다른 날짜를 선택해주세요.
+			</div>
+		</div>
+		<!-- e : No Data Contents -->
+	</section>
+	<!-- e : onAirContainer -->
+
+</div>
+<div class="landscape">
+	<div class="innerBox bgTvBefore">
+		가로모드는 지원하지 않습니다.
+	</div>
+</div>
+<!-- S : 방송알림 등록 -->
+<article id="arimiSetPop01" class="layerPopWrap02">
+	<div class="layerHeader">
+		<h1 class="txtC">방송알림 등록</h1>
+		<button type="button" class="btnLayerClose" onclick="closeLayerPop('#arimiSetPop01');"><span>닫기</span>
+	</button></div>
+	<div class="layerConts">
+		<div class="innerConts scrollY">
+			<section class="arimiRegBox">
+				<div class="arimiHead">
+					<span class="img"><img src="http://image.hnsmall.com/images/goods/068/12288068_t.jpg" alt="" /></span>
+					<p class="name">★Upgrade!★ 프리미엄 알렉스의 참숯 직화스테이크 15팩</p>
+				</div>
+
+				<ul class="setupOpt">
+					<li>
+						<dl>
+							<dt>수신횟수</dt>
+							<dd>
+								<ul class="optBtnBox type02">
+									<li><a href="#">1회</a></li>
+									<li><a href="#">2회</a></li>
+									<li><a href="#">3회</a></li>
+									<li><a href="#" class="checked">방송시마다</a></li>
+								</ul>
+							</dd>
+							<dt>수신시점</dt>
+							<dd>
+								<ul class="optBtnBox">
+									<li><a href="#">방송시작시</a></li>
+									<li><a href="#" class="checked">5분전</a></li>
+									<li><a href="#">15분전</a></li>
+									<li><a href="#">30분전</a></li>
+									<li><a href="#">60분전</a></li>
+								</ul>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>수신동의</dt>
+							<dd>
+								<div class="reciveAgreeBox">
+									<input type="checkbox" id="arimAgree01"> <label for="arimAgree01" class="telNum">010-****-1234</label>
+									<a href="#" class="btnModifyInfo"><span>정보변경</span></a>
+								</div>
+							</dd>
+						</dl>
+					</li>
+				</ul>
+				<ul class="icoComt">
+					<!-- <li>방송알림은 방송시작 1시간 전에 발송됩니다.</li> --><!-- 2016-08-30 고객요청으로 삭제 -->
+					<li>익일 8시~익일 오전 8시 사이 방송알림은 오후 7~8시에 미리 발송됩니다.</li>
+					<li>심야 및 새벽시간 재방송은 방송알림이 전송되지 않습니다.</li>
+					<li>방송 편성은 당사의 사정에 따라 달라질 수 있습니다.</li>
+					<li>수신동의 체크시 방송알림 및 쇼핑과 관련된 정보를 받아보실 수 있습니다.</li>
+				</ul>
+			</section>
+		</div>
+	</div>
+
+	<div class="btnWrap type02">
+		<a href="javascript:;" class="btnConfirm" onclick="closeLayerPop('#arimiSetPop01'); toastAlert(this, '#tvArimToast01');">알림받기</a> <!-- toastAlert(this, '.bestComtNotifyAlert'); -->
+	</div>
+</article>
+
+
+<div id="tvArimToast01" class="tv_arimi_toast01">방송알림이 설정되었습니다.</div>
+<div id="tvArimToast02" class="tv_arimi_toast02">방송알림이 해제되었습니다.</div>
+
+
+<!-- E : 방송알림 등록 -->
+<!-- <div class="slide_guideWrap">
+	<span class="imgBox"><img src="http://image.hnsmall.com/images/mobile2014/tv/tvtable_3/guide/limitedgoods_guide_banner.png"></span>
+</div> -->
+
+<script type="text/javascript">
+/**********************************************************************************************
+ ** document.ready
+ **********************************************************************************************/
+
+createDate();/* 최초화면 로딩시 요일 리스트 생성  */
+weekListSwipeFn.loadSet();/* 요일 생성 및 브라우저 로딩완료 후 스와이프 기능 시작 */
+timeListLibrary = new prdTvTimeList( $('.contsR .prdTvTimeList ul > li.on').index());	/* 오른쪽 시간표 스크롤 영역 */
+timeListLibrary.oldClickIdx = $('.contsR .prdTvTimeList ul > li.on').index();/* 오른쪽 시간표 스크롤 영역 시작 인덱스 값 저장 */
+
+//$('.contsR .prdTvTimeList ul').attr('data-idx', onIdx);
+
+/*$('.contsR .prdTvTimeList ul > li').each(function(i){
+	var index = i+1;
+	var numR = '<div class="num">'+ index +'</div>';
+	$(this).append(numR);
+});*/
+
+//stickyFn.init();
+
+//console.log('요일 : ' + dateArr);
+
+/* s : 관련상품 슬라이드 */
+if($('.relatPrdListWrap').length > 0) {
+	relateSlideLib = new relatePrdSlide();
+}
+/* e : 관련상품 슬라이드 */
+
+/* 가이드 팝업 */
+//guideShow();
+
+/* onair 이미지 setting */
+onairViewSet();
+
+/* 가로모드 체크 */
+landScapeCheck()
+
+/* onAirTimer */
+/* if($('.onairViewWrap .videoPlay .live').length > 0) {
+	onAirTime($('.onairViewWrap .videoPlay .live').attr('remaintime'));
+} */
+</script>
+
+</body>
+</html>
