@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+	<title>팁핑-리뷰작성</title>
+	<link type="text/css" href="../css/style.css" rel="stylesheet">
+	<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.touchSlider.js"></script>
+	<script type="text/javascript"  src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/swiper.min.js"></script>
+</head>
+<body>
+	<div class="wrap">
+
+		<header>
+			<div class="header">
+                <h2>리뷰작성</h2>
+                <button type="button" class="goPrev"><span>이전</span></button>
+				<button class="txtBtn rightBtn" type="button"><span>저장</span></button>
+			</div>
+		</header>
+
+		<section class="writeForm reviewForm">
+            <!-- 제목입력 //-->
+			<div class="formItem">
+				<input type="text" placeholder="제목" value="조르지오아르마니 좋아요" maxlength="100">
+            </div>
+            <!--// 제목입력 -->
+
+            <!-- 에디터 //-->
+            <div class="formEditor" contenteditable="true">
+                <!-- 내용 //-->
+                <div>#조르지오아르마니 런칭행사에서 보고 심쿵했지만직접 사용해보니 넘나 마음에 드는 것! 가볍고 촉촉 텍스쳐에 광채가 느껴지게 업그레이드된 #인생파데</div>
+                <!--// 내용 -->
+
+                <!-- 사진 //-->
+                <div class="itemGroup">
+                    <div class="item image">
+                        <img src="../images/@peed02.png" alt="조르지오아르마니">
+                        <p class="itemPickBtn"><span class="on">대표</span></p>
+                        <button type="button" class="itemDelBtn"><span>삭제</span></button>
+                    </div><!--// item -->
+                    <div class="item image">
+                        <img src="../images/@peed03.png" alt="조르지오아르마니">
+                        <p class="itemPickBtn"><span>대표</span></p>
+                        <button type="button" class="itemDelBtn"><span>삭제</span></button>
+                    </div><!--// item -->
+                </div>
+                <!--// 사진 -->
+
+                <!-- 동영상 //-->
+                <div class="itemGroup">
+                    <div class="item video">
+                        <img src="../images/@peed01.png" alt="조르지오아르마니">
+                        <div class="smTip">03 : 25</div><!--// 2018.03.19 추가 -->
+                        <p class="itemPickBtn"><span>대표</span></p>
+                        <button type="button" class="itemDelBtn"><span>삭제</span></button>
+                    </div><!--// item -->
+                </div>
+                <!--// 동영상 -->
+
+                <!-- 링크 //-->
+                <div class="itemGroup">
+                    <div class="item link">
+                        <div class="urlTemp">
+                            <img src="../images/@media01.png" alt="조르지오아르마니">
+                            <p>
+                                <span class="title">래스팅 실크 파운데이션 래스팅 실크 파운데이션 래스팅 실크 파운데이션</span>
+                                <span class="info">URL(ex. youtu.be)</span>
+                            </p>
+                        </div>
+                        <button type="button" class="itemDelBtn"><span>삭제</span></button>
+                    </div>
+                    <div class="item link">
+                        <span class="url">http://kr3.samsung.net/portal/desktop/main.do</span>
+                        <button type="button" class="itemDelBtn"><span>삭제</span></button>
+                    </div>
+                </div>
+                <!--// 링크 -->
+
+                <!-- 추천상품 //-->
+                <div class="itemGroup">
+                    <div class="scroll">
+                        <div class="item prd">
+                            <div class="prdTemp">
+                                <img src="../images/@img09.png" alt="조르지오아르마니">
+                                <p>입생로랑 #403/베르니아 레브르 바이닐 크림</p>
+                            </div>
+                            <button type="button" class="itemDelBtn"><span>삭제</span></button>
+                        </div>
+                        <div class="item prd">
+                            <div class="prdTemp">
+                                <img src="../images/@img10.png" alt="조르지오아르마니">
+                                <p>입생로랑 #403/베르니아 레브르 바이닐 크림</p>
+                            </div>
+                            <button type="button" class="itemDelBtn"><span>삭제</span></button>
+                        </div>
+                        <div class="item prd">
+                            <div class="prdTemp">
+                                <img src="../images/@img11.png" alt="조르지오아르마니">
+                                <p>입생로랑 #403/베르니아 레브르 바이닐 크림</p>
+                            </div>
+                            <button type="button" class="itemDelBtn"><span>삭제</span></button>
+                        </div>
+                        <div class="item prd">
+                            <div class="prdTemp">
+                                <img src="../images/@img12.png" alt="조르지오아르마니">
+                                <p>입생로랑 #403/베르니아 레브르 바이닐 크림</p>
+                            </div>
+                            <button type="button" class="itemDelBtn"><span>삭제</span></button>
+                        </div>
+                    </div>
+                </div>
+                <!--// 추천상품 -->
+            </div>	
+            <!--// 에디터 -->		
+        </section>
+        
+		<div class="attachItems">
+			<button type="button" class="imgBtn"><span>사진첨부</span></button>
+			<button type="button" class="videoBtn"><span>동영상첨부</span></button>
+			<button type="button" class="linkBtn" onclick="showlayer(self, urlPopup);"><span>링크추가</span></button>
+			<button type="button" class="prtBtn"><span>추천상품</span></button>
+		</div>
+		
+	</div>
+
+	<!-- Link Popup -->
+	<div id="urlPopup" class="layerPopup postPopup">
+		<div class="header">
+			<h2>링크</h2>
+			<button class="layerClose" type="button"><span>취소</span></button>
+			<button class="txtBtn rightBtn" type="button"><span>확인</span></button>
+		</div>
+		<div class="inner">
+			<section class="writeForm">
+				<div class="formItem">
+					<input type="url" placeholder="URL을 입력해주세요" maxlength="100">
+					<button type="reset" class="clearBtn" style="display:none"><span>지우기</span></button>
+				</div>
+			</section>
+		</div>
+	</div>
+
+	<!-- dim -->
+	<div class="dimLayer"></div>
+
+	<!--// Link Popup -->
+
+	<script>
+		$(document).on('ready', function() {
+
+			var $formEditor = $('.formEditor');
+			var $placeholder = $('.placeholder', $formEditor);
+			var $notice = $('.notice');
+
+			$formEditor.on('click', function(){
+				$placeholder.remove();
+				$notice.remove();
+
+				$(this).focus();
+			});
+
+            var $inputSrch = $('.postPopup input[type=url]'), $clearBtn = $('.postPopup .clearBtn');
+
+			$inputSrch.keyup(function () {
+                showClearBtn();
+            });
+
+            function showClearBtn(){
+                if ($inputSrch.val().length !== 0) {
+                    $clearBtn.show();
+                } else {
+                    $clearBtn.hide();
+                }
+            }
+
+		});
+	</script>
+
+</body>
+</html>

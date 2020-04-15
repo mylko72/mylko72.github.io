@@ -1,0 +1,2914 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>팁핑</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script type="text/javascript" src="./js/jquery-1.11.2.min.js"></script>
+<style>
+body {margin: 0;padding:0; background-color: #fff; color:#333; font-size:12px; font-family:"맑은 고딕", "돋움", Dotum, AppleSDGothicNeo ,Droid Sans, arial, sans-serif;overflow-x:hidden;}
+
+a:hover {color:#e60012;text-decoration:underline;}
+a, img {border:none;}
+
+.header {position:relative;height:60px;overflow:hidden;background-color:#fff;}
+.header h1 {float:left;margin:0;padding:10px; font-size:30px;}
+.header h1 strong {color:#e53433;}
+.header h1 > p {margin-top:2px; font-weight:normal !important; font-size:14px; color:#666; text-align:center;}
+.header h1 > p span {color:red;}
+.header #information {position:absolute; right:10px; top:30px; margin-left:100px; color:#333; font-size:14px; font-weight:bold;}
+.header #information>span {margin: 0 14px; color:#ddd; font-weight: normal;}
+.header #information>strong {color:#e60012;}
+
+table {width:100%; border-collapse:collapse; border-spacing:0; background-color: #fff;border-bottom:1px solid #ccc;box-sizing:border-box;}
+caption {display: none;}
+th {padding:5px 0; color:#fff; background:#444; border-top:1px solid #666; border-left:1px solid #666;}
+td {padding:7px 5px; border-top:1px solid #e1e1e1; border-left:1px solid #e1e1e1; line-height:16px;}
+tr:first-child td {border-top:1px solid #e1e1e1}
+th:first-child, td:first-child {border-left:0;}
+td:first-child {font-weight:bold;}
+td > ul {margin:0; padding-left:20px;}
+td a {color:#333; text-decoration:underline;}
+table tbody tr.on td a {color:#e60012; }
+table tbody tr.on th,
+table tbody tr.on td {background:rgba(0,0,0,0.15) !important;}
+.end{background:#f5f5db !important;}
+.new{background:#f5e4db !important}
+.live{background:#dbe3f5 !important}
+.story {background:#C7E2DF !important;}
+.emoticon {background:#EAFFE7 !important;}
+
+.guide td {border-bottom:3px double #d1d1d1;}
+.sec td {border-top:3px double #d1d1d1;}
+.del td {background-color:#bbb; text-decoration:line-through;}
+.skip td,
+.skip td a{background-color:#ebebeb; color:#999;}
+.skip td:first-child{color:#333;}
+.hold td, .hold {background-color:#fef3fd;}
+.ing td, .ing {background-color:#FC6;}
+.alignC {text-align:center;}
+.red {color:#e60012 !important;}
+
+.dNotice {overflow:hidden; width:100%; color:#666;}
+.dNotice > p {font-weight:bold; color:#11387f;}
+.dNotice > ul li {margin-bottom:5px;}
+
+.btnTop {position:relative; z-index:50; overflow:hidden; width:100%; height:20px; margin:20px 0;}
+.btnTop a {position:absolute; right:10px; display:block; width:46px; height:20px; background:url("../images/btn/btn_top.gif") no-repeat 0 0; text-indent:-9999em;}
+
+ul,  li, dl, dt, dd {padding:0;margin:0;list-style:none}
+
+.tab-list {padding:0 60px; text-align:right}
+.tab-list ul {display:table; float:left}
+.tab-list ul li {display:table-cell;}
+.tab-list li > a {display:inline-block; min-width:100px; margin-right:2px; padding:0 10px; border:1px solid #444; border-radius:10px 10px 0 0; background-color:#fff; font-size:16px; color:#000; line-height:38px; text-align:center; text-decoration:none}
+.tab-list li > a.active {background-color:#444; color:#fff; font-weight:bold;}
+
+.box {border:1px solid #ccc;padding:15px;line-height:18px;font-size:12px;margin:-5px 0 10px 0;background-color:#f7f7f7}
+.box strong {color:#ec1f60}
+xmp {font-family:'맑은 고딕','Malgun Gothic';margin:0;padding:0;color:#555}
+xmp.change {font-weight:bold;color:#000}
+</style>
+<script type="text/javascript">
+function popOpen(url, name, width, height){
+	var toolbar_str = 'no';
+	var menubar_str = 'no';
+	var statusbar_str = 'no';
+	var scrollbar_str = 'yes';
+	var resizable_str = 'no';
+	window.open(url, name, 'width='+width+',height='+height+',toolbar='+toolbar_str+',menubar='+menubar_str+',status='+statusbar_str+',scrollbars='+scrollbar_str+',resizable='+resizable_str);
+}
+</script>
+</head>
+<body>
+<div>
+
+	<div class="header">
+		<h1>Shilla get tip <strong>KR</strong></h1>
+		<div id="information">
+			총 <strong id="total-page"></strong>페이지<span>|</span>
+			완료 : <strong id="ok-page"></strong>페이지 <span>|</span>
+			네이티브 : <strong id="native"></strong>페이지 <span>|</span>
+			진행률 : <strong id="persent" class="red"></strong>%
+		</div>
+	</div>
+
+	<div>
+		<div class="tab-list">
+			<ul>
+				<li><a href="#" class="active">고도화</a></li>
+				<li><a href="./fileList_old.html">AS-IS</a></li>
+				<li><a href="./fileList_lang.html">언어확산</a></li>
+				<li><a href="./fileList_lang_zh.html">중문</a></li>
+				<li><a href="./fileList_lang_ja.html">일문</a></li>
+				<li><a href="./fileList_lang_en.html">영문</a></li>
+			</ul>
+		</div>
+		<table>
+			<caption>T플랫폼</caption>
+			<colgroup>
+				<col style="width:60px">
+				<col style="width:120px">
+				<col style="width:80px">
+				<col style="width:180px">
+				<col style="width:180px">
+				<col style="width:180px">
+				<col style="width:240px">
+				<col style="width:200px">
+				<col style="width:200px">
+				<col style="width:200px">
+				<col style="width:auto">
+			</colgroup>
+			<thead>
+				<tr>
+					<th rowspan="2">QA여부</th>
+					<th colspan="8">경로</th>
+					<th rowspan="2">URL(파일명)</th>
+					<th rowspan="2">비고</th>
+				</tr>
+				<tr>
+					<th>구분</th>
+					<th>화면ID</th>
+					<th>1Depth</th>
+					<th>2Depth</th>
+					<th>3Depth</th>
+					<th>4Depth</th>
+					<th>5Depth</th>
+					<th>6Depth</th>
+				</tr>
+			</thead>
+			<tbody class="sum">
+				<tr class="sec end emoticon">
+					<td></td>
+					<td>공통</td>
+					<td>010100</td>
+					<td>댓글 - 개선</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/010100_replyList_v2.html" target="_blank">010100_replyList_v2.html</a></td>
+					<td>키패드 - 이모티콘 추가</td>
+				</tr>
+				<tr class="sec end emoticon">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>신라TV - 이모티콘</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/010100_replyList_tv.html" target="_blank">010100_replyList_tv.html</a></td>
+					<td>키패드 - 이모티콘 추가</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>댓글없음</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/010100_noreplyList.html" target="_blank">010100_noreplyList.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>010200</td>
+					<td>공유</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/010100_snsPopup.html" target="_blank">010100_snsPopup.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>010300</td>
+					<td>신고</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/010300_reportWrite.html" target="_blank">010300_reportWrite.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>010600</td>
+					<td>이미지 갤러리</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/010600_imgGallery_final2.html" target="_blank">010600_imgGallery_final2.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="skip">
+					<td></td>
+					<td></td>
+					<td>010500</td>
+					<td>GNB</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>-</td>
+					<td>네이티브 앱</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>000000</td>
+					<td>로딩중</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/000000_loading.html" target="_blank">000000_loading.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>000400</td>
+					<td>기타</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/000400_etc.html" target="_blank">000400_etc.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>000400</td>
+					<td>팝업 개선</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/000000_openPop.html" target="_blank">000000_openPop.html</a></td>
+					<td>개선 완료</td>
+				</tr>
+				<tr class="sec end emoticon">
+					<td></td>
+					<td>컨텐츠 상세</td>
+					<td>020100</td>
+					<td>상품리뷰 상세</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/020100_reviewDetail.html" target="_blank">020100_reviewDetail.html</a></td>
+					<td>2차 완료 / 이모티콘 추가</td>
+				</tr>
+				<tr class="sec end">
+					<td></td>
+					<td></td>
+					<td>020101</td>
+					<td></td>
+					<td>신고된 게시물 안내</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/020101_reviewDetail.html" target="_blank">020101_reviewDetail.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="skip">
+					<td></td>
+					<td></td>
+					<td>020102</td>
+					<td></td>
+					<td>삭제 컨펌창</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>-</td>
+					<td>네이티브 앱</td>
+				</tr>
+				<tr class="end emoticon">
+					<td></td>
+					<td></td>
+					<td>020200</td>
+					<td>질문 상세</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/020200_questionDetail.html" target="_blank">020200_questionDetail.html</a></td>
+					<td>2차 완료 / 이모티콘 추가</td>
+				</tr>
+				<tr class="end emoticon">
+					<td></td>
+					<td></td>
+					<td>020300</td>
+					<td>투표 상세</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/020300_voteDetail.html" target="_blank">020300_voteDetail.html</a></td>
+					<td>2차 완료 / 이모티콘 추가</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>020400</td>
+					<td>여행리뷰 상세</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/020400_travelDetail.html" target="_blank">020400_travelDetail.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>020500</td>
+					<td>브랜드 컨텐츠 상세</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/020500_brandDetail.html" target="_blank">020500_brandDetail.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>020600</td>
+					<td>신라 컨텐츠 상세</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/020600_shilladfsDetail.html" target="_blank">020600_shilladfsDetail.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td>020700</td>
+					<td>상품 상세</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/020700_productDetail_v2.html" target="_blank">020700_productDetail_v2.html</a></td>
+					<td>고도화</td>
+				</tr>
+				<tr class="end new story">
+					<td></td>
+					<td></td>
+					<td>020700</td>
+					<td></td>
+					<td>스토리</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/020700_productDetail_v2_k.html" target="_blank">020700_productDetail_v2_k.html</a></td>
+					<td>K 플랫폼</td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td>020701</td>
+					<td></td>
+					<td>리뷰 전체보기</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/020701_reviewList_v2.html" target="_blank">020701_reviewList_v2.html</a></td>
+					<td>고도화</td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td>020702</td>
+					<td></td>
+					<td>동영상 전체보기</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/020702_mediaList_v2.html" target="_blank">020702_mediaList_v2.html</a></td>
+					<td>고도화</td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td>020703</td>
+					<td></td>
+					<td>상품문의 전체보기</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/020703_reviewList_v2.html" target="_blank">020703_reviewList_v2.html</a></td>
+					<td>고도화</td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td>020704</td>
+					<td></td>
+					<td>상품투표 전체보기</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/020704_pollList_v2.html" target="_blank">020704_pollList_v2.html</a></td>
+					<td>고도화</td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td>020800</td>
+					<td>해시태그 상세</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/020800_hashtags_v2.html" target="_blank">020800_hashtags_v2.html</a></td>
+					<td>고도화</td>
+				</tr>
+				<tr class="end live">
+					<td></td>
+					<td></td>
+					<td>TP_0007</td>
+					<td>해시태그 상세</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/TP_0007_hashtags_v2.html" target="_blank">TP_0007_hashtags_v2.html</a></td>
+					<td>B 플랫폼</td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td>020705</td>
+					<td></td>
+					<td>테마템 전체보기</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/020705_themeList_v2.html" target="_blank">020705_themeList_v2.html</a></td>
+					<td>고도화</td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td>020801</td>
+					<td></td>
+					<td>리뷰 전체보기</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/020801_reviewList_v2.html" target="_blank">020801_reviewList_v2.html</a></td>
+					<td>고도화</td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td>020802</td>
+					<td></td>
+					<td>동영상 전체보기</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/020802_mediaList_v2.html" target="_blank">020802_mediaList_v2.html</a></td>
+					<td>고도화</td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td>020804</td>
+					<td></td>
+					<td>질문 전체보기</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/020804_questionList_v2.html" target="_blank">020804_questionList_v2.html</a></td>
+					<td>고도화</td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td>020805</td>
+					<td></td>
+					<td>투표 전체보기</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/020805_pollList_v2.html" target="_blank">020805_pollList_v2.html</a></td>
+					<td>고도화</td>
+				</tr>
+				<tr class="end live">
+					<td></td>
+					<td></td>
+					<td>TP_0008</td>
+					<td></td>
+					<td>라이브방송 전체보기</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/TP_0008_liveList.html" target="_blank">TP_0008_liveList.html</a></td>
+					<td>B 플랫폼</td>
+				</tr>
+				<tr class="end story">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>연관 크리에이터 전체보기</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/TPK_beautyCreatorAll.html" target="_blank">TPK_beautyCreatorAll.html</a></td>
+					<td>K 플랫폼</td>
+				</tr>
+				<tr class="sec end new">
+					<td></td>
+					<td>홈</td>
+					<td>030100</td>
+					<td>홈</td>
+					<td>홈</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/030100_home_v2.html" target="_blank">030100_home_v2.html</a></td>
+					<td>고도화</td>
+				</tr>
+				<tr class="sec end story">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>스토리</td>
+					<td>숏컷 1개일때</td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/030100_home_v2_k.html" target="_blank">030100_home_v2_k.html</a></td>
+					<td>K 플랫폼</td>
+				</tr>
+				<tr class="sec end story">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>숏컷 1개 이상일때</td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/030100_home_v2_k_01.html" target="_blank">030100_home_v2_k_01.html</a></td>
+					<td>K 플랫폼</td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>동영상 레이지로드</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/030100_home_v2_new.html" target="_blank">030100_home_v2_new.html</a></td>
+					<td>고도화</td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>프로모션 미전시</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/030100_home_v2_2.html" target="_blank">030100_home_v2_2.html</a></td>
+					<td>고도화</td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>카테고리별 리뷰</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/030100_categoryReview_v2.html" target="_blank">030100_categoryReview_v2.html</a></td>
+					<td>고도화</td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>리뷰</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/030100_review_v2.html" target="_blank">030100_review_v2.html</a></td>
+					<td>고도화</td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>프로모션 미전시</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/030100_review_v2_2.html" target="_blank">030100_review_v2_2.html</a></td>
+					<td>고도화</td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td>030200</td>
+					<td></td>
+					<td>랭킹</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/030200_ranking_v2.html" target="_blank">030200_ranking_v2.html</a></td>
+					<td>고도화</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>030201</td>
+					<td></td>
+					<td></td>
+					<td>상세검색</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/030200_ranking.html" target="_blank">030200_ranking.html</a></td>
+					<td>2차 완료<br>검색 버튼 클릭 시 노출</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>030202</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>상세검색결과</td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/030202_search.html" target="_blank">030202_search.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td>030203</td>
+					<td></td>
+					<td></td>
+					<td>랭킹 더보기</td>
+					<td><#연령대 #성별 인기 상품>코너 더보기</td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/030203_rankingList_v2.html" target="_blank">030203_rankingList_v2.html</a></td>
+					<td>고도화</td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td>030300</td>
+					<td></td>
+					<td>질문</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/030300_question_v2.html" target="_blank">030300_question_v2.html</a></td>
+					<td>고도화</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>030301</td>
+					<td></td>
+					<td></td>
+					<td>질문 전체보기</td>
+					<td>상품문의</td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/030301_questionList.html" target="_blank">030301_questionList.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>030302</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>면세문의</td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/030302_questionList.html" target="_blank">030302_questionList.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>030303</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>여행문의</td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/030303_questionList.html" target="_blank">030303_questionList.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>030304</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>기타문의</td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/030304_questionList.html" target="_blank">030304_questionList.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>030501</td>
+					<td></td>
+					<td></td>
+					<td>브랜드검색</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/030501_brandSearch.html" target="_blank">030501_brandSearch.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>030502</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>브랜드검색결과</td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/030502_brandSearchResult.html" target="_blank">030502_brandSearchResult.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td>030500</td>
+					<td></td>
+					<td>브랜드팁</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/030500_brandtip_v2.html" target="_blank">030500_brandtip_v2.html</a></td>
+					<td>고도화</td>
+				</tr>
+				<tr class="end live">
+					<td></td>
+					<td></td>
+					<td>FO_1000</td>
+					<td></td>
+					<td>라이브</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/FO_1000_liveMain.html" target="_blank">FO_1000_liveMain.html</a></td>
+					<td>B 플랫폼</td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td>030500</td>
+					<td></td>
+					<td></td>
+					<td>상단 배너 없는 경우</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/030500_brandtip_v2_2.html" target="_blank">030500_brandtip_v2_2.html</a></td>
+					<td>고도화</td>
+				</tr>
+				<tr class="sec end new">
+					<td></td>
+					<td></td>
+					<td>040000</td>
+					<td>피드 3.0</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/040000_feed_v2.html" target="_blank">040000_feed_v2.html</a></td>
+					<td>고도화</td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td>040000</td>
+					<td>피드 3.0 - 개선</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/040000_feed_v2_new.html" target="_blank">040000_feed_v2_new.html</a></td>
+					<td>고도화</td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td>040000</td>
+					<td>피드 3.0 - 개선 (로그인전)</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/040000_feed_v2_new2.html" target="_blank">040000_feed_v2_new2.html</a></td>
+					<td>고도화</td>
+				</tr>
+				
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>프로모션 미전시</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/040000_feed_v2_2.html" target="_blank">040000_feed_v2_2.html</a></td>
+					<td>고도화</td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>새로운 소식 없음</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/040000_feed_alarm.html" target="_blank">040000_feed_alarm.html</a></td>
+					<td>고도화</td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>검색된 컨텐츠 없음</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/040000_feed_no.html" target="_blank">040000_feed_no.html</a></td>
+					<td>고도화</td>
+				</tr>
+				<tr class="end live">
+					<td></td>
+					<td></td>
+					<td>040000</td>
+					<td>피드 3.0 - 라이브방송</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/040000_feed_v3.html" target="_blank">040000_feed_v3.html</a></td>
+					<td>B 플랫폼</td>
+				</tr>
+				<tr class="end live">
+					<td></td>
+					<td></td>
+					<td>040000</td>
+					<td>피드 3.0 - 라이브방송(로그인전)</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/040000_feed_v3_2.html" target="_blank">040000_feed_v3_2.html</a></td>
+					<td>B 플랫폼</td>
+				</tr>
+				<tr class="sec story">
+					<td></td>
+					<td>뷰티파인더</td>
+					<td></td>
+					<td>퍼스널컬러 영역 - 진단 전 </td>
+					<td>KR</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/TPK_beautyMain.html" target="_blank">TPK_beautyMain.html</a></td>
+					<td>K 플랫폼</td>
+				</tr>
+				<tr class="sec story">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>CN</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/TPK_beautyMain_cn.html" target="_blank">TPK_beautyMain_cn.html</a></td>
+					<td>K 플랫폼 - CN</td>
+				</tr>
+				<tr class="sec story">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>퍼스널컬러 영역 - 진단 후</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/TPK_beautyMain_after.html" target="_blank">TPK_beautyMain_after.html</a></td>
+					<td>K 플랫폼</td>
+				</tr>
+				<tr class="sec story">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>퍼스널컬러 영역 - 배너</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/TPK_beautyMain_banner.html" target="_blank">TPK_beautyMain_banner.html</a></td>
+					<td>K 플랫폼</td>
+				</tr>
+				<tr class="sec story">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>버블가이드</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/TPK_beautyBubble.html" target="_blank">TPK_beautyBubble.html</a></td>
+					<td>K 플랫폼</td>
+				</tr>
+				<tr class="sec story">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>테마키워드 목록</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/TPK_themeList.html" target="_blank">TPK_themeList.html</a></td>
+					<td>K 플랫폼</td>
+				</tr>
+				<tr class="end story">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>퍼스널컬러 진단 하기 전 <br />개인정보수집동의 팝업</td>
+					<td>KR</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/TPK_beautyPopup.html" target="_blank">TPK_beautyPopup.html</a></td>
+					<td>K 플랫폼<br /></td>
+				</tr>
+				<tr class="end story">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>CN</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/TPK_beautyPopup_cn.html" target="_blank">TPK_beautyPopup_cn.html</a></td>
+					<td>K 플랫폼<br /></td>
+				</tr>
+				<tr class="end story">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>퍼스널컬러 진단 하기</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/TPK_beautyTest.html" target="_blank">TPK_beautyTest.html</a></td>
+					<td>K 플랫폼<br /></td>
+				</tr>
+				<tr class="end story">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>퍼스널컬러 진단 결과</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/TPK_beautyTestResult.html" target="_blank">TPK_beautyTestResult.html</a></td>
+					<td>K 플랫폼<br /></td>
+				</tr>
+				<tr class="end story">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>퍼스널컬러 진단 결과 2차</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/TPK_beautyTestResult_v2.html" target="_blank">TPK_beautyTestResult_v2.html</a></td>
+					<td>K 플랫폼<br /></td>
+				</tr>
+				<tr class="sec skip">
+					<td></td>
+					<td>포스팅</td>
+					<td>050000</td>
+					<td>포스팅</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/050000_posting.html" target="_blank">050000_posting.html</a></td>
+					<td>네이티브 앱</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>050101</td>
+					<td></td>
+					<td>상품리뷰</td>
+					<td>상품선택(전)</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/050000_productSelect.html" target="_blank">050000_productSelect.html</a></td>
+					<td>네이티브 앱 -> 모바일웹 전환</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>050101</td>
+					<td></td>
+					<td></td>
+					<td>상품선택(후)</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/050000_productSelect02.html" target="_blank">050000_productSelect02.html</a></td>
+					<td>네이티브 앱 -> 모바일웹 전환</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>050102</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>상품검색</td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/050102_productSearch.html" target="_blank">050102_productSearch.html</a></td>
+					<td>2차 완료<br>최근검색어, 자동완성 포함(Focus, text 입력시 노출)</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>050103</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>상품검색결과</td>
+					<td></td>
+					<td><a href="./html/050103_productList.html" target="_blank">050103_productList.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>050104</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>검색결과없음</td>
+					<td></td>
+					<td><a href="./html/050104_productNull.html" target="_blank">050104_productNull.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>050105</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>상품요청</td>
+					<td><a href="./html/050105_productRequest.html" target="_blank">050105_productRequest.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>050106</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>리뷰작성불가 브랜드</td>
+					<td></td>
+					<td><a href="./html/050106_noSoap.html" target="_blank">050106_noSoap.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>050107</td>
+					<td></td>
+					<td></td>
+					<td>리뷰작성(전)</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/050000_reviewWrite.html" target="_blank">050000_reviewWrite.html</a></td>
+					<td>네이티브 앱 -> 모바일웹 전환</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>050107</td>
+					<td></td>
+					<td></td>
+					<td>리뷰작성(후)</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/050000_reviewWrite02.html" target="_blank">050000_reviewWrite02.html</a></td>
+					<td>네이티브 앱 -> 모바일웹 전환</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>050107</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>링크 팝업</td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/050000_linkPopup.html" target="_blank">050000_linkPopup.html</a></td>
+					<td>네이티브 앱 -> 모바일웹 전환</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>050107</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>추천상품 추가</td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/050000_recommendPrt.html" target="_blank">050000_recommendPrt.html</a></td>
+					<td>네이티브 앱 -> 모바일웹 전환</td>
+				</tr>
+				<tr class="end story">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>스토리 작성</td>
+					<td>상품검색</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/050102_productSearch_k.html" target="_blank">050102_productSearch_k.html</a></td>
+					<td>K 플랫폼</td>
+				</tr>
+				<tr class="end story">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>상품검색결과</td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/050103_productList_k.html" target="_blank">050103_productList_k.html</a></td>
+					<td>K 플랫폼</td>
+				</tr>
+				<tr class="end story">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>리뷰검색</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/050102_productSearch_k_01.html" target="_blank">050102_productSearch_k_01.html</a></td>
+					<td>K 플랫폼</td>
+				</tr>
+				<tr class="end story">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>리뷰검색결과</td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/050103_productListReview_k.html" target="_blank">050103_productListReview_k.html</a></td>
+					<td>K 플랫폼</td>
+				</tr>
+				<tr class="skip">
+					<td></td>
+					<td></td>
+					<td>050108</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>사진첩(사진)</td>
+					<td></td>
+					<td></td>
+					<td>-</td>
+					<td>네이티브 앱</td>
+				</tr>
+				<tr class="skip">
+					<td></td>
+					<td></td>
+					<td>050109</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>사진첩(동영상)</td>
+					<td></td>
+					<td></td>
+					<td>-</td>
+					<td>네이티브 앱</td>
+				</tr>
+				<tr class="skip">
+					<td></td>
+					<td></td>
+					<td>050110</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>링크</td>
+					<td></td>
+					<td></td>
+					<td>-</td>
+					<td>네이티브 앱</td>
+				</tr>
+				<tr class="skip">
+					<td></td>
+					<td></td>
+					<td>050111</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>업로드 진행 중</td>
+					<td></td>
+					<td></td>
+					<td>-</td>
+					<td>네이티브 앱</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>050201</td>
+					<td></td>
+					<td>질문</td>
+					<td>질문작성(전)</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/050000_questionWrite.html" target="_blank">050000_questionWrite.html</a></td>
+					<td>네이티브 앱 -> 모바일웹 전환</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>050201</td>
+					<td></td>
+					<td></td>
+					<td>질문작성(후)</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/050000_questionWrite02.html" target="_blank">050000_questionWrite02.html</a></td>
+					<td>네이티브 앱 -> 모바일웹 전환</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>050301</td>
+					<td></td>
+					<td>투표</td>
+					<td>투표작성</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/050000_pollWrite.html" target="_blank">050000_pollWrite.html</a></td>
+					<td>네이티브 앱 -> 모바일웹 전환</td>
+				</tr>
+				<tr class="skip">
+					<td></td>
+					<td></td>
+					<td>050401</td>
+					<td></td>
+					<td>여행리뷰</td>
+					<td>여행리뷰작성</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>-</td>
+					<td>네이티브 앱</td>
+				</tr>
+				<tr class="skip">
+					<td></td>
+					<td></td>
+					<td>050500</td>
+					<td></td>
+					<td>임시저장 여부 확인</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>-</td>
+					<td>네이티브 앱</td>
+				</tr>
+				<tr class="sec end new">
+					<td></td>
+					<td>내소식</td>
+					<td>060100</td>
+					<td>내소식</td>
+					<td>내소식</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/060100_myActivity_v3.html" target="_blank">060100_myActivity_v3.html</a></td>
+					<td>신라별 통합</td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td>060101</td>
+					<td></td>
+					<td></td>
+					<td>새로운 소식 없음</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/060101_myActivity_no.html" target="_blank">060101_myActivity_no.html</a></td>
+					<td>고도화</td>
+				</tr>
+				<tr class="end live">
+					<td></td>
+					<td></td>
+					<td>TP_0004</td>
+					<td></td>
+					<td>내소식 - 라이브추가</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/TP_0004__myActivity.html" target="_blank">TP_0004__myActivity.html</a></td>
+					<td>고도화</td>
+				</tr>
+				<tr class="sec end new">
+					<td></td>
+					<td>마이샵</td>
+					<td>070100</td>
+					<td>나의 마이샵</td>
+					<td>리뷰/질문/투표/테마템/정보/스크랩/관심상품</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/070100_myShop_v4.html" target="_blank">070100_myShop_v4.html</a></td>
+					<td>신라별 통합</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>작성 글 없음</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/070100_myShop_no.html" target="_blank">070100_myShop_no.html</a></td>
+					<td>고도화</td>
+				</tr>
+				<tr class="end live">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>스크랩</td>
+					<td>라이브</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/TP_0005_myShop.html" target="_blank">TP_0005_myShop.html</a></td>
+					<td>B 플랫폼<br /></td>
+				</tr>
+				<tr class="end story">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>스토리</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/TP_0005_myShop_k.html" target="_blank">TP_0005_myShop_k.html</a></td>
+					<td>K 플랫폼<br /></td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td>070100</td>
+					<td>크리에이터 마이샵</td>
+					<td>리뷰</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/070100_myShop_v2_2.html" target="_blank">070100_myShop_v2_2.html</a></td>
+					<td>고도화<br /></td>
+				</tr>
+				<tr class="end live">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>라이브</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/TP_0006_myShop_2.html" target="_blank">TP_0006_myShop_2.html</a></td>
+					<td>B 플랫폼<br /></td>
+				</tr>
+				<tr class="end story">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>뷰티파인더<br /><span style="font-size:11px; color:red;">(나의마이샵/크리에이터 마이샵 공통)</span></td>
+					<td>퍼스널컬러 진단 전</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/TP_0006_myShop_2_k.html" target="_blank">TP_0006_myShop_2_k.html</a></td>
+					<td>K 플랫폼<br /></td>
+				</tr>
+				<tr class="end story">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>퍼스널컬러 진단 후</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/TP_0006_myShop_2_k_01.html" target="_blank">TP_0006_myShop_2_k_01.html</a></td>
+					<td>K 플랫폼<br /></td>
+				</tr>
+				<tr class="end live skip">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>예고영상 있을 경우</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/TP_0006_myShop.html" target="_blank"></a></td>
+					<td>화면삭제<br /></td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>070101</td>
+					<td></td>
+					<td></td>
+					<td>비공개 마이샵 안내</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/070101_myShop.html" target="_blank">070101_myShop.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>070102</td>
+					<td></td>
+					<td></td>
+					<td>마이샵 설정 안내</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/070102_myShop.html" target="_blank">070102_myShop.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>070501</td>
+					<td></td>
+					<td></td>
+					<td>테마상품목록</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/070501_themeList.html" target="_blank">070501_themeList.html</a></td>
+					<td></td>
+				</tr>
+				<tr class="skip">
+					<td></td>
+					<td></td>
+					<td>070502</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>삭제 컨펌창</td>
+					<td></td>
+					<td></td>
+					<td>-</td>
+					<td>네이티브 앱</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>070504</td>
+					<td></td>
+					<td></td>
+					<td>테마템관리</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/070504_themeEdit.html" target="_blank">070504_themeEdit.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="skip">
+					<td></td>
+					<td></td>
+					<td>070505</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>취소 컨펌창</td>
+					<td></td>
+					<td></td>
+					<td>-</td>
+					<td>네이티브 앱</td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td>070600</td>
+					<td></td>
+					<td>정보</td>
+					<td>팁핑 리워즈 상세</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/110300_rewardsDetail_v2.html" target="_blank">110300_rewardsDetail_v2.html</a></td>
+					<td>신라별 통합</td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td>070600</td>
+					<td></td>
+					<td></td>
+					<td>팁핑 지수 상세</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/110300_indexDetail.html" target="_blank">110300_indexDetail.html</a></td>
+					<td>고도화</td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td>070600</td>
+					<td></td>
+					<td></td>
+					<td>팁핑 크리에이터 포인트 상세</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/070600_pointDetail.html" target="_blank">070600_pointDetail.html</a></td>
+					<td>고도화</td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td>070600</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>팁핑 크리에이터 포인트 안내</td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/070600_pointGuide.html" target="_blank">070600_pointGuide.html</a></td>
+					<td>고도화</td>
+				</tr>
+				<tr class="skip">
+					<td></td>
+					<td></td>
+					<td>070701</td>
+					<td></td>
+					<td></td>
+					<td>장바구니 이동 컨펌창</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>-</td>
+					<td>네이티브 앱</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>070801</td>
+					<td></td>
+					<td>친구</td>
+					<td>팔로잉</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/070801_friendSearch.html" target="_blank">070801_friendSearch.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>070802</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>팔로잉 중인 회원이 없을 경우</td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/070802_friendSearch.html" target="_blank">070802_friendSearch.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>070803</td>
+					<td></td>
+					<td></td>
+					<td>팔로워</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/070803_friendSearch.html" target="_blank">070803_friendSearch.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>070804</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>팔로잉 중인 회원이 없을 경우</td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/070804_friendSearch.html" target="_blank">070804_friendSearch.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>070805</td>
+					<td></td>
+					<td></td>
+					<td>친구추가</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/070805_friendSearch.html" target="_blank">070805_friendSearch.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td>070900</td>
+					<td></td>
+					<td>설정</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/070900_myShopEdit_v2.html" target="_blank">070900_myShopEdit_v2.html</a></td>
+					<td>고도화</td>
+				</tr>
+				<tr class="skip">
+					<td></td>
+					<td></td>
+					<td>070901</td>
+					<td></td>
+					<td></td>
+					<td>취소 컨펌창</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>-</td>
+					<td>네이티브 앱</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>070902</td>
+					<td></td>
+					<td></td>
+					<td>마이샵 정보 수집 및 이용 동의 팝업</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/070900_myShopEdit.html" target="_blank">070900_myShopEdit.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>070903</td>
+					<td></td>
+					<td></td>
+					<td>프로필이미지 선택 팝업</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/070100_myShopEdit2.html" target="_blank">070100_myShopEdit2.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="skip">
+					<td></td>
+					<td></td>
+					<td>070905</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>취소 컨펌창</td>
+					<td></td>
+					<td></td>
+					<td>-</td>
+					<td>네이티브 앱</td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td>080100</td>
+					<td>브랜드 마이샵</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/080100_brandMyShop_v2.html" target="_blank">080100_brandMyShop_v2.html</a></td>
+					<td>고도화</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>080501</td>
+					<td></td>
+					<td>친구</td>
+					<td>팔로잉</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/080501_friendSearch.html" target="_blank">080501_friendSearch.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>080502</td>
+					<td></td>
+					<td></td>
+					<td>팔로워</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/080502_friendSearch.html" target="_blank">080502_friendSearch.html</a></td>
+					<td></td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td>080100</td>
+					<td>브랜드 전체보기</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/030501_brandSearch_v2.html" target="_blank">030501_brandSearch_v2.html</a></td>
+					<td>고도화</td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td>090100</td>
+					<td>신라면세점 마이샵</td>
+					<td>Trend/Tip&Talk/테마템</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/090100_shillaMyShop_v2.html" target="_blank">090100_shillaMyShop_v2.html</a></td>
+					<td>고도화</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>090401</td>
+					<td></td>
+					<td></td>
+					<td>테마상품목록</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/090401_themeList.html" target="_blank">090401_themeList.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="sec end">
+					<td></td>
+					<td>통합검색</td>
+					<td>100100</td>
+					<td>통합검색</td>
+					<td>인기해시태그</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/100100_searchHashtags.html" target="_blank">100100_searchHashtags.html</a></td>
+					<td>2차 완료<br>스크롤 이벤트 100000_search.html</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>100200</td>
+					<td></td>
+					<td>인기리뷰어</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/100200_searchReviewer.html" target="_blank">100200_searchReviewer.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td>100300</td>
+					<td></td>
+					<td>카테고리</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/100300_searchCategory_v2.html" target="_blank">100300_searchCategory_v2.html</a></td>
+					<td>고도화</td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td>100301</td>
+					<td></td>
+					<td></td>
+					<td>서브카테고리</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/100301_subCategory_v2.html" target="_blank">100301_subCategory_v2.html</a></td>
+					<td>고도화</td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td>100301</td>
+					<td></td>
+					<td></td>
+					<td>검색 결과 없음</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/100301_subCategory_no.html" target="_blank">100301_subCategory_no.html</a></td>
+					<td>고도화</td>
+				</tr>
+				<tr class="end live">
+					<td></td>
+					<td></td>
+					<td>TP_0009</td>
+					<td></td>
+					<td>라이브</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/TP_0009_searchLive.html" target="_blank">TP_0009_searchLive.html</a></td>
+					<td>B 플랫폼</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>100400</td>
+					<td></td>
+					<td>최근검색어/즐겨찾기</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/100400_searchWord.html" target="_blank">100400_searchWord.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>100400</td>
+					<td></td>
+					<td>최근검색어 내역없음</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/100400_noSearchWord.html" target="_blank">100400_noSearchWord.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>100501</td>
+					<td></td>
+					<td>검색결과</td>
+					<td>해시태그</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/100501_searchHashtags.html" target="_blank">100501_searchHashtags.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>100502</td>
+					<td></td>
+					<td></td>
+					<td>리뷰어</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/100502_searchReviewer.html" target="_blank">100502_searchReviewer.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>100503</td>
+					<td></td>
+					<td></td>
+					<td>상품</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/100503_searchProduct.html" target="_blank">100503_searchProduct.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end live">
+					<td></td>
+					<td></td>
+					<td>FO_1300</td>
+					<td></td>
+					<td></td>
+					<td>라이브방송</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/FO_1300_searchLive.html" target="_blank">FO_1300_searchLive.html</a></td>
+					<td>B 플랫폼</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>100600</td>
+					<td></td>
+					<td>검색 실행 중</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/100600_searching.html" target="_blank">100600_searching.html</a></td>
+					<td>2차 완료<br> 자동완성 부분에 검색중 추가</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>100700</td>
+					<td></td>
+					<td>검색결과가 없는 경우</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/100700_noList.html" target="_blank">100700_noList.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="sec end new">
+					<td></td>
+					<td>마이메뉴</td>
+					<td>110000</td>
+					<td>마이메뉴</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/110000_myMenu_v2.html" target="_blank">110000_myMenu_v2.html</a></td>
+					<td>신라별 통합</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>110100</td>
+					<td></td>
+					<td>마이메뉴(로그아웃)</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/110100_myMenu.html" target="_blank">110100_myMenu.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td>110200</td>
+					<td></td>
+					<td>나의 등급</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/110200_myLevel_v2.html" target="_blank">110200_myLevel_v2.html</a></td>
+					<td>고도화</td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td>110200</td>
+					<td></td>
+					<td></td>
+					<td>크리에이터 등급 안내문 팝업</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/110203_myLevelInfo.html" target="_blank">110203_myLevelInfo.html</a></td>
+					<td>고도화</td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td>110200</td>
+					<td></td>
+					<td>나의 팁핑 지수</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/110200_myIndex.html" target="_blank">110200_myIndex.html</a></td>
+					<td>고도화</td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td>110201</td>
+					<td></td>
+					<td></td>
+					<td>크리에이터 등급 안내</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/110201_levelGuide_v3.html" target="_blank">110201_levelGuide_v3.html</a></td>
+					<td>고도화</td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td>110201</td>
+					<td></td>
+					<td></td>
+					<td>팁핑 지수 등급 안내</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/110201_indexLvGuide.html" target="_blank">110201_indexLvGuide.html</a></td>
+					<td>고도화</td>
+				</tr>
+				<tr class="skip">
+					<td></td>
+					<td></td>
+					<td>110202</td>
+					<td></td>
+					<td></td>
+					<td>등급별 혜택</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>회원 등급 안내 화면과 통합하여 삭제</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>110300</td>
+					<td></td>
+					<td>리워즈</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/110300_rewards.html" target="_blank">110300_rewards.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td>110300</td>
+					<td></td>
+					<td>팁핑 판매 적립 상세</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/110300_rewards_v2.html" target="_blank">110300_rewards_v2.html</a></td>
+					<td>신라별통합</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>110301</td>
+					<td></td>
+					<td></td>
+					<td>리워즈 전환</td>
+					<td>전환신청</td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/110301_rewards.html" target="_blank">110301_rewards.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>110301</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>정보제공 동의</td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/110301_agreement.html" target="_blank">110301_agreement.html</a></td>
+					<td>2차 완료<br><span class="red">약관 내용 수급 필요</span></td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>110301</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>개인정보 입력</td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/110301_memForm.html" target="_blank">110301_memForm.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>110301</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>계좌정보 입력</td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/110301_accountForm.html" target="_blank">110301_accountForm.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>110302</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>전환신청내역</td>
+					<td></td>
+					<td><a href="./html/110302_applicationList.html" target="_blank">110302_applicationList.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>110303</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>리워즈 안내</td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/110303_rewardsGuide.html" target="_blank">110303_rewardsGuide.html</a></td>
+					<td><span class="red">컨텐츠 수급 필요</span></td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td>110303</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>팁핑 지수 안내</td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/110303_indexGuide.html" target="_blank">110303_indexGuide.html</a></td>
+					<td><span class="red">고도화</span></td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>110304</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>적립 예정 리워즈</td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/110304_rewards.html" target="_blank">110304_rewards.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>110305</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>판매 리뷰 목록</td>
+					<td></td>
+					<td><a href="./html/110305_reviewList.html" target="_blank">110305_reviewList.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>110306</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>총구매자 상세</td>
+					<td><a href="./html/110306_buyerList.html" target="_blank">110306_buyerList.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>110307</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>리워즈율 상세</td>
+					<td><a href="./html/110307_rewards.html" target="_blank">110307_rewards.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td>110307</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>신라별 적립률 상세</td>
+					<td><a href="./html/110307_rewards_v2.html" target="_blank">1110307_rewards_v2.html</a></td>
+					<td>신라별 통합</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>110308</td>
+					<td></td>
+					<td></td>
+					<td>누적 리워즈</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/110308_rewards.html" target="_blank">110308_rewards.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>110401</td>
+					<td></td>
+					<td>별포인트</td>
+					<td>적립내역</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/110401_starPoint.html" target="_blank">110401_starPoint.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>110402</td>
+					<td></td>
+					<td></td>
+					<td>합산내역</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/110401_starPoint.html" target="_blank">110401_starPoint.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>110403</td>
+					<td></td>
+					<td></td>
+					<td>별 합산신청</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/110403_starPoint.html" target="_blank">110403_starPoint.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>110404</td>
+					<td></td>
+					<td></td>
+					<td>별 포인트 안내</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/110404_starPointGuide.html" target="_blank">110404_starPointGuide.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td>110405</td>
+					<td></td>
+					<td></td>
+					<td>팁핑 신라별 적립 안내</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/110405_shillastarGuide.html" target="_blank">110405_shillastarGuide.html</a></td>
+					<td>신라별 통합</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>110500</td>
+					<td></td>
+					<td>설정</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/110500_setting.html" target="_blank">110500_setting.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="skip">
+					<td></td>
+					<td></td>
+					<td>110501</td>
+					<td></td>
+					<td></td>
+					<td>신라겟팁 이용가이드</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>서비스 이용가이드와 통합하여 해당화면 삭제</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>110504</td>
+					<td></td>
+					<td></td>
+					<td>공지사항</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/110504_notice.html" target="_blank">110504_notice.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>110505</td>
+					<td></td>
+					<td></td>
+					<td>서비스 안내 - 앱</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/110505_serviceGuide_app.html" target="_blank">110505_serviceGuide_app.html</a></td>
+					<td><span class="red"></span></td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>110505</td>
+					<td></td>
+					<td></td>
+					<td>서비스 안내 - 모바일</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/110505_serviceGuide_mo.html" target="_blank">110505_serviceGuide_mo.html</a></td>
+					<td><span class="red"></span></td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>110506</td>
+					<td></td>
+					<td></td>
+					<td>서비스 문의</td>
+					<td>문의하기</td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/110506_requestWrite.html" target="_blank">110506_requestWrite.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>110507</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>문의내역</td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/110507_requestList.html" target="_blank">110507_requestList.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td>110508</td>
+					<td></td>
+					<td></td>
+					<td>고객센터</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/110508_customerCenter.html" target="_blank">110508_customerCenter.html</a></td>
+					<td>신라별 통합</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>110509</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>FAQ</td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/110509_faqList.html" target="_blank">110509_faqList.html</a></td>
+					<td>신규</td>
+				</tr>				
+				<tr class="sec skip">
+					<td></td>
+					<td>기타</td>
+					<td>120100</td>
+					<td>서비스 이동 게이트</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>-</td>
+					<td>네이티브 앱</td>
+				</tr>
+				<tr class="skip">
+					<td></td>
+					<td></td>
+					<td>120200</td>
+					<td>사이트 이동</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>-</td>
+					<td>네이티브 앱</td>
+				</tr>
+				<tr class="skip">
+					<td></td>
+					<td></td>
+					<td>120300</td>
+					<td>로그인</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>-</td>
+					<td>네이티브 앱</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>120400</td>
+					<td>몰메인 팝업창</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/120400_mainPopup.html" target="_blank">120400_mainPopup.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end new">
+					<td></td>
+					<td></td>
+					<td>120400</td>
+					<td>몰메인 팝업창 - 롤링적용</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/120400_mainPopup_new.html" target="_blank">120400_mainPopup_new.html</a></td>
+					<td></td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>120500</td>
+					<td>이용제한안내</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/120500_Guide.html" target="_blank">120500_Guide.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>120700</td>
+					<td>페이지오류</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/120700_error.html" target="_blank">120700_error.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>121400</td>
+					<td>시스템점검 안내</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/121400_error.html" target="_blank">121400_error.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>팁핑 이용약관 동의</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/popup_login_tipping_m.html" target="_blank">popup_login_tipping_m.html</a></td>
+					<td></td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>이용약관 개정안내 - 팝업배너</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/popup_agree.html" target="_blank">popup_agree.html</a></td>
+					<td></td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>팁핑 회원 이용 약관 개정 안내</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/popup_login_tipping_new.html" target="_blank">popup_login_tipping_new.html</a></td>
+					<td></td>
+				</tr>
+				<tr class="sec end">
+					<td></td>
+					<td>이메일</td>
+					<td>120800</td>
+					<td>악성고객설정 안내</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/120800_email.html" target="_blank">120800_email.html</a></td>
+					<td>2차 완료<br/><span class="red">수정 2018-04-18</span><br/><span class="red">수정 2018-04-25</span><br/><span class="red">수정 2018-04-27</span></td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>120900</td>
+					<td>악성고객설정해제 안내</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/120900_email.html" target="_blank">120900_email.html</a></td>
+					<td>2차 완료<br/><span class="red">수정 2018-04-18</span><br/><span class="red">수정 2018-04-25</span><br/><span class="red">수정 2018-04-27</span></td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>121000</td>
+					<td>서비스문의 답변</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/121000_email.html" target="_blank">121000_email.html</a></td>
+					<td>2차 완료<br/><span class="red">수정 2018-04-18</span><br/><span class="red">수정 2018-04-25</span><br/><span class="red">수정 2018-04-27</span></td>
+				</tr>
+				<tr class="end">
+					<td></td>
+					<td></td>
+					<td>121800</td>
+					<td>비밀번호 초기화</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./html/121001_email.html" target="_blank">121001_email.html</a></td>
+					<td>2차 완료<br/><span class="red">수정 2018-04-18</span><br/><span class="red">수정 2018-04-25</span><br/><span class="red">수정 2018-04-27</span></td>
+				</tr>
+				<tr class="sec end">
+					<td rowspan="3"></td>
+					<td rowspan="3">이커머스</td>
+					<td rowspan="3">121100</td>
+					<td>상품평</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./ecommerce/reviewDetail.html" target="_blank">reviewDetail.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="sec end">
+					<td>상품평 없음</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./ecommerce/noreviewDetail.html" target="_blank">noreviewDetail.html</a></td>
+					<td><span class="red">추가 2018-05-02</span></td>
+				</tr>
+				<tr class="sec end">
+					<td>상품상세 + 상품평</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="./ecommerce/reviewDetail02.html" target="_blank">reviewDetail02.html</a></td>
+					<td>2차 완료</td>
+				</tr>
+				<tr class="skip">
+					<td></td>
+					<td></td>
+					<td>121200</td>
+					<td>별</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>-</td>
+					<td>텍스트 변경 건으로 퍼블 지원 필요 없음(2018.03.30 임하수돈)</td>
+				</tr>
+				<tr class="skip">
+					<td></td>
+					<td></td>
+					<td>121300</td>
+					<td>탈퇴</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>-</td>
+					<td>텍스트 변경 건으로 퍼블 지원 필요 없음(2018.03.30 임하수돈)</td>
+				</tr>
+				<tr class="skip">
+					<td></td>
+					<td></td>
+					<td>121500</td>
+					<td>온라인쇼핑 하단바</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>-</td>
+					<td>네이티브 앱</td>
+				</tr>
+				<tr class="skip">
+					<td></td>
+					<td></td>
+					<td>121600</td>
+					<td>스마트매장 하단바</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>-</td>
+					<td>네이티브 앱</td>
+				</tr>
+				<tr class="skip">
+					<td></td>
+					<td></td>
+					<td>121700</td>
+					<td>지점혜택 하단바</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>-</td>
+					<td>네이티브 앱</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+</div>
+<script type="text/javascript">
+	$('table tr').bind('mouseover',function(){$(this).addClass('on')});
+	$('table tr').bind('mouseout',function(){$(this).removeClass('on')});
+
+	$( 'table' ).each( function() {
+		var all = $('tbody tr').length;
+		var end = $('tbody tr.end').length;
+		var skip = $('tbody tr.skip').length;
+		$('#total-page').text(all);
+		$('#native').text(skip);
+		$('#ok-page').text(end);
+		$('#persent').text(Math.round((end+skip)/all*100));
+    } );
+
+</script>
+
+</body>
+</html>

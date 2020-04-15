@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+	<title>팁핑-리뷰작성</title>
+	<link type="text/css" href="../css/style.css" rel="stylesheet">
+	<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.touchSlider.js"></script>
+	<script type="text/javascript"  src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/swiper.min.js"></script>
+</head>
+<body>
+	<div class="wrap">
+
+		<header>
+			<div class="header">
+                <h2>리뷰작성</h2>
+                <button type="button" class="goPrev"><span>이전</span></button>
+				<button class="txtBtn rightBtn" type="button"><span>저장</span></button>
+			</div>
+		</header>
+
+		<section class="writeForm reviewForm">
+			<!-- 제목입력 //-->
+			<div class="formItem">
+				<input type="text" placeholder="제목" maxlength="100">
+			</div>
+			<!--// 제목입력 -->
+
+			<!-- 에디터 //-->
+            <div class="formEditor" contenteditable="true">
+				<p class="placeholder">본문에 #으로 해시태그를 입력해보세요!<br />상품리뷰는 60자 이상 입력해야 등록됩니다.</p>
+
+				<div class="notice">
+					<dl>
+						<dt>작성시 유의사항</dt>
+						<dd>
+							<ul>
+								<li>- 게시물의 작성 시, 개인정보가 포함되지 않도록 유의바라며, 개인정보가 포함된 글은 정책에 따라 임의조치 될 수 있습니다.</li>
+								<li>- 게시물에 적합하지 않은 내용, 미풍양속을 해치는 내용 등은 통보없이 삭제 및 적립 혜택이 회수될 수 있습니다.</li>
+								<li>- 명예훼손, 저작권, 초상권의 권리 침해 및 음란 게시물은 관련 법률에 의해 제재를 받을 수 있습니다.</li>
+							</ul>
+						</dd>
+					</dl>
+				</div>	
+			</div>		
+			<!--// 에디터 -->	
+		</section>
+		<div class="attachItems">
+			<button type="button" class="imgBtn"><span>사진첨부</span></button>
+			<button type="button" class="videoBtn"><span>동영상첨부</span></button>
+			<button type="button" class="linkBtn" onclick="showlayer(self, urlPopup);"><span>링크추가</span></button>
+			<button type="button" class="prtBtn"><span>추천상품</span></button>
+		</div>
+	</div>
+
+	<!-- Link Popup -->
+	<div id="urlPopup" class="layerPopup postPopup">
+		<div class="header">
+			<h2>링크</h2>
+			<button class="layerClose" type="button"><span>취소</span></button>
+			<button class="txtBtn rightBtn" type="button"><span>확인</span></button>
+		</div>
+		<div class="inner">
+			<section class="writeForm">
+				<div class="formItem">
+					<input type="url" placeholder="URL을 입력해주세요" maxlength="100">
+					<button type="reset" class="clearBtn" style="display:none"><span>지우기</span></button>
+				</div>
+			</section>
+		</div>
+	</div>
+
+	<!-- dim -->
+	<div class="dimLayer"></div>
+
+	<!--// Link Popup -->
+
+	<script>
+		$(document).on('ready', function() {
+
+			var $formEditor = $('.formEditor');
+			var $placeholder = $('.placeholder', $formEditor);
+			var $notice = $('.notice');
+
+			$formEditor.on('click', function(){
+				$placeholder.remove();
+				$notice.remove();
+
+				$(this).focus();
+			});
+
+            var $inputSrch = $('.postPopup input[type=url]'), $clearBtn = $('.postPopup .clearBtn');
+
+			$inputSrch.keyup(function () {
+                showClearBtn();
+            });
+
+            function showClearBtn(){
+                if ($inputSrch.val().length !== 0) {
+                    $clearBtn.show();
+                } else {
+                    $clearBtn.hide();
+                }
+            }
+
+		});
+	</script>
+</body>
+</html>

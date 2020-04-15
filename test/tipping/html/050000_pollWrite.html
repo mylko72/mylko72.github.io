@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+	<title>팁핑-투표작성</title>
+	<link type="text/css" href="../css/style.css" rel="stylesheet">
+	<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.touchSlider.js"></script>
+	<script type="text/javascript"  src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/swiper.min.js"></script>
+</head>
+<body>
+	<div class="wrap">
+
+		<header>
+			<div class="header">
+                <h2>투표작성</h2>
+                <button class="layerClose" type="button"><span>취소</span></button>
+				<button class="txtBtn rightBtn" type="button"><span>저장</span></button>
+			</div>
+		</header>
+
+		<section class="writeForm uploadForm">
+			<!-- 제목입력 //-->
+			<div class="formItem">
+				<input type="text" placeholder="제목" maxlength="100">
+			</div>
+			<!--// 제목입력 -->
+
+			<!-- 에디터 //-->
+            <div class="formEditor" contenteditable="true">
+				<p class="placeholder">본문에 #으로 해시태그를 입력해보세요!</p>
+			</div>		
+			<!--// 에디터 -->	
+
+			<!-- 투표항목 //-->
+            <div class="pollUpload">
+                <div class="uploadList">
+					<a href="#none" class="icoFileUp" option-call="1">파일업로드</a>
+					<span class="inputArea">
+						<input type="text" name="" placeholder="항목명 입력">
+					</span>
+					<button type="button" name="button" class="fileDelBtn"><span>삭제</span></button>
+				</div>
+                <div class="uploadList">
+					<a href="#none" class="icoFileUp" option-call="1">파일업로드</a>
+                    <div class="productDetail">
+                        <img src="../images/@brand_review02.jpg" alt="아르마니 립스틱 화보집" onerror="this.src='../images/common/noImg470x470.png'">
+                        <strong>입생로랑</strong>
+                        <p>#403/베르니 아레브르디</p>
+                        <b>$26.6</b>
+                    </div>
+                    <button type="button" name="button" class="fileDelBtn"><span>삭제</span></button>
+                </div>
+                <div class="uploadList">
+					<a href="#none" class="icoFileUp" option-call="1">파일업로드</a>
+					<span class="inputArea">
+						<input type="text" name="" placeholder="항목명 입력">
+                    </span>
+                    <p class="imgArea">
+						<img class="" src="../images/@img_temp01.jpg" alt="" />
+					</p>
+					<button type="button" name="button" class="fileDelBtn"><span>삭제</span></button>
+				</div>                
+			</div>
+			<!--// 투표항목 -->
+		</section>
+		<div class="plusItems">
+            <button type="button" class="icoFileUp"><span>파일추가</span></button>
+            <span class="chk">
+				<input type="checkbox" name="chkA" id="chk01">
+				<label for="chk01">복수 선택 허용</label>
+			</span>
+		</div>
+	</div>
+	<script>
+		var $formEditor = $('.formEditor');
+		var $placeholder = $('.placeholder', $formEditor);
+
+		$formEditor.on('click', function(){
+			$placeholder.remove();
+
+			$(this).focus();
+		});
+
+		// $formEditor.on('focusout', function(){
+		// 	$formEditor.append($placeholder);
+		// });
+	</script>
+</body>
+</html>

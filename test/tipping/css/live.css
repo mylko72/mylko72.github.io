@@ -1,0 +1,242 @@
+@charset "utf-8";
+
+/* 재생버튼 */
+.playBtn {display:inline-block; margin-right:15px; text-align:left; font-weight:normal; font-size:13px; color:#666; line-height:20px;}
+.playBtn span {height:100%; background:url(../images/common/new/playIco.png) no-repeat left 45%; background-size:18px; width:20px;}
+.playBtn span {font-size:0; display:inline-block; vertical-align:middle;}
+
+/* 라이브 뱃지 */
+.badge {display:block; width:39px; height:15px; }
+.badge.live {background:url(../images/common/badge_live.png) no-repeat 0 0; background-size:39px 15px;}
+.badge.prev {background:url(../images/common/badge_prev.png) no-repeat 0 0; background-size:39px 15px;}
+.badge.vod {background:url(../images/common/badge_vod.png) no-repeat 0 0; background-size:39px 15px;}
+
+/* 라이브 썸네일 */
+.liveThumb {position:relative; height:180px}
+.liveThumb img {height:180px;}
+.liveThumb .playIco {position:absolute; left:15px; bottom:14px; width:40px; height:42px; background:url(../images/common/new/playIcoBtn.png) no-repeat; background-size:40px 42px; font-size:0; color:transparent}
+
+/* 라이브영상 목록 */
+.liveLists {margin-top:60px}
+.liveLists .counts {margin-bottom:15px; font-size:15px; color:#333}
+.liveLists .counts .num {color:#eb4869}
+.liveLists .videos li {padding:25px 0; border-top:1px solid #f2f2f2;}
+.liveLists .videos li:last-child {border-bottom:1px solid #f2f2f2;}
+.liveLists .item {display:flex; justify-content:flex-start;}
+.liveLists .item .img {position:relative; flex:0 0 100px; height:160px; margin-right:20px}
+.liveLists .item .img img {width:100%; height:160px;}
+.liveLists .item .img .players video {width:100% !important; height:160px !important; object-fit:cover}
+.liveLists .item .img .playIco {position:absolute; left:5px; bottom:5px; width:30px; height:32px; background:url(../images/common/new/playIcoBtn_s.png) no-repeat; background-size:30px 32px; font-size:0; color:transparent}
+.liveLists .item .content .title {display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; word-break:break-all; text-overflow:ellipsis; overflow:hidden; font-size:18px; color:#1a1a1a; line-height:23px;}
+.liveLists .item .content .title a {color:inherit}
+.liveLists .item .content .date {margin-top:11px; font-size:12px; color:#999}
+
+/* 라이브방송 메인 */
+/*.live_main {margin-top:71px !important}*/
+.live_main {margin-top:79px !important}
+.live_main .tit {font-size:20px; color:#1a1a1a; font-weight:bold}
+.live_main #liveAirSlider {white-space:nowrap; overflow:hidden}
+.live_main #liveAirSlider .slick-list, .live_main #liveAirSlider .slick-track {height: initial}
+.live_main .liveAir #liveAirSlider {position:absolute; width:100%; padding:0 12.5px; box-sizing:border-box;}
+.live_main .liveAir.single #liveAirSlider {position:static}
+.live_main .liveAir #liveAirSlider.slick-initialized {position:relative; padding:0;}
+.live_main .liveAir {margin-bottom:55px; min-height:353px;}
+.live_main .liveAir:after {position:absolute; right:0; top:0; z-index:10; display:inline-block; content:''; width:5px; /*height:170px;*/ height:125px; background-color:#fff;}
+.live_main .liveAir .liveType {margin:0 7.5px}
+.live_main .liveAir .liveType * {vertical-align:middle}
+.live_main .liveAir .liveType .badgeLive {display:inline-block; width:48px; height:23px; background:url(../images/common/new/badgeLive.png) no-repeat 0 0; background-size:auto 23px; font-size:0; color:transparent}
+.live_main .liveAir .liveType .badgePreview {display:inline-block; width:74px; height:23px; background:url(../images/common/new/badgePreview.png) no-repeat 0 0; background-size:auto 23px; font-size:0; color:transparent}
+.live_main .liveAir .liveType .badgeVod {display:inline-block; width:52px; height:23px; background:url(../images/common/new/badgeVod.png) no-repeat 0 0; background-size:auto 23px; font-size:0; color:transparent}
+.live_main .liveAir .liveType .scheduleBtn {display:inline-block; width:51px; height:23px; background:url(../images/common/new/scheduleBtn.png) no-repeat 0 0; background-size:auto 23px;}
+.live_main .liveAir .liveType .scheduleBtn > span {font-size:0; color:transparent}
+.live_main .liveAir .profileby {margin:0 7.5px;}
+.live_main .liveAir .profileby > a {display:inline-block; vertical-align:middle}
+.live_main .liveAir .profileby .pic {width:30px; height:30px}
+.live_main .liveAir .profileby .pic + .nickname {height:30px; padding-left:37px; font-size:12px; color:#333; font-weight:bold; line-height:30px}
+.live_main .liveAir .profileby .viewer {position:relative; display:inline-block; padding-left:15px; font-size:12px; color:#eb4869; line-height:30px; font-weight:bold; vertical-align:middle;}
+.live_main .liveAir .profileby .viewer:before {position:absolute; left:0; top:9px; width:12px; height:12px; content:''; background:url(../images/common/new/viewerIco.png) no-repeat 0 0; background-size:12px;}
+.live_main .liveAir .profileby .viewer .num {width:auto; margin:0; font-size:12px; background:none; line-height:1; vertical-align:0;}
+.live_main .liveAir .profileby .date {font-size:12px; line-height:30px; vertical-align:middle}
+.live_main .liveAir .liveThumb {margin:15px 7.5px 0}
+.live_main .liveAir .reviewProduct {margin:10px 7.5px 0}
+.live_main .liveAir .reviewProduct > a {width:81%}
+.live_main .liveAir .reviewProduct .info .name {display:block; height:18px; -webkit-line-clamp:initial; -webkit-box-orient:initial; white-space:nowrap}
+.live_main .liveAir .reviewProduct .prtBtn {width:100%; text-align:center}
+.live_main .liveAir .saleProduct {margin:10px 7.5px 0}
+.live_main .liveAir .saleProduct ul {position:static; /*display:inline-block;*/ font-size:0}
+.live_main .liveAir .saleProduct li {display:inline-block; width:20%; height:65px; border:1px solid #e6e6e6; border-right:0; text-align:center; vertical-align:top; box-sizing:border-box}
+.live_main .liveAir .saleProduct li:last-child {border-right:1px solid #e6e6e6;}
+.live_main .liveAir .saleProduct li .more {display:inline-block; width:100%; /*max-width:63px;*/ height:63px; background:url(../images/common/new/moreBtn.png) no-repeat center; background-size:31px;}
+.live_main .liveAir .saleProduct li .more > span {font-size:0; color:transparent}
+.live_main .liveAir .saleProduct li img {display:inline-block; max-width:63px; height:63px;}
+.live_main .liveAir .hashtag {height:28px; margin:10px 7.5px 0; font-size:0; overflow:hidden; box-sizing:border-box;}
+.live_main .liveAir .hashtag a {margin-right:7px; padding:5px 10px 4px; font-size:14px; color:#666}
+.live_main .liveAir .slideItem {vertical-align:top; white-space:initial}
+.live_main .liveAir .slideItem:focus {outline:0}
+.live_main .liveAir .slideItem .content {padding:8px 7.5px 15px}
+.live_main .liveAir .slideItem .content .desc {/*min-height:54px;*/ margin-top:0; font-size:23px; color:#333; letter-spacing:-0.4px; line-height:27px; white-space:initial}
+.live_main .liveAir .slideItem .content .name {margin-top:7px; font-size:16px; color:#666}
+.live_main .liveAir .slideItem.slick-current .profileby {display:block;}
+
+.live_main .bestCreator {height:195px; margin-bottom:60px}
+.live_main .bestCreator .slider {padding-top:21px; padding-bottom:10px}
+.live_main .bestCreator ul {padding-left:20px}
+.live_main .bestCreator ul li {position:relative; width:85px; text-align:center}
+.live_main .bestCreator ul li .onAir {position:absolute; left:0; top:0; width:85px; height:85px; border-radius:85px; border:2px solid #eb4869; font-size:0; color:transparent; box-sizing:border-box}
+.live_main .bestCreator ul li .onAir:before {display:block; position:absolute; left:0; right:0; top:0; bottom:0; content:''; border:2px solid #fff; border-radius:100%}
+.live_main .bestCreator ul li .onAir:after {display:block; position:absolute; right:-2px; bottom:-2px; content:''; width:24px; height:24px; background:url(../images/common/new/onairIco.png) no-repeat 0 center; background-size:24px;}
+.live_main .bestCreator ul li img {height:85px}
+.live_main .bestCreator ul li .name {margin-top:9px}
+.live_main .bestCreator ul li .followBtn {display:inline-block; margin-top:10px}
+.live_main .goodsBanner {margin-bottom:55px}
+.live_main .lastVodLists .tit {padding:0 20px}
+.live_main .lastVodLists .swiperSlide {padding-top:3px}
+.live_main .liveLists {margin-top:0}
+.live_main .liveLists .videos {padding:0 20px}
+.live_main .liveLists .lastVodArea {margin-top:9px}
+.live_main .liveLists .item .content {display:flex; flex-direction:column; min-height:160px; justify-content:flex-start}
+.live_main .liveLists .item .content .title {margin-top:-5px}
+.live_main .liveLists .item .content .hashtags {max-height:45px; font-size:0; overflow:hidden;}
+.live_main .liveLists .item .content .hashtags a{display:inline-block; background:#f2f2f2; padding:0 8px; line-height:20px; margin-bottom:5px; margin-right:5px; font-size:12px; color:#666; word-break:break-all;}
+.live_main .liveLists .item .content .profileby {margin-top:15px}
+.live_main .liveLists .item .content .handler button {margin-right:4px; padding:10px 0; font-size:12px; color:#333}
+.live_main .liveLists .item .content .handler .playBtn span {width:10px; margin-right:3px; background:url(../images/common/new/playOffIco.png) no-repeat left 42%; background-size:10px;}
+.live_main .liveLists .item .content .handler .goodBtn span {width:10px; margin-right:4px; background:url(../images/common/new/goodOffIco.png) no-repeat left 42%; background-size:10px;}
+.live_main .liveLists .item .content .handler .repleBtn span {width:11px; margin-right:4px; background:url(../images/common/new/replyOffIco.png) no-repeat left 42%; background-size:11px 10px;}
+
+/* 편성표 */
+.liveSchedule {position:relative}
+.liveSchedule .scheduleArea {padding:35px 0 0;}
+.liveSchedule .scheduleArea h1 {position:relative; display:inline-block; margin-bottom:12px; font-size:26px; color:#1a1a1a; letter-spacing:-0.2px}
+.liveSchedule .scheduleArea h1:before {position:absolute; left:0; bottom:0px; z-index:-10; content:''; width:100%; height:8.5px; background-color:rgba(235,72,105,.2)}
+.liveSchedule .scheduleLists {position:relative; padding:0 20px}
+.liveSchedule .scheduleDate {height:30px; margin:0 -20px; padding:0 20px; background-color:#5e636d; line-height:30px; box-sizing:border-box}
+.liveSchedule .scheduleDate .date {font-size:13px; color:#fff; font-weight:bold}
+.liveSchedule .scheduleDate .day {font-size:12px; color:#fff;}
+.liveSchedule .scheduleItem {padding:15px 0 30px; border-bottom:1px solid #e6e6e6}
+.liveSchedule .scheduleItem .profile {display:flex; justify-content:space-between; align-items:center}
+.liveSchedule .scheduleItem .profile a {display:block; width:100%; padding:15px 0}
+.liveSchedule .scheduleItem .profile .nickname {display:block; margin-top:0; font-size:15px; color:#1f1f1f}
+.liveSchedule .scheduleItem .profile .onAir {display:table-cell; width:35px; height:15px; background:url(../images/common/badge_live_s.png) no-repeat; background-size:35px 15px; font-size:0; color:transparent; line-height:1;}
+.liveSchedule .scheduleItem .profile .date {display:table-cell; padding-left:0; padding-right:5px; line-height:18px}
+.liveSchedule .scheduleItem .alarm {display:inline-block; flex:0 0 36px; width:36px; height:36px; margin-left:10px; background:url(../images/common/new/alarmIco.png) no-repeat; background-size:75px 36px;}
+.liveSchedule .scheduleItem .alarm.active {background-position:right center}
+.liveSchedule .scheduleItem .alarm > span {font-size:0; color:transparent}
+.liveSchedule .scheduleItem .content {padding-top:9px}
+.liveSchedule .scheduleItem .content .title {display:-webkit-box; max-height:48px; -webkit-line-clamp:2; -webkit-box-orient:vertical; word-break:break-all; text-overflow:ellipsis; overflow:hidden; font-size:18px; color:#1a1a1a; line-height:24px;}
+.liveSchedule .scheduleLists.today .scheduleDate {position:fixed; top:0; left:0; z-index:100; width:100%; margin:0; background-color:#eb4869; transition:transform .5s}
+.liveSchedule .scheduleLists.today.fixed {padding-top:0}
+.liveSchedule .scheduleLists.today.fixed .scheduleDate {display:block; top:15px !important; transform:translateY(30px)}
+.liveSchedule .scheduleLists.fixed .scheduleDate {display:block; position:fixed; top:45px; left:0; z-index:100; width:100%; margin:0;}
+.liveSchedule .scheduleLists.pt30 {padding-top:30px}
+
+/* 방송상세 */
+.liveDetail .detailArea {padding:0 20px; border-bottom:1px solid #e6e6e6}
+.liveDetail .detailArea .liveCont {padding-bottom:25px}
+.liveDetail .detailArea .liveCont h2 {padding:0 0 15px; font-size:16px; color:#1a1a1a}
+.liveDetail .detailArea .liveCont .subTit {margin-top:24px; font-size:14px; color:#666; line-height:23px}
+.liveDetail .detailArea .liveCont .liveThumb {margin-top:26px}
+.liveDetail .detailArea .liveCont .liveThumb .popAlert {display:flex; flex-direction:column; justify-content:center; position:absolute; width:160px; height:90px; left:50%; top:50%; transform:translate(-50%, -50%); background-color:rgba(255,255,255,.9); text-align:center;}
+.liveDetail .detailArea .liveCont .liveThumb .popAlert .day {margin-bottom:4px; font-size:14px; color:#eb4869; font-weight:bold;}
+.liveDetail .detailArea .liveCont .liveThumb .popAlert .time {font-size:14px; color:#333; line-height:18px}
+.liveDetail .detailArea .liveCont .hashtag {margin-top:25px; margin-bottom:-7px}
+.liveDetail .detailArea .liveCont .hashtag a {margin-right:3px; padding:4px 10px 3px; font-size:14px}
+.liveDetail .liveGoods {padding:15px 0 25px; border-top:6px solid #f2f2f2}
+.liveDetail .liveGoods:before {content:''; position:absolute; left:0; top:-7px; width:100%; height:1px;  background:#e6e6e6}
+.liveDetail .liveGoods .cnt {margin-left:7px; font-size:16px; color:#999;}
+.liveDetail .liveGoods .tits {padding:20px 20px 15px; border-bottom:0; line-height:1.4}
+.liveDetail .liveGoods .nickname {display:inline-block; max-width:36%; text-overflow:ellipsis; overflow:hidden; word-break:break-all; white-space:nowrap; line-height:1.2; vertical-align:middle}
+.liveDetail .liveGoods .themeSlider {margin-top:0}
+.liveDetail .listBox {border-top:6px solid #f2f2f2;}
+.liveDetail .listBox:before {content:''; position:absolute; left:0; top:-7px; width:100%; height:1px;  background:#e6e6e6}
+.liveDetail .listBox h2 {margin:0 20px; padding:36px 0 18px; line-height:1.4}
+.liveDetail .listBox .liveLists {margin-top:-1px;}
+.liveDetail .listBox .liveLists .videos {margin:0 20px}
+.liveDetail .listBox .liveLists .videos li:last-child {border-bottom:0}
+.liveDetail .listBox .liveLists .videos .item .img {top:0 !important; right:initial}
+
+/* 피드 - 라이브방송 */
+.liveBroadCastArea {position:relative; height:105px; margin-top:54px; letter-spacing:-0.5px; overflow:hidden;}
+.liveBroadCastArea .tit {padding:0 20px; color:#1a1a1a}
+.liveBroadCastArea .slider {padding-top:15px; padding-bottom:10px; height:86px;}
+
+.liveBroadCastArea ul {padding-left:20px; overflow:hidden}
+.liveBroadCastArea ul li {position:relative;width:60px; margin-right:15px;}
+.liveBroadCastArea ul li:nth-child(4n-1) {padding:0}
+.liveBroadCastArea ul li img {width:100%; height:60px; border:1px solid #e4e5e7; border-radius:60px; box-sizing:border-box}
+.liveBroadCastArea ul li .name {display:-webkit-box; -webkit-line-clamp:1; -webkit-box-orient:vertical; word-break:break-all; text-overflow:ellipsis; overflow:hidden; margin-top:9px; font-size:13px; color:#1a1a1a; line-height:18px; text-align:center}
+.liveBroadCastArea ul li .badge {position:absolute; left:10px; top:52px;}
+.liveBroadCastArea + .hashTagList {margin-top:9px !important; position:static; padding:15px 20px 4px;}
+
+#recomArea .reviewPost:first-child {padding-top:28px !important;}
+
+.feed_v2_2 > .liveBroadCastArea {margin-top:15px;}
+.tabList + .liveBroadCastArea {margin-top:54px;}
+.feed_v2_2 > .hashTagList + .reviewPostList {margin-top:11px;}
+.feed_v2_2 > .tabList + .liveBroadCastArea + .hashTagList + .reviewPostList {margin-top:0px;}
+
+.bestTip ~ .liveBroadCastArea {height:120px; margin-top:-4px; margin-bottom:37px}
+.bestTip ~ .liveBroadCastArea .tit {margin-bottom:15px}
+.bestTip ~ .liveBroadCastArea .slider {padding-top:0}
+
+/* 마이샵 */
+.myshop_v2 .tabArea .liveItem .img img {width:100px; height:160px}
+.myshop_v2 .tabArea .liveItem .img .playIco {position:absolute; left:5px; bottom:5px; width:30px; height:32px; background:url(../images/common/new/playIcoBtn_s.png) no-repeat; background-size:30px 32px; font-size:0; color:transparent}
+.myshop_v2 .tabArea .liveItem .img + .content {min-height:160px; justify-content:space-between}
+.myshop_v2 .tabArea .liveItem .content > a {margin-top:0}
+.myshop_v2 .tabArea .liveItem .content .profileby {margin-bottom:12px; z-index:5}
+.myshop_v2 .tabArea .liveItem .content .desc {margin-top:2px; margin-bottom:8px}
+.myshop_v2 .tabArea .liveItem .content .tit {font-size:18px; line-height:23px}
+.myshop_v2 .tabArea .liveItem .content .onAir {display:inline-block; width:35px; height:15px; background:url(../images/common/badge_live_s.png) no-repeat; background-size:35px 15px; font-size:0; color:transparent; vertical-align:middle}
+
+/* 예고영상 목록 */
+.livePreview {margin-bottom:15px; padding:30px 20px; background-color:#f7f7f7}
+.livePreview h3 {margin-bottom:10px; font-size:14px; color:#eb4869}
+.livePreview .previewArea {display:flex; justify-content:space-between; align-items:center;}
+.livePreview .previewArea .title {display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; word-break:break-all; text-overflow:ellipsis; overflow:hidden; font-size:20px; color:#1a1a1a; line-height:25px;}
+.livePreview .previewArea .alarm {display:inline-block; flex:0 0 36px; width:36px; height:36px; margin-left:15px; background:url(../images/common/new/alarmIco.png) no-repeat; background-size:75px 36px;}
+.livePreview .previewArea .alarm.active {background-position:right center}
+.livePreview .previewArea .alarm > span {font-size:0; color:transparent}
+.livePreview .date {margin-top:15px; font-size:12px; color:#333}
+.livePreview .time {color:#eb4869}
+.livePreview .thumbnail {width:100%; height:180px; margin-top:30px; background-color:#ccc}
+.livePreview .thumbnail img {height:180px}
+.livePreview .previewSlider {margin:30px -20px 0; overflow:hidden}
+.livePreview .previewSlider ul {padding:0 15px; overflow:hidden}
+.livePreview .previewSlider li {padding:0 5px}
+.livePreview .previewSlider .liveItem {width:100px}
+.livePreview .previewSlider .liveItem .img {position:relative; height:160px; overflow:hidden}
+.livePreview .previewSlider .liveItem .img > a {height:100%}
+.livePreview .previewSlider .liveItem .img img {height:100%}
+.livePreview .previewSlider .liveItem .img .playIco {position:absolute; left:5px; bottom:5px; width:30px; height:32px; background:url(../images/common/new/playIcoBtn_s.png) no-repeat; background-size:30px 32px; font-size:0; color:transparent}
+.livePreview .previewSlider .liveItem .title {margin-top:10px; color:#999}
+.livePreview .previewSlider .liveItem .title > a {display:-webkit-box; min-height:36px; -webkit-line-clamp:2; -webkit-box-orient:vertical; word-break:break-all; text-overflow:ellipsis; overflow:hidden; color:#333; line-height:18px}
+.livePreview .previewSlider .liveItem .profileby {margin-top:15px}
+.livePreview .previewSlider .noItem {width:100px}
+.livePreview .previewSlider .noItem .img {height:160px}
+.livePreview .previewSlider .noItem .img img {width:100px; height:160px}
+/* .livePreview .previewSlider .noItem .img {width:100%; height:160px; border:1px solid #d9d9d9; background:#f7f7f7 url(../images/common/new/noliveIco.png) no-repeat center; background-size:30px; box-sizing:border-box} */
+.livePreview .previewSlider .noItem .title {margin-top:10px; color:#999}
+
+.myshop_v2 .mainArea .myPic .thumb {position:relative; display:inline-block}
+.myshop_v2 .mainArea .myPic .thumb .badge {position:absolute; left:21px; top:70px}
+.myshop_v2 .mainArea .myLevel .ico {position:relative}
+.myshop_v2 .mainArea .myLevel .ico .live {position:absolute; left:42px; bottom:0; width:18px; height:18px; background:url(../images/common/new/liveIco.png) no-repeat; background-size:18px; font-size:0; color:transparent}
+
+/* 통합검색 - 라이브검색결과 */
+.searchResultArea.total .brandList.keyword .profile p {line-height:35px}
+.liveSearchArea {padding-top:17px}
+.liveSearchArea .postList .postArea {padding:25px 0 10px}
+.postList .postArea.liveItem .img {width:100px}
+.postList .postArea.liveItem .img img {height:160px}
+.postList .postArea.liveItem .img .playIco {position:absolute; left:5px; bottom:5px; width:30px; height:32px; background:url(../images/common/new/playIcoBtn_s.png) no-repeat; background-size:30px 32px; font-size:0; color:transparent}
+.postList .postArea.liveItem .img + .content {min-height:160px;}
+.postList .postArea.liveItem .content > a {margin-top:0; padding-right:15px !important}
+.postList .postArea.liveItem .content .desc {margin-top:2px; margin-bottom:8px}
+/* .postList .postArea.liveItem .content .tit {margin-bottom:3px} */
+
+.detail_v2 .livePreview {margin-bottom:26px; padding:15px 20px 0; border-top:6px solid #f2f2f2; background-color:#fff}
+.detail_v2 .livePreview .tits {border-bottom:0}
+.detail_v2 .livePreview .previewSlider {height:245px; margin-top:0}
+.detail_v2 .livePreview .previewSlider .slider ul {padding-bottom:10px}
+.detail_v2 .livePreview .previewSlider .nickname {color:#333}

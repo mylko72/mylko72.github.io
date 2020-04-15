@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+	<title>팁핑-질문작성</title>
+	<link type="text/css" href="../css/style.css" rel="stylesheet">
+	<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.touchSlider.js"></script>
+	<script type="text/javascript"  src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/swiper.min.js"></script>
+</head>
+<body>
+	<div class="wrap">
+
+		<header>
+			<div class="header">
+                <h2>질문작성</h2>
+                <button class="layerClose" type="button"><span>취소</span></button>
+				<button class="txtBtn rightBtn" type="button"><span>저장</span></button>
+			</div>
+		</header>
+
+		<section class="writeForm questionForm">
+			<!-- 질문선택 //-->
+			<div class="selectItem">
+                <span class="selType">
+                    <select>
+                        <option value="">상품문의</option>
+                        <option value="">면세문의</option>
+                        <option value="">기타문의</option>
+                    </select>
+                </span>
+			</div>
+			<!--// 질문선택 -->
+
+			<!-- 제목입력 //-->
+			<div class="formItem">
+				<input type="text" placeholder="제목" value="조르지오아르마니 좋아요" maxlength="100">
+			</div>
+			<!--// 제목입력 -->
+			
+			<!-- 에디터 //-->
+            <div class="formEditor" contenteditable="true" placeholder="본문에 #으로 해시태그를 입력해보세요!">
+
+				<!-- 상품 //-->
+                <div class="productDetail">
+                    <img src="../images/@brand_review02.jpg" alt="아르마니 립스틱 화보집" onerror="this.src='../images/common/noImg470x470.png'">
+                    <strong>입생로랑</strong>
+                    <p>#403/베르니 아레브르디</p>
+                    <b>$26.6</b>
+				</div>         
+				<!--// 상품 -->   
+
+				<!-- 내용 //-->
+				<div>내용이 궁금해요~ 알려주세요!</div>
+				<!--// 내용 -->
+
+                <!-- 사진 //-->
+                <div class="itemGroup">
+                    <div class="item image">
+                        <img src="../images/@peed02.png" alt="조르지오아르마니">
+                        <p class="itemPickBtn"><span class="on">대표</span></p>
+                        <button type="button" class="itemDelBtn"><span>삭제</span></button>
+                    </div>
+                    <div class="item image">
+                        <img src="../images/@peed03.png" alt="조르지오아르마니">
+                        <p class="itemPickBtn"><span>대표</span></p>
+                        <button type="button" class="itemDelBtn"><span>삭제</span></button>
+                    </div>
+                </div>
+                <!--// 사진 -->
+			</div>
+			<!--// 에디터 -->
+		</section>
+		<div class="attachItems">
+			<button type="button" class="imgBtn"><span>사진첨부</span></button>
+			<button type="button" class="searBtn"><span>상품검색</span></button>
+		</div>
+	</div>
+</body>
+</html>
