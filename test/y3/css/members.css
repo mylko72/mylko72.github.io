@@ -78,19 +78,16 @@
 .pw_check_info .row_box ~ .btns_area{margin-top:35px;}
 
 /* 모달팝업 */
-.popup_layer.m_type2 .box{margin:10px 42px;}
-.popup_layer.m_type2 .contents{padding:30px;}
-.popup_layer.m_type2 .btns_area{border-top:1px solid #e0e0e0;}
-.popup_layer.m_type2 .alert_tit{margin-bottom:6px;font-size:15px;letter-spacing:-0.5px;line-height:22px;color:#222;font-weight:bold;text-align:center;}
-.popup_layer.m_type2 .alert_stxt{font-size:14px;letter-spacing:-1px;line-height:22px;color:#222;text-align:center;}
-.popup_layer.m_type2 .alert_dsc{font-size:13px;letter-spacing:-0.5px;line-height:21px;color:#666;text-align:center;}
-.popup_layer.m_type2 .passport_info_area .alert_dsc{text-align:left;}
-.popup_layer.m_type2 .passport_info_area .img{max-width:100%;margin:11px auto;padding:0 5px 0 6px;text-align:center;box-sizing:border-box;}
-.popup_layer.m_type2 .passport_info_area .img > img{width:100%;}
-.popup_layer.m_type2 .passport_info_area .def_tpye{font-size:13px;letter-spacing:-0.5px;line-height:21px;color:#666;}
-.popup_layer.m_type2 .passport_info_area .def_tpye dt{margin-top:6px;}
-.popup_layer.m_type2 .passport_info_area .def_tpye dt:first-child{margin-top:0;}
-.popup_layer.m_type2 .h1_area_bg{display:none;}
+.passport_info_area .box{margin:10px 42px;}
+.passport_info_area .contents{padding:30px;}
+.passport_info_area .btns_area{border-top:1px solid #e0e0e0;}
+.passport_info_area .alert_dsc{text-align:left;}
+.passport_info_area .img{max-width:100%;margin:11px auto;padding:0 5px 0 6px;text-align:center;box-sizing:border-box;}
+.passport_info_area .img > img{width:100%;}
+.passport_info_area .def_tpye{font-size:13px;letter-spacing:-0.5px;line-height:21px;color:#666;text-align:left;}
+.passport_info_area .def_tpye dt{margin-top:6px;}
+.passport_info_area .def_tpye dt:first-child{margin-top:0;}
+.passport_info_area .h1_area_bg{display:none;}
 
 /* jh */
 /* Top */
@@ -145,7 +142,7 @@
 .mem_form_area + .btns_area{margin-top:30px;}
 
 .form_tip_area{position:relative; display:inline-block; width:15px; height:15px; background:url('../img/common/ico_sp.png') -120px -30px no-repeat;background-size:300px auto; vertical-align:-2px;}
-.form_tip_box{display:inline-block; position:absolute; left:0; top:-999px; margin:0 20px; background-color:rgb(0,0,0,0.8); font-size:11px; color:#fff; font-weight:lighter; letter-spacing:0.5px; line-height:17px; padding:15px; z-index:20; box-sizing:border-box}
+.form_tip_box{display:inline-block; position:absolute; left:0; top:-999px; margin:0 20px; background-color:rgba(0,0,0,0.8); font-size:11px; color:#fff; font-weight:lighter; letter-spacing:0.5px; line-height:17px; padding:15px; z-index:20; box-sizing:border-box}
 .form_tip_cont{position:relative}
 .tip_arrow{display:none; position:absolute; left:50%; top:-10px; width:9px; height:8px; background:url('../img/common/ico_sp.png') -240px -30px no-repeat; background-size:300px auto; transform:translateX(-50%)}
 .tip_close{position:absolute; top:-8px; right:-8px; width:9px; height:9px; background:url('../img/common/ico_sp.png') -210px -30px no-repeat;background-size:300px auto;}
@@ -174,7 +171,7 @@
 .mem_chklist_area.passport .mem_chklist_box{margin-bottom:17px;}
 
 /* 마케팅 동의 */
-.pop_bottom_dim{position:absolute; top:0; left:0; bottom:0; width:100%; background-color:rgb(0,0,0,0.7); z-index:100;}
+.pop_bottom_dim{position:absolute; top:0; left:0; bottom:0; width:100%; background-color:rgba(0,0,0,0.7); z-index:100;}
 .pop_bottom_area{position:fixed; bottom:0; background-color:#fff; z-index:101;}
 .pop_bottom_area .btns_area.mkt .btns_com:first-child{width:40%;}
 .pop_bottom_close{position:absolute; display:block; top:20px; right:20px; width:16px; height:16px; background:url('../img/common/ico_sp.png') -177px 0 no-repeat; background-size:300px auto;}
