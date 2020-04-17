@@ -89,6 +89,12 @@
 .passport_info_area .def_tpye dt:first-child{margin-top:0;}
 .passport_info_area .h1_area_bg{display:none;}
 
+/* Full */
+.pop_full_header{margin-bottom:15px}
+.pop_full_tit{position:relative; min-height:50px; box-sizing:border-box; padding-top:13px; padding-bottom:10px;}
+.pop_full_tit h1{font-size:18px; color:#222; font-weight:bold; text-align:center; letter-spacing:-0.5px; line-height:25px;}
+.pop_full_btn{position:absolute; display:block; top:50%; right:20px; width:30px; height:30px; background:url('../img/common/ico_sp.png') -170px 7px no-repeat; background-size:300px auto; transform:translateY(-50%)}
+
 /* jh */
 /* Top */
 .mem_top_area{max-width:335px;margin:0 auto;text-align:center; letter-spacing:-0.5px; margin-bottom:31px;}
@@ -126,7 +132,7 @@
 
 .mem_chklist_area + .btns_area{margin-top:34px;}
 
-.mem_chklist{display:none; margin-top:3px;}
+.mem_chklist{display:none;}
 .mem_chklist.on{display:block;}
 .mem_chklist li{position:relative; margin-top:11px; padding-right:25px;}
 .mem_chk_view{position:absolute; display:block; top:50%; right:0; border-bottom:1px solid #666; font-size:13px; color:#666; padding-bottom:1px; transform:translateY(-50%)}
@@ -181,3 +187,9 @@
 .mkt_txt{font-size:18px; color:#222; line-height:25px; letter-spacing:-0.5px;}
 .mkt_box > .mem_tit{margin-top:27px;}
 .mkt_box > .mem_tit + .mem_dsc{margin-top:-2px;}
+
+/* Table */
+.mem_table_area{margin-bottom:30px;}
+.mem_table_area td{border-left:1px solid #e5e5e5; border-bottom:1px solid #e5e5e5; font-size:13px; color:#222; letter-spacing:-0.5px; line-height:21px; vertical-align:top; padding:15px;}
+.mem_table_area tr td:first-child{border-left:0;}
+.mem_table_area tr:first-child td{border-top:1px solid #e5e5e5;}

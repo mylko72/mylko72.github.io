@@ -171,7 +171,8 @@
                     'height' : '100%',
                     'z-index' : 1,
                     'background' : '#000',
-                    'opacity' : '.8'
+                    'opacity' : '.8',
+                    'cursor' : 'pointer',
                     })
                     .attr('data-popup', 'dimmed')
                     .data( module.STORAGEName, obj.index );
@@ -188,7 +189,6 @@
             return function( event ){
 
                 var obj = module.STORAGE[$(this).data( module.STORAGEName )];
-
                 obj.allClose && SHILLADFS.UI.elem.$doc.find( module.DATA.POPUP ).hide();
                 !obj.allClose && obj.elem.popup.fadeOut('fast');
                 flag && (obj.elem.popup.fadeIn('fast'), popupDimmed( obj ), SHILLADFS.UI.elem.$body.addClass( obj.lockClass ));
