@@ -269,13 +269,12 @@ SHILLADFS.Membership = {};
                 var cssStyle = computedStyle(el);
 
                 if($(this).hasClass('active')){
-                    button.toggleClass('closed');
+                    e.target == this ? button.toggleClass('closed') : button.removeClass('closed');
                 }
 
                 button.addClass('active');
                 button.append(tooltip);
 
-                console.log('style', cssStyle);
                 tooltip.css(cssStyle)
             });
 
