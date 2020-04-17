@@ -269,7 +269,7 @@ SHILLADFS.Membership = {};
                 var cssStyle = computedStyle(el);
 
                 if($(this).hasClass('active')){
-                    button.removeClass('closed');
+                    button.toggleClass('closed');
                 }
 
                 button.addClass('active');
