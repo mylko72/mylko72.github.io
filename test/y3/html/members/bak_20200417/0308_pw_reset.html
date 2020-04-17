@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, target-densitydpi=160, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>신라인터넷면세점</title>
+    <link rel="shortcut icon" type="image/x-icon" media="all" href="https://m.shilladfs.com/estore/_ui/mobile/common/shilladfshome/images/favicon.ico" />
+
+    <!-- CSS 로드 -->
+    <link rel="stylesheet" type="text/css" media="all" href="https://m.shilladfs.com/estore/_ui/mobile/common/shilladfshome/kr/css/common.css?bt=202004131111" />
+    <link rel="stylesheet" type="text/css" media="all" href="https://m.shilladfs.com/estore/_ui/mobile/common/shilladfshome/kr/css/sub.css?bt=202004131111" />
+    <link rel="stylesheet" type="text/css" media="all" href="../../css/common_v2.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="../../css/members.css" />
+</head>
+<body>
+    <div id="wrap" class="mainNew">
+		<!-- Header -->
+        <header id="header">
+			<div class="sub_header">
+				<h1>비밀번호 재설정</h1>
+				<a href="javascript:history.go(-1);" class="btn_prev"><img src="https://m.shilladfs.com/estore/_ui/mobile/common/shilladfshome/kr/img/common/ico_arrow_left_l.png" alt="이전페이지" /></a>
+			</div>
+		</header>
+
+        <!-- Container -->
+        <div id="container">
+           <!-- Y3프로젝트 시작 -->
+			<div class="members_wrap">
+				<div class="members_cont">
+					<div class="mem_idpw_area">
+						<div class="tab_btns_wrap" data-js="tabSwitch">	<!-- data-js=tabSwitch : SHILLADFS.TabSwitch -->
+							<!-- 탭 메뉴 -->
+							<div class="tab_btn_area" data-tab-type="tab" data-tab-target=".tab_btn_cont">
+								<ul class="tab_btn">
+									<li class="on"><a href="#"><span>내국인</span></a></li><!-- D: 활성화 시 on 클래스 추가 -->
+									<li><a href="#"><span>외국인</span></a></li>
+								</ul>
+							</div>
+							<!-- //탭 메뉴 -->
+							<!-- 탭 내용(내국인) -->
+							<div class="tab_btn_cont active">
+								<div class="pw_reset_info">
+									<div class="mem_form_area">
+										<div class="row_box">
+											<div class="row_tit"><label for="m_pw01">새 비밀번호</label></div>
+											<div class="pw_form_box"><!-- D: 오류 시 error 클래스 추가 -->
+												<div class="form_inp">
+													<input type="password" id="m_pw01" name="m_pw01" class="int" maxlength="20" placeholder="영문, 숫자, 특수문자 포함 8-20자">
+												</div>
+											</div>
+											<div class="row_msg error" style="display:none">비밀번호가 일치하지 않습니다.</div><!-- D: 오류 시 메시지 노출, 확인완료 시 메시지 비노출 -->
+										</div>
+										<div class="row_box">
+											<div class="row_tit"><label for="m_pw_check01">새 비밀번호 확인</label></div>
+											<div class="pw_form_box"><!-- D: 확인완료 시 checked 클래스 추가 -->
+												<div class="form_inp">
+													<input type="password" id="m_pw_check01" name="m_pw_check01" class="int" maxlength="20" placeholder="비밀번호를 다시한번 입력해 주세요">
+												</div>
+											</div>
+										</div>
+										<ul class="list_type_dot">
+											<li>영문,숫자,특수문자 포함 8자이상 20자 이내여야 합니다.</li>
+											<li>3자리 이상 연속된 숫자를 입력하실 수 없습니다. (예:123,678 등)</li>
+											<li>동일한 문자/숫자를 3자 이상 연속으로 입력하실 수 없습니다. (예: aaa,111 등)</li>
+											<li>영문 대/소문자를 구분하며, 특수문자도 입력 가능합니다.</li>
+										</ul>
+										<div class="btns_area">
+											<a href="#" class="btns_com bk">변경하기</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- //탭 내용(내국인) -->
+							<!-- 탭 내용(외국인) -->
+							<div class="tab_btn_cont">
+								<div class="pw_reset_info">
+									<div class="mem_form_area">
+										<div class="row_box">
+											<div class="row_tit"><label for="m_pw02">새 비밀번호</label></div>
+											<div class="pw_form_box error"><!-- D: 오류 시 error 클래스 추가 -->
+												<div class="form_inp">
+													<input type="password" id="m_pw02" name="m_pw02" class="int" maxlength="20" placeholder="영문, 숫자, 특수문자 포함 8-20자">
+												</div>
+											</div>
+											<div class="row_msg error">비밀번호가 일치하지 않습니다.</div><!-- D: 오류 시 메시지 노출, 확인완료 시 메시지 비노출 -->
+										</div>
+										<div class="row_box">
+											<div class="row_tit"><label for="m_pw_check02">새 비밀번호 확인</label></div>
+											<div class="pw_form_box checked"><!-- D: 확인완료 시 checked 클래스 추가 -->
+												<div class="form_inp">
+													<input type="password" id="m_pw_check02" name="m_pw_check02" class="int" maxlength="20" placeholder="비밀번호를 다시한번 입력해 주세요">
+												</div>
+											</div>
+										</div>
+										<ul class="list_type_dot">
+											<li>영문,숫자,특수문자 포함 8자이상 20자 이내여야 합니다.</li>
+											<li>3자리 이상 연속된 숫자를 입력하실 수 없습니다. (예:123,678 등)</li>
+											<li>동일한 문자/숫자를 3자 이상 연속으로 입력하실 수 없습니다. (예: aaa,111 등)</li>
+											<li>영문 대/소문자를 구분하며, 특수문자도 입력 가능합니다.</li>
+										</ul>
+										<div class="btns_area">
+											<a href="#" class="btns_com bk">변경하기</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- //탭 내용(외국인) -->
+						</div>
+					</div>
+				</div>
+				<div class="members_cont wline mb-35">
+					<div class="bottom_btn_box">
+						<ul>
+							<li><a href="#">아이디찾기</a></li>
+							<li><a href="#">로그인</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- //Y3프로젝트 시작 -->
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer" class="footer_type" data-user="" data-site="" data-cart="3" data-rate="1212.3">
+            <div class="footer_nav">
+                <div class="quickBox">
+                    <p id="talk" class="">
+                        <a id="talkImg" style="display:none;" href="javascript:void(0);" onclick="javascript:shillaChatTalkPop(); return false;">상담톡<span class="new_alert">알림</span></a>
+                    </p>
+                </div>
+                <nav class="fgnb_sticky new_ico">
+                    <ul class="clear_both">
+                        <li><a href="https://m.shilladfs.com/estore/kr/ko/?uiel=Mobile&clear=true" class="krMainSp01"></a></li>
+                        <li><a href="" onclick="javascript:previousHistory(); return false;" class="krMainSp02"></a></li>
+                        <li><a href="" class="krMainSp03" onclick="javascript:ACC.cart.goCartPage(); return false;"><span class="ico_num" id="miniCartCountSpanBottomCenter">3</span></a></li>
+                        <li class="ico_menu js-btn-total"><a href="" class="krMainSp06"></a></li>
+                        <li><a href="javascript:UserAgent.goStoreKr()" class="krMainSp05"></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- JS 로드 -->
+    <script type="text/javascript" src="https://m.shilladfs.com/estore/_ui/mobile/common/js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="https://m.shilladfs.com/estore/_ui/mobile/common/js/slick.min.js?bt=202004131111"></script>
+    <script type="text/javascript" src="https://m.shilladfs.com/estore/_ui/mobile/common/shilladfshome/kr/js/lazyload.js"></script>
+	<script type="text/javascript" src="../../js/ui.common.js"></script>
+	<script type="text/javascript" src="../../js/ui.member.js"></script>
+</body>
+</html>

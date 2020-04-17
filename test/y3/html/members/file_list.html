@@ -1,0 +1,439 @@
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<title>[신라 면세점 ]Work List</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("ul.panel li:not("+$("ul.tab li a.selected").attr("href")+")").hide()
+			$("ul.tab li a").click(function(){
+				$("ul.tab li a").removeClass("selected");
+				$(this).addClass("selected");
+				$("ul.panel li").hide();
+				$($(this).attr("href")).show();
+				return false;
+			});
+			
+			//$(".submenu").hide();
+			
+			$("h2").click(function(){
+				//alert("aaaa");
+				$(this).next(".submenu:visible").slideUp("middle");
+				$(this).next('.submenu:hidden').slideDown("middle");
+				return false;
+			});
+		});
+
+	</script>
+
+
+	<style type="text/css">
+		*{margin:0;padding:0}
+		body{font-family: "맑은 고딕", "돋움", dotum;}
+		a:link {color: #000}
+		a:visited {color: #000}
+		a:hover {color: #000}
+		a:focus {color: #000}
+		#container{width:1200px;margin:30px auto}
+		h1{position:relative;font-size:22px;margin-bottom:10px}
+		h1 span{position:absolute;right:0;top:13px;font-size:12px;font-weight:normal;color:#333}
+		.tab{width:100%;content:'';overflow:hidden;padding:0;height:42px;}
+		.tab li{list-style-type:none;width:200px;float:left;height:42px;line-height:40px;border:1px solid #e2d9d9;border-left:none;box-sizing:border-box}
+		.tab li:first-child{border-left:1px solid #e2d9d9;}
+		.tab li a{outline:none;display:block;line-height:40px;text-align:center;text-decoration:none;background-color:#eceef0}
+		.tab li a.selected{text-decoration:none;color:#333;cursor:default;background-color:#fff; font-weight:bold;line-height:41px}
+		.panel{clear:both; /*border:1px solid #e2d9d9;*/border-top:none;padding:0}
+		.panel li{list-style-type:none;padding:20px 0;color:#333}
+
+		.panel h2{font-size:16px;line-height:24px;height:24px;padding-bottom:3px;padding-left:20px;font-weight:normal;margin-bottom:10px;background-color:#6b5351;color:#fff}
+		.category_area table{width:100%;border-collapse:collapse;border-spacing:0;border:1px solid #9FB7D4}
+		.category_area table th{text-align:center;padding:5px 0;font-size:14px;background-color:#f0eded}
+		.category_area table td{padding:3px 10px;line-height:20px;font-size:12px;height:21px}
+		.category_area table th, td{border:1px solid #e2d9d9}
+		.category_area .submenu + h2{margin-top:10px}
+		.category_area .submenu{margin-bottom:40px;}
+
+		.open_close{text-align:right; margin-top:20px; margin-right:20px;}
+		.open_close a{font-size:12px;}
+		.folder{font-weight:bold; 	 color:#000;	}
+
+	</style>
+</head>
+<body>
+	<div id="container">
+
+		<h1>THE SHILLA Publishing Work Sheet - Y3프로젝트 회원가입</h1>
+		<ul class="tab">
+			<li><a href="#tab1" class="selected">KR</a></li>
+			<!-- 
+			<li><a href="#tab2">CN</a></li>
+			<li><a href="#tab3">JP</a></li>
+			<li><a href="#tab4">EN</a></li> 
+			-->
+		</ul>
+
+		
+		<ul class="panel">
+<!---------------------------------------------------------- KR PC ---------------------------------------------------------->
+			<li id="tab1">
+		
+			<!-- category area  accordion -->
+				<div class="category_area">
+					<h2>Y3프로젝트 회원가입_KR_PC</h2>
+					<!-- <div class="submenu" style="display:block;">
+						<table>
+							<colgroup>
+								<col width="42%"/>
+								<col width="42%"/>
+								<col width="*"/>
+							<colgroup>
+							<tbody>
+								<tr>
+									<td><a href="http://72.2.30.150:8080/test/_newhtml/estore/kr/ko/signup/pop_consent_agree.html" onclick="javascript:window.open(this.href,'pop','width=414,height=620,menubar=no, status=no, toolbar=no, scrollbars=no'); return false;">pop_consent_agree.html</a></td>
+									<td><p>정보동의팝업</p></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td><a href="http://72.2.30.150:8080/test/_newhtml/estore/kr/ko/signup/consent.html" target="_blank">consent.html</a></td>
+									<td><p>약관_내국인</p></td>
+									<td>
+										<p style="color:#ff0000;">2019-09-17<br/>고유식별수집동의서 선택항목 변경 개선<p>
+										<p style="color:#ff0000;">2019-09-19<br/>OSD 서비스 종료, 위치기반서비스 약관 삭제<p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div> -->
+					<h2>Y3프로젝트 회원가입_KR_Mobile</h2>
+					<div class="submenu" style="display:block;">
+						<table>
+							<colgroup>
+								<col width="18%"/>
+								<col width="10%"/>
+								<col width="30%"/>
+								<col width="25%"/>
+								<col width="*"/>
+							<colgroup>
+							<!-- 01. 회원가입(내국인, 외국인) -->
+							<tbody>
+								<tr>
+									<td rowspan="19">01. 회원가입(내국인, 외국인)</td>
+									<td>0101<br/>0106</td>
+									<td>회원가입_내국인<br/>회원가입_외국인</td>
+									<td><a href="0101_join.html" target="_blank">0101_join.html</a></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>0102</td>
+									<td>회원가입_내국인_최초화면</td>
+									<td><a href="0102_join_step_first.html" target="_blank">0102_join_step_first.html</a></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td rowspan="5">0103</td>
+									<td>회원가입_내국인_01인증완료</td>
+									<td rowspan="4"><a href="0103_join_step_end.html" target="_blank">0103_join_step_end.html</a></td>
+									<td rowspan="4"></td>
+								</tr>
+								<tr>
+									<td>회원가입_내국인_02인증완료(입력)</td>
+								</tr>
+								<tr>
+									<td>회원가입_내국인_03_01인증완료</td>
+								</tr>
+								<tr>
+									<td>회원가입_내국인_03_02인증완료(툴팁)</td>
+								</tr>
+								<tr>
+									<td>회원가입_내국인_03_03인증완료(P이용약관)</td>
+									<td><a href="#" target="_blank"></a></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>0104<br/>0108</td>
+									<td>회원가입_내국인_가입완료<br/>회원가입_외국인_03인증완료</td>
+									<td><a href="0104_join_complete.html" target="_blank">0104_join_complete.html</a></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td rowspan="5">0105</td>
+									<td>회원가입_내국인_01SNS간편로그인</td>
+									<td></td>
+									<td>SNS연동</td>
+								</tr>
+								<tr>
+									<td>회원가입_내국인_02SNS간편로그인_신라연동</td>
+									<td><a href="0105_sns_login.html" target="_blank">0105_sns_login.html</a></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>회원가입_내국인_03SNS간편로그인_신라연동(P완료)</td>
+									<td><a href="#" target="_blank"></a></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>회원가입_내국인_04SNS신규기회원</td>
+									<td rowspan="2"><a href="0105_sns_newbie.html" target="_blank">0105_sns_newbie.html</a></td>
+									<td rowspan="2"></td>
+								</tr>
+								<tr>
+									<td>회원가입_내국인_05SNS신규기회원</td>
+								</tr>
+								<tr>
+									<td>0107</td>
+									<td>회원가입_외국인_01최초화면<br/>회원가입_외국인_02최초화면</td>
+									<td><a href="0107_join_step_first.html" target="_blank">0107_join_step_first.html</a></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>0108</td>
+									<td>회원가입_외국인_01인증완료<br/>회원가입_외국인_02_01인증완료<br/>회원가입_외국인_02_02인증완료(툴팁)</td>
+									<td><a href="0108_join_step_end.html" target="_blank">0108_join_step_end.html</a></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td rowspan="2">0104</td>
+									<td>마케팅동의</td>
+									<td><a href="0104_mkt_agree.html" target="_blank">0104_mkt_agree.html</a></td>
+									<td>2020-04-09 디자인 추가</td>
+								</tr>
+								<tr>
+									<td>마케팅동의(P)</td>
+									<td><a href="#" target="_blank"></a></td>
+									<td>2020-04-09 디자인 추가</td>
+								</tr>
+							</tbody>
+							<!-- 02. 본인인증기가입 -->
+							<tbody>
+								<tr>
+									<td>02. 본인인증기가입</td>
+									<td>0201</td>
+									<td>회원가입_기가입회원</td>
+									<td><a href="0201_join_complete.html" target="_blank">0201_join_complete.html</a></td>
+									<td></td>
+								</tr>
+							</tbody>
+							<!-- 03. 아이디,비밀번호 찾기 -->
+							<tbody>
+								<tr>
+									<td rowspan="8">03. 아이디,비밀번호 찾기</td>
+									<td>0301<br>0302<br>0304</td>
+									<td>
+										회원가입_아이디찾기(내국인_초기화면)<br>
+										회원가입_아이디찾기(내국인_01아이디간편찾기)<br>
+										회원가입_아이디찾기(내국인_02_01아이디전체찾기)<br>
+										회원가입_아이디찾기(내국인_02_02아이디전체찾기)<br>
+										회원가입_아이디찾기(내국인_03이름이메일로찾기)<br>
+										회원가입_아이디찾기(외국인_초기화면)
+									</td>
+									<td><a href="0301_find_id.html" target="_blank">0301_find_id.html</a></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>0302</td>
+									<td>회원가입_아이디찾기(내국인_02_03아이디전체찾기_P)</td>
+									<td><a href="modal.html" target="_blank">modal.html</a></td>
+									<td>0302_0307_아이디 전체찾기 시도 불일치 시</td>
+								</tr>
+								<tr>
+									<td>0303<br>0305</td>
+									<td>
+										회원가입_아이디찾기(내국인_01_01완료)<br>
+										회원가입_아이디찾기(내국인_01_02완료)<br>
+										회원가입_아이디찾기(외국인_완료)
+									</td>
+									<td><a href="0303_find_id_complete.html" target="_blank">0303_find_id_complete.html</a></td>
+									<td>한 페이지에 케이스별 추가</td>
+								</tr>
+								<tr>
+									<td>0306<br>0307<br>0309</td>
+									<td>
+										회원가입_비밀번호찾기(내국인_초기화면)<br>
+										회원가입_비밀번호찾기(내국인_01회원정보로찾기)<br>		
+										회원가입_비밀번호찾기(내국인_02_01본인인증)<br>
+										회원가입_비밀번호찾기(내국인_02_02본인인증)<br>
+										회원가입_비밀번호찾기(내국인_03아이디휴대폰으로찾기)<br>
+										회원가입_비밀번호찾기(외국인_비밀번호찾기)<br>
+										회원가입_비밀번호찾기(외국인_비밀번호찾기_오류)
+									</td>
+									<td><a href="0306_find_pw.html" target="_blank">0306_find_pw.html</a></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>0307</td>
+									<td>회원가입_비밀번호찾기(내국인_02_03본인인증_P)</td>
+									<td><!-- <a href="modal.html" target="_blank">modal.html</a> --></td>
+									<td>0302_0307_아이디 전체찾기 시도 불일치 시</td>
+								</tr>
+								<tr>
+									<td>0308</td>
+									<td>회원가입_비밀번호찾기(내국인_비밀번호재설정)</td>
+									<td><a href="0308_pw_reset.html" target="_blank">0308_pw_reset.html</a></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>0309</td>
+									<td>회원가입_비밀번호찾기(내국인_비밀번호완료)</td>
+									<td><a href="0309_pw_reset_complete.html" target="_blank">0309_pw_reset_complete.html</a></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>0310</td>
+									<td>회원가입_비밀번호찾기(외국인_비밀번호완료)</td>
+									<td><a href="0310_find_pw_complete.html" target="_blank">0310_find_pw_complete.html</a></td>
+									<td></td>
+								</tr>
+							</tbody>
+							<!-- 04. SNS회원가입 -->
+							<tbody>
+								<tr>
+									<td rowspan="12">04. SNS회원가입</td>
+									<td>0401<br/>0406</td>
+									<td>SNS회원가입_내국인<br/>SNS회원가입_외국인</td>
+									<td><a href="0401_sns_join.html" target="_blank">0401_sns_join.html</a></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>0402</td>
+									<td>SNS회원가입_내국인_로그인</td>
+									<td><a href="#" target="_blank"></a></td>
+									<td>SNS연동</td>
+								</tr>
+								<tr>
+									<td>0403</td>
+									<td>SNS회원가입_내국인_본인인증</td>
+									<td><a href="0403_sns_join_step_first.html" target="_blank">0403_sns_join_step_first.html</a></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td rowspan="3">0404</td>
+									<td>SNS회원가입_내국인_01인증완료</td>
+									<td rowspan="3"><a href="0404_sns_join_step_end.html" target="_blank">0404_sns_join_step_end.html</a></td>
+									<td rowspan="3"></td>
+								</tr>
+								<tr>
+									<td>SNS회원가입_내국인_02인증완료(입력)</td>
+								</tr>
+								<tr>
+									<td>SNS회원가입_내국인_03인증완료</td>
+								</tr>
+								<tr>
+									<td>0405</td>
+									<td>SNS회원가입_내국인_가입완료</td>
+									<td><a href="0405_sns_join_complete.html" target="_blank">0405_sns_join_complete.html</a></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td rowspan="2">0407</td>
+									<td>SNS회원가입_외국인_01본인인증</td>
+									<td rowspan="2"><a href="0407_sns_join_step_first.html" target="_blank">0407_sns_join_step_first.html</a></td>
+									<td rowspan="2"></td>
+								</tr>
+								<tr>
+									<td>SNS회원가입_외국인_02본인인증</td>
+								</tr>
+								<tr>
+									<td rowspan="2">0408</td>
+									<td>SNS회원가입_외국인_01인증완료</td>
+									<td rowspan="2"><a href="0408_sns_join_step_end.html" target="_blank">0408_sns_join_step_end.html</a></td>
+									<td rowspan="2"></td>
+								</tr>
+								<tr>
+									<td>SNS회원가입_외국인_02인증완료</td>
+								</tr>
+								<tr>
+									<td>0409</td>
+									<td>SNS회원가입_외국인_가입완료</td>
+									<td><a href="0409_sns_join_complete.html" target="_blank">0409_sns_join_complete.html</a></td>
+									<td></td>
+								</tr>
+							</tbody>
+							<!-- 05. 로그인 -->
+							<tbody>
+								<tr>
+									<td rowspan="4">05. 로그인</td>
+									<td>0501<br>0502</td>
+									<td>
+										로그인<br>
+										로그인_불일치
+									</td>
+									<td><a href="0501_login.html" target="_blank">0501_login.html</a></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>0503</td>
+									<td>로그인_긴급공지</td>
+									<td><a href="0503_login_notice.html" target="_blank">0503_login_notice.html</a></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>0504<br>0505</td>
+									<td>
+										SNS간편로그인_신라면세점연동<br>
+										SNS간편로그인_신라면세점연동
+									</td>
+									<td><a href="0504_sns_login.html" target="_blank">0504_sns_login.html</a></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>0506</td>
+									<td>SNS간편로그인_신라면세점연동(P완료)</td>
+									<td><!-- <a href="modal.html" target="_blank">modal.html</a> --></td>
+									<td>0506_SNS 아이디와 계정 완료 시</td>
+								</tr>
+							</tbody>
+							<!-- 06. SNS연결설정,여권정보관리 -->
+							<tbody>
+								<tr>
+									<td rowspan="6">06. SNS연결설정,여권정보관리</td>
+									<td>0601</td>
+									<td>
+										MY신라_01SNS간편로그인연동(닫힘)<br>
+										MY신라_02SNS간편로그인연동(열림)
+									</td>
+									<td><a href="#" target="_blank"></a></td>
+									<td>2020-04-09 마이신라 포함<br/>(안수연과장님 검수 요청)</td>
+								</tr>
+								<tr>
+									<td>0602</td>
+									<td>여권정보관리_비밀번호확인</td>
+									<td><a href="0602_pw_comfirm.html" target="_blank">0602_pw_comfirm.html</a></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>0602</td>
+									<td>여권정보관리_비활성</td>
+									<td><a href="0602_my_passport_dis.html" target="_blank">0602_my_passport_dis.html</a></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>0603</td>
+									<td>여권정보관리_활성</td>
+									<td><a href="0603_my_passport.html" target="_blank">0603_my_passport.html</a></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>0604</td>
+									<td>여권정보관리_활성(P등록여권)</td>
+									<td><!-- <a href="modal.html" target="_blank">modal.html</a> --></td>
+									<td>0604_등록된 여권 번호 일 경우</td>
+								</tr>
+								<tr>
+									<td>0604</td>
+									<td>여권정보관리_활성(P여권정보)</td>
+									<td><!-- <a href="modal.html" target="_blank">modal.html</a> --></td>
+									<td>0604_여권 정보입력 안내</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

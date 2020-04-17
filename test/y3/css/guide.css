@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+#container {padding:20px 0 50px; box-sizing:border-box;}
+.guide_head {padding:0 30px 20px; text-align:left;}
+.guide_head_title {display:inline-block; font-size:33px; font-weight:bold; letter-spacing:-1px; color:#434a53; vertical-align:middle;}
+.guide_utill {font-size:12px; color:#b5b5b5;}
+.guide_utill span {display:inline-block; margin-left:20px;}
+.guide_utill span:first-child {margin-left:0;}
+.guide_step {padding:30px 30px 30px 45px; background:#F8F8F8;}
+.guide_step li {padding-top:5px; font-size:14px; color:#555; line-height:23px; list-style:decimal;}
+.guide_step li:first-child {padding-top:0;}
+.guide_button {padding:0 30px}
+.guide_button a {display:inline-block; height:35px; margin-top:20px; padding:0 20px; border-radius:5px; box-shadow:#00000047 0px 1px 2px 0px; background:#F38923; font-weight:bold; font-size:14px; color:#fff; font-weight:normal; text-align:left; line-height:35px;}
+.guide_button:visited,
+.guide_button:link {color:#fff;}
+.guide_top {position:fixed; bottom:20px; right:20px; width:50px; height:50px; border-radius:50%; background:#D0D0D0; color:#fff; font-size:16px; text-align:center; line-height:50px;}
+.guide_top a {color:#fff;}

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, target-densitydpi=160, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>신라인터넷면세점</title>
+    <link rel="shortcut icon" type="image/x-icon" media="all" href="https://m.shilladfs.com/estore/_ui/mobile/common/shilladfshome/images/favicon.ico" />
+
+    <!-- CSS 로드 -->
+    <link rel="stylesheet" type="text/css" media="all" href="../../css/common.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="../../css/sub.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="../../css/common_v2.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="../../css/members.css" />
+</head>
+<body>
+    <div id="wrap" class="mainNew">
+		<!-- Header -->
+        <header id="header">
+			<div class="sub_header">
+				<h1>회원가입</h1>
+				<a href="javascript:history.go(-1);" class="btn_prev"><img src="https://m.shilladfs.com/estore/_ui/mobile/common/shilladfshome/kr/img/common/ico_arrow_left_l.png" alt="이전페이지" /></a>
+			</div>
+		</header>
+
+        <!-- Container -->
+        <div id="container">
+           <!-- Y3 프로젝트 - 회원가입 -->
+			<div class="members_wrap">		
+				<div class="members_cont">
+					<div class="mem_confirm_area">
+						<h3 class="mem_tit">본인인증</h3>
+						<p class="mem_stxt">가입여부 확인을 위해<span class="txt_point">이메일을 입력</span>해 주세요.<br/>여권 소지자 본인에 한해 한 개의 계정만 가입 가능합니다.</p>
+						<!-- 인증 완료 -->
+						<p class="mem_stxt">인증메일이<span class="txt_point">shillakim@naver.com</span>으로 전송되었습니다.<br/>메일을 확인하신 후, 회원가입을 진행하여주시기 바랍니다.<br/>메일 전송까지 1~2분 정도 소요될 수 있습니다.</p>
+						<div class="row_box">
+							<div class="row_tit"><label for="m_email">이메일</label></div>
+							<div class="email_form_box" data-js="selectbox">	<!-- data-js=selectbox : SHILLADFS.Membership -->
+								<div class="form_inp">
+									<input type="text" id="m_email" name="m_email" class="int" placeholder="이메일">
+								</div>
+								<div class="nbsp at"><span>@</span></div>
+								<!-- D: 직접 입력 선택 시 노출 -->
+								<div class="form_inp add_field" style="display:none">
+									<input type="text" id="emailName" name="emailName" class="int" maxlength="25" placeholder="">
+								</div>
+								<!-- //D: 직접 입력 선택 시 노출 -->
+								<div class="form_sel basic"><!-- D: 옵션에 '선택해 주세요'가 있는 경우 basic 클래스 추가, 부모영역에 data-js="selectbox" 추가 -->
+									<select name="" id="">
+										<option value="">선택해 주세요</option>
+										<option value="naver">naver.com</option>
+										<option value="daum">daum.net</option>
+										<option value="direct">직접입력</option>
+									</select>
+								</div>
+							</div>	
+							<div class="row_msg error" style="display:none">이미 가입 된 이메일 주소입니다.</div><!-- D: 오류 시 메시지 노출 -->
+						</div>
+						<div class="btns_area">
+							<a href="#" class="btns_com bk">인증메일 전송하기</a>
+						</div>
+					</div>
+				</div>
+				<div class="members_cont wline dis"><!-- D : 활성화 'dis' class 제거 -->
+					<h3 class="mem_tit">기본정보</h3>
+					<!-- 약관 동의 -->
+					<div class="mem_chklist_area" data-js="accordion" data-accordion-slide="true" data-accordion-collapsible="false">
+						<div data-js="checkbox">
+							<div class="mem_chklist_box" data-accordion-type="checkbox">
+								<label class="form_chk" for="checkbox2" data-checked="false"><input type="checkbox" id="checkbox2" name="checkbox" data-checkbox-type="all"><span></span><span class="label">본인 확인을 위한 약관 모두 동의  <em class="txt_em">(필수)</em></span></label>
+								<a href="#" class="mem_chklist_btn" data-accordion-type="button"><span class="blind">필수 약관 항목 리스트 보기</span></a><!-- D: 활성화 시 on 클래스 추가 -->						
+							</div>
+							<!-- list -->
+							<ul class="mem_chklist" data-accordion-target="panel"><!-- D: 활성화 시 on 클래스 추가 -->						
+								<li>
+									<label class="form_chk type2" for="check-agree1"><input type="checkbox" id="check-agree1" name="check-agree1" data-checkbox-target="agree"><span></span><span class="label">이용약관동의</span></label>
+									<a href="#" class="mem_chk_view">보기</a>
+								</li>
+								<li>
+									<label class="form_chk type2" for="check-agree2"><input type="checkbox" id="check-agree2" name="check-agree2" data-checkbox-target="agree"><span></span><span class="label">개인정보 수집 및 이용 동의</span></label>
+									<a href="#" class="mem_chk_view">보기</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<ul class="mem_join_date_area">
+						<li>
+							이메일<span>본인인증 후 자동 적용</span>
+						</li>
+					</ul>
+					<div class="mem_form_area">
+						<div class="row_box">
+							<div class="row_tit"><label for="member_name">이름</label></div>
+							<div class="form_inp">
+								<input type="text" id="member_name" class="int" placeholder="이름을 입력해 주세요">
+							</div>
+						</div>
+						<div class="row_box">
+							<div class="row_tit"><label for="member_gender">성별</label></div>
+							<div class="rc_form_box">
+								<label class="form_rdo" for="member_male"><input type="radio" id="member_male" name="member_gender"><span></span><span class="label">남성</span></label>
+								<label class="form_rdo" for="member_female"><input type="radio" id="member_female" name="member_gender"><span></span><span class="label">여성</span></label>
+							</div>
+						</div>
+						<div class="row_box">
+							<div class="row_tit"><label for="member_birthdate_yy">생년월일</label></div>
+							<div class="bir_form_box">
+								<div class="form_sel bir_yy">
+									<select name="member_birthdate_yy" id="member_birthdate_yy">
+										<option value="">년</option>
+										<option value="">1980</option>
+										<option value="">1981</option>
+									</select>
+								</div>
+								<div class="form_sel bir_mm">
+									<select name="member_birthdate_mm" id="member_birthdate_mm">
+										<option value="">월</option>
+										<option value="">01</option>
+										<option value="">02</option>
+									</select>
+								</div>
+								<div class="form_sel bir_dd">
+									<select name="member_birthdate_mm" id="member_birthdate_mm">
+										<option value="">일</option>
+										<option value="">01</option>
+										<option value="">02</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="row_box">
+							<div class="row_tit"><label for="mobilephoneNumber">휴대폰번호</label></div>
+							<div class="phone_form_box">
+								<div class="form_sel">
+									<select name="internationalTelNumber" id="internationalTelNumber">
+										<option value="82" data-id="korea" selected="selected">한국(82)</option>
+										<option value="86" data-id="china">중국(86)</option>
+										<option value="etc" data-id="etc">기타</option>
+									</select>
+								</div>
+								<div class="form_inp">
+									<input type="tel" id="mobilephoneNumber" name="mobilephoneNumber" class="int" placeholder="">
+								</div>
+							</div>
+						</div>
+						<div class="row_box">
+							<div class="row_tit"><label for="memberId">아이디</label></div>
+							<div class="id_form_box">
+								<div class="form_inp">
+									<input type="text" id="memberId" name="memberId" class="int" maxlength="12" placeholder="아이디를 입력해 주세요">
+								</div>
+								<div class="btns_box">
+									<a href="#" class="btns_com bk">중복확인</a>
+								</div>
+							</div>
+						</div>
+						<div class="row_box">
+							<div class="row_tit" data-js="tooltip">
+								<label for="password">비밀번호</label>
+								<!-- tip -->
+								<div class="form_tip_area" data-tooltip-type="button" data-tooltip-target=".form_tip_box" data-tooltip-arrow=".tip_arrow">
+									<span class="tip_arrow" data-tooltip-type="arrow"></span>
+								</div>
+								<div class="form_tip_box">
+									<div class="form_tip_cont">
+										<ul>
+											<li>8~20자 이내 영문과 숫자 모두 포함합니다.</li>
+											<li>3자리 이상 연속된 숫자 사용 불가합니다. (예 : 123, 678등)</li>
+											<li>동일한 문자/숫자를 3자 이상 연속으로 사용 불가합니다.(예 : aaa, 111등)</li>
+											<li>영문 대/소문자를 구분하며, 특수문자 사용 가능합니다.</li>
+										</ul>
+										<a href="#" class="tip_close"><span class="blind">close</span></a>
+									</div>									
+								</div>
+							<!-- //tip -->
+							</div>
+							<div class="form_inp">
+								<input type="password" id="password" name="password" class="int" maxlength="20" autocomplete="off" placeholder="영문, 숫자, 특수문자 포함 8-12자">
+							</div>
+						</div>	
+						<div class="row_box">
+							<div class="row_tit"><label for="checkPassword">비밀번호 확인</label></div>
+							<div class="pw_form_box"><!-- D: 확인완료 시 checked 클래스 추가 --> <!-- D: 오류 시 error 클래스 추가 -->
+								<div class="form_inp">
+									<input type="password" id="checkPassword" name="checkPassword" class="int" maxlength="20" autocomplete="off" placeholder="비밀번호를 다시한번 입력해 주세요">
+								</div>
+							</div>
+							<div class="row_msg error" style="display:none">비밀번호가 일치하지 않습니다.</div><!-- D: 오류 메시지일 때 error 클래스 추가 -->
+						</div>
+						<div class="row_box" data-js="selectbox">
+							<div class="row_tit"><label for="m_region">지역</label></div>
+							<div class="form_sel basic"><!-- D: 옵션에 '선택해 주세요'가 있는 경우 basic 클래스 추가, 부모영역에 data-js="selectbox" 추가 -->
+								<select name="m_region" id="m_region">
+									<option value="">선택해 주세요</option>
+									<option value="china">china</option>
+									<option value="japan">japan</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<h3 class="mem_tit" data-js="tooltip">
+						개인정보 유효기간 설정
+						<!-- tip -->
+						<div class="form_tip_area" data-tooltip-type="button" data-tooltip-target=".form_tip_box" data-tooltip-arrow=".tip_arrow">
+							<span class="tip_arrow"></span>
+						</div>
+						<div class="form_tip_box">
+							<div class="form_tip_cont">
+								<ul>
+									<li>개인정보 유효기간을 선택한 기간으로 변경합니다. </li>
+									<li>미 선택 시 개인정보 유효기간은 1년으로 하며, 개인정보 유효기간은 신라면세점 멤버십 개인정보에도 동시 적용됩니다.</li>
+								</ul>
+								<a href="#" class="tip_close"><span class="blind">close</span></a>
+							</div>							
+						</div>
+						<!-- //tip -->
+					</h3>
+					<p class="mem_dsc">개인정보 유효기간은 1년으로 유지 됩니다.</p>
+					<div class="mem_form_area">
+						<label class="form_rdo" for="radio1"><input type="radio" id="radio1" name="radio"><span></span><span class="label">회원 탈퇴시까지</span></label>
+						<label class="form_rdo" for="radio1"><input type="radio" id="radio1" name="radio"><span></span><span class="label">5년</span></label>
+					</div>
+					<div class="btns_area">
+						<a href="#" class="btns_com dis">가입하기</a><!-- D : 비활성 버튼 -->
+					</div>
+				</div>
+			</div>
+			<!-- //Y3 프로젝트 - 회원가입 -->
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer" class="footer_type" data-user="" data-site="" data-cart="3" data-rate="1212.3">
+            <div class="footer_nav">
+                <div class="quickBox">
+                    <p id="talk" class="">
+                        <a id="talkImg" style="display:none;" href="javascript:void(0);" onclick="javascript:shillaChatTalkPop(); return false;">상담톡<span class="new_alert">알림</span></a>
+                    </p>
+                </div>
+                <nav class="fgnb_sticky new_ico">
+                    <ul class="clear_both">
+                        <li><a href="https://m.shilladfs.com/estore/kr/ko/?uiel=Mobile&clear=true" class="krMainSp01"></a></li>
+                        <li><a href="" onclick="javascript:previousHistory(); return false;" class="krMainSp02"></a></li>
+                        <li><a href="" class="krMainSp03" onclick="javascript:ACC.cart.goCartPage(); return false;"><span class="ico_num" id="miniCartCountSpanBottomCenter">3</span></a></li>
+                        <li class="ico_menu js-btn-total"><a href="" class="krMainSp06"></a></li>
+                        <li><a href="javascript:UserAgent.goStoreKr()" class="krMainSp05"></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- JS 로드 -->
+    <script type="text/javascript" src="https://m.shilladfs.com/estore/_ui/mobile/common/js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="https://m.shilladfs.com/estore/_ui/mobile/common/js/slick.min.js?bt=202004131111"></script>
+    <script type="text/javascript" src="https://m.shilladfs.com/estore/_ui/mobile/common/shilladfshome/kr/js/lazyload.js"></script>
+	<script type="text/javascript" src="../../js/ui.common.js"></script>
+	<script type="text/javascript" src="../../js/ui.member.js"></script>
+</body>
+</html>

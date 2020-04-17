@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, target-densitydpi=160, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>신라인터넷면세점</title>
+    <link rel="shortcut icon" type="image/x-icon" media="all" href="https://m.shilladfs.com/estore/_ui/mobile/common/shilladfshome/images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" media="all" href="https://m.shilladfs.com/estore/_ui/mobile/common/shilladfshome/kr/css/common.css?bt=202004131111" />
+    <link rel="stylesheet" type="text/css" media="all" href="https://m.shilladfs.com/estore/_ui/mobile/common/shilladfshome/kr/css/sub.css?bt=202004131111" />
+    <!-- 2020-04-14 : Y3 장바구니 - 픽스다인 -->
+    <link rel="stylesheet" type="text/css" media="all" href="../../css/cart.css" />
+    <!-- // 2020-04-14 : Y3 장바구니 - 픽스다인 -->
+</head>
+
+<body>
+
+    <div id="wrap" class="mainNew">
+
+        <div id="container">
+
+            <!-- 2020-04-14 : Y3 장바구니 - 픽스다인 -->
+            <div class="sub_header sticky">
+                <h2>장바구니</h2>
+                <a href="#" onclick="goBackBtn(); return false;" class="btn_prev"><img src="https://m.shilladfs.com/estore/_ui/mobile/common/shilladfshome/kr/img/common/ico_arrow_left_l.png" alt="이전페이지"></a>
+                <a href="#" class="btn_search">검색페이지 이동</a>
+            </div>
+
+            <!-- // 2020-04-14 : Y3 장바구니 - 픽스다인 -->
+        </div>
+
+        <footer id="footer" class="footer_type" data-user="" data-site="" data-cart="3" data-rate="1212.3" style="">
+
+            <div class="footer_nav">
+
+                <!-- 2020-04-14 : Y3 장바구니 - 픽스다인 -->
+                <div class="">
+
+                </div>
+                <!-- // 2020-04-14 : Y3 장바구니 - 픽스다인 -->
+
+                <div class="quickBox">
+                    <p id="talk" class="">
+                        <a id="talkImg" style="display:none;" href="javascript:void(0);" onclick="javascript:shillaChatTalkPop(); return false;">
+                            상담톡
+                            <span class="new_alert">알림</span>
+                        </a>
+                    </p>
+                </div>
+
+                <nav class="fgnb_sticky new_ico">
+                    <ul class="clear_both">
+
+                        <li><a href="https://m.shilladfs.com/estore/kr/ko/?uiel=Mobile&clear=true" class="krMainSp01"></a></li>
+
+                        <li><a href="" onclick="javascript:previousHistory(); return false;" class="krMainSp02"></a></li>
+                        <li>
+                            <a href="" class="krMainSp03" onclick="javascript:ACC.cart.goCartPage(); return false;">
+                                <span class="ico_num" id="miniCartCountSpanBottomCenter">
+                                    3
+                                </span>
+                            </a>
+                        </li>
+
+                        <li class="ico_menu js-btn-total"><a href="" class="krMainSp06"></a></li>
+
+                        <li><a href="javascript:UserAgent.goStoreKr()" class="krMainSp05"></a></li>
+
+                    </ul>
+                </nav>
+
+
+            </div>
+
+
+            <div id="pass-info">
+                <div class="popup_layer" id="layer-pass-info" style="display: none;">
+                    <div class="cont">
+                        <form id="passportForm" name="passportForm" accept-charset="utf-8" action="https://m.shilladfs.com/estore/kr/ko/myshilla/user/passport/modify"
+                            method="post">
+                            <div class="passport_notic box" style="margin:0;">
+                                <div class="h1_area_bg">
+                                    <h1>여권 정보 입력</h1>
+                                    <a href="javascript:void(0);" class="btn_close"><img src="https://m.shilladfs.com/estore/_ui/mobile/common/shilladfshome/kr/img/common/ico_close_m.png"
+                                            alt="닫기"></a>
+                                </div>
+                                <!-- contents 영역 -->
+                                <div class="passport_scroll_wrap">
+                                    <div class="passport_contents_wrap">
+                                        <div class="passport_area">
+                                            <p class="txt_01">신라인터넷면세점 이용을 위해 여권정보를 입력하여 주시기 바랍니다.</p>
+                                            <p class="txt_02">*여권번호 입력 후, 온/오프라인 상품 구매 시 할인 혜택을 받을 수 있는 신라멤버십이 발급됩니다.</p>
+                                            <p class="txt_03">*이미 신라멤버십 회원인 경우, 오프라인 가입 시 입력한 여권번호, 영문성명을 입력해주세요.</p>
+                                        </div>
+                                    </div>
+                                    <div class="passport_contents_wrap">
+                                        <div class="passport_area">
+                                            <h2 class="sub_title">고객 정보 확인</h2>
+                                            <div class="user_info_txt">
+                                                <dl class="clear_both">
+                                                    <dt>이름</dt>
+                                                    <dd>안수연</dd>
+                                                </dl>
+                                                <dl class="clear_both">
+                                                    <dt>성별</dt>
+                                                    <dd>
+                                                        여성
+                                                    </dd>
+                                                </dl>
+                                                <dl class="clear_both">
+                                                    <dt>생년월일</dt>
+                                                    <dd>1988-02-24</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="passport_contents_wrap">
+                                        <div class="passport_area">
+                                            <h2 class="sub_title">여권 정보 입력</h2>
+                                            <!-- start -->
+                                            <div class="signup_wrap">
+                                                <div class="inner_join_inp">
+                                                    <div class="inner_inp">
+                                                        <div class="input_wrap label">
+                                                            <label for="new_pw01" class="txt_label">여권번호</label>
+                                                            <a href="#" id="pop-passinfo" class="ico_tip_pop open-popup">
+                                                                <img src="https://m.shilladfs.com/estore/_ui/mobile/common/shilladfshome/kr/img/common/ico_tip.png"
+                                                                    alt="여권정보입력안내" id="password_tooltip">
+                                                            </a>
+                                                            <input type="text" id="passportNumber" name="passportNumber"
+                                                                class="input" maxlength="20" onpaste="return false;" />
+                                                            <p class="sub_txt">*여권번호를 잘못 기재하실 경우 상품 인도가 불가능합니다.</p>
+                                                        </div>
+                                                        <div class="input_wrap label">
+                                                            <label for="new_pw02" class="txt_label">여권만료일</label>
+
+                                                            <input type="hidden" name="passportExpireDate" />
+                                                            <div class="date_area clear_both">
+                                                                <div class="date_wrap">
+                                                                    <select name="expireDate_year" id="expireDate_year"
+                                                                        class="date_year">
+                                                                        <option value="" selected="selected">년</option>
+
+                                                                        <option value="2020">2020년</option>
+
+                                                                        <option value="2021">2021년</option>
+
+                                                                        <option value="2022">2022년</option>
+
+                                                                        <option value="2023">2023년</option>
+
+                                                                        <option value="2024">2024년</option>
+
+                                                                        <option value="2025">2025년</option>
+
+                                                                        <option value="2026">2026년</option>
+
+                                                                        <option value="2027">2027년</option>
+
+                                                                        <option value="2028">2028년</option>
+
+                                                                        <option value="2029">2029년</option>
+
+                                                                        <option value="2030">2030년</option>
+
+                                                                        <option value="2031">2031년</option>
+
+                                                                        <option value="2032">2032년</option>
+
+                                                                        <option value="2033">2033년</option>
+
+                                                                        <option value="2034">2034년</option>
+
+                                                                        <option value="2035">2035년</option>
+
+                                                                        <option value="2036">2036년</option>
+
+                                                                        <option value="2037">2037년</option>
+
+                                                                        <option value="2038">2038년</option>
+
+                                                                        <option value="2039">2039년</option>
+
+                                                                        <option value="2040">2040년</option>
+
+                                                                        <option value="2041">2041년</option>
+
+                                                                        <option value="2042">2042년</option>
+
+                                                                        <option value="2043">2043년</option>
+
+                                                                        <option value="2044">2044년</option>
+
+                                                                        <option value="2045">2045년</option>
+
+                                                                        <option value="2046">2046년</option>
+
+                                                                        <option value="2047">2047년</option>
+
+                                                                        <option value="2048">2048년</option>
+
+                                                                        <option value="2049">2049년</option>
+
+                                                                        <option value="2050">2050년</option>
+
+                                                                    </select>
+                                                                    <select name="expireDate_month" id="expireDate_month"
+                                                                        class="date_month">
+                                                                        <option value="" selected="selected">월</option>
+                                                                        <option value="01">01월</option>
+                                                                        <option value="02">02월</option>
+                                                                        <option value="03">03월</option>
+                                                                        <option value="04">04월</option>
+                                                                        <option value="05">05월</option>
+                                                                        <option value="06">06월</option>
+                                                                        <option value="07">07월</option>
+                                                                        <option value="08">08월</option>
+                                                                        <option value="09">09월</option>
+                                                                        <option value="10">10월</option>
+                                                                        <option value="11">11월</option>
+                                                                        <option value="12">12월</option>
+                                                                    </select>
+                                                                    <select name="expireDate_day" id="expireDate_day"
+                                                                        class="date_day">
+                                                                        <option value="" selected="selected">일</option>
+                                                                        <option value="01">01일</option>
+                                                                        <option value="02">02일</option>
+                                                                        <option value="03">03일</option>
+                                                                        <option value="04">04일</option>
+                                                                        <option value="05">05일</option>
+                                                                        <option value="06">06일</option>
+                                                                        <option value="07">07일</option>
+                                                                        <option value="08">08일</option>
+                                                                        <option value="09">09일</option>
+                                                                        <option value="10">10일</option>
+                                                                        <option value="11">11일</option>
+                                                                        <option value="12">12일</option>
+                                                                        <option value="13">13일</option>
+                                                                        <option value="14">14일</option>
+                                                                        <option value="15">15일</option>
+                                                                        <option value="16">16일</option>
+                                                                        <option value="17">17일</option>
+                                                                        <option value="18">18일</option>
+                                                                        <option value="19">19일</option>
+                                                                        <option value="20">20일</option>
+                                                                        <option value="21">21일</option>
+                                                                        <option value="22">22일</option>
+                                                                        <option value="23">23일</option>
+                                                                        <option value="24">24일</option>
+                                                                        <option value="25">25일</option>
+                                                                        <option value="26">26일</option>
+                                                                        <option value="27">27일</option>
+                                                                        <option value="28">28일</option>
+                                                                        <option value="29">29일</option>
+                                                                        <option value="30">30일</option>
+                                                                        <option value="31">31일</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="input_wrap label">
+                                                            <label for="lb_new_city" class="txt_label">영문이름</label>
+                                                            <div>
+                                                                <input type="text" id="" name="lastName" class="input"
+                                                                    placeholder="Last name(성)" maxlength="20" onpaste="return false;" />
+                                                            </div>
+                                                            <div class="name_first">
+                                                                <input type="text" id="" name="firstName" placeholder="First name(이름)"
+                                                                    class="input" maxlength="20" onpaste="return false;" />
+                                                            </div>
+                                                            <p class="sub_txt">*여권상의 영문 스펠링과 동일하게 입력해주시고, First
+                                                                name(이름)은 붙여서 입력해 주세요.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- end -->
+                                        </div>
+                                    </div>
+                                    <div class="signup_wrap">
+                                        <div class="inner_join_inp">
+                                            <div class="btn_area passport_area">
+                                                <a href="javascript:void(0)" class="btn_red" id="signupSubmit">확인</a>
+                                                <a href="javascript:void(0)" class="btn_brown btn_close" id="signupCancel">취소</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <input type="hidden" name="CSRFToken" value="1f0b824a-93a0-4ba3-b80a-78fbb7e6da6b" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div id="layer-pop-passinfo" class="popup_layer" style="display:none">
+                    <div class="cont">
+                        <div class="passport_notic box">
+                            <div class="h1_area_bg">
+                                <h1>여권 정보입력 안내</h1>
+                                <a href="" class="btn_close"></a>
+                            </div>
+                            <div class="contents">
+                                <p>여권 입력시 꼭 확인해 주세요.<br />잘못된 여권 정보는 상품 인도를 하시지 못할 수 있습니다.</p>
+                                <p class="img"><img src="https://m.shilladfs.com/estore/_ui/mobile/common/shilladfshome/kr/img/sub/passport.jpg"
+                                        alt="여권이미지" /></p>
+                                <ul class="text_area">
+                                    <li>
+                                        1. 내국인 여권번호유형
+                                        <ul>
+                                            <li>영문 1자리 + 숫자 8자리 예) M01234567</li>
+                                            <li>영문 2자리 + 숫자 7자리 예) JR1234567</li>
+                                            <li>숫자 7자리 예) 1234567</li>
+                                            <li>관용여권 : S숫자 7자리 예) S 1234567</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        2. 영문이름
+                                        <ul>
+                                            <li>'-'를 제외하고 붙여서 붙여서 기입하셔야 합니다.</li>
+                                            <li>성(LAST_NAME7/), 이름(FIRST-NAME) 순으로 입력하시기 바랍니다.</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        3. 여권만료일<br />
+                                        기간이 만료된 구 여권의 경우 상품인도를 하시지 못할 수 있으니 신규 발급받으신 여권으로 입력하셔야 합니다.
+                                    </li>
+                                </ul>
+                                <p class="btn"><a href="#url" class="btn_brown btn_close">확인</a></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <script type="text/javascript">
+                    $(document).ready(function () {
+                        //여권정보:여권이름 영문 대문자만 입력 가능	    	
+                        $("input[name=lastName]").keyup(function () {
+                            var rex = /[^a-zA-Z]/gi;
+                            $(this).val($(this).val().replace(rex, "").toUpperCase());
+                        });
+                        $("input[name=firstName]").keyup(function () {
+                            var rex = /[^a-zA-Z]/gi;
+                            $(this).val($(this).val().replace(rex, "").toUpperCase());
+                        });
+
+                        //여권정보:여권번호 영문 대문자, 숫자만 입력 가능
+                        $("input[name=passportNumber]").bind("keyup keydown", function () {
+                            var rex = /[^a-zA-Z0-9]/gi;
+                            $(this).val($(this).val().replace(rex, "").toUpperCase());
+                        });
+
+
+                        $(".signup_wrap .passport_area #signupSubmit").click(function () {
+                            var passportNumber = $.trim($("#passportNumber").val())
+                            if (passportNumber == "") {
+                                alert("여권번호를 바르게 입력해 주세요.");
+                                $("#passportNumber").focus();
+                                return false;
+                            } else {
+                                checkValidPassport(passportNumber, function (result) {
+                                    if (result == "true") {
+                                        checkValidName($.trim($("input[name=firstName]").val()),
+                                            $.trim($("input[name=lastName]").val()));
+                                    } else if (result == "notrecv") {
+                                        alert(
+                                            "인도 받지 않은 주문이 있어서 여권정보 변경이 불가합니다.\n변경을 원하시면 고객센터(1688-1110)로 연락 주시기 바랍니다."
+                                        );
+                                    } else if (result == "remainday") {
+                                        alert(
+                                            "여권번호 최종 변경일로부터 60일이 지나지 않아 여권번호 변경이 불가합니다.\n여권번호 변경이 필요한 경우 고객센터로 문의 바랍니다. (1688-1110)"
+                                        );
+                                    } else {
+                                        alert(
+                                            "이미 등록된 여권 번호입니다.\n다시 확인하시고 정확한 여권\n번호를 입력해 주세요.입력하신\n여권 번호가 정확한 여권\n번호이신 경우 고객센터(1688-1110)로 연락 바랍니다."
+                                        );
+                                    }
+                                });
+                            }
+                        });
+                    });
+
+
+                    function hide_notice_passport() {
+                        $("#layer-pass-info").hide();
+                    }
+
+                    //이름 변경이 가능한지 체크
+                    //1. 변경할 이름이 기존 이름과 같으면 true 
+                    //2. 특정 여권정보이면 true
+                    function checkValidName(firstName, lastName) {
+
+                        $.ajax({
+                            type: "POST",
+                            url: "https://m.shilladfs.com/estore/kr/ko/myshilla/user/passport/validatname",
+                            data: {
+                                engLastName: lastName,
+                                engFirstName: firstName,
+                                'CSRFToken': "1f0b824a-93a0-4ba3-b80a-78fbb7e6da6b"
+                            },
+                            dataType: "json",
+                            success: function (result) {
+                                if (result == "true") {
+                                    submitCustomerFormAjax($("#passportForm"), 'https://m.shilladfs.com/estore/kr/ko', function () {
+                                        alert("여권정보 입력이 완료되었습니다.\n신라 멤버십 회원의 혜택을 받을 수 있습니다.");
+                                        $('#layer-switching_member').hide();
+
+                                        var passportNum = $("#passportNumber").val();
+                                        var passExpireNum = $('input[name=passportExpireDate]').val();
+                                        addPassportInfoCloseSession(passportNum, passExpireNum);
+                                        //location.reload();
+                                    });
+
+                                } else {
+                                    alert("영문 이름 변경이 필요하신 경우 고객센터로 문의 바랍니다.");
+                                    return;
+                                }
+                            }
+                        });
+                    }
+
+                    function checkPassportRule() {
+                        var passNum = $.trim($("input[name=passportNumber]").val());
+
+                        if (passNum != $("#passportNumber").val()) {
+                            alert("여권번호 패턴에 오류가 있습니다. 여권번호를 다시 확인하여 주십시오.");
+                            return false;
+                        }
+
+
+                        if (validateAllPsprtNo(passNum) == false) {
+                            $("input[name=passportNumber]").focus();
+                            return false;
+                        }
+
+
+                        var expireDate = $('select[name=expireDate_year]').val() + "-" + $(
+                            'select[name=expireDate_month]').val() + "-" + $('select[name=expireDate_day]').val();
+
+                        if (!isValidDate(expireDate) || expireDate.length <= 9) {
+                            alert("여권 만료일을 입력해 주세요.");
+                            return false;
+                        } else {
+                            var passExpireDateTime = $.parseToDate(expireDate);
+                            var passExpire = new Date(passExpireDateTime.getFullYear(), passExpireDateTime.getMonth(),
+                                passExpireDateTime.getDate());
+                            todayDateTime = new Date();
+                            today = new Date(todayDateTime.getFullYear(), todayDateTime.getMonth(), todayDateTime.getDate());
+                            if (today.getTime() > passExpire.getTime()) {
+                                alert("여권 만료일이 유효하지 않습니다.");
+                                return false;
+                            }
+
+
+                            todayAfter30 = new Date(todayDateTime.getFullYear() + 30, todayDateTime.getMonth(),
+                                todayDateTime.getDate());
+                            if (todayAfter30.getTime() < passExpire.getTime()) {
+                                alert("여권 만료일이 유효하지 않습니다.");
+                                return false;
+                            }
+                        }
+                        $('input[name=passportExpireDate]').val(expireDate);
+
+                        var engLastName = $.trim($("input[name=lastName]").val());
+                        var engFirstName = $.trim($("input[name=firstName]").val());
+
+                        if (engLastName == "" || $("#lastName").attr("placeholder") == engLastName) {
+                            alert("Last name을 입력해 주세요."); // 성(LAST NAME)을 입력해 주세요.
+                            $("#lastName").focus();
+                            return false;
+                        }
+                        if (engLastName.length > 30) {
+                            alert("30자 이내 영문으로 입력해 주세요.")
+                            $("#lastName").focus();
+                            return false;
+                        }
+                        if (!engLastName.isUpperCase()) {
+                            alert('영문성명은 영문 대문자로 입력해주시기 바랍니다.'); // 영문성명은 영문 대문자로 입력해주시기 바랍니다.
+                            $('#lastName').focus();
+                            return false;
+                        }
+                        if (engFirstName == "" || $("#firstName").attr("placeholder") == engLastName) {
+                            alert("First name을 입력해 주세요."); // 이름(FIRST NAME)을 입력해 주세요.
+                            $("#firstName").focus();
+                            return false;
+                        }
+                        if (engFirstName.length > 30) {
+                            alert("30자 이내 영문으로 입력해 주세요.")
+                            $("#firstName").focus();
+                            return false;
+                        }
+                        if (!engFirstName.isUpperCase()) {
+                            alert('영문성명은 영문 대문자로 입력해주시기 바랍니다.'); // 영문성명은 영문 대문자로 입력해주시기 바랍니다.
+                            $('#firstName').focus();
+                            return false;
+                        }
+
+                        return true;
+                    }
+
+                    //여권번호 패턴 체크
+                    function validateAllPsprtNo(psprtNo) {
+                        var isValid = false;
+
+                        $.ajax({
+                            url: 'https://m.shilladfs.com/estore/kr/ko/signup/validatePassportPattern',
+                            type: 'POST',
+                            dataType: 'json',
+                            data: {
+                                psprtNo: psprtNo,
+                                nationalityCode: "KOR",
+                                'CSRFToken': "1f0b824a-93a0-4ba3-b80a-78fbb7e6da6b"
+                            },
+                            async: false,
+                            error: function () {
+                                alert("서버와의 통신에 장애가 발생하였습니다.");
+                            },
+                            success: function (resultMap) {
+                                if (resultMap.result == "success") {
+                                    isValid = true;
+                                } else {
+                                    alert(resultMap.errorMsg);
+                                    isValid = false;
+                                }
+                            }
+                        });
+                        return isValid;
+                    }
+
+                    //여권번호 중복 체크
+                    function checkValidPassport(ppn, successCallback) {
+                        if (checkPassportRule()) {
+                            $.ajax({
+                                type: "POST",
+                                url: 'https://m.shilladfs.com/estore/kr/ko/myshilla/user/passport/validatechgnew',
+                                data: {
+                                    passportNumber: ppn,
+                                    'CSRFToken': "1f0b824a-93a0-4ba3-b80a-78fbb7e6da6b"
+                                },
+                                dataType: "json",
+                                success: successCallback,
+                                error: function (a, b, c) {
+                                    //console.log("error!!");
+                                }
+                            });
+                        }
+                    }
+
+                    $.parseToDate = function (sourceDate) {
+                        var yyyy = sourceDate.substring(0, 4);
+                        var month = sourceDate.substring(5, 7);
+                        var dd = sourceDate.substring(8, 10);
+
+                        var targetDate = new Date(yyyy, month - 1, dd);
+
+                        return targetDate;
+                    };
+
+
+                    function isValidDate(dateStr) {
+                        var date = new Date(dateStr);
+                        if (dateStr != date.format('yyyy-MM-dd')) {
+                            return false;
+                        }
+                        return true;
+                    }
+                </script>
+            </div>
+
+            <!-- 17/11/02 simplified regular member end -->
+
+
+            <div id="layer-open-simpleChg" class="popup_layer" style="display:none">
+                <span class="bg"></span>
+                <div class="cont">
+                    <div class="simpleMemChg box">
+                        <div class="h1_area">
+                            <h1>알림</h1>
+                        </div>
+                        <div class="contents memChgCont">
+                            <article class="article01">
+                                <p>고객님께서는 현재, '신라면세점 더 심플'에 회원 가입되어 있습니다.</p>
+                                <p><strong>'신라면세점'에 가입하기 위해서는<br />'신라면세점 더 심플' 회원을 탈퇴</strong>해야 합니다.</p>
+                                <p>'신라면세점 더 심플'의 개인정보는<br />'신라면세점'으로 이관하실 수 있습니다.</p>
+                                <p>'신라면세점 더 심플'을 탈퇴하시고, '신라면세점'에 가입하시겠습니까?</p>
+                            </article>
+                            <article class="article02">
+                                <dl class="memChgInfo">
+                                    <dt>신라면세점 더 심플 정보 중 이관되는 정보</dt>
+                                    <dd>- 아이디, 비밀번호, 본인인증정보(CI), 여권정보, 여권만료일, 여권영문명, 신라면세점 멤버십 아이디, 성명, 성별, 생년월일,
+                                        휴대폰번호, 장바구니 정보</dd>
+                                    <dt>신라면세점 더 심플 정보 중 이관되지 않는 정보</dt>
+                                    <dd>- 신라포인트 등 각종 리워드 이메일 주소, 국적, 주문실적, 포인트 거래정보, 결제정보</dd>
+                                </dl>
+                            </article>
+                            <article class="article03">
+                                <p>※ 신라면세점 더 심플의 미인도 주문내역이 남아있으면 회원전환이 불가합니다.</p>
+                            </article>
+
+                            <fieldset class="simpleChgEmail">
+                                <legend>이메일 입력</legend>
+                                <label>이메일</label>
+                                <div class="email_box clear_both">
+                                    <input type="text" name="emailName" id="emailName" title="이메일 아이디" class="input ms"
+                                        maxlength="25"><span>@</span>
+                                    <input type="text" name="emailDomain" id="emailDomain" title="이메일 주소 자동입력 또는 직접입력"
+                                        class="input ms" maxlength="25">
+                                    <select name="emailKindCode" id="emailKindCode" title="이메일 주소 선택">
+                                    </select>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="btn">
+                            <a href="javascript:converCustomerValidate();" class="btn_red">확인</a>
+                            <a href="javascript:theSimpleLayerHide();" class="btn_brown">취소</a>
+                        </div>
+                    </div>
+                    <input type="hidden" value="">
+                </div>
+            </div>
+
+        </footer>
+
+    </div>
+
+    <!-- JS 로드 -->
+    <script type="text/javascript" src="https://m.shilladfs.com/estore/_ui/mobile/common/js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="https://m.shilladfs.com/estore/_ui/mobile/common/js/slick.min.js?bt=202004131111"></script>
+    <script type="text/javascript" src="https://m.shilladfs.com/estore/_ui/mobile/common/shilladfshome/kr/js/lazyload.js"></script>
+    <!-- 2020-04-14 : Y3 장바구니 - 픽스다인 -->
+    <script type="text/javascript" src="../../js/ui.common.js"></script>
+    <script type="text/javascript" src="../../js/ui.cart.js"></script>
+    <!-- // 2020-04-14 : Y3 장바구니 - 픽스다인 -->
+
+</body>
+
+</html>

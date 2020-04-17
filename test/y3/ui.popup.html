@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, target-densitydpi=160, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>신라인터넷면세점</title>
+    <link rel="shortcut icon" type="image/x-icon" media="all" href="https://m.shilladfs.com/estore/_ui/mobile/common/shilladfshome/images/favicon.ico" />
+
+    <!-- CSS 로드 -->
+    <link rel="stylesheet" type="text/css" media="all" href="https://m.shilladfs.com/estore/_ui/mobile/common/shilladfshome/kr/css/common.css?bt=202004131111" />
+    <link rel="stylesheet" type="text/css" media="all" href="https://m.shilladfs.com/estore/_ui/mobile/common/shilladfshome/kr/css/sub.css?bt=202004131111" />
+    <link rel="stylesheet" type="text/css" media="all" href="./css/common_v2.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="./css/cart.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="./css/member.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="./css/guide.css" />
+</head>
+<body>
+    <div id="wrap" class="mainNew">
+
+        <div id="container">
+            <div class="guide_head">
+                <strong class="guide_head_title">Popup Guide</strong>
+            </div>
+            <div>
+                <ol class="guide_step">
+                    <li>호출 버튼에 data-ui="popup" 속성을 추가한다.</li>
+                    <li>호출 버튼 href값에 호출할 팝업의 id값을 넣어준다.</li>
+                    <li>호출될 팝업 영역에 id값과 data-popup="cont" 속성을 추가한다.</li>
+                    <li>호출될 팝업 의 닫기버튼에 data-popup="close" 속성을 추가한다.</li>
+                    <li>호출될 팝업내의 dimmed 마크업이 있다면 해당 마크업에 data-popup=dimmed 속성을 추가한다.</li>
+                    <li>호출될 팝업내의 dimmed 마크업이 없다면 스크립트에서 자동으로 추가된다.</li>
+                    <li>dimmed 자동 추가가 없어야 한다면 호출 버튼에 data-popup-dimmed="false" 속성을 추가한다.</li>
+                </ol> 
+            </div>
+            
+            <div class="guide_button"><a href="#cartPopup01" data-ui="popup">팝업 Dimmed Yes</a></div>
+            <div class="guide_button"><a href="#cartPopup02" data-ui="popup">팝업 Dimmed No</a></div>
+            <div class="guide_button"><a href="#cartPopup03" data-ui="popup" data-popup-dimmed="false">팝업 Dimmed Off</a></div>
+            <div class="guide_button"><a href="#cartPopup04" data-ui="popup">alert (확인)</a></div>
+            <div class="guide_button"><a href="#cartPopup05" data-ui="popup">alert (취소, 확인)</a></div>
+
+            <!-- 샘플용 팝업 (팝업내에 Dimmed 마크업 있을경우) -->
+            <div class="cart_popup" id="cartPopup01" data-popup="cont">
+                <!-- 클릭 요소 -->
+                <span class="cart_dimmed" data-popup="dimmed">&nbsp;</span>
+                <div class="cart_popup_inner">
+                    <div class="cart_popup_cont">
+                        <!-- 팝업 닫기 버튼 -->
+                        <div class="cart_popup_close"><a href="#cartPopup01" data-popup="close"><i class="ico_c">닫기</i></a></div>
+                        <strong class="cart_popup_title">선택하신 옵션을 변경하시겠습니까?</strong>
+                        
+                        <div class="cart_option">
+                            <div class="cart_option_select">
+                                <span class="form_select">
+                                    <select name="">
+                                        <option value="" selected>상품옵션</option>
+                                        <option value="">1</option>
+                                        <option value="">2</option>
+                                    </select>
+                                </span>
+                            </div>
+    
+                            <div class="cart_option_bottom">
+                                <div class="cart_option_calc">
+                                    <a href="#" class="minus"><i class="ico_c">현재값에서 수량 1 빼기</i></a>
+                                    <span class="number">1</span>
+                                    <a href="#" class="plus"><i class="ico_c">현재값에서 수량 1 더하기</i></a>
+                                </div>
+                                <span class="cart_option_price"><em>$180</em>(112,300원)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart_popup_button">
+                        <a href="#">변경하기</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 샘플용 팝업 (팝업내에 Dimmed 마크업 없을경우) -->
+            <div class="cart_popup" id="cartPopup02" data-popup="cont">
+                <!-- 클릭 요소 -->
+                <div class="cart_popup_inner">
+                    <div class="cart_popup_cont">
+                        <!-- 팝업 닫기 버튼 -->
+                        <div class="cart_popup_close"><a href="#cartPopup01" data-popup="close"><i class="ico_c">닫기</i></a></div>
+                        <strong class="cart_popup_title">선택하신 옵션을 변경하시겠습니까?</strong>
+                        
+                        <div class="cart_option">
+                            <div class="cart_option_select">
+                                <span class="form_select">
+                                    <select name="">
+                                        <option value="" selected>상품옵션</option>
+                                        <option value="">1</option>
+                                        <option value="">2</option>
+                                    </select>
+                                </span>
+                            </div>
+    
+                            <div class="cart_option_bottom">
+                                <div class="cart_option_calc">
+                                    <a href="#" class="minus"><i class="ico_c">현재값에서 수량 1 빼기</i></a>
+                                    <span class="number">1</span>
+                                    <a href="#" class="plus"><i class="ico_c">현재값에서 수량 1 더하기</i></a>
+                                </div>
+                                <span class="cart_option_price"><em>$180</em>(112,300원)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart_popup_button">
+                        <a href="#">변경하기</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 샘플용 팝업 (Dimmed 사용 안함) -->
+            <div class="cart_popup" id="cartPopup03" data-popup="cont">
+                <div class="cart_popup_inner">
+                    <div class="cart_popup_cont">
+                        <!-- 팝업 닫기 버튼 -->
+                        <div class="cart_popup_close"><a href="#cartPopup01" data-popup="close"><i class="ico_c">닫기</i></a></div>
+                        <strong class="cart_popup_title">선택하신 옵션을 변경하시겠습니까?22222</strong>
+                        
+                        <div class="cart_option">
+    
+                            <div class="cart_option_bottom">
+                                <div class="cart_option_calc">
+                                    <a href="#" class="minus"><i class="ico_c">현재값에서 수량 1 빼기</i></a>
+                                    <span class="number">1</span>
+                                    <a href="#" class="plus"><i class="ico_c">현재값에서 수량 1 더하기</i></a>
+                                </div>
+                                <span class="cart_option_price"><em>$180</em>(112,300원)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart_popup_button">
+                        <a href="#">변경하기</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 샘플용 Alert 팝업 (확인) -->
+            <div class="alert_popup" id="cartPopup04" data-popup="cont">
+                <div class="alert_popup_inner">
+                    <div class="alert_popup_cont">
+                        <p>선택한 상품을 주문하시겠습니까?</p>
+                    </div>
+                    <div class="alert_popup_button">
+                        <a href="#" data-popup="close">확인</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 샘플용 Alert 팝업 (취소, 확인)-->
+            <div class="alert_popup" id="cartPopup05" data-popup="cont">
+                <div class="alert_popup_inner">
+                    <div class="alert_popup_cont">
+                        <p>선택한 상품을 주문하시겠습니까?</p>
+                    </div>
+                    <div class="alert_popup_button">
+                        <a href="#" data-popup="close">취소</a>
+                        <a href="#">확인</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="guide_top"><a href="#container">Top</a></div>
+        </div>
+
+    </div>
+
+    <!-- JS 로드 -->
+    <script type="text/javascript" src="https://m.shilladfs.com/estore/_ui/mobile/common/js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="https://m.shilladfs.com/estore/_ui/mobile/common/js/slick.min.js?bt=202004131111"></script>
+    <script type="text/javascript" src="https://m.shilladfs.com/estore/_ui/mobile/common/shilladfshome/kr/js/lazyload.js"></script>
+    <script type="text/javascript" src="./js/ui.common.js"></script>
+</body>
+</html>
