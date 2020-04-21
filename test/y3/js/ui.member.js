@@ -315,7 +315,7 @@ SHILLADFS.Membership = {};
             this._this = $(el);
             this._selectbox = this._this.find('.form_sel select');
 
-            this._selectbox.on('change blur', function(){
+            this._selectbox.on('change focusout', function(){
                 var value = $('option:selected', $(this)).val();
                 var index = $('option', $(this)).index($('option:selected', $(this)));
 
@@ -323,14 +323,14 @@ SHILLADFS.Membership = {};
                 if(value === 'direct'){
                     // var $add_field = $(el).find('.form_inp.add_field').show();
                     // $add_field.find('input[type=text]').focus();
-                    fnSelect(el);
+                    showInput(el);
                 }else{
                     $(el).find('.form_inp.add_field').hide();
                 }
             });
         }
 
-        function fnSelect(el){
+        function showInput(el){
             var $add_field = $(el).find('.form_inp.add_field');
 
             if($add_field.css('display') === 'none'){
