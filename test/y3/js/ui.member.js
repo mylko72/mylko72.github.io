@@ -315,7 +315,7 @@ SHILLADFS.Membership = {};
             this._this = $(el);
             this._selectbox = this._this.find('.form_sel select');
 
-            this._selectbox.on('change', function(){
+            this._selectbox.on('focusout', function(){
                 var value = $('option:selected', $(this)).val();
                 var index = $('option', $(this)).index($('option:selected', $(this)));
 
