@@ -254,7 +254,7 @@ SHILLADFS.Membership = {};
             return {
                 'width' : tooltip_width + 'px',
                 'left' : xpos + 'px',
-                'top' : 'initial',
+                'top' : 'inherit',
                 'bottom' : '25px',
             }
         }
@@ -269,7 +269,8 @@ SHILLADFS.Membership = {};
                 var cssStyle = computedStyle(el);
 
                 if($(this).hasClass('active')){
-                    e.target == this ? button.toggleClass('closed') : button.removeClass('closed');
+                    // e.target == this ? button.toggleClass('closed') : button.removeClass('closed');
+                    button.toggleClass('closed');
                 }
 
                 button.addClass('active');
