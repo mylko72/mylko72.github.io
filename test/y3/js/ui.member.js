@@ -321,12 +321,22 @@ SHILLADFS.Membership = {};
 
                 index === 0 ? $(this).parent('.form_sel').addClass('basic') : $(this).parent('.form_sel').removeClass('basic');
                 if(value === 'direct'){
-                    var $add_field = $(el).find('.form_inp.add_field').show();
-                    $add_field.find('input[type=text]').focus();
+                    // var $add_field = $(el).find('.form_inp.add_field').show();
+                    // $add_field.find('input[type=text]').focus();
+                    fnSelect(el);
                 }else{
                     $(el).find('.form_inp.add_field').hide();
                 }
             });
+        }
+
+        function fnSelect(el){
+            var $add_field = $(el).find('.form_inp.add_field');
+
+            if($add_field.css('display') === 'none'){
+                $add_field.css('display','block');
+                $add_field.find('input').trigger('focus');
+            }
         }
 
         /* 인증버튼 - 선택시 활성 */
