@@ -81,10 +81,12 @@ SHILLADFS.Membership = {};
                     collapsible : this._this.data('accordionCollapsible'),
                     slide : this._this.data('accordionSlide'),
                     toggle : this._this.find('[data-accordion-type]')[0].dataset.accordionType === 'radio' ? false : true,
+                    opened : this._this.find('[data-accordion-type=button]').data('accordion-open'),
                     eventType : []
                 }
             };
 
+            initEvents(this._elements);
             bindEvents(this._elements);
         }
 
@@ -120,6 +122,23 @@ SHILLADFS.Membership = {};
                     panel.css('display','block');
                 }
             }
+        }
+
+        function initEvents(el){
+            var anchor = el.chkAnchor.find('label');
+            var button = el.btnAnchor;
+
+            if(el.options.opened){
+                slideUpDown(el, button);
+            }
+
+            anchor.length && anchor.each(function(i){
+                var input = $('input', $(this));
+                if(input.is(':checked')){
+                    slideUpDown(el, this);
+                }
+            });
+
         }
 
         function bindEvents(el){
@@ -166,7 +185,18 @@ SHILLADFS.Membership = {};
                 }
             }
 
+            initEvents(this._elements);
             bindEvents(this._elements);
+        }
+
+        function initEvents(el){
+            var checkedAll = el.checkedAll;
+            var checkedItem = el.checkedItem;
+
+            if(checkedAll.is(':checked')){
+                checkedItem.prop('checked', true);
+                setTimeout(function(){checkedAll.parent('label').attr('data-checked', true)}, 300);
+            }
         }
 
         function bindEvents(el){
@@ -321,8 +351,6 @@ SHILLADFS.Membership = {};
 
                 index === 0 ? $(this).parent('.form_sel').addClass('basic') : $(this).parent('.form_sel').removeClass('basic');
                 if(value === 'direct'){
-                    // var $add_field = $(el).find('.form_inp.add_field').show();
-                    // $add_field.find('input[type=text]').focus();
                     showInput(el);
                 }else{
                     $(el).find('.form_inp.add_field').hide();
