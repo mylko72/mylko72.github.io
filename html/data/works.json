@@ -1,6 +1,30 @@
 {
     "works":[
         {
+            "project": "신라면세점",
+            "image": "/home/images/img_shilladfs_s.jpg",
+            "client": "신라면세점",
+			"date" : "2018.04 ~ 2020.06",
+			"view": "shilladfs",
+			"url" : "http://m.shilladfs.com/estore/kr/ko/"
+        },
+        {
+            "project": "홈앤쇼핑",
+            "image": "/home/images/img_hnsmall_s.jpg",
+            "client": "홈앤쇼핑",
+			"date" : "2017.02 ~ 2018.02",
+			"view": "hnsmall",
+			"url" : " https://www.hnsmall.com/"
+        },
+        {
+            "project": "네이버 통합검색 UI 개선",
+            "image": "/home/images/img_naver_s.jpg",
+            "client": "NHN",
+			"date" : "2016.08 ~ 2016.12",
+			"view": "naver",
+			"url" : " https://www.naver.com/"
+        },
+        {
             "project": "토리버치 쇼핑몰",
             "image": "/home/images/img_toryburch_s.jpg",
             "client": "제일모직",
