@@ -31,7 +31,7 @@
 	.recent-work .works ul {}
 		.recent-work .works ul li {float:none; width:auto; margin:0; padding:5px 0 3px 5px; border-bottom:1px solid #ededed; font-size:0.7em; color:#747679; line-height:2em;}
 		.recent-work .works ul li * {vertical-align:middle;}
-		.recent-work .works ul li span.lh {display:inline-block; width:48px; height:18px; margin-right:5px; background-color:#bbb; -webkit-border-radius:3px; -moz-border-radius:3px; -o-border-radius:3px; -ms-border-radius:3px; border-radius:3px; font-size:0.7em; color:#fff; text-align:center; line-height:1.8em;}
+		.recent-work .works ul li span.lh {display:inline-block; width:48px; height:18px; margin-right:5px; background-color:#bbb; -webkit-border-radius:3px; -moz-border-radius:3px; -o-border-radius:3px; -ms-border-radius:3px; border-radius:3px; font-size:0.7em; color:#fff; text-align:center; line-height:18px}
 		.recent-work .works ul li a {display:inline-block; width: 150px; line-height:1; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
 		.recent-work .works ul li a:hover {color:#6c9009;}
 
