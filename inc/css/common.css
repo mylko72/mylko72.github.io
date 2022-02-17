@@ -41,6 +41,7 @@ h1, h2, h3, h4, h5, h6 {font-family: 'Oswald', 'Nanum Gothic', 'Dotum';}
 
 .mb20 {margin-bottom:20px;}
 .mr20 {margin-right:50px;}
+.mt30 {margin-top:30px;}
 
 [class*='col-'] {-moz-transition:all 0.3s ease 0s;-webkit-transition:all 0.3s ease 0s;-o-transition:all 0.3s ease 0s;-ms-transition:all 0.3s ease 0s;transition:all 0.3s ease 0s;}
 /**

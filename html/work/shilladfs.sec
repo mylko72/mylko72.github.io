@@ -1,0 +1,23 @@
+<h1>신라면세점</h1>
+<div class="clfix">
+	<div class="col-md-8">
+		<h2>신라면세 EC</h2>
+		<img src="/home/images/recent_shilladfs_view2.jpg" class="responsive-img" alt="" />
+		<h2 class="mt30">팁핑</h2>
+		<img src="/home/images/recent_shilladfs_view.jpg" class="responsive-img" alt="" />
+		<h2 class="mt30">신라트립</h2>
+		<img src="/home/images/recent_shilladfs_view3.jpg" class="responsive-img" alt="" />		
+	</div>
+	<div class="col-md-3">
+		<ul class="desc-list">
+			<li><span>Project</span> 신라면세점 운영 및 서비스 구축</li>
+			<li><span>Client</span> 신라면세점</li>
+			<li><span>Date</span> 2018.04 ~ 2020.06</li>
+			<li><span>Url</span> <a href="http://m.shilladfs.com/estore/kr/ko/" target="_blank">http://m.shilladfs.com/estore/kr/ko/</a><br />
+			<a href="http://m-tipping.shilladfs.com/" target="_blank" style="margin-left:50px;">http://m-tipping.shilladfs.com/</a><br />
+			<a href="http://shillatrip.shilladfs.com/" target="_blank" style="margin-left:50px;">http://shillatrip.shilladfs.com/</a>
+			</li>
+			<li>신라면세점 EC 및 Tipping, 신라트립<br />서비스 구축</li>
+		</ul>
+	</div>
+</div>

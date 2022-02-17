@@ -1,0 +1,15 @@
+<h1>네이버 통합검색</h1>
+<div class="clfix">
+	<div class="col-md-8">
+		<img src="/home/images/recent_naver_view.jpg" class="responsive-img" alt="" />
+	</div>
+	<div class="col-md-3">
+		<ul class="desc-list">
+			<li><span>Project</span> 네이버 통합검색 UI 개선</li>
+			<li><span>Client</span> NHN</li>
+			<li><span>Date</span> 2016.08 ~ 2016.12</li>
+			<li><span>Url</span> <a href="https://www.naver.com/" target="_blank">https://www.naver.com/</a></li>
+			<li>웹퍼블리싱, Git을 이용한 버전 관리, Gulp</li>
+		</ul>
+	</div>
+</div>

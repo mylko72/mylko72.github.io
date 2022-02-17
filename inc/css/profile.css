@@ -71,7 +71,7 @@ aside.rotatedtext {position:relative; height:800px; margin-top:-150px; margin-ri
 	#myhistory .works h4 {background-color:#1db62f; padding:15px 10px;}
 	#myhistory .works > li > ul > li {padding:20px 10px 20px; border-bottom:1px dotted #fff; line-height:1.4em;}
 	#myhistory .works > li > ul > li:last-child {border-bottom:none;}
-	#myhistory .works .detail {padding:20px 10px 0;}
+	#myhistory .works .detail {padding:0 10px 0;}
 	#myhistory .works .detail h5 {margin-bottom:20px; font-size:1.25rem;}
 	#myhistory .works .detail ul li {margin-bottom:5px;}
 
