@@ -1,27 +1,39 @@
-(function ($) {
+var myhome = myhome || {};
+myhome.ui = {};
 
-    /**
-	Global object which lives on every page.  This object will handle the creation of other necessary objects for page functionality. 
-	@class $.Global
-	@constructor
-	**/
-    $.Main= function () {
+(function (_ui) {
 
-        /** 
-		Init function will check for specific body classes and create the necessary page object.
-		@function init
-		**/
-        function init() {
-			//new $.MotionEffect('.work', {container:'.recent-work', animation:'slide', offsetX:-100, easing:'ease-out-quint', duration:500});
-			new $.MotionEffect('.circle', {container:'.my-ability', animation:'scale', easing:'ease', duration:500});
+	_ui.Main = (function(){
+
+		const myAbility = document.querySelector('.my-ability');
+		const abilityRect = myAbility.getBoundingClientRect();
+
+		function init(){
+			let pageYOffset = window.pageYOffset + window.innerHeight;
+			if(pageYOffset > abilityRect.top){
+				myAbility.classList.add('active');
+			}
+
+			bindEvents();
 		}
-		
-		init();
 
-	};
+		function bindEvents(){
+			document.addEventListener('scroll', function(){
+				let pageYOffset = window.pageYOffset + window.innerHeight - abilityRect.height;
+				if(pageYOffset > abilityRect.top){
+					myAbility.classList.add('active');
+				}
+			});
+		}
 
-}(jQuery));
+		return {
+			init: init
+		}
+
+	})();
+
+}(myhome.ui ));
 
 $(function (){
-	new $.Main();
+	myhome.ui.Main.init();
 });

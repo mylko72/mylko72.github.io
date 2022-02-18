@@ -349,7 +349,6 @@ $(function () {
 		function addMotion(){
 			if(animated) return;
 
-			console.log('called');
 			if (animation == 'slide') {
 				tram($el)
 					.set({ x: offsetX, opacity:0 })
@@ -379,9 +378,7 @@ $(function () {
 			var containerHeight = $container.outerHeight()+($(window).height()/2),
 				containerTop = $container.position().top,
 				containerBottom = containerTop - containerHeight;
-			
-			console.log('containerTop '+ containerTop);
-			console.log('containerBottom '+ containerBottom);
+		
 
 			eventDriven.on(eventDictionary.global.SCROLL, function(e){
 				var scrollTop = $.util.getScrollTop();	
@@ -425,12 +422,9 @@ $(function () {
 			},
 			scan : function(){
 				var len = this.lazy.length;
-				console.log('length :'+len);
 				for(var i=0;i<len;i++){
-					console.log('call2');
 					var $elem = $(this.lazy[i]);
 					if($elem.attr('data-lazy-loaded') !== 'true' && this.isInView($elem)){
-						console.log('call');
 						$elem.attr('data-lazy-loaded', 'true');
 						$elem.animate({'opacity':1});
 						$elem.removeClass('lazy');
