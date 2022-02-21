@@ -206,7 +206,7 @@ $(function () {
 			str += '<a href="#" class="dropdown-toggle" data-toggle="dropdown">Study<b class="caret"></b></a>';
 			str += '<ul class="dropdown-menu">';
 			str += '<li><a href="http://mylko72.gitbooks.io/git/" class="mobile" target="_blank">Git</a></li>';
-			str += '<li><a href="http://mylko72.github.io/FEDNote/html/markdown/angular-app.html" class="tablet" target="_blank">AngularJS</a></li>';
+			str += '<li><a href="https://www.typescriptlang.org/" class="tablet" target="_blank">TypeScript</a></li>';
 			str += '</ul>';
 			str += '</li>';
 			
