@@ -1,6 +1,14 @@
 {
     "works":[
         {
+            "project": "삼성물산 패션샵 개선 및 운영",
+            "image": "/home/images/img_ddangyo_s.jpg",
+            "client": "삼성물산",
+			"date" : "2022.06 ~ 2022.12",
+			"view": "sshshop",
+            "url" : "https://www.ssfshop.com/"
+        },        
+        {
             "project": "신한은행 배달앱서비스 땡겨요",
             "image": "/home/images/img_ddangyo_s.jpg",
             "client": "신한은행",

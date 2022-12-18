@@ -1,0 +1,18 @@
+<h1>신한은행 땡겨요</h1>
+<div class="clfix">
+	<div class="col-md-8">
+		<h2>땡겨요App</h2>
+		<img src="/home/images/img_ddangyo_01.jpg" class="responsive-img" alt="" />
+		<h2 class="mt30">브랜드사이트</h2>
+		<img src="/home/images/img_ddangyo_02.jpg" class="responsive-img" alt="" />
+	</div>
+	<div class="col-md-3">
+		<ul class="desc-list">
+			<li><span>Project</span> 삼성물산 패션샵 개선 및 운영</li>
+			<li><span>Client</span> 삼성물산</li>
+			<li><span>Date</span> 2022.06 ~ 2022.12</li>
+			<li><span>Url</span> <a href="https://www.ssfshop.com/" target="_blank">hhttps://www.ssfshop.com/</a></li>
+			<li>메인 및 공통 UI(레이아웃 및 검색) 개선, 기획전 및 상품상세 개선, Git을 이용한 버전 관리</li>
+		</ul>
+	</div>
+</div>
