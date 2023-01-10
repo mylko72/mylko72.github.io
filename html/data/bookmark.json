@@ -1,18 +1,53 @@
 {
     "Javascript" :[
         {
+            "site": "MDN",
+            "url": "https://developer.mozilla.org/ko/docs/Web/JavaScript",
+            "explain": "JavaScript 가이드",
+			"rate" : "",
+			"tags" : ["튜토리얼", "가이드"]
+        },           
+        {
+            "site": "모던 JavaScript 튜토리얼",
+            "url": "https://ko.javascript.info/",
+            "explain": "모던 JavaScript 튜토리얼",
+			"rate" : "",
+			"tags" : ["튜토리얼", "문법"]
+        },           
+        {
+            "site": "Hello World JavaScript",
+            "url": "https://helloworldjavascript.net/",
+            "explain": "자바스크립트 튜토리얼",
+			"rate" : "",
+			"tags" : ["튜토리얼", "강의"]
+        },           
+        {
+            "site": "Patterns",
+            "url": "https://www.patterns.dev/posts/",
+            "explain": "Design Pattern, Rendering Pattern",
+			"rate" : "",
+			"tags" : ["튜토리얼", "강의"]
+        },        
+        {
+            "site": "Vanilla Javascript로 웹 컴포넌트 만들기",
+            "url": "https://junilhwang.github.io/TIL/Javascript/Design/Vanilla-JS-Component/#_1-%E1%84%8F%E1%85%A5%E1%86%B7%E1%84%91%E1%85%A9%E1%84%82%E1%85%A5%E1%86%AB%E1%84%90%E1%85%B3%E1%84%8B%E1%85%AA-%E1%84%89%E1%85%A1%E1%86%BC%E1%84%90%E1%85%A2%E1%84%80%E1%85%AA%E1%86%AB%E1%84%85%E1%85%B5",
+            "explain": "웹 컴포넌트 만들기",
+			"rate" : "",
+			"tags" : ["컴포넌트", "강의"]
+        },   
+        {
+            "site": "Vanilla Javascript로 상태관리 시스템 만들기",
+            "url": "https://junilhwang.github.io/TIL/Javascript/Design/Vanilla-JS-Store/#_1-publish",
+            "explain": "상태관리 시스템",
+			"rate" : "",
+			"tags" : ["상태관리", "강의"]
+        },                  
+        {
             "site": "생활코딩",
             "url": "http://opentutorials.org/course/743",
             "explain": "자바스크립트 동영상 강의",
 			"rate" : "",
 			"tags" : ["동영상", "강의"]
-        },
-        {
-            "site": "Javascript Garden",
-            "url": "http://bonsaiden.github.io/JavaScript-Garden/ko/",
-            "explain": "JavaScript 언어의 핵심만을 모아 놓은 번역 문서",
-			"rate" : "",
-			"tags" : ["번역문서", "객체", "함수", "Array", "타입"]
         },
         {
             "site": "Dottoro Web Reference",
@@ -29,177 +64,35 @@
 			"tags" : ["정규표현식", "패턴", "도구"]
         },
         {
-            "site": "Grunt 공식 사이트 한글판",
-            "url": "http://gruntjs-kr.herokuapp.com/",
-            "explain": "Grunt 공식 사이트를 번역한 비공식 사이트",
+            "site": "나를 제외한 천재들 블로그",
+            "url": "https://gurtn.tistory.com/category/JavaScript/%EC%BD%94%EB%93%9C",
+            "explain": "Javascript 코드",
 			"rate" : "",
-			"tags" : ["Grunt", "자동화"]
-        },
-        {
-            "site": "Kurien's Blog",
-            "url": "http://kurien.tistory.com/category/Web%20Programing/JavaScript?page=1",
-            "explain": "Javascript 강좌",
-			"rate" : "",
-			"tags" : ["강좌", "문법"]
+			"tags" : ["코드", "문법"]
         }
 	],
-    "jQuery" :[
+    "Vue" :[
         {
-            "site": "Taeyo.Net",
-            "url": "http://www.taeyo.pe.kr/Columns/List.aspx?SEQ=29&IDX=1",
-            "explain": "Taeyo의 jQuery 프로그래밍",
+            "site": "Vue3.0 공홈",
+            "url": "https://v3-docs.vuejs-korea.org/",
+            "explain": "프로그레시브 자바스크립트 프레임워크",
 			"rate" : "",
-			"tags" : ["셀렉터", "폼", "event"]
-        },
-		{
-            "site": "CMSFactory.NET",
-            "url": "http://www.cmsfactory.net/jquery",
-            "explain": "유용한 플러그인과 메서드를 설명한 jQuery 강좌",
-			"rate" : "",
-			"tags" : ["플러그인", "메서드", "강좌"]
-        },
-		{
-            "site": "WEBSAMO",
-            "url": "http://www.websamo.com/bbs/board.php?bo_table=jquery_api",
-            "explain": "jQuery API를 한글로 번역하여 소개",
-			"rate" : "",
-			"tags" : ["API", "메서드", "강좌"]
-        },
-		{
-            "site": "Mastercafe",
-            "url": "http://www.mastercafe.com/index.asp?zona=tutorial",
-            "explain": "jQuery의 다양한 효과와 예제로 살펴본 Tutorials",
-			"rate" : "",
-			"tags" : ["효과", "예제", "Tutorials"]
-        }
-	],
-    "AngularJS" :[
-        {
-            "site": "하루만에 끝내는 AngularJS",
-            "url": "http://soomong.net/blog/2014/01/20/translation-ultimate-guide-to-learning-angularjs-in-one-day/",
-            "explain": "Todd라는 개발자가 작성한 “Ultimate guide to learning angular js in one day”라는 블로그 글을 번역한 글",
-			"rate" : "",
-			"tags" : ["컨트롤러", "디렉티브", "서비스", "데이터 바인딩"]
+			"tags" : ["vue"]
         },
         {
-            "site": "AngularJS는 왜 좋은가?",
-            "url": "http://blog.outsider.ne.kr/975",
-            "explain": "Angular.js는 왜 좋은 가에 대한 설명",
+            "site": "Vue.js 입문서",
+            "url": "https://joshua1988.github.io/web-development/vuejs/vuejs-tutorial-for-beginner/#vuejs%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80",
+            "explain": "프론트엔드 개발자를 위한",
 			"rate" : "",
-			"tags" : ["컨트롤러", "디렉티브", "서비스", "데이터 바인딩"]
+			"tags" : ["vue"]
         },
         {
-            "site": "AngularJS의 매력에 빠지다",
-            "url": "http://blog.naver.com/jjoommnn/130179684248",
-            "explain": "Angular.js를 문법적으로 설명한 블로그 글",
+            "site": "Cracking Vue.js",
+            "url": "https://joshua1988.github.io/vue-camp/textbook.html",
+            "explain": "Vue.js로 웹 서비스를 개발할 때 필요한 지식을 모아놓은 사이트",
 			"rate" : "",
-			"tags" : ["컨트롤러", "디렉티브", "서비스", "데이터 바인딩"]
-        },
-        {
-            "site": "AngularJS Hub",
-            "url": "http://www.angularjshub.com/",
-            "explain": "AngularJS의 code와 예제를 확인할 수 있는 레퍼런스 사이트",
-			"rate" : "",
-			"tags" : ["코드", "예제", "레퍼런스"]
-        },
-        {
-            "site": "Programmingsummaries",
-            "url": "http://programmingsummaries.tistory.com/229",
-            "explain": "AngularJS를 공부하는데 필요한 정보를 제공하는 블로그",
-			"rate" : "",
-			"tags" : ["개발", "레퍼런스"]
-        },
-        {
-            "site": "AngularJS Cheat Sheet",
-            "url": "http://www.cheatography.com/proloser/cheat-sheets/angularjs/",
-            "explain": "AngularJS의 기능들을 요약한 Cheat Sheet",
-			"rate" : "",
-			"tags" : ["Cheat Sheet"]
-        },
-        {
-            "site": "NEXTREE",
-            "url": "http://www.nextree.co.kr/p4850/",
-            "explain": "사용자정의 디렉티브 이야기",
-			"rate" : "",
-			"tags" : ["사용자정의", "디렉티브"]
-        },
-        {
-            "site": "Summernote용 AngularJS 디렉티브",
-            "url": "http://blog.outsider.ne.kr/1019",
-            "explain": "부트스트랩 기반의 WYSIWYG 에디터인 Summernote의 Angular 버전",
-			"rate" : "",
-			"tags" : ["Summernote", "부트스트랩", "에디터"]
-        },
-        {
-            "site": "angular-scroll",
-            "url": "https://github.com/oblador/angular-scroll",
-            "explain": "one-page 웹사이트를 위한 auto scroll 기능을 angularjs로 구현",
-			"rate" : "",
-			"tags" : ["Auto Scroll", "Scroll", "One page"]
-        },
-        {
-            "site": "Programing is Fun",
-            "url": "http://netframework.tistory.com/category/Dynamic%20Language",
-            "explain": "angularJs를 이용한 single page web application 개발에 필요한 정보",
-			"rate" : "",
-			"tags" : ["Single Page", "SPA"]
-        },
-        {
-            "site": "AnguarJS jsFiddle",
-            "url": "https://github.com/angular/angular.js/wiki/JsFiddle-Examples",
-            "explain": "다양한 AngularJS jsFiddle 예제들",
-			"rate" : "",
-			"tags" : ["예제", "jsFiddle"]
-        },
-        {
-            "site": "웹개발 공작소",
-            "url": "http://w3devlabs.net/wp/?p=15",
-            "explain": "유용한 AngularJS 링크 모음",
-			"rate" : "",
-			"tags" : ["링크"]
-        },
-        {
-            "site": "The Modern Developer",
-            "url": "http://blog.oxrud.com/posts/creating-youtube-directive/",
-            "explain": "Youtube AngularJS 디렉티브 만들기",
-			"rate" : "",
-			"tags" : ["디렉티브", "Directive", "유투브", "Youtube"]
-        },
-        {
-            "site": "AngularJS Style Guide",
-            "url": "https://github.com/johnpapa/angularjs-styleguide",
-            "explain": "AngularJS 개발에 필요한 표준화된 스타일 가이드 제시",
-			"rate" : "",
-			"tags" : ["스타일 가이드", "가이드"]
-        },
-        {
-            "site": "AngularJS 한글 튜토리얼",
-            "url": "http://blog.naver.com/mrg721/120212618058",
-            "explain": "AngularJS를 공부하기 위한 한글 튜토리얼 블로그 ",
-			"rate" : "",
-			"tags" : ["튜토리얼"]
-        },
-        {
-            "site": "ng-newsletter",
-            "url": "http://www.ng-newsletter.com/posts/angular-for-the-jquery-developer.html",
-            "explain": "제이쿼리 개발자를 위한 AngularJS 가이드 문서",
-			"rate" : "",
-			"tags" : ["튜토리얼"]
-        },
-        {
-            "site": "AngularJS-Learning",
-            "url": "https://github.com/soomong/AngularJS-Learning",
-            "explain": "AngularJS 학습할 수 있는 유용한 링크 모음",
-			"rate" : "",
-			"tags" : ["링크", "학습"]
-        },
-        {
-            "site": "MOBICON",
-            "url": "http://mobicon.tistory.com/388",
-            "explain": "MEAN Stack 개발자 되기",
-			"rate" : "",
-			"tags" : ["MEAN Stack"]
-        }
+			"tags" : ["vue"]
+        }  
 	],
     "Node.js" :[
         {
@@ -480,66 +373,6 @@
             "explain": "사용성 측면에서 UI의 패턴과 예시를 들어 정보를 제공",
 			"rate" : "",
 			"tags" : ["UI", "모바일", "패턴", "안드로이드"]
-        }
-	],
-    "VIM" :[
-        {
-            "site": "Blog [essayer]",
-            "url": "http://www.morenice.kr/117",
-            "explain": "개발 생산성을 위한 필수 vim plugin",
-			"rate" : "",
-			"tags" : ["Plugin"]
-        },
-        {
-            "site": "KLDP",
-            "url": "http://kldp.org/node/125263",
-            "explain": "vim 사용자를 위한 플러그인 매니저 vundle",
-			"rate" : "",
-			"tags" : ["Plugin", "vundle", "플러그인 매니저"]
-        },
-        {
-            "site": "vimium",
-            "url": "http://sunyzero.tistory.com/178",
-            "explain": "구글 크롬 vim 단축키 플로그인",
-			"rate" : "",
-			"tags" : ["단축키", "플로그인", "vimium"]
-        }
-	],
-    "Grunt" :[
-        {
-            "site": "Outsider's Dev Story",
-            "url": "http://blog.outsider.ne.kr/search/grunt?page=2",
-            "explain": "Grunt의 설치와 설정, 플러그인 소개 ",
-			"rate" : "",
-			"tags" : ["빌드", "gruntfile"]
-        },
-        {
-            "site": "대문블로그",
-            "url": "http://demun.tistory.com/2416",
-            "explain": "grunt-markdown 그런트 마크다운 사용하기",
-			"rate" : "",
-			"tags" : ["markdown", "플러그인"]
-        },
-        {
-            "site": "OSXTIP",
-            "url": "http://osxtip.tistory.com/151",
-            "explain": "grunt 그런트 사용법",
-			"rate" : "",
-			"tags" : ["사용법", "grunt"]
-        },
-        {
-            "site": "falinux",
-            "url": "http://forum.falinux.com/zbxe/index.php?_filter=search&mid=lecture_tip&search_target=title&search_keyword=grunt&document_srl=797278",
-            "explain": "grunt로 프로젝트를 자동화하는 과정을 설정 ",
-			"rate" : "",
-			"tags" : ["강좌", "자동화"]
-        },
-        {
-            "site": "Grunt",
-            "url": "http://gruntjs-kr.herokuapp.com/",
-            "explain": " Grunt 공식 사이트를 번역한 비공식 사이트",
-			"rate" : "",
-			"tags" : ["공식사이트", "자동화"]
         }
 	],
     "Tool" :[
