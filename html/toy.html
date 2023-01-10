@@ -7,18 +7,18 @@
 	<link href='http://fonts.googleapis.com/css?family=Pinyon+Script' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Denk+One' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css'>
-	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Anton' rel='stylesheet' type='text/css'>
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="/home/inc/css/modules/bootstrap.css" media="screen"/>
 	<link rel="stylesheet" type="text/css" href="/home/inc/css/common.css" />
-	<link rel="stylesheet" type="text/css" href="/home/inc/css/work.css" />
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script type="text/javascript" src="/home/inc/js/lib/jquery.animate-enhanced.min.js"></script>
 	<script type="text/javascript" src="/home/inc/js/lib/bootstrap.js"></script>
 	<script type="text/javascript" src="/home/inc/js/common.js"></script>
 	<script type="text/javascript" src="/home/inc/js/utilities.js"></script>
-	<script type="text/javascript" src="/home/inc/js/work.js"></script>
 	<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="/home/inc/js/lib/respond.js"></script>
 	<![endif]-->
 	<style type="text/css" media="screen">
 		@import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css" );
@@ -45,21 +45,23 @@
 	</header>
 	<div id="contents">
 		<section>
-			<div class="container clfix">
-				<h2>Portfolio</h2>
-				<div class="page-crop">
-					<div class="page-slider">
-						<!--<ul class="works-list clfix">
-						</ul>-->
-						<div class="row works-list">
-						</div>
-						<article class="work-desc">
-							<a href="#" class="back"><i class="fa fa-4x fa-angle-left"></i> All Works</a>
-							<div class="work-view">
-								<div class="loading"><i class="fa fa-refresh fa-spin"></i></div>
-							</div>
-						</article>
-					</div>
+			<div class="container">
+				<h2>Toy Project</h2>
+				<div class="row">
+
+					<article class="col-md-12 toy-project">
+                        <figure class="img-cover">
+                            <div class="inner"><img src="../images/img_time_capsule.jpg" alt="Time Capsule" /></div>
+                            <figcaption><em>Time Capsule, <a href="http://my-todo.surge.sh/html/index.html" target="_blank">http://my-todo.surge.sh/html/index.html</a></em></figcaption>
+                        </figure>
+                        
+                        <div class="conts">
+                            <h3>1. 시간을 기록하다. Time Capsule</h3>
+                            <p>Time Capsule은 2016년에 코드캐년에 등록할 목적으로 만든 작은 프로젝트이다. 흔한 ToDo 리스트를 타임라인으로 시각화하여 타임라인에 시간과 할일을
+                                기록하고 히스토리 방식으로 할일을 보여주는 방식으로 UI에 재미를 주고자 기획했다.</p>
+                        </div>
+                        
+					</article>
 				</div>
 			</div>
 		</section>
@@ -81,25 +83,6 @@
 			<p class="pull-right copyright">Copyright ⓒ MYLKO 2014 All rights reserved.</p>
 		</div>
 	</footer>
-</div>
-<div id="work-templates" style="position:absolute; left:-5000px; top:-9999px;">
-	<div class="row works-list">
-		<div class="col-sm-6 col-md-3">
-			<div class="thumbnail">
-				<img src="/home/images/recent_work_01.jpg" class="responsive-img work" alt="" />
-				<div class="caption">
-					<a href="#" data-view="samsung_uk">
-						<h3>SAMSUNG UK 반응형웹</h3>
-						<ul>
-							<li class="client">SAMSUNG test</li>
-							<li class="date">2013.10 ~ 2014.04</li>
-							<li class="url"></li>
-						</ul>
-					</a>
-				</div>
-			</div>
-		</li>
-	</ul>
 </div>
 </body>
 </html>
