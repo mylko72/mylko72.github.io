@@ -76,9 +76,9 @@ function requestTick(ev) {
 
 		var gnbMenu = {
 			"Main" : "/home/html/index.html?hn=1",
-			"Portfolio" : "/home/html/work.html?hn=2",
-			"Profile" : "/home/html/profile.html?hn=3",
-			"Toy Project" : "/home/html/vim.html?hn=4",
+			"About" : "/home/html/profile.html?hn=2",
+			"Portfolio" : "/home/html/work.html?hn=3",
+			"Lab" : "/home/html/lab.html?hn=4",
 			"Bookmark" : "/home/html/bookmark.html?hn=5"
 		}
 
