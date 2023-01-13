@@ -20,10 +20,10 @@ ul.bookmark > li:last-child {border-bottom:none;}
 	.bookmark-list h3 .fa-caret-right {margin:2px 0 0 -2px; font-size:2.6em; color:#000;}
 
 ul.lists {margin-bottom:50px;}
-	ul.lists li {padding:25px 0 20px 20px;}
+	ul.lists li {display:flex; padding:25px 0 20px 20px;}
 	ul.lists li:nth-child(odd) {background-color:#f9f9f9;}
 	ul.lists li:nth-child(even) {background-color:#f1f1f1;}
-	ul.lists li h4 {display:inline-block; margin-right:10px; vertical-align:top;}
+	ul.lists li h4 {display:inline-block; width:210px; flex-basis:210px; margin-right:10px; vertical-align:top;}
 	ul.lists li .info {display:inline-block; width:100%; margin-top:10px;}
 	ul.lists li .info > a {display:block; width:100%; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; line-height:20px;}
 	ul.lists li .tags {margin-top:20px; font-size:0.80em;}
