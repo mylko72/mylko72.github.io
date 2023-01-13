@@ -94,6 +94,36 @@
 			"tags" : ["vue"]
         }  
 	],
+    "Typescript" :[
+        {
+            "site": "타입스크립트 핸드북",
+            "url": "https://joshua1988.github.io/ts/why-ts.html",
+            "explain": "핸드북",
+			"rate" : "",
+			"tags" : ["타입스크립트", "핸드북"]
+        },
+        {
+            "site": "TypeScript Handbook",
+            "url": "https://www.typescriptlang.org/ko/docs/handbook/intro.html",
+            "explain": "타입스크립트 공식홈 핸드북",
+			"rate" : "",
+			"tags" : ["타입스크립트", "핸드북"]
+        },
+        {
+            "site": "TypeScript 가이드북",
+            "url": "https://yamoo9.gitbook.io/typescript/",
+            "explain": "야무의 가이드북",
+			"rate" : "",
+			"tags" : ["타입스크립트", "가이드북"]
+        },
+        {
+            "site": "자바스크립트 개발자를 위한 타입스크립트",
+            "url": "https://ahnheejong.gitbook.io/ts-for-jsdev/",
+            "explain": "개발자를 위한 타입스크립트",
+			"rate" : "",
+			"tags" : ["타입스크립트", "개발자"]
+        }        
+    ],
     "Node.js" :[
         {
             "site": "Felix's Node.js Guide",
