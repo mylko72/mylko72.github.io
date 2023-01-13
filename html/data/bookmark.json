@@ -403,6 +403,27 @@
             "explain": "사용성 측면에서 UI의 패턴과 예시를 들어 정보를 제공",
 			"rate" : "",
 			"tags" : ["UI", "모바일", "패턴", "안드로이드"]
+        },
+        {
+            "site": "dribbble",
+            "url": "https://dribbble.com/",
+            "explain": "Explore the world’s leading design portfolios",
+			"rate" : "",
+			"tags" : ["UI", "디자인"]
+        },  
+        {
+            "site": "Cool Backgrounds",
+            "url": "https://coolbackgrounds.io/",
+            "explain": "백그라운드 이미지 제작 툴",
+			"rate" : "",
+			"tags" : ["UI", "백그라운드"]
+        },          
+        {
+            "site": "Lorem Picsum",
+            "url": "https://picsum.photos/",
+            "explain": "사이즈별 랜덤 이미지 제공",
+			"rate" : "",
+			"tags" : ["이미지", "랜덤"]
         }
 	],
     "Tool" :[
