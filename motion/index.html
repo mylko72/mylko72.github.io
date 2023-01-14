@@ -22,8 +22,10 @@
         </header>
         <main>
             <section>
-                <div class="card-list">
-                    <img src="https://i.picsum.photos/id/551/600/250.jpg?hmac=xrgtC30_kzb_Z77hdKrO7mrSuF-a9JBHJQsFusWkQXA" />
+                <div class="card-view">
+                    <div class="media">
+                        <img src="https://i.picsum.photos/id/551/600/250.jpg?hmac=xrgtC30_kzb_Z77hdKrO7mrSuF-a9JBHJQsFusWkQXA" />
+                    </div>
                     <div class="content">
                         <h2 clas="tit">Image</h2>
                     </div>
@@ -31,10 +33,36 @@
                 </div>
             </section>
             <section>
-                <div class="card-list">
-                    <img src="https://i.picsum.photos/id/551/600/250.jpg?hmac=xrgtC30_kzb_Z77hdKrO7mrSuF-a9JBHJQsFusWkQXA" />
+                <div class="card-view">
+                    <div class="media">
+                        <iframe id="ytplayer" type="text/html" width="600" height="250" src="https://www.youtube.com/embed/vPNbwwrs0A0?autoplay=1" frameborder="0"></iframe>
+                    </div>
                     <div class="content">
-                        <h2 clas="tit">Image</h2>
+                        <h2 clas="tit">Video</h2>
+                    </div>
+                    <button class="del"><span>삭제</span></button>
+                </div>
+            </section>            
+            <section>
+                <div class="card-view">
+                    <div class="content">
+                        <h2 clas="tit">Note</h2>
+                        <div class="body">
+                            Note Body
+                        </div>
+                    </div>
+                    <button class="del"><span>삭제</span></button>
+                </div>
+            </section>            
+            <section>
+                <div class="card-view">
+                    <div class="content">
+                        <h2 clas="tit">Todo</h2>
+                        <div class="body">
+                            <ol class="todo-list">
+                                <li>Must do!</li>
+                            </ol>
+                        </div>
                     </div>
                     <button class="del"><span>삭제</span></button>
                 </div>

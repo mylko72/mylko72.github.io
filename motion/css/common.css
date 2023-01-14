@@ -42,9 +42,14 @@ body {background:url(../images/background_1d7e7d9e57.png) no-repeat center; back
 .wrap header > nav li {margin-right:5px;}
 .wrap header > nav li > a {display:inline-block; width:100px; padding:10px 20px; background-color:var(--accent-color); text-align:center; box-sizing: border-box;}
 .wrap header > nav li > a span {font-size:14px; color:#fff;}
-.wrap main {height:calc(100% - 200px); padding:40px 25px; background-color:var(--document-bg-color); box-sizing: border-box;}
-.wrap main .card-list {position:relative; display:flex; height:250px; margin-bottom:10px; border:1px solid var(--border-color); background-color:var(--bg-accent-color); box-shadow: 2px 2px 2px 1px var(--shadow-color)}
-.wrap main .card-list .content {padding:20px 15px;}
-.wrap main .card-list .del {position:absolute; right:10px; top:50%; transform:translateY(-50%); display:inline-block; width:20px; height:20px; background: url(../images/ico-del.svg) center/20px auto no-repeat;}
-.wrap main .card-list .del > span {font-size:0; color:transparent}
+.wrap main {min-height:calc(100% - 200px); padding:40px 25px; background-color:var(--document-bg-color); box-sizing: border-box;}
+.wrap main .card-view {position:relative; display:flex; margin-bottom:30px; border:1px solid var(--border-color); background-color:var(--bg-accent-color); box-shadow: 2px 2px 2px 1px var(--shadow-color)}
+.wrap main .card-view .media {width:600px; flex:1 1 600px; height:250px;}
+.wrap main .card-view .media ~ .content {width:calc(100% - 600px);}
+.wrap main .card-view .content {width:100%; padding:20px 15px; box-sizing: border-box;}
+.wrap main .card-view .content .body {padding:20px 0 5px}
+.wrap main .card-view .content .todo-list {padding-left:20px}
+.wrap main .card-view .content .todo-list li::before {display:inline-block; content:'■'; margin-right:5px;}
+.wrap main .card-view .del {position:absolute; right:10px; top:50%; transform:translateY(-50%); display:inline-block; width:20px; height:20px; background: url(../images/ico-del.svg) center/20px auto no-repeat;}
+.wrap main .card-view .del > span {font-size:0; color:transparent}
 .wrap footer {height:50px; background-color:var(--bg-main-color); text-align:center}
