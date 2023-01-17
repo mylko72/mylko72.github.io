@@ -10,8 +10,13 @@ const ui = {};
             objs: {
                 container: document.querySelector('#scroll-section-0'),
                 messageA: document.querySelector('#scroll-section-0 .main-message.a'),
+                canvas: document.querySelector('#video-canvas-0'),
+                context: document.querySelector('#video-canvas-0').getContext('2d'),
+                videoImages: []
             },
             values: {
+                videoImageCount:211,        // 비디오에서 추출한 이미지 갯수
+                imageSequence: [0, 210],    // 재생할 이미지시퀀스 배열
                 messageA_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
                 messageA_translateY_in: [20, 0, { start: 0.1, end: 0.2 }],
                 messageA_opacity_out: [1, 0, { start: 0.25, end: 0.3 }],
@@ -74,7 +79,27 @@ const ui = {};
                 break;
             }
         }
-        document.body.setAttribute('id', `show-scene-${currentScene}`);        
+        document.body.setAttribute('id', `show-scene-${currentScene}`);   
+        
+        const heightRatio = window.innerHeight / 1080;
+        sceneInfo[0].objs.canvas.style.transform = `translate3d(-50%, -50%, 0) scale(${heightRatio})`;
+    }
+
+    function setCanvasImages(){
+        let imgElem;
+        let number;
+        for(let i=0; i<sceneInfo[0].values.videoImageCount; i++){
+            imgElem = new Image();
+            if(i<10){
+                number = `00${i}`;
+            }else if(i>=10&&i<100){
+                number = `0${i}`;
+            }else{
+                number = i;
+            }
+            imgElem.src = `./images/through_the_night_00${number}-min.jpg`;
+            sceneInfo[0].objs.videoImages.push(imgElem);
+        }
     }
 
     function scrollLoop() {
@@ -108,30 +133,30 @@ const ui = {};
         playAnimation();
     }
 
-    function calcValues(values, currentYOffset){
+    function calcValues(props, currentYOffset){
         let rv;
 
         //현재 스크롤섹션에서 스크롤된 범위를 비율로 구하기
         const scrollHeight = sceneInfo[currentScene].scrollHeight;
         const scrollRatio = currentYOffset / scrollHeight;
 
-        // values의 타이밍속성이 3번째 있는지 분기처리
-        if (values.length === 3) {
+        // props의 타이밍속성이 3번째 있는지 분기처리
+        if (props.length === 3) {
             // start ~ end 사이에 애니메이션 실행
-            const partScrollStart = values[2].start * scrollHeight;
-            const partScrollEnd = values[2].end * scrollHeight;
+            const partScrollStart = props[2].start * scrollHeight;
+            const partScrollEnd = props[2].end * scrollHeight;
             const partScrollHeight = partScrollEnd - partScrollStart;
 
             if (currentYOffset >= partScrollStart && currentYOffset <= partScrollEnd) {
-                rv = (currentYOffset - partScrollStart) / partScrollHeight * (values[1] - values[0]) + values[0];
+                rv = (currentYOffset - partScrollStart) / partScrollHeight * (props[1] - props[0]) + props[0];
             } else if (currentYOffset < partScrollStart) {
-                rv = values[0];
+                rv = props[0];
             } else if (currentYOffset > partScrollEnd) {
-                rv = values[1];
+                rv = props[1];
             }
         } else {
-            // scrollRatio는 0에서 1까지이며 전달된 values의 값에 따라 비율에 따른 범위를 구하는 공식
-            rv = scrollRatio * (values[1] - values[0]) + values[0];
+            // scrollRatio는 0에서 1까지이며 전달된 props의 값에 따라 비율에 따른 범위를 구하는 공식
+            rv = scrollRatio * (props[1] - props[0]) + props[0];
         }
     
         return rv
@@ -147,6 +172,9 @@ const ui = {};
         switch (currentScene) {
             case 0:
                 // console.log('0 play');
+                let sequence = Math.round(calcValues(values.imageSequence, currentYOffset));
+                objs.context.drawImage(objs.videoImages[sequence], 0, 0);
+
                 if (scrollRatio <= 0.22) {
                     // in
                     objs.messageA.style.opacity = calcValues(values.messageA_opacity_in, currentYOffset);
@@ -171,6 +199,7 @@ const ui = {};
 
     window.addEventListener('load', () => {
         setLayout(); // 중간에 새로고침 시, 콘텐츠 양에 따라 높이를 세팅하도록 실행
+        sceneInfo[0].objs.context.drawImage(sceneInfo[0].objs.videoImages[0], 0, 0);
     })
 
     window.addEventListener('scroll', () => {
@@ -181,5 +210,6 @@ const ui = {};
     window.addEventListener('resize', setLayout);
 
     setLayout();
+    setCanvasImages();
 
   })(ui);
