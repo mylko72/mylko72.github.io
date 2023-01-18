@@ -34,7 +34,7 @@ caption, legend,  #skipNavi {width:0; height:0; line-height:0; overflow:hidden; 
   }
 
 body {background:url(../images/background_1d7e7d9e57.png) no-repeat center; background-size:cover}
-.wrap {width:1024px; height:100%; margin:0 auto; padding:10px 0; box-sizing:border-box}
+.wrap {width:980px; height:100%; margin:0 auto; padding:10px 0; box-sizing:border-box}
 .wrap header {padding:20px 0 26px; background-color:var(--bg-main-color); text-align:center; }
 .wrap header > h1 {margin-bottom:20px; font-size:42px; color:var(--accent-color); line-height:48px; font-weight:bold}
 .wrap header > nav {display:inline-block;}
@@ -44,8 +44,8 @@ body {background:url(../images/background_1d7e7d9e57.png) no-repeat center; back
 .wrap header > nav li > a span {font-size:14px; color:#fff;}
 .wrap main {min-height:calc(100% - 200px); padding:40px 25px; background-color:var(--document-bg-color); box-sizing: border-box;}
 .wrap main .card-view {position:relative; display:flex; margin-bottom:30px; border:1px solid var(--border-color); background-color:var(--bg-accent-color); box-shadow: 2px 2px 2px 1px var(--shadow-color)}
-.wrap main .card-view .media {width:600px; flex:1 1 600px; height:250px;}
-.wrap main .card-view .media ~ .content {width:calc(100% - 600px);}
+.wrap main .card-view .media {width:500px; flex:1 1 500px; height:250px;}
+.wrap main .card-view .media ~ .content {width:calc(100% - 500px);}
 .wrap main .card-view .content {width:100%; padding:20px 15px; box-sizing: border-box;}
 .wrap main .card-view .content .body {padding:20px 0 5px}
 .wrap main .card-view .content .todo-list {padding-left:20px}
@@ -53,3 +53,14 @@ body {background:url(../images/background_1d7e7d9e57.png) no-repeat center; back
 .wrap main .card-view .del {position:absolute; right:10px; top:50%; transform:translateY(-50%); display:inline-block; width:20px; height:20px; background: url(../images/ico-del.svg) center/20px auto no-repeat;}
 .wrap main .card-view .del > span {font-size:0; color:transparent}
 .wrap footer {height:50px; background-color:var(--bg-main-color); text-align:center}
+.wrap footer > p {line-height:50px;}
+.dialog-pop {display:none; position:fixed; left:0; top:0; width:100%; height:100%; background-color:var(--translucent-black)}
+.dialog-pop.show {display:flex; align-items:center; justify-content:center}
+.dialog-pop .pop {position:relative; width:500px; height:200px; padding:40px 10px 10px; border-radius:10px; background:var(--component-bg-gradient); box-sizing: border-box;}
+.dialog-pop .pop .close {position:absolute; right:10px; top:20px; display:inline-block; width:20px; height:20px; background: url(../images/ico-del.svg) center/20px auto no-repeat;}
+.dialog-pop .pop .close > span {font-size:0; color:transparent}
+.dialog-pop .pop .form-row {margin-bottom:15px}
+.dialog-pop .pop .btn-r {text-align:right}
+.dialog-pop .pop .btn-r > button {padding:5px 20px; background:var(--accent-color); color:#fff}
+.dialog-pop .pop label {display:block; margin-bottom:5px; color:var(--text-accent-color);}
+.dialog-pop .pop input[type="text"] {width:100%; background-color:var(--text-edit-bg-color); line-height:24px; box-sizing: border-box;}
