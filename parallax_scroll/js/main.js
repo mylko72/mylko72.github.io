@@ -5,11 +5,14 @@ const ui = {};
         {
             // 0
             type: 'sticky',
-            heightNum: 5, // 브라우저 높이의 5배로 scrollHeight 세팅
+            heightNum: 6, // 브라우저 높이의 5배로 scrollHeight 세팅
             scrollHeight: 0,
             objs: {
                 container: document.querySelector('#scroll-section-0'),
                 messageA: document.querySelector('#scroll-section-0 .main-message.a'),
+                messageB: document.querySelector('#scroll-section-0 .main-message.b'),     
+                messageC: document.querySelector('#scroll-section-0 .main-message.c'),     
+                messageD: document.querySelector('#scroll-section-0 .main-message.d'),                                                
                 canvas: document.querySelector('#video-canvas-0'),
                 context: document.querySelector('#video-canvas-0').getContext('2d'),
                 videoImages: []
@@ -17,11 +20,19 @@ const ui = {};
             values: {
                 videoImageCount:211,        // 비디오에서 추출한 이미지 갯수
                 imageSequence: [0, 210],    // 재생할 이미지시퀀스 배열
-                messageA_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
-                messageA_translateY_in: [20, 0, { start: 0.1, end: 0.2 }],
-                messageA_opacity_out: [1, 0, { start: 0.25, end: 0.3 }],
-                messageA_translateY_out: [0, -20, { start: 0.25, end: 0.3 }],
-            }
+                canvas_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
+                canvas_opacity_out: [1, 0, { start: 0.9, end: 1 }],
+				messageB_opacity_in: [0, 1, { start: 0.5, end: 0.55 }],
+				messageC_opacity_in: [0, 1, { start: 0.72, end: 0.77 }],     
+				messageB_translateY_in: [30, 0, { start: 0.5, end: 0.55 }],
+				messageC_translateY_in: [30, 0, { start: 0.72, end: 0.77 }],                           
+                messageA_opacity_out: [1, 0, { start: 0.35, end: 0.4 }],
+                messageA_translateY_out: [0, -20, { start: 0.35, end: 0.4 }],
+				messageB_opacity_out: [1, 0, { start: 0.58, end: 0.63 }],
+				messageC_opacity_out: [1, 0, { start: 0.85, end: 0.9 }],    
+				messageB_translateY_out: [0, -20, { start: 0.58, end: 0.63 }],
+				messageC_translateY_out: [0, -20, { start: 0.85, end: 0.9 }],                            
+            }           
         },
         {
             // 1
@@ -90,13 +101,9 @@ const ui = {};
         let number;
         for(let i=0; i<sceneInfo[0].values.videoImageCount; i++){
             imgElem = new Image();
-            if(i<10){
-                number = `00${i}`;
-            }else if(i>=10&&i<100){
-                number = `0${i}`;
-            }else{
-                number = i;
-            }
+
+            number = i < 10 ? `00${i}` : i>=10&&i<100 ? `0${i}` : i;
+
             imgElem.src = `./images/through_the_night_00${number}-min.jpg`;
             sceneInfo[0].objs.videoImages.push(imgElem);
         }
@@ -172,18 +179,41 @@ const ui = {};
         switch (currentScene) {
             case 0:
                 // console.log('0 play');
+
                 let sequence = Math.round(calcValues(values.imageSequence, currentYOffset));
-                objs.context.drawImage(objs.videoImages[sequence], 0, 0);
+                console.log('sequence', sequence)
+                objs.context.drawImage(objs.videoImages[sequence], 0, 0);  
+                objs.canvas.style.opacity = calcValues(values.canvas_opacity_out, currentYOffset);
 
                 if (scrollRatio <= 0.22) {
                     // in
-                    objs.messageA.style.opacity = calcValues(values.messageA_opacity_in, currentYOffset);
-                    objs.messageA.style.transform = `translate3d(0, ${calcValues(values. messageA_translateY_in, currentYOffset)}%, 0)`;
-                }else{
+                    objs.canvas.parentElement.style.opacity = calcValues(values.canvas_opacity_in, currentYOffset);
+                //     objs.messageA.style.transform = `translate3d(0, ${calcValues(values. messageA_translateY_in, currentYOffset)}%, 0)`;
+                }else{                                      
                     // out
                     objs.messageA.style.opacity = calcValues(values.messageA_opacity_out, currentYOffset);
                     objs.messageA.style.transform = `translate3d(0, ${calcValues(values.messageA_translateY_out, currentYOffset)}%, 0)`;
                 }
+
+				if (scrollRatio <= 0.42) {
+					// in
+					objs.messageB.style.opacity = calcValues(values.messageB_opacity_in, currentYOffset);
+					objs.messageB.style.transform = `translate3d(0, ${calcValues(values.messageB_translateY_in, currentYOffset)}%, 0)`;
+				} else {
+					// out
+					objs.messageB.style.opacity = calcValues(values.messageB_opacity_out, currentYOffset);
+					objs.messageB.style.transform = `translate3d(0, ${calcValues(values.messageB_translateY_out, currentYOffset)}%, 0)`;
+				}
+
+				if (scrollRatio <= 0.62) {
+					// in
+					objs.messageC.style.opacity = calcValues(values.messageC_opacity_in, currentYOffset);
+					objs.messageC.style.transform = `translate3d(0, ${calcValues(values.messageC_translateY_in, currentYOffset)}%, 0)`;
+				} else {
+					// out
+					objs.messageC.style.opacity = calcValues(values.messageC_opacity_out, currentYOffset);
+					objs.messageC.style.transform = `translate3d(0, ${calcValues(values.messageC_translateY_out, currentYOffset)}%, 0)`;
+				}                
                 
                 break;
     
@@ -200,6 +230,7 @@ const ui = {};
     window.addEventListener('load', () => {
         setLayout(); // 중간에 새로고침 시, 콘텐츠 양에 따라 높이를 세팅하도록 실행
         sceneInfo[0].objs.context.drawImage(sceneInfo[0].objs.videoImages[0], 0, 0);
+        sceneInfo[0].objs.messageA.classList.add('show');
     })
 
     window.addEventListener('scroll', () => {
