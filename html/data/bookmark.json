@@ -479,6 +479,13 @@
 	],
     "Git" :[
         {
+            "site": "GitHub Docs",
+            "url": "https://docs.github.com/ko/get-started",
+            "explain": "GitHub 여정의 모든 위치에 대한 도움말.",
+			"rate" : "",
+			"tags" : ["깃", "깃허브", "Git"]
+        },
+        {
             "site": "완전 초보를 위한 깃허브",
             "url": "http://nolboo.github.io/blog/2013/10/06/github-for-beginner/",
             "explain": "초보자를 위한 깃허브 사용 메뉴얼",
