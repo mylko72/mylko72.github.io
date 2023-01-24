@@ -13,14 +13,14 @@
     const ratioElem = document.querySelector('.status_info .ratio');
 
 	const sceneInfo = [
-        {
-            // scene 0
-            type: 'normal',
-            scrollHeight: 0,        
+		{
+			// scene 0
+			type: 'normal',
+			scrollHeight: 0,        
 			objs: {
 				container: null
-            },
-        },
+			},
+		},
 		{
 			// scene 1
 			type: 'sticky',

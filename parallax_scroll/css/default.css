@@ -90,7 +90,7 @@ body.before-load {
 .scroll-section h1 {
     position: relative;
     z-index: 5;
-    font-size: 4rem;
+    font-size: 6rem;
     text-align: center;
 }
 
@@ -101,13 +101,34 @@ body.before-load {
 	margin: 5px 0;
 	top:35vh;
 	height: 3em;
-	font-size: 2.5rem;
+	font-size: 4rem;
 	opacity: 0;
 }
 .main-message p {
 	font-weight: bold;
 	text-align: center;
 	line-height: 1.2;
+}
+
+.container .header {
+	position:fixed;
+	left:0;
+	top:0;
+	z-index:10;
+	width:100%;
+	height:76px;
+	padding:0 52px;
+	background:rgba(255,255,255,.1);
+	-webkit-backdrop-filter: blur(15px);
+	backdrop-filter: blur(15px);
+}
+
+.container .header .title_area {
+	display:flex;
+	height:76px;
+	align-items:center;
+	font-size:38px;
+	font-weight:bold;
 }
 
 #show-scene-0 #scroll-section-0 .sticky-elem,
@@ -118,6 +139,9 @@ body.before-load {
 	will-change: transform, opacity;
 }
 
+#show-scene-0 .container .header,
+#show-scene-2 .container .header
+{background: transparent;}
 #show-scene-0 #scroll-section-0 .sticky-elem-canvas {opacity:0; z-index:10}
 #show-scene-0 #scroll-section-0 .sticky-elem-canvas > img {max-width:none; height:100%}
 #show-scene-0 #scroll-section-0 .sticky-elem {display:flex; align-items:center; justify-content:center}
@@ -125,15 +149,27 @@ body.before-load {
 #show-scene-0 #scroll-section-0 .sticky-elem.main-message {z-index:20;}
 #show-scene-0 #scroll-section-0 .sticky-elem.main-message.a {opacity:0; transform:translateY(50px); transition:all .7s;}
 #show-scene-0 #scroll-section-0 .sticky-elem.main-message.a.show {opacity:1; transform:translateY(0)}
-
 #show-scene-1 #scroll-section-1 .main-message.a {opacity:1}
 
-@media (min-width: 1024px){
-	#scroll-section-0 h1 {
-		font-size: 6vw;
-	}
+#scroll-section-1 {padding-top:0;}
+#scroll-section-1 .content {height:100% ;
+	background-image:url(..//images/img_night_03.jpg);
+	background-position: 50% 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;}
+#scroll-section-1 .main-message { height:100vh; flex-direction:column; opacity:1}
+#scroll-section-1 .main-message > p {margin:2rem 0;}
+#scroll-section-1 .bg-main {width:100%; height:100vh; background:#000;}
 
-	.main-message {
-		font-size: 4vw;
-	}	
+#scroll-section-2 {padding: 27vh 0;	z-index: 2;	background-color: #393d4c;}
+#scroll-section-2 .main-message {height:2em; color:#5c6278; opacity:1}
+#scroll-section-2 .sticky-elem.main-message.a {top:27vh}
+#scroll-section-2 .sticky-elem.main-message.b {top:41.3vh}
+#scroll-section-2 .sticky-elem.main-message.c {top:55.5vh}
+#scroll-section-2 .sticky-elem.main-message.d {top:69.9vh}
+
+@media (min-width: 1024px){
+
+
 }
