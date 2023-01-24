@@ -5,7 +5,7 @@ const ui = {};
         {
             // 0
             type: 'sticky',
-            heightNum: 6, // 브라우저 높이의 5배로 scrollHeight 세팅
+            heightNum: 8, // 브라우저 높이의 5배로 scrollHeight 세팅
             scrollHeight: 0,
             objs: {
                 container: document.querySelector('#scroll-section-0'),
@@ -22,42 +22,55 @@ const ui = {};
                 videoImageCount:211,        // 비디오에서 추출한 이미지 갯수
                 imageSequence: [0, 210],    // 재생할 이미지시퀀스 배열
                 canvas_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
-                canvas_opacity_out: [1, 0, { start: 0.9, end: 1 }],
-                canvas_translateY_out: [0, -100, { start: 0.9, end: 1 }],    
+                canvas_opacity_out: [1, 0, { start: 0.9, end: 1 }],   
                 messageA_opacity_out: [1, 0, { start: 0.35, end: 0.4 }],
                 messageA_translateY_out: [0, -20, { start: 0.35, end: 0.4 }],                
-				messageB_opacity_in: [0, 1, { start: 0.45, end: 0.55 }],
-				messageB_translateY_in: [30, 0, { start: 0.45, end: 0.55 }],
-				messageB_opacity_out: [1, 0, { start: 0.6, end: 0.65 }],                
-				messageB_translateY_out: [0, -30, { start: 0.6, end: 0.65 }],                
-				messageC_opacity_in: [0, 1, { start: 0.6, end: 0.7 }],     
-				messageC_translateY_in: [30, 0, { start: 0.6, end: 0.7 }],                           
+				messageB_opacity_in: [0, 1, { start: 0.45, end: 0.52 }],
+				messageB_translateY_in: [30, 0, { start: 0.45, end: 0.52 }],
+				messageB_opacity_out: [1, 0, { start: 0.55, end: 0.6 }],                
+				messageB_translateY_out: [0, -20, { start: 0.55, end: 0.6 }],                
+				messageC_opacity_in: [0, 1, { start: 0.65, end: 0.72 }],     
+				messageC_translateY_in: [30, 0, { start: 0.65, end: 0.72 }],                           
 				messageC_opacity_out: [1, 0, { start: 0.75, end: 0.8 }],    
-				messageC_translateY_out: [0, -30, { start: 0.75, end: 0.8 }],   
-				messageD_opacity_in: [0, 1, { start: 0.75, end: 0.85 }],     
-				messageD_translateY_in: [30, 0, { start: 0.75, end: 0.85}],                           
-				messageD_opacity_out: [1, 0, { start: 0.9, end: 0.95 }],    
-				messageD_translateY_out: [0, -30, { start: 0.9, end: 0.95 }],    
-				bgMain_translateY_out: [0, -100, { start: 0.9, end: 1 }],                                                               
+				messageC_translateY_out: [0, -20, { start: 0.75, end: 0.8 }],   
+				messageD_opacity_in: [0, 1, { start: 0.85, end: 0.92 }],     
+				messageD_translateY_in: [30, 0, { start: 0.85, end: 0.92}],                           
+				messageD_opacity_out: [1, 0, { start: 0.95, end: 0.99 }],    
+				messageD_translateY_out: [0, -20, { start: 0.95, end: 0.99 }],                                                                
             }           
         },
         {
             // 1
-            type: 'sticky',
+            type: 'normal',
             heightNum: 5, // type normal에서는 필요 없음
             scrollHeight: 0,
             objs: {
                 container: document.querySelector('#scroll-section-1'),
+                content: document.querySelector('#scroll-section-1 .content')
             }
         },
         {
             // 2
             type: 'sticky',
-            heightNum: 5,
+            heightNum: 4,
             scrollHeight: 0,
             objs: {
                 container: document.querySelector('#scroll-section-2'),
+                messageA: document.querySelector('#scroll-section-2 .main-message.a'),
+                messageB: document.querySelector('#scroll-section-2 .main-message.b'),     
+                messageC: document.querySelector('#scroll-section-2 .main-message.c'),     
+                messageD: document.querySelector('#scroll-section-2 .main-message.d'),                       
             },
+			values: {
+				messageA_translateY_in: [100, 0, { start: 0, end: 0.25 }],
+				messageB_translateY_in: [100, 0, { start: 0, end: 0.25 }],
+				messageC_translateY_in: [100, 0, { start: 0, end: 0.25 }],
+                messageD_translateY_in: [100, 0, { start: 0, end: 0.25 }],
+				messageA_translateY_out: [0, -100, { start: 0.7, end: 1 }],
+				messageB_translateY_out: [0, -100, { start: 0.7, end: 1 }],
+				messageC_translateY_out: [0, -100, { start: 0.7, end: 1 }],
+                messageD_translateY_out: [0, -100, { start: 0.7, end: 1 }],
+			},            
         },
         {
             // 3
@@ -81,7 +94,7 @@ const ui = {};
             if (sceneInfo[i].type === 'sticky') {
                 sceneInfo[i].scrollHeight = sceneInfo[i].heightNum * window.innerHeight;
             } else if (sceneInfo[i].type === 'normal') {
-                sceneInfo[i].scrollHeight = sceneInfo[i].objs.content.offsetHeight + window.innerHeight * 0.5;
+                sceneInfo[i].scrollHeight = sceneInfo[i].objs.content.offsetHeight;
             }
             sceneInfo[i].objs.container.style.height = `${sceneInfo[i].scrollHeight}px`;
         }
@@ -182,13 +195,14 @@ const ui = {};
         const currentYOffset = yOffset - prevScrollHeight;
         const scrollHeight = sceneInfo[currentScene].scrollHeight;
         const scrollRatio = currentYOffset / scrollHeight;
+
+        console.log('scrollRatio', scrollRatio)
     
         switch (currentScene) {
             case 0:
                 // console.log('0 play');
 
                 let sequence = Math.round(calcValues(values.imageSequence, currentYOffset));
-                console.log('sequence', sequence)
                 objs.context.drawImage(objs.videoImages[sequence], 0, 0);  
                 
 
@@ -202,7 +216,7 @@ const ui = {};
                     objs.messageA.style.transform = `translate3d(0, ${calcValues(values.messageA_translateY_out, currentYOffset)}%, 0)`;
                 }
 
-				if (scrollRatio <= 0.57) {
+				if (scrollRatio <= 0.53) {
 					// in
 					objs.messageB.style.opacity = calcValues(values.messageB_opacity_in, currentYOffset);
 					objs.messageB.style.transform = `translate3d(0, ${calcValues(values.messageB_translateY_in, currentYOffset)}%, 0)`;
@@ -222,7 +236,7 @@ const ui = {};
 					objs.messageC.style.transform = `translate3d(0, ${calcValues(values.messageC_translateY_out, currentYOffset)}%, 0)`;
 				}  
                 
-				if (scrollRatio <= 0.87) {
+				if (scrollRatio <= 0.93) {
 					// in
 					objs.messageD.style.opacity = calcValues(values.messageD_opacity_in, currentYOffset);
 					objs.messageD.style.transform = `translate3d(0, ${calcValues(values.messageD_translateY_in, currentYOffset)}%, 0)`;
@@ -235,17 +249,67 @@ const ui = {};
 				if (scrollRatio > 0.87) {
 					// out
                     objs.canvas.style.opacity = calcValues(values.canvas_opacity_out, currentYOffset);
-                    objs.canvas.parentElement.style.transform = calcValues(values.canvas_translateY_out, currentYOffset);
-					objs.bgMain.style.transform = `translate3d(0, ${calcValues(values.bgMain_translateY_out, currentYOffset)}%, 0)`;
-				}                
+ 				}                
                 break;
     
             case 1:
-                // console.log('2 play');
+                // console.log('2 play');  
+                sceneInfo[2].objs.container.querySelectorAll('.main-message').forEach((message) => {
+                    message.classList.remove('sticky-elem')
+                })
                 break;
-    
             case 2:
                 // console.log('3 play');
+                let mainMessage = sceneInfo[2].objs.container.querySelectorAll('.main-message');
+                mainMessage.forEach((message) => {
+                    message.classList.add('sticky-elem')
+                })
+
+			    if (scrollRatio > 0.74) {
+					// in
+					objs.messageA.style.transform = `translate3d(0, ${calcValues(values.messageA_translateY_out, currentYOffset)}vh, 0)`;
+					objs.messageB.style.transform = `translate3d(0, ${calcValues(values.messageB_translateY_out, currentYOffset)}vh, 0)`;
+					objs.messageC.style.transform = `translate3d(0, ${calcValues(values.messageC_translateY_out, currentYOffset)}vh, 0)`;
+                    objs.messageD.style.transform = `translate3d(0, ${calcValues(values.messageD_translateY_out, currentYOffset)}vh, 0)`;		
+                }else{
+                    // out
+                    objs.messageA.style.transform = `translate3d(0, ${calcValues(values.messageA_translateY_out, currentYOffset)}vh, 0)`;
+                    objs.messageB.style.transform = `translate3d(0, ${calcValues(values.messageB_translateY_out, currentYOffset)}vh, 0)`;
+                    objs.messageC.style.transform = `translate3d(0, ${calcValues(values.messageC_translateY_out, currentYOffset)}vh, 0)`;
+                    objs.messageD.style.transform = `translate3d(0, ${calcValues(values.messageD_translateY_out, currentYOffset)}vh, 0)`;		
+                }
+
+                if(scrollRatio < 0.1){
+                    objs.messageA.style.color = '#5c6278';
+                }else if(scrollRatio >= 0.1 && scrollRatio < 0.34) {
+					objs.messageA.style.color = '#fff';
+					objs.messageB.style.color = '#5c6278';
+					objs.messageC.style.color = '#5c6278';
+					objs.messageD.style.color = '#5c6278';                    
+				} else if(scrollRatio >= 0.35 && scrollRatio < 0.49) {
+					objs.messageA.style.color = '#5c6278';
+					objs.messageB.style.color = '#fff';
+					objs.messageC.style.color = '#5c6278';
+                    objs.messageD.style.color = '#5c6278';
+				} else if(scrollRatio >= 0.5 && scrollRatio < 0.64) {
+					objs.messageA.style.color = '#5c6278';
+					objs.messageB.style.color = '#5c6278';
+					objs.messageC.style.color = '#fff';
+                    objs.messageD.style.color = '#5c6278';
+				}else if(scrollRatio >= 0.65){
+					objs.messageA.style.color = '#5c6278';
+					objs.messageB.style.color = '#5c6278';
+					objs.messageC.style.color = '#5c6278';
+                    objs.messageD.style.color = '#fff';
+				}
+
+				// let stTimer2 = setTimeout(() => {
+				// 	objs.messageA.style.transition = 'all 1s';
+				// 	objs.messageB.style.transition = 'all 1s';
+				// 	objs.messageC.style.transition = 'all 1s';
+				// 	clearTimeout(stTimer2);
+				// }, 500)
+
                 break;
         }
     }
