@@ -15,7 +15,7 @@
 		Init function will check for specific body classes and create the necessary page object.
 		@function init
 		**/
-        function init() {
+		function init() {
 			$.util= new $.Utilities();
 
 			loadBookmarkList();	
