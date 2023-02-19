@@ -1,0 +1,448 @@
+{
+  "works":[
+    {
+      "project":"삼성물산 패션몰 개선 및 운영",
+      "thumbnail":"/assets/images/img_ssfshop_s.jpg",
+      "images":[
+        "/assets/images/img_ssfshop_01.jpg",
+        "/assets/images/img_ssfshop_02.jpg"
+      ],
+      "company":"웨이브",
+      "client":"삼성물산",
+      "date":"2022.06 ~ 2022.12",
+      "task":"화면 및 공통 UI 개선 및 운영 업무",
+      "desc":"메인 및 공통 UI(레이아웃 및 검색) 개선, 기획전 및 상품상세 개선, Git을 이용한 버전 관리",
+      "url":"https://www.ssfshop.com/"
+    },
+    {
+      "project":"아모레 E-Accounting 멀티브라우저 개선",
+      "thumbnail":"",
+      "images":[
+        
+      ],
+      "company":"비트윈소프트",
+      "client":"아모레",
+      "date":"2022.03 ~ 2022.05",
+      "task":"프론트 UI 오류 수정 및 스크립트 수정",
+      "desc":"IE EOS에 따른 크로스브라우징 개선",
+      "url":""
+    },
+    {
+      "project":"신한은행 배달앱서비스 땡겨요",
+      "thumbnail":"/assets/images/img_ddangyo_s.jpg",
+      "images":[
+        "/assets/images/img_ddangyo_01.jpg",
+        "/assets/images/img_ddangyo_02.jpg"
+      ],
+      "company":"픽스다인",
+      "client":"신한은행",
+      "date":"2021.08 ~ 2022.02",
+      "task":"프론트엔드 UI 스크립트",
+      "desc":"배달앱, 가맹점 UI 스크립트 및 브랜드사이트 Full Scroll Animation",
+      "url":"https://www.ddangyo.com/"
+    },
+    {
+      "project":"삼성SDS 인적자원 Visibility 강화과제",
+      "thumbnail":"/assets/images/img_sds_s.jpg",
+      "images":[
+        "/assets/images/img_sds_s.png"
+      ],
+      "company":"픽스다인",
+      "client":"삼성SDS",
+      "date":"2020.06 ~ 2021.06",
+      "task":"Vue.js 기반 프론트엔드 퍼블리싱",
+      "desc":"교육과 인사시스템을 Vue.js 플랫폼을 활용하여 고도화 및 구축"
+    },
+    {
+      "project":" 신라면세점 운영 및 서비스 구축",
+      "thumbnail":"/assets/images/img_shilladfs_s.jpg",
+      "images":[
+        "/assets/images/recent_shilladfs_view2.jpg",
+        "/assets/images/recent_shilladfs_view.jpg",
+        "/assets/images/recent_shilladfs_view3.jpg"
+      ],
+      "company":"픽스다인",
+      "client":"신라면세점",
+      "date":"2018.04 ~ 2020.06",
+      "task":"웹퍼블리싱, 스크립트 및 인터렉션",
+      "desc":"신라면세점 EC 및 Tipping, 신라트립 서비스 구축",
+      "url":"http://m.shilladfs.com/estore/kr/ko/"
+    },
+    {
+      "project":"홈앤쇼핑 운영 및 개선",
+      "thumbnail":"/assets/images/img_hnsmall_s.jpg",
+      "images":[
+        "/assets/images/recent_hnsmall_view.jpg"
+      ],
+      "company":"소셜앱스",
+      "client":"홈앤쇼핑",
+      "date":"2017.02 ~ 2018.02",
+      "task":"웹퍼블리싱, 스크립트 및 인터렉션",
+      "desc":"홈앤쇼핑 UI개선 및 운영",
+      "url":" https://www.hnsmall.com/"
+    },
+    {
+      "project":"네이버 통합검색 UI 개선",
+      "thumbnail":"/assets/images/img_naver_s.jpg",
+      "images":[
+        "/assets/images/recent_naver_view.jpg"
+      ],
+      "company":"이노스트",
+      "client":"NHN",
+      "date":"2016.08 ~ 2016.12",
+      "task":"웹퍼블리싱, Git을 이용한 버전 관리, Gulp",
+      "desc":"네이버 통합검색 개편 및 운영",
+      "url":" https://www.naver.com/"
+    },
+    {
+      "project":"Toryburch 쇼핑몰 구축",
+      "thumbnail":"/assets/images/img_toryburch_s.jpg",
+      "images":[
+        "/assets/images/recent_toryburch_view.jpg"
+      ],
+      "company":"이젠 인터렉티브",
+      "client":"제일모직",
+      "date":"2016.04 ~ 2016.06",
+      "task":"웹퍼블리싱, 스크립트 모듈화 및 라이브러리 수정",
+      "desc":"토리버치 온라인 샵 구축 및 모바일 웹 구축",
+      "url":"http://www.toryburch.co.kr/"
+    },
+    {
+      "project":"LG.COM 4.0 Roll Out",
+      "thumbnail":"/assets/images/img_lgcom_s.jpg",
+      "images":[
+        "/assets/images/recent_lgcom_view.jpg"
+      ],
+      "company":"피프티원",
+      "client":"LG CNS",
+      "date":"2015.10 ~ 2016.03",
+      "task":"Sass, Grunt를 압축/병합/빌드, Gnb 공통 스크립트, Share API 수정",
+      "desc":"LG.Com 4.0 국가별 확산 작업, PC 및 모바일 대응 반응형 웹 구축",
+      "url":"http://www.lg.com/uk/"
+    },
+    {
+      "project":"한컴 핀테크 드림시드",
+      "thumbnail":"/assets/images/img_dreamsead_s.jpg",
+      "images":[
+        "/assets/images/recent_dreamsead_view.jpg"
+      ],
+      "company":"디지털즈",
+      "client":"한글과 컴퓨터",
+      "date":"2015.08 ~ 2015.09",
+      "task":"웹퍼블리싱, 스크립트 모듈화 및 공통 가이드",
+      "desc":"한글과 컴퓨터의 크라우드 펀딩 서비스 구축, PC 및 모바일 대응 반응형 웹 구축",
+      "url":"https://www.dreamsead.com/"
+    },
+    {
+      "project":"스마일게이트 게임커뮤니티 구축",
+      "thumbnail":"",
+      "images":[
+        
+      ],
+      "company":"아이덴비인터랙티브",
+      "client":"스마일게이트",
+      "date":"2015.01 ~ 2015.06",
+      "task":"웹퍼블리싱 PL",
+      "desc":"게임 커뮤니티 사이트 신규 구축",
+      "url":"http://www.lottefresh.com/"
+    },
+    {
+      "project":"Lotte Fresh 리뉴얼",
+      "thumbnail":"/assets/images/img_lotte_fresh_s.jpg",
+      "images":[
+        "/assets/images/img_lotte_fresh.jpg"
+      ],
+      "company":"퍼플루트",
+      "client":"LOTTE",
+      "date":"2014.09 ~ 2014.11",
+      "task":"웹퍼블리싱",
+      "desc":"롯데 프레시 쇼핑몰 구축, PC 및 모바일 대응 반응형 웹 구축",
+      "url":"http://www.lottefresh.com/"
+    },
+    {
+      "project":"SAMSUNG CN 반응형웹",
+      "thumbnail":"/assets/images/img_samsung_cn_s.jpg",
+      "images":[
+        "/assets/images/img_samsung_cn.jpg"
+      ],
+      "company":"오픈타이드차이나",
+      "client":"SAMSUNG",
+      "date":"2014.07 ~ 2014.08",
+      "task":"퍼블리싱 및 스크립트",
+      "desc":"Front 페이지 코딩 및 스크립트",
+      "url":"http://www.samsung.com/cn/"
+    },
+    {
+      "project":"SAMSUNG UK 반응형웹",
+      "thumbnail":"/assets/images/recent_work_01.jpg",
+      "images":[
+        "/assets/images/recent_work_view01.jpg"
+      ],
+      "company":"에이디앤스타일",
+      "client":"SAMSUNG",
+      "date":"2013.10 ~ 2014.03",
+      "task":"자바 스크립트 및 UI 개발",
+      "desc":"Front 페이지 UI 스크립트 및 자바스크립트 동적 구현",
+      "url":"http://www.samsung.com/uk/"
+    },
+    {
+      "project":"LG Fashion Shop 모바일웹",
+      "thumbnail":"/assets/images/recent_work_03.jpg",
+      "images":[
+        "/assets/images/recent_work_view03.jpg"
+      ],
+      "company":"ITLINE",
+      "client":"LG Fashion",
+      "date":"2013.08 ~ 2013.08",
+      "task":"웹퍼블리싱 PL",
+      "desc":"모바일웹 퍼블리싱 및 모바일 가이드 작성 / UI 스크립트",
+      "url":"http://m.lgfashionshop.com/"
+    },
+    {
+      "project":"LG Fashion Shop",
+      "thumbnail":"/assets/images/recent_work_02.jpg",
+      "images":[
+        "/assets/images/recent_work_view02.jpg"
+      ],
+      "company":"ITLINE",
+      "client":"LG Fashion",
+      "date":"2013.03 ~ 2013. 07",
+      "task":"웹퍼블리싱 PL",
+      "desc":"퍼블리싱 및 가이드 작성 / UI 스크립트 / 개발페이지 코딩 결함 수정",
+      "url":" http://www.lfmall.co.kr/"
+    },
+    {
+      "project":"SAMSUNG Developers",
+      "thumbnail":"/assets/images/recent_work_04.jpg",
+      "images":[
+        "/assets/images/recent_work_view04.jpg"
+      ],
+      "company":"CONTENTS TECH",
+      "client":"SAMSUNG",
+      "date":"2012.07 ~ 2012.10",
+      "task":"웹퍼블리싱 PL",
+      "desc":"Html 코딩 및 jQuery / 일정관리 및 가이드 작성 / 개발페이지 코딩 결함 수정",
+      "url":"http://developer.samsung.com/"
+    },
+    {
+      "project":"SKT 멤버십",
+      "thumbnail":"/assets/images/recent_work_05.jpg",
+      "images":[
+        "/assets/images/recent_work_view05.jpg"
+      ],
+      "company":"미디어포스",
+      "client":"SKTelecom",
+      "date":"2012.02 ~ 2012.05",
+      "task":"웹퍼블리싱 PL",
+      "desc":"Html 코딩 및 jQuery / 일정관리 및 카테고리별 파트 분담 / 개발페이지 코딩 결함 수정",
+      "url":"http://www.sktmembership.co.kr/"
+    },
+    {
+      "project":"신한은행",
+      "thumbnail":"/assets/images/recent_work_06.jpg",
+      "images":[
+        "/assets/images/img_shinhan_bank.jpg"
+      ],
+      "company":"미디어포스",
+      "client":"신한은행",
+      "date":"2011.07 ~ 2012.02",
+      "task":"웹퍼블리싱 PL",
+      "desc":"Html 코딩 및 jQuery / 일정관리 및 카테고리별 파트 분담 / 개발페이지 코딩 결함 수정",
+      "url":"http://www.shinhan.com/"
+    },
+    {
+      "project":"현대엔지니어링",
+      "thumbnail":"/assets/images/recent_work_08.jpg",
+      "images":[
+        "/assets/images/img_hyundae_engineering.jpg"
+      ],
+      "company":"미디어포스",
+      "client":"현대엔지니어링",
+      "date":"2011.09 ~ 2011. 12",
+      "task":"웹퍼블리싱 PL",
+      "desc":"Html 코딩 및 jQuery / 프로젝트 코딩 가이드 작성",
+      "url":"http://www.hec.co.kr/"
+    },
+    {
+      "project":"롯데카드",
+      "thumbnail":"/assets/images/recent_work_07.jpg",
+      "images":[
+        "/assets/images/recent_work_view07.jpg"
+      ],
+      "company":"미디어포스",
+      "client":"Lotte Card",
+      "date":"2011.04 ~ 2011.09",
+      "task":"웹퍼블리싱 PL",
+      "desc":"Html 코딩 및 jQuery / 일정관리 및 카테고리별 파트 분담 / 프로젝트 코딩 가이드 작성 및 샘플페이지 작성 / 개발페이지 코딩 결함 수정",
+      "url":"http://www.lottecard.co.kr/"
+    },
+    {
+      "project":"KTH 컨버전스 영상서비스",
+      "thumbnail":"/assets/images/img_playy.jpg",
+      "images":[
+        "/assets/images/img_playy.jpg"
+      ],
+      "company":"미디어포스",
+      "client":"KTH",
+      "date":"2010.10 ~ 2010.12",
+      "task":"웹퍼블리싱",
+      "desc":"Html 코딩 및 jQuery / 코딩 가이드 작성 및 개발페이지 코딩 결함 수정",
+      "url":"http://www.playy.co.kr/"
+    },
+    {
+      "project":"Tooniverse",
+      "thumbnail":"/assets/images/img_tooniverse_s.jpg",
+      "images":[
+        "/assets/images/img_tooniverse.jpg"
+      ],
+      "company":"미디어포스",
+      "client":"CJ E&N",
+      "date":"2010.07 ~ 2010.08",
+      "task":"웹퍼블리싱",
+      "desc":" Html 코딩 및 jQuery / 코딩 가이드 작성",
+      "url":"http://www.tooniland.com/tooniverse/program/getFrontProgramList.tl"
+    },
+    {
+      "project":"SKT T bizpoint",
+      "thumbnail":"/assets/images/recent_work_11.jpg",
+      "images":[
+        "/assets/images/img_sktbiz_point.jpg"
+      ],
+      "company":"미디어포스",
+      "client":"SK 텔레콤",
+      "date":"2010.03 ~ 2010.06",
+      "task":"웹퍼블리싱 PL",
+      "desc":"Html 코딩 및 jQuery / 일정관리 및 카테고리별 파트 분담 / 프로젝트 코딩 가이드 작성 및 샘플페이지 작성 / 개발페이지 코딩 결함 수정",
+      "url":" http://www.tbizpoint.co.kr/"
+    },
+    {
+      "project":"BC카드 법인",
+      "thumbnail":"/assets/images/img_wise_biz_s.jpg",
+      "images":[
+        "/assets/images/img_wise_biz.jpg"
+      ],
+      "company":"미디어포스",
+      "client":"BC",
+      "date":"2009.09 ~ 2009.12",
+      "task":"웹퍼블리싱 PL",
+      "desc":"CMS (Contents Management System) 연동 코딩 / Html 코딩 및 자바스크립트 / 개발페이지 코딩 결함 수정",
+      "url":"http://wisebiz.bccard.com/"
+    },
+    {
+      "project":"BC 골프라운지",
+      "thumbnail":"/assets/images/recent_work_13.gif",
+      "images":[
+        
+      ],
+      "company":"미디어포스",
+      "client":"BC",
+      "date":"2009.04 ~ 2009.07",
+      "task":"웹퍼블리싱 PL",
+      "desc":"CMS (Contents Management System) 연동 코딩 / Html 코딩 및 자바스크립트 / 일정관리 및 카테고리별 파트 분담 / 프로젝트 코딩 가이드 작성 및 샘플페이지 작성 / 개발페이지 코딩 결함 수정",
+      "url":"http://www.golfloung.com/"
+    },
+    {
+      "project":"SK 브로드밴드 TV 개편",
+      "thumbnail":"",
+      "images":[
+        
+      ],
+      "company":"미디어포스",
+      "client":"BC",
+      "date":"2008.12 ~ 2009.02",
+      "task":"웹퍼블리싱 PL",
+      "desc":"Html 코딩 및 자바스크립트 / 일정관리 / 가이드 작성",
+      "url":"http://www.golfloung.com/"
+    },
+    {
+      "project":"2008 SK 텔레콤 T world",
+      "thumbnail":"/assets/images/recent_work_14_s.jpg",
+      "images":[
+        "/assets/images/img_tworld_2008.jpg"
+      ],
+      "company":"미디어포스",
+      "client":"SK 텔레콤",
+      "date":"2008.08 ~ 2008.11",
+      "task":"웹퍼블리싱 PL",
+      "desc":"Html 코딩 및 jQuery / 일정관리 및 카테고리별 파트 분담 / 프로젝트 코딩 가이드 작성 및 샘플페이지 작성 / 개발페이지 코딩 결함 수정",
+      "url":"http://www.tworld.co.kr/"
+    },
+    {
+      "project":"2007 SK 텔레콤 T world",
+      "thumbnail":"/assets/images/recent_work_15.gif",
+      "images":[
+        
+      ],
+      "company":"미디어포스",
+      "client":"SK 텔레콤",
+      "date":"2007.07 ~ 2007.12",
+      "task":"웹퍼블리싱 PL",
+      "desc":"Html 코딩 및 jQuery / 일정관리 및 카테고리별 파트 분담 / 프로젝트 코딩 가이드 작성 및 샘플페이지 작성 / 개발페이지 코딩 결함 수정",
+      "url":"http://www.tworld.co.kr/"
+    },
+    {
+      "project":"쇼핑몰 와와닷컴",
+      "thumbnail":"/assets/images/recent_work_16.jpg",
+      "images":[
+        
+      ],
+      "company":"NEOFISH",
+      "client":"골든프레임",
+      "date":"2006.09 ~ 2007.04",
+      "desc":"",
+      "url":"http://www.waawaa.com/"
+    },
+    {
+      "project":"한국기업데이터",
+      "thumbnail":"/assets/images/recent_work_17.jpg",
+      "images":[
+        
+      ],
+      "company":"제로업",
+      "client":"인포렉스",
+      "date":"2005.01 ~ 2005.07",
+      "task":"웹퍼블리싱",
+      "desc":"",
+      "url":""
+    },
+    {
+      "project":"오즈뮤직",
+      "thumbnail":"/assets/images/recent_work_18.jpg",
+      "images":[
+        
+      ],
+      "company":"인포렉스",
+      "client":"인포렉스",
+      "date":"2005.01 ~ 2005.07",
+      "task":"웹퍼블리싱",
+      "desc":"",
+      "url":""
+    },
+    {
+      "project":"MBC ESPN",
+      "thumbnail":"/assets/images/recent_work_19.jpg",
+      "images":[
+        
+      ],
+      "company":"KL 커뮤니케이션",
+      "client":"MBC ESPN",
+      "date":"2003.02 ~ 2003.05",
+      "task":"웹퍼블리싱",
+      "desc":"",
+      "url":""
+    },
+    {
+      "project":"포털사이트 넷츠고 구축",
+      "thumbnail":"",
+      "images":[
+        
+      ],
+      "company":"이모션",
+      "client":"넷츠고",
+      "date":"2001.06 ~ 2001.12",
+      "task":"웹퍼블리싱",
+      "desc":"Html 및 템플릿 코딩, 넷츠고 사이트 운영 코딩",
+      "url":""
+    }
+  ]
+}
