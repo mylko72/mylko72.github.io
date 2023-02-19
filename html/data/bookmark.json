@@ -92,7 +92,14 @@
             "explain": "Vue.js로 웹 서비스를 개발할 때 필요한 지식을 모아놓은 사이트",
 			"rate" : "",
 			"tags" : ["vue"]
-        }  
+        },
+        {
+            "site": "Vue Guide",
+            "url": "https://kyounghwan01.github.io/blog/Vue/",
+            "explain": "vue 개발을 하면서 꼭 필요하다고 생각하는 개념 및 해결하기 어려웠던 작업에 대해 해결했던 방법에 대한 가이드",
+			"rate" : "",
+			"tags" : ["vue", "가이드"]
+        }   
 	],
     "Typescript" :[
         {
