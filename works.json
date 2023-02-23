@@ -16,9 +16,9 @@
     },
     {
       "project":"아모레 E-Accounting 멀티브라우저 개선",
-      "thumbnail":"",
+      "thumbnail":"/assets/images/img_amore_s.jpg",
       "images":[
-        
+        "/assets/images/img_amore_01.png"
       ],
       "company":"비트윈소프트",
       "client":"아모레",
@@ -55,7 +55,7 @@
     },
     {
       "project":" 신라면세점 운영 및 서비스 구축",
-      "thumbnail":"/assets/images/img_shilladfs_s.jpg",
+      "thumbnail":"/assets/images/img_shilladfs_s2.jpg",
       "images":[
         "/assets/images/recent_shilladfs_view2.jpg",
         "/assets/images/recent_shilladfs_view.jpg",
@@ -70,7 +70,7 @@
     },
     {
       "project":"홈앤쇼핑 운영 및 개선",
-      "thumbnail":"/assets/images/img_hnsmall_s.jpg",
+      "thumbnail":"/assets/images/img_hnsmall_s2.jpg",
       "images":[
         "/assets/images/recent_hnsmall_view.jpg"
       ],
