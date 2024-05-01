@@ -1,6 +1,20 @@
 {
   "works":[
     {
+      "project": "LG 글로벌 스토리 콘텐츠 제작",
+      "thumbnail": "/assets/images/img_monthlylg_s.jpg",
+      "images": [
+        "/assets/images/img_monthlylg_01.jpg",
+        "/assets/images/img_monthlylg_02.jpg"
+      ],
+      "company": "메이크잇 컴퍼니",
+      "client": "LG전자",
+      "date": "2024.01 ~ 2024.05",
+      "task": "글로벌 스토리 콘텐츠 제작",
+      "desc": "Full Scroll 애니메이션 및 인터렉션을 이용한 콘텐츠 제작",
+      "url": ["https://www.lg.com/de/monthly-lg/maerz-2024/", "https://www.lg.com/uk/monthly-lg/"]
+    },    
+    {
       "project": "케이뱅크 개선 및 운영",
       "thumbnail": "/assets/images/img_kbank_s.jpg",
       "images": [
@@ -13,7 +27,7 @@
       "date": "2023.03 ~ 2023.12",
       "task": "모바일 앱 UI 스크립트 개선",
       "desc": "공통 UI 개선 및 컴포넌트 개발",
-      "url": "https://www.kbanknow.com/"
+      "url": ["https://www.kbanknow.com/"]
     },    
     {
       "project":"삼성물산 패션몰 개선 및 운영",
@@ -27,7 +41,7 @@
       "date":"2022.06 ~ 2022.12",
       "task":"화면 및 공통 UI 개선 및 운영 업무",
       "desc":"메인 및 공통 UI(레이아웃 및 검색) 개선, 기획전 및 상품상세 개선, Git을 이용한 버전 관리",
-      "url":"https://www.ssfshop.com/"
+      "url":["https://www.ssfshop.com/"]
     },
     {
       "project":"아모레 E-Accounting 멀티브라우저 개선",
@@ -54,7 +68,7 @@
       "date":"2021.08 ~ 2022.02",
       "task":"프론트엔드 UI 스크립트",
       "desc":"배달앱, 가맹점 UI 스크립트 및 브랜드사이트 Full Scroll Animation",
-      "url":"https://www.ddangyo.com/"
+      "url":["https://www.ddangyo.com/"]
     },
     {
       "project":"삼성SDS 인적자원 Visibility 강화과제",
@@ -81,7 +95,7 @@
       "date":"2018.04 ~ 2020.06",
       "task":"웹퍼블리싱, 스크립트 및 인터렉션",
       "desc":"신라면세점 EC 및 Tipping, 신라트립 서비스 구축",
-      "url":"http://m.shilladfs.com/estore/kr/ko/"
+      "url":["http://m.shilladfs.com/estore/kr/ko/"]
     },
     {
       "project":"홈앤쇼핑 운영 및 개선",
@@ -94,7 +108,7 @@
       "date":"2017.02 ~ 2018.02",
       "task":"웹퍼블리싱, 스크립트 및 인터렉션",
       "desc":"홈앤쇼핑 UI개선 및 운영",
-      "url":" https://www.hnsmall.com/"
+      "url":["https://www.hnsmall.com/"]
     },
     {
       "project":"네이버 통합검색 UI 개선",
@@ -107,7 +121,7 @@
       "date":"2016.08 ~ 2016.12",
       "task":"웹퍼블리싱, Git을 이용한 버전 관리, Gulp",
       "desc":"네이버 통합검색 개편 및 운영",
-      "url":" https://www.naver.com/"
+      "url":["https://www.naver.com/"]
     },
     {
       "project":"Toryburch 쇼핑몰 구축",
@@ -120,7 +134,7 @@
       "date":"2016.04 ~ 2016.06",
       "task":"웹퍼블리싱, 스크립트 모듈화 및 라이브러리 수정",
       "desc":"토리버치 온라인 샵 구축 및 모바일 웹 구축",
-      "url":"http://www.toryburch.co.kr/"
+      "url":["http://www.toryburch.co.kr/"]
     },
     {
       "project":"LG.COM 4.0 Roll Out",
@@ -133,7 +147,7 @@
       "date":"2015.10 ~ 2016.03",
       "task":"Sass, Grunt를 압축/병합/빌드, Gnb 공통 스크립트, Share API 수정",
       "desc":"LG.Com 4.0 국가별 확산 작업, PC 및 모바일 대응 반응형 웹 구축",
-      "url":"http://www.lg.com/uk/"
+      "url":["http://www.lg.com/uk/"]
     },
     {
       "project":"한컴 핀테크 드림시드",
@@ -146,7 +160,7 @@
       "date":"2015.08 ~ 2015.09",
       "task":"웹퍼블리싱, 스크립트 모듈화 및 공통 가이드",
       "desc":"한글과 컴퓨터의 크라우드 펀딩 서비스 구축, PC 및 모바일 대응 반응형 웹 구축",
-      "url":"https://www.dreamsead.com/"
+      "url":["https://www.dreamsead.com/"]
     },
     {
       "project":"스마일게이트 게임커뮤니티 구축",
@@ -159,7 +173,7 @@
       "date":"2015.01 ~ 2015.06",
       "task":"웹퍼블리싱 PL",
       "desc":"게임 커뮤니티 사이트 신규 구축",
-      "url":"http://www.lottefresh.com/"
+      "url":""
     },
     {
       "project":"Lotte Fresh 리뉴얼",
@@ -172,7 +186,7 @@
       "date":"2014.09 ~ 2014.11",
       "task":"웹퍼블리싱",
       "desc":"롯데 프레시 쇼핑몰 구축, PC 및 모바일 대응 반응형 웹 구축",
-      "url":"http://www.lottefresh.com/"
+      "url":["http://www.lottefresh.com/"]
     },
     {
       "project":"SAMSUNG CN 반응형웹",
@@ -185,7 +199,7 @@
       "date":"2014.07 ~ 2014.08",
       "task":"퍼블리싱 및 스크립트",
       "desc":"Front 페이지 코딩 및 스크립트",
-      "url":"http://www.samsung.com/cn/"
+      "url":["http://www.samsung.com/cn/"]
     },
     {
       "project":"SAMSUNG UK 반응형웹",
@@ -198,7 +212,7 @@
       "date":"2013.10 ~ 2014.03",
       "task":"자바 스크립트 및 UI 개발",
       "desc":"Front 페이지 UI 스크립트 및 자바스크립트 동적 구현",
-      "url":"http://www.samsung.com/uk/"
+      "url":["http://www.samsung.com/uk/"]
     },
     {
       "project":"LG Fashion Shop 모바일웹",
@@ -211,7 +225,7 @@
       "date":"2013.08 ~ 2013.08",
       "task":"웹퍼블리싱 PL",
       "desc":"모바일웹 퍼블리싱 및 모바일 가이드 작성 / UI 스크립트",
-      "url":"http://m.lgfashionshop.com/"
+      "url":["http://m.lgfashionshop.com/"]
     },
     {
       "project":"LG Fashion Shop",
@@ -224,7 +238,7 @@
       "date":"2013.03 ~ 2013. 07",
       "task":"웹퍼블리싱 PL",
       "desc":"퍼블리싱 및 가이드 작성 / UI 스크립트 / 개발페이지 코딩 결함 수정",
-      "url":" http://www.lfmall.co.kr/"
+      "url":["http://www.lfmall.co.kr/"]
     },
     {
       "project":"SAMSUNG Developers",
@@ -237,7 +251,7 @@
       "date":"2012.07 ~ 2012.10",
       "task":"웹퍼블리싱 PL",
       "desc":"Html 코딩 및 jQuery / 일정관리 및 가이드 작성 / 개발페이지 코딩 결함 수정",
-      "url":"http://developer.samsung.com/"
+      "url":["http://developer.samsung.com/"]
     },
     {
       "project":"SKT 멤버십",
@@ -250,7 +264,7 @@
       "date":"2012.02 ~ 2012.05",
       "task":"웹퍼블리싱 PL",
       "desc":"Html 코딩 및 jQuery / 일정관리 및 카테고리별 파트 분담 / 개발페이지 코딩 결함 수정",
-      "url":"http://www.sktmembership.co.kr/"
+      "url":["http://www.sktmembership.co.kr/"]
     },
     {
       "project":"신한은행",
@@ -263,7 +277,7 @@
       "date":"2011.07 ~ 2012.02",
       "task":"웹퍼블리싱 PL",
       "desc":"Html 코딩 및 jQuery / 일정관리 및 카테고리별 파트 분담 / 개발페이지 코딩 결함 수정",
-      "url":"http://www.shinhan.com/"
+      "url":["http://www.shinhan.com/"]
     },
     {
       "project":"현대엔지니어링",
@@ -276,7 +290,7 @@
       "date":"2011.09 ~ 2011. 12",
       "task":"웹퍼블리싱 PL",
       "desc":"Html 코딩 및 jQuery / 프로젝트 코딩 가이드 작성",
-      "url":"http://www.hec.co.kr/"
+      "url":["http://www.hec.co.kr/"]
     },
     {
       "project":"롯데카드",
@@ -289,7 +303,7 @@
       "date":"2011.04 ~ 2011.09",
       "task":"웹퍼블리싱 PL",
       "desc":"Html 코딩 및 jQuery / 일정관리 및 카테고리별 파트 분담 / 프로젝트 코딩 가이드 작성 및 샘플페이지 작성 / 개발페이지 코딩 결함 수정",
-      "url":"http://www.lottecard.co.kr/"
+      "url":["http://www.lottecard.co.kr/"]
     },
     {
       "project":"KTH 컨버전스 영상서비스",
@@ -302,7 +316,7 @@
       "date":"2010.10 ~ 2010.12",
       "task":"웹퍼블리싱",
       "desc":"Html 코딩 및 jQuery / 코딩 가이드 작성 및 개발페이지 코딩 결함 수정",
-      "url":"http://www.playy.co.kr/"
+      "url":["http://www.playy.co.kr/"]
     },
     {
       "project":"Tooniverse",
@@ -315,7 +329,7 @@
       "date":"2010.07 ~ 2010.08",
       "task":"웹퍼블리싱",
       "desc":" Html 코딩 및 jQuery / 코딩 가이드 작성",
-      "url":"http://www.tooniland.com/tooniverse/program/getFrontProgramList.tl"
+      "url":["http://www.tooniland.com/tooniverse/program/getFrontProgramList.tl"]
     },
     {
       "project":"SKT T bizpoint",
@@ -328,7 +342,7 @@
       "date":"2010.03 ~ 2010.06",
       "task":"웹퍼블리싱 PL",
       "desc":"Html 코딩 및 jQuery / 일정관리 및 카테고리별 파트 분담 / 프로젝트 코딩 가이드 작성 및 샘플페이지 작성 / 개발페이지 코딩 결함 수정",
-      "url":" http://www.tbizpoint.co.kr/"
+      "url":["http://www.tbizpoint.co.kr/"]
     },
     {
       "project":"BC카드 법인",
@@ -341,7 +355,7 @@
       "date":"2009.09 ~ 2009.12",
       "task":"웹퍼블리싱 PL",
       "desc":"CMS (Contents Management System) 연동 코딩 / Html 코딩 및 자바스크립트 / 개발페이지 코딩 결함 수정",
-      "url":"http://wisebiz.bccard.com/"
+      "url":["http://wisebiz.bccard.com/"]
     },
     {
       "project":"BC 골프라운지",
@@ -354,7 +368,7 @@
       "date":"2009.04 ~ 2009.07",
       "task":"웹퍼블리싱 PL",
       "desc":"CMS (Contents Management System) 연동 코딩 / Html 코딩 및 자바스크립트 / 일정관리 및 카테고리별 파트 분담 / 프로젝트 코딩 가이드 작성 및 샘플페이지 작성 / 개발페이지 코딩 결함 수정",
-      "url":"http://www.golfloung.com/"
+      "url":["http://www.golfloung.com/"]
     },
     {
       "project":"SK 브로드밴드 TV 개편",
@@ -367,7 +381,7 @@
       "date":"2008.12 ~ 2009.02",
       "task":"웹퍼블리싱 PL",
       "desc":"Html 코딩 및 자바스크립트 / 일정관리 / 가이드 작성",
-      "url":"http://www.golfloung.com/"
+      "url":["http://www.golfloung.com/"]
     },
     {
       "project":"2008 SK 텔레콤 T world",
@@ -380,7 +394,7 @@
       "date":"2008.08 ~ 2008.11",
       "task":"웹퍼블리싱 PL",
       "desc":"Html 코딩 및 jQuery / 일정관리 및 카테고리별 파트 분담 / 프로젝트 코딩 가이드 작성 및 샘플페이지 작성 / 개발페이지 코딩 결함 수정",
-      "url":"http://www.tworld.co.kr/"
+      "url":["http://www.tworld.co.kr/"]
     },
     {
       "project":"2007 SK 텔레콤 T world",
@@ -393,7 +407,7 @@
       "date":"2007.07 ~ 2007.12",
       "task":"웹퍼블리싱 PL",
       "desc":"Html 코딩 및 jQuery / 일정관리 및 카테고리별 파트 분담 / 프로젝트 코딩 가이드 작성 및 샘플페이지 작성 / 개발페이지 코딩 결함 수정",
-      "url":"http://www.tworld.co.kr/"
+      "url":["http://www.tworld.co.kr/"]
     },
     {
       "project":"쇼핑몰 와와닷컴",
@@ -405,7 +419,7 @@
       "client":"골든프레임",
       "date":"2006.09 ~ 2007.04",
       "desc":"",
-      "url":"http://www.waawaa.com/"
+      "url":["http://www.waawaa.com/"]
     },
     {
       "project":"한국기업데이터",
