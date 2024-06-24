@@ -195,6 +195,69 @@ img {max-width: 100%; height: auto; border: 0;}
 #scroll-section-10 .arrow-svg .line {display:inline-block; width:100%; height: auto;}
 #scroll-section-10 .arrow-svg .arrow {position:absolute; width:10.70312px; height:20.5781px}
 /* #scroll-section-10 .arrow-svg.show-in .path {animation: dash 1s linear forwards;} */
+
+@media screen and (max-width:1280px) {
+    .monthly__thumb-img img {width: 210px}
+}
+
+@media screen and (max-width:1024px) {
+    .monthly__scroll-section {min-height: auto;}
+    .monthly__section-inner {padding: 100px 0 50px;}
+    .monthly__thumb-img img {width: 200px}
+
+    #scroll-section-0 .monthly__flex {flex-direction: column;}
+    #scroll-section-0 .monthly__cover-img {width: 100%; height: 500px}
+    #scroll-section-0 .monthly__cover-img img {width: 100%; object-fit: cover;}
+    #scroll-section-0 .monthly__main-message {width: 100%}
+    #scroll-section-0 .monthly__main-message .monthly__message-desc {width: 50%}
+    #scroll-section-0 .monthly__main-message .monthly__item-area {left: unset; top: 120px; width: 40%}
+
+    #scroll-section-1 .monthly__box-area {padding: 0 0 50px;}
+    #scroll-section-2 .monthly__section-inner {padding-top: 0}
+    #scroll-section-2 .monthly__obj-row {margin-top: 0}
+
+    #scroll-section-3 .monthly__section-inner {padding: 0}
+    #scroll-section-3 .monthly__section-inner + .monthly__section-inner {padding-bottom: 50px}
+
+    #scroll-section-6 .monthly__section-inner {padding: 50px 0 0}
+    #scroll-section-6 .monthly__section-inner.monthly__flex {padding-bottom: 50px}
+
+    #scroll-section-7 .monthly__section-inner {padding: 0 0 50px}
+    #scroll-section-7 .monthly__item-1 {width: 50vw}
+
+    #scroll-section-8 .monthly__main-message {margin: 0 auto;}
+}
+
+@media screen and (max-width:640px) {
+    .monthly__container {overflow: hidden;}
+    .monthly__cover-img img {border-radius: 20px;}
+    .monthly__main-message {padding: 50px 0 0;}
+    .monthly__main-message .monthly__message-tit {font-size: 6.5vw}
+    .monthly__thumb-img img {width: 180px}
+
+    #scroll-section-0 .monthly__main-message .monthly__message-desc {width: 100%}
+    #scroll-section-0 .monthly__main-message .monthly__item-area {position: static; width: 100%; margin-top: 5vw}
+
+    #scroll-section-1 .monthly__section-inner {flex-direction: column;}
+    #scroll-section-1 .monthly__main-message {width: 100%}
+    #scroll-section-1 .monthly__img {width: 100%; margin:10vw auto;}
+    #scroll-section-1 .monthly__cover-img {padding: 0}
+    #scroll-section-1 .monthly__box-area .monthly__main-message {left: 0}
+
+    #scroll-section-2 .monthly__obj-sticky {width: 100%; height: 500px !important; margin: 50px auto; }
+    #scroll-section-2 .monthly__obj-row {flex-direction: column-reverse;}
+    #scroll-section-2 .monthly__obj-img {position: static;}
+    #scroll-section-2 .monthly__obj-img img {height: 500px}
+    #scroll-section-2 .monthly__img-item {height: 500px}
+    #scroll-section-2 .monthly__obj-content {width: 100%}
+    #scroll-section-2 .monthly__obj-section {padding: 0}
+
+    #scroll-section-3 .monthly__section-inner {flex-direction: column;}
+    #scroll-section-3 .monthly__cover-img {width: 100%; height: 250px; margin-top: 5vw}
+    #scroll-section-3 .monthly__message-desc .monthly__cover-img {margin-top: 5vw}
+    #scroll-section-3 .monthly__message-desc {width: 100%; padding: 0}
+}
+
 /* #scroll-section-10 .arrow-svg.show-in .arrow .path {animation: dash .2s linear 1s forwards;} */
 @keyframes dash {
     /* 0%   {stroke-dashoffset: 1482px;} */

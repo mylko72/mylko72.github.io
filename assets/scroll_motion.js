@@ -1,4 +1,4 @@
-import { hasElementsNum, setPxToVw, callByObserver, isNumber } from './monthly_function.js'
+import { hasElementsNum, setPxToVw, callByObserver, isNumber } from './scroll_function.js'
 
 export default class ScrollMotion {
     defaults = {

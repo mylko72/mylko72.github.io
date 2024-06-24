@@ -1,5 +1,5 @@
-import ScrollMotion from "./monthly_motion_2404.js";
-import { isMobile, isDesktop, hasElementsNum, callByObserver } from "./monthly_function.js";
+import ScrollMotion from "./scroll_motion.js";
+import { isMobile, isDesktop, hasElementsNum, callByObserver } from "./scroll_function.js";
 
 class ScrollIndex {
     defaults = {
