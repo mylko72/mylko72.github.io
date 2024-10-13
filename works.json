@@ -1,6 +1,18 @@
 {
   "works":[
     {
+      "project":"삼성SDS 온실가스 관리시스템 구축",
+      "thumbnail":"/assets/images/img_sds_s.jpg",
+      "images":[
+        "/assets/images/img_sds_s.png"
+      ],
+      "company":"브이게이트",
+      "client":"삼성SDS",
+      "date":"2024.07 ~ 2024.10",
+      "task":"Vue.js 기반 프론트엔드 퍼블리싱",
+      "desc":"Vue.js로 개발된 자체 프레임워크인 레고 컴포넌트를 분석 수정하여 그리드 기반의 관리시스템 구축"
+    },
+    {
       "project": "LG 글로벌 스토리 콘텐츠 제작",
       "thumbnail": "/assets/images/img_monthlylg_s.jpg",
       "images": [
@@ -26,7 +38,7 @@
       "client": "케이뱅크",
       "date": "2023.03 ~ 2023.12",
       "task": "모바일 앱 UI 스크립트 개선",
-      "desc": "공통 UI 개선 및 컴포넌트 개발",
+      "desc": "순수 자바스크립트 문법인 클래스를 사용하여 공통 UI 개선 및 컴포넌트 개발",
       "url": ["https://www.kbanknow.com/"]
     },    
     {
