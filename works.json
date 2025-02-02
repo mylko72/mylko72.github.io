@@ -1,6 +1,18 @@
 {
   "works":[
     {
+      "project":"삼성닷컴 NSP (차세대 세일즈 포탈) 개편",
+      "thumbnail":"/assets/images/img_samsung_logo.gif",
+      "images":[
+        "/assets/images/img_samsung_logo.gif"
+      ],
+      "company":"분더페이스 어소시에이츠",
+      "client":"삼성전자",
+      "date":"2024.11 ~ 2025.01",
+      "task":"Vue.js 기반 프론트엔드 퍼블리싱",
+      "desc":"Composition API와 <script setup>에 기반한 Vue3 최신 문법을 사용, Mock 데이타를 이용한 데이타 바인딩 및 이벤트 수신 및 발신신, 메인 및 상품리스트 등 기능별 컴포넌트 생성 및 제작"
+    },  
+    {
       "project":"삼성SDS 온실가스 관리시스템 구축",
       "thumbnail":"/assets/images/img_sds_s.jpg",
       "images":[
