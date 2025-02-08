@@ -6,7 +6,7 @@ body {background:#f0ece4; overflow-x: hidden;}
 
 img {max-width: 100%; height: auto; border: 0;}
 
-/* .monthly__container {position: relative; height:100vh; overflow-x: hidden; overflow-y: auto; perspective: 300px; -webkit-perspective-origin-x :100%; -perspective-origin-x :100%} */
+/* .page__container {position: relative; height:100vh; overflow-x: hidden; overflow-y: auto; perspective: 300px; -webkit-perspective-origin-x :100%; -perspective-origin-x :100%} */
 .monthly__parallax-group {position:relative; /*height:100vh;*/ -webkit-transform-style: preserve-3d; transform-style: preserve-3d;}
 .monthly__parallax-layer {position:absolute; top:0; left:0; right:0; bottom:0; -webkit-transform-origin-x: 100%;}
 .parallax__layer-img_1 {-webkit-transform: translateZ(90px) scale(.7); transform: translateZ(90px) scale(.7); z-index: 5;}
@@ -15,9 +15,9 @@ img {max-width: 100%; height: auto; border: 0;}
 .monthly__kv-area {position:relative; width: 100%; height:100vh; background-image: url(https://assets-global.website-files.com/65954b3b08c10f984a99513e/65963c38715913f363df4eda_Urban%20-%204-p-2000.webp); background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover;}
 .monthly__kv-area .caption {position: absolute; left: 0; top: 50%; width: 100%; text-align: center; color: #000;}
 .monthly__kv-area .caption span.border {background-color: #111; color: #fff; padding: 18px; font-size: 25px; letter-spacing: 10px;}
-.monthly__container {width:100%}
-.monthly__scroll-section {position:relative; border-bottom:1px solid #ddd; background-color: #f0ece4; width:100%; padding:0 20px; min-height:100vh;}
-.monthly__scroll-section .tit {margin:auto; font-size:5rem; color:#fff; font-weight:bold; opacity:1}
+.page__container {width:100%}
+.content__scroll-section {position:relative; border-bottom:1px solid #ddd; background-color: #f0ece4; width:100%; padding:0 20px; min-height:100vh;}
+.content__scroll-section .tit {margin:auto; font-size:5rem; color:#fff; font-weight:bold; opacity:1}
 
 .bounceInDown {
     animation-name: bounceInDown;
@@ -43,7 +43,7 @@ img {max-width: 100%; height: auto; border: 0;}
 .monthly__thumb-img img {width:250px; height:150px; border-radius:10px; object-position: 50% 50%; object-fit:cover;}
 
 .monthly__sticky-elem {display:none; position:fixed; top:0; left:0; width:100%; height:100%;}
-.monthly__scroll-section.active .monthly__sticky-elem {display:block; will-change:transform, opacity;}
+.content__scroll-section.active .monthly__sticky-elem {display:block; will-change:transform, opacity;}
 .monthly__scroll-x {display:flex; width:100%; height:100vh; background: linear-gradient(to right, #FCB48D 0%, #FCB48D 20%, #FCA17D 20%, #FCA17D 40%, #DA627D 40%, #DA627D 60%, #9A348E 60%, #9A348E 80%, #782B7F 80%, #782B7F 100%);
     background-size: 100vw 500px;
     transition:transform .5s;}
@@ -201,7 +201,7 @@ img {max-width: 100%; height: auto; border: 0;}
 }
 
 @media screen and (max-width:1024px) {
-    .monthly__scroll-section {min-height: auto;}
+    .content__scroll-section {min-height: auto;}
     .monthly__section-inner {padding: 100px 0 50px;}
     .monthly__thumb-img img {width: 200px}
 
@@ -229,7 +229,7 @@ img {max-width: 100%; height: auto; border: 0;}
 }
 
 @media screen and (max-width:640px) {
-    .monthly__container {overflow: hidden;}
+    .page__container {overflow: hidden;}
     .monthly__cover-img img {border-radius: 20px;}
     .monthly__main-message {padding: 50px 0 0;}
     .monthly__main-message .monthly__message-tit {font-size: 6.5vw}

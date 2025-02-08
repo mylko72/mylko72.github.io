@@ -6,7 +6,7 @@ function isDesktop(){
     return window.innerWidth > 768;
 }
 
-function hasElementsNum(className) {
+function getAllElements(className) {
     return document.querySelectorAll(className);
 }
 
@@ -58,7 +58,7 @@ export {
     isMobile,
     isDesktop,
     isNumber,
-    hasElementsNum,
+    getAllElements,
     callByObserver,
     setPxToVw
 }

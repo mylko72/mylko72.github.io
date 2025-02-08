@@ -1,5 +1,5 @@
 import ScrollMotion from "./scroll_motion.js";
-import { isMobile, isDesktop, hasElementsNum, callByObserver } from "./scroll_function.js";
+import { isMobile, isDesktop, getAllElements, callByObserver } from "./scroll_function.js";
 
 class ScrollIndex {
     defaults = {
@@ -262,7 +262,7 @@ class ScrollIndex {
     }
 
     setSwiper(){
-        [...hasElementsNum('.monthly-carousel')].forEach((el) => {
+        [...getAllElements('.monthly-carousel')].forEach((el) => {
             const galleryCarousel = new Swiper(el, {
                 loop: true,
                 lazy: true,
@@ -303,7 +303,7 @@ class ScrollIndex {
         });  
   
         // 동영상 관찰
-        [...hasElementsNum('[data-observe]')].forEach((video) => {
+        [...getAllElements('[data-observe]')].forEach((video) => {
            callByObserver({target: video, showCallback: this.playVideo, hideCallback: this.pauseVideo, keepObserver:true, options:{ rootMargin: '0px 0px 50px 0px', threshold: 0.4 } });
         });
      }
@@ -340,8 +340,8 @@ class ScrollIndex {
 }
 
 window.scrollIndex = new ScrollIndex(
-    '.monthly__container',
-    '.monthly__scroll-section',
+    '.page__container',
+    '.content__scroll-section',
     '[data-effect]',
     { threshold: 0.95 }
 );

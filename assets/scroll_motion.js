@@ -1,4 +1,4 @@
-import { hasElementsNum, setPxToVw, callByObserver, isNumber } from './scroll_function.js'
+import { getAllElements, setPxToVw, callByObserver, isNumber } from './scroll_function.js'
 
 export default class ScrollMotion {
     defaults = {
@@ -67,9 +67,9 @@ export default class ScrollMotion {
             }  
         });
 
-        [...hasElementsNum('.monthly__obj-content')].forEach((objContent, idx) => {
+        [...getAllElements('.monthly__obj-content')].forEach((objContent, idx) => {
             const resizeHeight = objContent.clientHeight;
-            hasElementsNum('.monthly__obj-sticky')[idx].style.height = `${resizeHeight}px`;
+            getAllElements('.monthly__obj-sticky')[idx].style.height = `${resizeHeight}px`;
         });
 
         this.yOffset = this.currentIndex > 0 ? window.scrollY + this.defaults.threshold : window.scrollY;
@@ -126,14 +126,14 @@ export default class ScrollMotion {
 
     setObserver(){
         // 인터렉션 관찰
-        this.motionSelector = hasElementsNum('[data-effect]');
+        this.motionSelector = getAllElements('[data-effect]');
         this.motionSelector.length && [...this.motionSelector].forEach((selector) => {
             let opt = !!selector.dataset.options && JSON.parse(selector.dataset.options);
             let marginGap = window.innerWidth > 768 ? window.innerHeight * 0 : window.innerHeight * 0;
             let config = {...{ rootMargin: `0px 0px -${marginGap}px 0px`, threshold: 0.2 }, ...opt}            
             callByObserver({target: selector, showCallback: this.addShow.bind(this), keepObserver:false, options: config });
         });  
-        hasElementsNum('[data-sequence]').length && [...hasElementsNum('[data-sequence]')].forEach((selector) => {
+        getAllElements('[data-sequence]').length && [...getAllElements('[data-sequence]')].forEach((selector) => {
             let opt = !!selector.dataset.options && JSON.parse(selector.dataset.options);
             let marginGap = window.innerWidth > 768 ? window.innerHeight * 0 : window.innerHeight * 0;
             let config = {...{ rootMargin: `0px 0px -${marginGap}px 0px`, threshold: 0.2 }, ...opt}            

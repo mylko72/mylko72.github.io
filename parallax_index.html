@@ -8,13 +8,13 @@
 </head>
 <body>
     <!-- s: code components 작업 영역 -->
-    <div class="monthly__container">
+    <div class="page__container">
         <div class="monthly__kv-area">
             <div class="caption">
                 <span class="border">SCROLL DOWN</span>
             </div>
         </div>
-        <div id="scroll-section-0" class="monthly__scroll-section">
+        <div id="scroll-section-0" class="content__scroll-section">
             <div class="monthly__section-inner monthly__flex">
                 <div class="monthly__cover-img" data-effect="slide-right">
                     <img class="" src="https://assets-global.website-files.com/64b2e99d61b74377994604f3/64b2f6cb4c059eab341bf2ce_About-img.jpg" />
@@ -44,7 +44,7 @@
             </div>
             <!-- <span class="tit">Section 1</span> -->
         </div>
-        <div id="scroll-section-1" class="monthly__scroll-section">
+        <div id="scroll-section-1" class="content__scroll-section">
             <div class="monthly__section-inner monthly__flex">
                 <div class="monthly__main-message">
                     <div class="monthly__mask" data-effect>
@@ -83,7 +83,7 @@
             </div>           
             <!-- <span class="tit">Section 2</span> -->
         </div>
-        <div id="scroll-section-2" class="monthly__scroll-section">
+        <div id="scroll-section-2" class="content__scroll-section">
             <div class="monthly__section-inner">
                 <div class="monthly__main-message w-100">
                     <div class="monthly__mask" data-effect>
@@ -135,7 +135,7 @@
             </div>
             <!-- <span class="tit">Section 3</span> -->
         </div>
-        <div id="scroll-section-3" class="monthly__scroll-section">
+        <div id="scroll-section-3" class="content__scroll-section">
             <div class="monthly__main-message">
                 <div class="monthly__mask" data-effect>
                     <h1 class="monthly__message-tit" data-effect="slide-up">Lorem Ipsum</h1>
@@ -175,14 +175,14 @@
             </div>            
             <!-- <span class="tit">Section 4</span> -->
         </div>
-        <div id="scroll-section-4" class="monthly__scroll-section">
+        <div id="scroll-section-4" class="content__scroll-section">
             <div class="monthly__video-area">
                 <video class="pc_only" muted loop playsinline poster="https://www.lg.com/uk/lg-signature/images/kv/kv_sld_bg2_220118.jpg" data-loaded="false" data-observe="true">
                    <source src="" type="video/mp4" data-src="https://www.lg.com/uk/lg-signature/images/kv/kv_sld_bg2_220121.mp4" />
                 </video>
              </div>
         </div>
-        <!-- <div id="scroll-section-5" class="monthly__scroll-section" data-type="sticky" data-heightNum="6">
+        <!-- <div id="scroll-section-5" class="content__scroll-section" data-type="sticky" data-heightNum="6">
             <div class="monthly__scroll-x">
                 <img data-src="https://assets-global.website-files.com/65e5bb1555a91679603e3cd2/65e5bb1555a91679603e3d70_02_pizza-p-1080.jpeg" class="" />
                 <img data-src="https://assets-global.website-files.com/65e5bb1555a91679603e3cd2/65e5bb1555a91679603e3d7a_Vacanza5.jpg" class="" />
@@ -192,7 +192,7 @@
                 <img data-src="https://assets-global.website-files.com/6261514ffa38eb710641e019/640f2d43766e129339f694d0_Hamster2.jpg" class="" />
             </div>
         </div> -->
-        <div id="scroll-section-6" class="monthly__scroll-section">
+        <div id="scroll-section-6" class="content__scroll-section">
             <div class="monthly__section-inner">
                 <div class="monthly__main-message">
                     <h1 data-split-txt data-effect="slide-right">Lorem Ipsum</h1>
@@ -211,7 +211,7 @@
                 </div>
             </div>
         </div>
-        <div id="scroll-section-7" class="monthly__scroll-section">
+        <div id="scroll-section-7" class="content__scroll-section">
             <div class="monthly__section-inner">
                 <div class="monthly__main-message">
                     <h1 data-split-txt data-effect="">Lorem Ipsum</h1>
@@ -233,7 +233,7 @@
             </div>
         </div>
 
-        <div id="scroll-section-8" class="monthly__scroll-section">
+        <div id="scroll-section-8" class="content__scroll-section">
             <div class="monthly__main-message">
                 <h1 class="monthly__message-tit" data-effect="text-blur" data-duration="1s" data-transform="translate(0, 50px)">Lorem Ipsum</h1>
             </div>
@@ -248,7 +248,7 @@
             </div>
         </div>
 
-        <div id="scroll-section-9" class="monthly__scroll-section">
+        <div id="scroll-section-9" class="content__scroll-section">
             <div class="monthly__cover-sticky">
                 <div class="monthly__main-message">
                     <!-- <h1 class="monthly__message-tit bounceInDown" data-split-txt data-effect="bounceInDown">Lorem</h1> -->
@@ -275,7 +275,7 @@
             </div>            
         </div>
                   
-        <div id="scroll-section-10" class="monthly__scroll-section">
+        <div id="scroll-section-10" class="content__scroll-section">
             <div class="monthly__section-inner monthly__flex">
                 <div class="monthly__cover-img" data-split-effect="cross fade">
                     <img class="" src="https://assets-global.website-files.com/605cb36d0541c08b53162afa/606b560a8fccaa5180821aef_Post002.jpeg" />
@@ -307,12 +307,12 @@
         const lenis = new Lenis()
 
         lenis.on('scroll', (e) => {
-        console.log(e)
+            // console.log(e)
         })
 
         function raf(time) {
-        lenis.raf(time)
-        requestAnimationFrame(raf)
+            lenis.raf(time)
+            requestAnimationFrame(raf)
         }
 
         requestAnimationFrame(raf)
